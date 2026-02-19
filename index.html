@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lifestyle Hikers — Find Your Trail</title>
-    <meta name="description" content="Lifestyle Hikers is a community of passionate outdoor enthusiasts exploring the world's most beautiful trails together. Join our group hikes and discover your next adventure.">
+    <title>Lifestyle Hikers — Explore Jamaica's Trails</title>
+    <meta name="description"
+        content="Lifestyle Hikers is Jamaica's premier hiking community exploring the Blue Mountains, waterfalls, rivers, and hidden trails across the island. Join us every weekend for adventure!">
+    <link rel="icon" type="image/png" href="logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#" class="nav-logo">
-                <i class="fas fa-mountain"></i>
+                <img src="logo.png" alt="Lifestyle Hikers Logo" class="nav-logo-img">
                 <span>Lifestyle Hikers</span>
             </a>
             <ul class="nav-links" id="navLinks">
@@ -37,17 +43,18 @@
     <!-- Hero Section -->
     <header class="hero" id="hero">
         <div class="hero-bg">
-            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=1920&q=80" alt="Mountain landscape" class="hero-img">
+            <img src="hero.jpg" alt="Lifestyle Hikers group walking along a Jamaican trail" class="hero-img">
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
-            <p class="hero-tagline reveal">A Community of Outdoor Enthusiasts</p>
-            <h1 class="hero-title reveal">Find Your <span class="text-gradient">Trail</span></h1>
-            <p class="hero-subtitle reveal">Explore the world's most breathtaking trails with a group of passionate hikers. Every weekend is an adventure.</p>
+            <p class="hero-tagline reveal">Jamaica's Premier Hiking Community</p>
+            <h1 class="hero-title reveal">Explore <span class="text-gradient">Jamaica</span></h1>
+            <p class="hero-subtitle reveal">Discover the Blue Mountains, hidden waterfalls, lush river trails, and
+                breathtaking coastlines with a community that lives for the outdoors.</p>
             <div class="hero-search reveal">
                 <div class="search-box">
                     <i class="fas fa-search"></i>
-                    <input type="text" placeholder="Search trails, parks, or locations..." id="searchInput">
+                    <input type="text" placeholder="Search trails, parishes, or landmarks..." id="searchInput">
                     <button class="search-btn" id="searchBtn">Explore</button>
                 </div>
             </div>
@@ -80,8 +87,9 @@
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-badge"><i class="fas fa-compass"></i> Explore</span>
-                <h2 class="section-title">Featured Trails</h2>
-                <p class="section-subtitle">Hand-picked trails curated by our community — from serene forests to epic summit pushes.</p>
+                <h2 class="section-title">Featured Jamaican Trails</h2>
+                <p class="section-subtitle">From misty Blue Mountain peaks to cascading waterfalls and river gorges —
+                    discover Jamaica's best kept hiking secrets.</p>
             </div>
             <div class="trails-filter reveal">
                 <button class="filter-btn active" data-filter="all">All Trails</button>
@@ -90,131 +98,20 @@
                 <button class="filter-btn" data-filter="hard">Hard</button>
             </div>
             <div class="trails-grid" id="trailsGrid">
-                <!-- Trail Card 1 -->
-                <div class="trail-card reveal" data-difficulty="moderate">
-                    <div class="trail-card-img">
-                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Cascade Ridge Trail">
-                        <span class="trail-badge moderate">Moderate</span>
-                        <button class="trail-save" aria-label="Save trail"><i class="far fa-heart"></i></button>
-                    </div>
-                    <div class="trail-card-body">
-                        <h3 class="trail-name">Cascade Ridge Trail</h3>
-                        <p class="trail-location"><i class="fas fa-map-marker-alt"></i> North Cascades, WA</p>
-                        <div class="trail-meta">
-                            <span><i class="fas fa-route"></i> 8.2 mi</span>
-                            <span><i class="fas fa-arrow-up"></i> 2,100 ft</span>
-                            <span><i class="fas fa-clock"></i> 4-5 hrs</span>
-                        </div>
-                        <div class="trail-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <span class="rating-text">4.7 (128 reviews)</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Trail Card 2 -->
+                <!-- Trail Card 1 — Blue Mountain Peak -->
                 <div class="trail-card reveal" data-difficulty="hard">
                     <div class="trail-card-img">
-                        <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=80" alt="Summit Peak Loop">
+                        <img src="https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&w=800&q=80"
+                            alt="Blue Mountain Peak Jamaica">
                         <span class="trail-badge hard">Hard</span>
                         <button class="trail-save" aria-label="Save trail"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="trail-card-body">
-                        <h3 class="trail-name">Summit Peak Loop</h3>
-                        <p class="trail-location"><i class="fas fa-map-marker-alt"></i> Mt. Rainier, WA</p>
+                        <h3 class="trail-name">Blue Mountain Peak Trail</h3>
+                        <p class="trail-location"><i class="fas fa-map-marker-alt"></i> Portland / St. Thomas</p>
                         <div class="trail-meta">
-                            <span><i class="fas fa-route"></i> 12.4 mi</span>
-                            <span><i class="fas fa-arrow-up"></i> 4,300 ft</span>
-                            <span><i class="fas fa-clock"></i> 7-9 hrs</span>
-                        </div>
-                        <div class="trail-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <span class="rating-text">4.9 (256 reviews)</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Trail Card 3 -->
-                <div class="trail-card reveal" data-difficulty="easy">
-                    <div class="trail-card-img">
-                        <img src="https://images.unsplash.com/photo-1440186347098-386b7459ad6b?auto=format&fit=crop&w=800&q=80" alt="Pine Valley Nature Walk">
-                        <span class="trail-badge easy">Easy</span>
-                        <button class="trail-save" aria-label="Save trail"><i class="far fa-heart"></i></button>
-                    </div>
-                    <div class="trail-card-body">
-                        <h3 class="trail-name">Pine Valley Nature Walk</h3>
-                        <p class="trail-location"><i class="fas fa-map-marker-alt"></i> Olympic NP, WA</p>
-                        <div class="trail-meta">
-                            <span><i class="fas fa-route"></i> 3.1 mi</span>
-                            <span><i class="fas fa-arrow-up"></i> 340 ft</span>
-                            <span><i class="fas fa-clock"></i> 1-2 hrs</span>
-                        </div>
-                        <div class="trail-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                            <span class="rating-text">4.3 (89 reviews)</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Trail Card 4 -->
-                <div class="trail-card reveal" data-difficulty="moderate">
-                    <div class="trail-card-img">
-                        <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=800&q=80" alt="Emerald Lake Trail">
-                        <span class="trail-badge moderate">Moderate</span>
-                        <button class="trail-save" aria-label="Save trail"><i class="far fa-heart"></i></button>
-                    </div>
-                    <div class="trail-card-body">
-                        <h3 class="trail-name">Emerald Lake Trail</h3>
-                        <p class="trail-location"><i class="fas fa-map-marker-alt"></i> Rocky Mountain NP, CO</p>
-                        <div class="trail-meta">
-                            <span><i class="fas fa-route"></i> 6.8 mi</span>
-                            <span><i class="fas fa-arrow-up"></i> 1,800 ft</span>
-                            <span><i class="fas fa-clock"></i> 3-4 hrs</span>
-                        </div>
-                        <div class="trail-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <span class="rating-text">4.6 (195 reviews)</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Trail Card 5 -->
-                <div class="trail-card reveal" data-difficulty="hard">
-                    <div class="trail-card-img">
-                        <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=800&q=80" alt="Angel's Crest Via Ferrata">
-                        <span class="trail-badge hard">Hard</span>
-                        <button class="trail-save" aria-label="Save trail"><i class="far fa-heart"></i></button>
-                    </div>
-                    <div class="trail-card-body">
-                        <h3 class="trail-name">Angel's Crest Via Ferrata</h3>
-                        <p class="trail-location"><i class="fas fa-map-marker-alt"></i> Glacier NP, MT</p>
-                        <div class="trail-meta">
-                            <span><i class="fas fa-route"></i> 10.6 mi</span>
-                            <span><i class="fas fa-arrow-up"></i> 3,500 ft</span>
+                            <span><i class="fas fa-route"></i> 7.5 mi</span>
+                            <span><i class="fas fa-arrow-up"></i> 3,200 ft</span>
                             <span><i class="fas fa-clock"></i> 6-8 hrs</span>
                         </div>
                         <div class="trail-rating">
@@ -225,25 +122,144 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
-                            <span class="rating-text">4.8 (310 reviews)</span>
+                            <span class="rating-text">4.9 (312 reviews)</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Trail Card 6 -->
+                <!-- Trail Card 2 — Dunn's River Falls -->
+                <div class="trail-card reveal" data-difficulty="moderate">
+                    <div class="trail-card-img">
+                        <img src="https://images.unsplash.com/photo-1580746738699-3975c8421a74?auto=format&fit=crop&w=800&q=80"
+                            alt="Dunn's River Falls Jamaica">
+                        <span class="trail-badge moderate">Moderate</span>
+                        <button class="trail-save" aria-label="Save trail"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="trail-card-body">
+                        <h3 class="trail-name">Dunn's River Falls Climb</h3>
+                        <p class="trail-location"><i class="fas fa-map-marker-alt"></i> Ocho Rios, St. Ann</p>
+                        <div class="trail-meta">
+                            <span><i class="fas fa-route"></i> 0.4 mi</span>
+                            <span><i class="fas fa-arrow-up"></i> 600 ft</span>
+                            <span><i class="fas fa-clock"></i> 1-2 hrs</span>
+                        </div>
+                        <div class="trail-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-text">4.7 (256 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trail Card 3 — Reach Falls -->
                 <div class="trail-card reveal" data-difficulty="easy">
                     <div class="trail-card-img">
-                        <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80" alt="Wildflower Meadow Path">
+                        <img src="https://images.unsplash.com/photo-1432405972618-c6b0cfba1b4a?auto=format&fit=crop&w=800&q=80"
+                            alt="Reach Falls Portland Jamaica">
                         <span class="trail-badge easy">Easy</span>
                         <button class="trail-save" aria-label="Save trail"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="trail-card-body">
-                        <h3 class="trail-name">Wildflower Meadow Path</h3>
-                        <p class="trail-location"><i class="fas fa-map-marker-alt"></i> Yosemite NP, CA</p>
+                        <h3 class="trail-name">Reach Falls Nature Trail</h3>
+                        <p class="trail-location"><i class="fas fa-map-marker-alt"></i> Manchioneal, Portland</p>
                         <div class="trail-meta">
-                            <span><i class="fas fa-route"></i> 2.5 mi</span>
-                            <span><i class="fas fa-arrow-up"></i> 200 ft</span>
-                            <span><i class="fas fa-clock"></i> 1 hr</span>
+                            <span><i class="fas fa-route"></i> 1.2 mi</span>
+                            <span><i class="fas fa-arrow-up"></i> 180 ft</span>
+                            <span><i class="fas fa-clock"></i> 1-2 hrs</span>
+                        </div>
+                        <div class="trail-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.8 (189 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trail Card 4 — Hollywell -->
+                <div class="trail-card reveal" data-difficulty="moderate">
+                    <div class="trail-card-img">
+                        <img src="https://images.unsplash.com/photo-1552083974-186346df2e9a?auto=format&fit=crop&w=800&q=80"
+                            alt="Hollywell Recreation Park Jamaica">
+                        <span class="trail-badge moderate">Moderate</span>
+                        <button class="trail-save" aria-label="Save trail"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="trail-card-body">
+                        <h3 class="trail-name">Hollywell Forest Park Loop</h3>
+                        <p class="trail-location"><i class="fas fa-map-marker-alt"></i> Irish Town, St. Andrew</p>
+                        <div class="trail-meta">
+                            <span><i class="fas fa-route"></i> 4.5 mi</span>
+                            <span><i class="fas fa-arrow-up"></i> 1,200 ft</span>
+                            <span><i class="fas fa-clock"></i> 3-4 hrs</span>
+                        </div>
+                        <div class="trail-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-text">4.6 (145 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trail Card 5 — Cunha Cunha Pass -->
+                <div class="trail-card reveal" data-difficulty="hard">
+                    <div class="trail-card-img">
+                        <img src="https://images.unsplash.com/photo-1500259571355-332da5cb07aa?auto=format&fit=crop&w=800&q=80"
+                            alt="Cunha Cunha Pass Blue Mountains Jamaica">
+                        <span class="trail-badge hard">Hard</span>
+                        <button class="trail-save" aria-label="Save trail"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="trail-card-body">
+                        <h3 class="trail-name">Cunha Cunha Pass</h3>
+                        <p class="trail-location"><i class="fas fa-map-marker-alt"></i> John Crow Mountains, Portland
+                        </p>
+                        <div class="trail-meta">
+                            <span><i class="fas fa-route"></i> 9.3 mi</span>
+                            <span><i class="fas fa-arrow-up"></i> 2,800 ft</span>
+                            <span><i class="fas fa-clock"></i> 7-9 hrs</span>
+                        </div>
+                        <div class="trail-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.9 (98 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trail Card 6 — YS Falls -->
+                <div class="trail-card reveal" data-difficulty="easy">
+                    <div class="trail-card-img">
+                        <img src="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&w=800&q=80"
+                            alt="YS Falls Jamaica">
+                        <span class="trail-badge easy">Easy</span>
+                        <button class="trail-save" aria-label="Save trail"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="trail-card-body">
+                        <h3 class="trail-name">YS Falls Riverside Walk</h3>
+                        <p class="trail-location"><i class="fas fa-map-marker-alt"></i> Middle Quarters, St. Elizabeth
+                        </p>
+                        <div class="trail-meta">
+                            <span><i class="fas fa-route"></i> 1.8 mi</span>
+                            <span><i class="fas fa-arrow-up"></i> 150 ft</span>
+                            <span><i class="fas fa-clock"></i> 1-2 hrs</span>
                         </div>
                         <div class="trail-rating">
                             <div class="stars">
@@ -253,7 +269,7 @@
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
                             </div>
-                            <span class="rating-text">4.2 (74 reviews)</span>
+                            <span class="rating-text">4.4 (112 reviews)</span>
                         </div>
                     </div>
                 </div>
@@ -267,7 +283,8 @@
             <div class="section-header reveal">
                 <span class="section-badge"><i class="fas fa-calendar-alt"></i> Schedule</span>
                 <h2 class="section-title">Upcoming Group Hikes</h2>
-                <p class="section-subtitle">Join us on our next adventure. All skill levels are welcome — just bring your enthusiasm!</p>
+                <p class="section-subtitle">Join us on our next adventure across Jamaica. All skill levels welcome —
+                    just bring yuh vibes!</p>
             </div>
             <div class="events-grid">
                 <!-- Event 1 -->
@@ -279,16 +296,18 @@
                     </div>
                     <div class="event-details">
                         <div class="event-top">
-                            <span class="event-badge moderate">Moderate</span>
-                            <span class="event-spots"><i class="fas fa-users"></i> 12 spots left</span>
+                            <span class="event-badge hard">Hard</span>
+                            <span class="event-spots"><i class="fas fa-users"></i> 10 spots left</span>
                         </div>
-                        <h3 class="event-name">Cascade Ridge Sunrise Hike</h3>
-                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> North Cascades, WA</p>
+                        <h3 class="event-name">Blue Mountain Peak Sunrise Hike</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Penlyne Castle, Portland</p>
                         <div class="event-info">
-                            <span><i class="fas fa-clock"></i> 6:00 AM — Meet at trailhead</span>
-                            <span><i class="fas fa-route"></i> 8.2 mi round trip</span>
+                            <span><i class="fas fa-clock"></i> 2:00 AM — Meet at Whitfield Hall</span>
+                            <span><i class="fas fa-route"></i> 7.5 mi round trip</span>
                         </div>
-                        <p class="event-desc">Early morning summit push to catch the sunrise over the Cascades. Headlamps required for the first mile.</p>
+                        <p class="event-desc">The ultimate Jamaica hike! Start before dawn to catch the sunrise from
+                            the highest point on the island — 7,402 ft. Headlamps essential, warm layers recommended.
+                        </p>
                         <a href="#contact" class="event-signup">Sign Up <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -305,13 +324,14 @@
                             <span class="event-badge easy">Easy</span>
                             <span class="event-spots"><i class="fas fa-users"></i> 25 spots left</span>
                         </div>
-                        <h3 class="event-name">Family Wildflower Walk</h3>
-                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Yosemite NP, CA</p>
+                        <h3 class="event-name">Reach Falls River Trek</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Manchioneal, Portland</p>
                         <div class="event-info">
-                            <span><i class="fas fa-clock"></i> 10:00 AM — Visitor Center</span>
-                            <span><i class="fas fa-route"></i> 2.5 mi loop</span>
+                            <span><i class="fas fa-clock"></i> 9:00 AM — Meet at entrance</span>
+                            <span><i class="fas fa-route"></i> 1.2 mi loop</span>
                         </div>
-                        <p class="event-desc">A relaxed family-friendly walk through blooming spring meadows. Naturalist-guided with photo stops!</p>
+                        <p class="event-desc">A relaxed family-friendly river trek through one of Jamaica's most
+                            stunning natural pools and cascades. Swim stops included!</p>
                         <a href="#contact" class="event-signup">Sign Up <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -325,16 +345,17 @@
                     </div>
                     <div class="event-details">
                         <div class="event-top">
-                            <span class="event-badge hard">Hard</span>
-                            <span class="event-spots"><i class="fas fa-users"></i> 8 spots left</span>
+                            <span class="event-badge moderate">Moderate</span>
+                            <span class="event-spots"><i class="fas fa-users"></i> 15 spots left</span>
                         </div>
-                        <h3 class="event-name">Summit Peak Challenge</h3>
-                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Mt. Rainier, WA</p>
+                        <h3 class="event-name">Hollywell Forest Exploration</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Irish Town, St. Andrew</p>
                         <div class="event-info">
-                            <span><i class="fas fa-clock"></i> 5:30 AM — Paradise Lot</span>
-                            <span><i class="fas fa-route"></i> 12.4 mi out & back</span>
+                            <span><i class="fas fa-clock"></i> 7:00 AM — Hollywell Gate</span>
+                            <span><i class="fas fa-route"></i> 4.5 mi loop</span>
                         </div>
-                        <p class="event-desc">Our biggest challenge of the spring. Prior high-altitude experience recommended. Post-hike cookout included!</p>
+                        <p class="event-desc">Explore the cloud forest of the Blue Mountains. Bird watching, cool
+                            mountain air, and panoramic views of Kingston. Post-hike jerk chicken included!</p>
                         <a href="#contact" class="event-signup">Sign Up <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -347,34 +368,39 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image reveal">
-                    <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=800&q=80" alt="Hiking group on mountain">
+                    <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80"
+                        alt="Jamaican hiking group in the Blue Mountains">
                     <div class="about-image-accent"></div>
                 </div>
                 <div class="about-content reveal">
                     <span class="section-badge"><i class="fas fa-heart"></i> Our Story</span>
-                    <h2 class="section-title">More Than a Hiking Group</h2>
-                    <p>Lifestyle Hikers started as a small group of friends who shared a passion for the outdoors. What began as weekend walks quickly grew into a vibrant community of adventurers spanning all ages and skill levels.</p>
-                    <p>We believe that the best trails are the ones you share with others. Whether you're a seasoned thru-hiker or lacing up boots for the first time, you'll find your place here.</p>
+                    <h2 class="section-title">Born in the Blue Mountains</h2>
+                    <p>Lifestyle Hikers was born from a love for Jamaica's incredible natural beauty. What started as a
+                        small group of friends exploring trails in the Blue Mountains has grown into one of the island's
+                        most vibrant outdoor communities.</p>
+                    <p>From the misty peaks of Portland to the river gorges of St. Elizabeth, we explore every corner of
+                        Jamaica on foot. Whether yuh a seasoned trail runner or just looking fi get outdoors for the
+                        first time — you belong here.</p>
                     <div class="about-features">
                         <div class="about-feature">
                             <div class="about-feature-icon"><i class="fas fa-users"></i></div>
                             <div>
-                                <h4>Inclusive Community</h4>
-                                <p>All ages, all fitness levels. We hike together.</p>
+                                <h4>One Community, One Love</h4>
+                                <p>All ages, all fitness levels. We hike together as family.</p>
                             </div>
                         </div>
                         <div class="about-feature">
                             <div class="about-feature-icon"><i class="fas fa-shield-alt"></i></div>
                             <div>
                                 <h4>Safety First</h4>
-                                <p>Certified guides and planned routes on every hike.</p>
+                                <p>Experienced guides and planned routes on every hike.</p>
                             </div>
                         </div>
                         <div class="about-feature">
                             <div class="about-feature-icon"><i class="fas fa-leaf"></i></div>
                             <div>
-                                <h4>Leave No Trace</h4>
-                                <p>We protect the trails we love for future generations.</p>
+                                <h4>Protect Wi Island</h4>
+                                <p>We practice Leave No Trace on every trail across Jamaica.</p>
                             </div>
                         </div>
                     </div>
@@ -388,54 +414,63 @@
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-badge"><i class="fas fa-camera"></i> Moments</span>
-                <h2 class="section-title">Trail Gallery</h2>
-                <p class="section-subtitle">Snapshots from our adventures — every hike tells a story.</p>
+                <h2 class="section-title">Jamaica Trail Gallery</h2>
+                <p class="section-subtitle">Snapshots from our adventures across the island — every hike tells a
+                    story.</p>
             </div>
             <div class="gallery-grid reveal">
                 <div class="gallery-item gallery-item-tall">
-                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=600&q=80" alt="Hikers on mountain trail">
+                    <img src="https://images.unsplash.com/photo-1545167496-28be8f7d5e5d?auto=format&fit=crop&w=600&q=80"
+                        alt="Jamaica tropical mountain landscape">
                     <div class="gallery-overlay">
                         <span><i class="fas fa-expand"></i></span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?auto=format&fit=crop&w=600&q=80" alt="Mountain summit view">
+                    <img src="https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&w=600&q=80"
+                        alt="Blue Mountain Peak view">
                     <div class="gallery-overlay">
                         <span><i class="fas fa-expand"></i></span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1445363692815-ebcd599f7621?auto=format&fit=crop&w=600&q=80" alt="Waterfall along trail">
+                    <img src="https://images.unsplash.com/photo-1432405972618-c6b0cfba1b4a?auto=format&fit=crop&w=600&q=80"
+                        alt="Jamaica waterfall swimming hole">
                     <div class="gallery-overlay">
                         <span><i class="fas fa-expand"></i></span>
                     </div>
                 </div>
                 <div class="gallery-item gallery-item-wide">
-                    <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" alt="Sunrise over mountains">
+                    <img src="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&w=800&q=80"
+                        alt="River through Jamaican rainforest">
                     <div class="gallery-overlay">
                         <span><i class="fas fa-expand"></i></span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80" alt="Forest trail">
+                    <img src="https://images.unsplash.com/photo-1552083974-186346df2e9a?auto=format&fit=crop&w=600&q=80"
+                        alt="Tropical forest trail Jamaica">
                     <div class="gallery-overlay">
                         <span><i class="fas fa-expand"></i></span>
                     </div>
                 </div>
                 <div class="gallery-item gallery-item-tall">
-                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80" alt="Alpine lake reflection">
+                    <img src="https://images.unsplash.com/photo-1500259571355-332da5cb07aa?auto=format&fit=crop&w=600&q=80"
+                        alt="Misty Blue Mountain ridge">
                     <div class="gallery-overlay">
                         <span><i class="fas fa-expand"></i></span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=600&q=80" alt="Foggy forest">
+                    <img src="https://images.unsplash.com/photo-1580746738699-3975c8421a74?auto=format&fit=crop&w=600&q=80"
+                        alt="Dunn's River Falls climbers">
                     <div class="gallery-overlay">
                         <span><i class="fas fa-expand"></i></span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=600&q=80" alt="Mountain path">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80"
+                        alt="Jamaica coastline sunset">
                     <div class="gallery-overlay">
                         <span><i class="fas fa-expand"></i></span>
                     </div>
@@ -447,13 +482,15 @@
     <!-- CTA / Contact Section -->
     <section class="section cta-section" id="contact">
         <div class="cta-bg">
-            <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=1920&q=80" alt="Mountain backdrop">
+            <img src="https://images.unsplash.com/photo-1500259571355-332da5cb07aa?auto=format&fit=crop&w=1920&q=80"
+                alt="Jamaica mountain backdrop">
             <div class="cta-overlay"></div>
         </div>
         <div class="container">
             <div class="cta-content reveal">
-                <h2 class="cta-title">Ready to Hit the Trail?</h2>
-                <p class="cta-subtitle">Join Lifestyle Hikers and become part of a community that lives for adventure. Your next great story starts here.</p>
+                <h2 class="cta-title">Ready fi Hit di Trail?</h2>
+                <p class="cta-subtitle">Join Lifestyle Hikers and discover Jamaica one trail at a time. Your next great
+                    adventure starts here.</p>
                 <form class="cta-form" id="joinForm">
                     <div class="form-row">
                         <div class="form-group">
@@ -466,9 +503,9 @@
                     <div class="form-group">
                         <select id="formExperience">
                             <option value="" disabled selected>Your Hiking Experience</option>
-                            <option value="beginner">Beginner — I'm just starting out</option>
-                            <option value="intermediate">Intermediate — I hike regularly</option>
-                            <option value="advanced">Advanced — I eat mountains for breakfast</option>
+                            <option value="beginner">Beginner — Mi just a start out</option>
+                            <option value="intermediate">Intermediate — Mi hike regular</option>
+                            <option value="advanced">Advanced — Mi eat mountain fi breakfast</option>
                         </select>
                     </div>
                     <button type="submit" class="cta-submit" id="submitBtn">
@@ -486,15 +523,16 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="#" class="footer-logo">
-                        <i class="fas fa-mountain"></i>
+                        <img src="logo.png" alt="Lifestyle Hikers Logo" class="footer-logo-img">
                         <span>Lifestyle Hikers</span>
                     </a>
-                    <p>A community of passionate outdoor enthusiasts exploring the world's most beautiful trails together.</p>
+                    <p>Jamaica's premier hiking community exploring the island's most beautiful mountains, waterfalls,
+                        and rivers together.</p>
                     <div class="footer-socials">
                         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="#" aria-label="Strava"><i class="fab fa-strava"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
                 <div class="footer-links-group">
@@ -521,12 +559,12 @@
                         <li><a href="mailto:hello@lifestylehikers.com">hello@lifestylehikers.com</a></li>
                         <li><a href="#">Newsletter</a></li>
                         <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Facebook Group</a></li>
+                        <li><a href="#">WhatsApp Group</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Lifestyle Hikers. All rights reserved.</p>
+                <p>&copy; 2026 Lifestyle Hikers Jamaica. All rights reserved.</p>
                 <div class="footer-bottom-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Use</a>
@@ -537,4 +575,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
