@@ -63,7 +63,9 @@
 }
 
 /* --- Reset & Base --- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -99,7 +101,10 @@ ul {
     list-style: none;
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
     font-family: var(--font-body);
     font-size: 1rem;
     border: none;
@@ -198,9 +203,11 @@ button, input, select, textarea {
     z-index: 1001;
 }
 
-.nav-logo i {
-    color: var(--clr-primary-light);
-    font-size: 1.5rem;
+.nav-logo-img {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 6px;
 }
 
 .nav-links {
@@ -297,20 +304,23 @@ button, input, select, textarea {
 }
 
 @keyframes heroZoom {
-    from { transform: scale(1.05); }
-    to { transform: scale(1.15); }
+    from {
+        transform: scale(1.05);
+    }
+
+    to {
+        transform: scale(1.15);
+    }
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        180deg,
-        rgba(15, 26, 18, 0.5) 0%,
-        rgba(15, 26, 18, 0.3) 40%,
-        rgba(15, 26, 18, 0.7) 80%,
-        rgba(15, 26, 18, 1) 100%
-    );
+    background: linear-gradient(180deg,
+            rgba(15, 26, 18, 0.5) 0%,
+            rgba(15, 26, 18, 0.3) 40%,
+            rgba(15, 26, 18, 0.7) 80%,
+            rgba(15, 26, 18, 1) 100%);
 }
 
 .hero-content {
@@ -470,9 +480,22 @@ button, input, select, textarea {
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(8px); }
-    60% { transform: translateY(4px); }
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(8px);
+    }
+
+    60% {
+        transform: translateY(4px);
+    }
 }
 
 /* ========================================
@@ -1012,11 +1035,9 @@ button, input, select, textarea {
 .cta-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        135deg,
-        rgba(15, 26, 18, 0.92) 0%,
-        rgba(27, 67, 50, 0.88) 100%
-    );
+    background: linear-gradient(135deg,
+            rgba(15, 26, 18, 0.92) 0%,
+            rgba(27, 67, 50, 0.88) 100%);
 }
 
 .cta-content {
@@ -1147,12 +1168,14 @@ button, input, select, textarea {
     margin-bottom: var(--space-lg);
 }
 
-.footer-logo i {
-    color: var(--clr-primary-light);
-    font-size: 1.4rem;
+.footer-logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 6px;
 }
 
-.footer-brand > p {
+.footer-brand>p {
     color: var(--clr-text-muted);
     font-size: 0.9rem;
     line-height: 1.7;
@@ -1252,11 +1275,25 @@ button, input, select, textarea {
 }
 
 /* stagger children */
-.trails-grid .reveal:nth-child(2) { transition-delay: 0.1s; }
-.trails-grid .reveal:nth-child(3) { transition-delay: 0.2s; }
-.trails-grid .reveal:nth-child(4) { transition-delay: 0.3s; }
-.trails-grid .reveal:nth-child(5) { transition-delay: 0.4s; }
-.trails-grid .reveal:nth-child(6) { transition-delay: 0.5s; }
+.trails-grid .reveal:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.trails-grid .reveal:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.trails-grid .reveal:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+.trails-grid .reveal:nth-child(5) {
+    transition-delay: 0.4s;
+}
+
+.trails-grid .reveal:nth-child(6) {
+    transition-delay: 0.5s;
+}
 
 /* ========================================
    RESPONSIVE
