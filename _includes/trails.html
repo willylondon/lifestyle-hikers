@@ -31,17 +31,12 @@
                     </div>
                     <div class="trail-rating">
                         <div class="stars">
-                            {% for i in (1..trail.stars) %}
-                            <i class="fas fa-star"></i>
-                            {% endfor %}
-                            {% if trail.half_star %}
-                            <i class="fas fa-star-half-alt"></i>
-                            {% endif %}
-                            {% assign empty = 5 | minus: trail.stars %}
-                            {% if trail.half_star %}{% assign empty = empty | minus: 1 %}{% endif %}
-                            {% for i in (1..empty) %}
-                            {% if empty > 0 %}<i class="far fa-star"></i>{% endif %}
-                            {% endfor %}
+                            {% if trail.stars >= 1 %}<i class="fas fa-star"></i>{% endif %}
+                            {% if trail.stars >= 2 %}<i class="fas fa-star"></i>{% endif %}
+                            {% if trail.stars >= 3 %}<i class="fas fa-star"></i>{% endif %}
+                            {% if trail.stars >= 4 %}<i class="fas fa-star"></i>{% endif %}
+                            {% if trail.stars >= 5 %}<i class="fas fa-star"></i>{% endif %}
+                            {% if trail.half_star %}<i class="fas fa-star-half-alt"></i>{% endif %}
                         </div>
                         <span class="rating-text">{{ trail.rating }} ({{ trail.reviews }} reviews)</span>
                     </div>
