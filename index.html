@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifestyle Hikers — Find Your Trail</title>
+    <meta name="description" content="Lifestyle Hikers is a community of passionate outdoor enthusiasts exploring the world's most beautiful trails together. Join our group hikes and discover your next adventure.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <i class="fas fa-mountain"></i>
+                <span>Lifestyle Hikers</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#trails">Trails</a></li>
+                <li><a href="#upcoming">Upcoming Hikes</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact" class="nav-cta">Join Us</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=1920&q=80" alt="Mountain landscape" class="hero-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-tagline reveal">A Community of Outdoor Enthusiasts</p>
+            <h1 class="hero-title reveal">Find Your <span class="text-gradient">Trail</span></h1>
+            <p class="hero-subtitle reveal">Explore the world's most breathtaking trails with a group of passionate hikers. Every weekend is an adventure.</p>
+            <div class="hero-search reveal">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search trails, parks, or locations..." id="searchInput">
+                    <button class="search-btn" id="searchBtn">Explore</button>
+                </div>
+            </div>
+            <div class="hero-stats reveal">
+                <div class="stat">
+                    <span class="stat-number" data-count="150">0</span>
+                    <span class="stat-label">Trails Explored</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="480">0</span>
+                    <span class="stat-label">Active Members</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="52">0</span>
+                    <span class="stat-label">Hikes This Year</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <a href="#trails">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Featured Trails Section -->
+    <section class="section trails-section" id="trails">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge"><i class="fas fa-compass"></i> Explore</span>
+                <h2 class="section-title">Featured Trails</h2>
+                <p class="section-subtitle">Hand-picked trails curated by our community — from serene forests to epic summit pushes.</p>
+            </div>
+            <div class="trails-filter reveal">
+                <button class="filter-btn active" data-filter="all">All Trails</button>
+                <button class="filter-btn" data-filter="easy">Easy</button>
+                <button class="filter-btn" data-filter="moderate">Moderate</button>
+                <button class="filter-btn" data-filter="hard">Hard</button>
+            </div>
+            <div class="trails-grid" id="trailsGrid">
+                <!-- Trail Card 1 -->
+                <div class="trail-card reveal" data-difficulty="moderate">
+                    <div class="trail-card-img">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Cascade Ridge Trail">
+                        <span class="trail-badge moderate">Moderate</span>
+                        <button class="trail-save" aria-label="Save trail"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="trail-card-body">
+                        <h3 class="trail-name">Cascade Ridge Trail</h3>
+                        <p class="trail-location"><i class="fas fa-map-marker-alt"></i> North Cascades, WA</p>
+                        <div class="trail-meta">
+                            <span><i class="fas fa-route"></i> 8.2 mi</span>
+                            <span><i class="fas fa-arrow-up"></i> 2,100 ft</span>
+                            <span><i class="fas fa-clock"></i> 4-5 hrs</span>
+                        </div>
+                        <div class="trail-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-text">4.7 (128 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trail Card 2 -->
+                <div class="trail-card reveal" data-difficulty="hard">
+                    <div class="trail-card-img">
+                        <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=80" alt="Summit Peak Loop">
+                        <span class="trail-badge hard">Hard</span>
+                        <button class="trail-save" aria-label="Save trail"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="trail-card-body">
+                        <h3 class="trail-name">Summit Peak Loop</h3>
+                        <p class="trail-location"><i class="fas fa-map-marker-alt"></i> Mt. Rainier, WA</p>
+                        <div class="trail-meta">
+                            <span><i class="fas fa-route"></i> 12.4 mi</span>
+                            <span><i class="fas fa-arrow-up"></i> 4,300 ft</span>
+                            <span><i class="fas fa-clock"></i> 7-9 hrs</span>
+                        </div>
+                        <div class="trail-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.9 (256 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trail Card 3 -->
+                <div class="trail-card reveal" data-difficulty="easy">
+                    <div class="trail-card-img">
+                        <img src="https://images.unsplash.com/photo-1440186347098-386b7459ad6b?auto=format&fit=crop&w=800&q=80" alt="Pine Valley Nature Walk">
+                        <span class="trail-badge easy">Easy</span>
+                        <button class="trail-save" aria-label="Save trail"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="trail-card-body">
+                        <h3 class="trail-name">Pine Valley Nature Walk</h3>
+                        <p class="trail-location"><i class="fas fa-map-marker-alt"></i> Olympic NP, WA</p>
+                        <div class="trail-meta">
+                            <span><i class="fas fa-route"></i> 3.1 mi</span>
+                            <span><i class="fas fa-arrow-up"></i> 340 ft</span>
+                            <span><i class="fas fa-clock"></i> 1-2 hrs</span>
+                        </div>
+                        <div class="trail-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.3 (89 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trail Card 4 -->
+                <div class="trail-card reveal" data-difficulty="moderate">
+                    <div class="trail-card-img">
+                        <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=800&q=80" alt="Emerald Lake Trail">
+                        <span class="trail-badge moderate">Moderate</span>
+                        <button class="trail-save" aria-label="Save trail"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="trail-card-body">
+                        <h3 class="trail-name">Emerald Lake Trail</h3>
+                        <p class="trail-location"><i class="fas fa-map-marker-alt"></i> Rocky Mountain NP, CO</p>
+                        <div class="trail-meta">
+                            <span><i class="fas fa-route"></i> 6.8 mi</span>
+                            <span><i class="fas fa-arrow-up"></i> 1,800 ft</span>
+                            <span><i class="fas fa-clock"></i> 3-4 hrs</span>
+                        </div>
+                        <div class="trail-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-text">4.6 (195 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trail Card 5 -->
+                <div class="trail-card reveal" data-difficulty="hard">
+                    <div class="trail-card-img">
+                        <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=800&q=80" alt="Angel's Crest Via Ferrata">
+                        <span class="trail-badge hard">Hard</span>
+                        <button class="trail-save" aria-label="Save trail"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="trail-card-body">
+                        <h3 class="trail-name">Angel's Crest Via Ferrata</h3>
+                        <p class="trail-location"><i class="fas fa-map-marker-alt"></i> Glacier NP, MT</p>
+                        <div class="trail-meta">
+                            <span><i class="fas fa-route"></i> 10.6 mi</span>
+                            <span><i class="fas fa-arrow-up"></i> 3,500 ft</span>
+                            <span><i class="fas fa-clock"></i> 6-8 hrs</span>
+                        </div>
+                        <div class="trail-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.8 (310 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trail Card 6 -->
+                <div class="trail-card reveal" data-difficulty="easy">
+                    <div class="trail-card-img">
+                        <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80" alt="Wildflower Meadow Path">
+                        <span class="trail-badge easy">Easy</span>
+                        <button class="trail-save" aria-label="Save trail"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="trail-card-body">
+                        <h3 class="trail-name">Wildflower Meadow Path</h3>
+                        <p class="trail-location"><i class="fas fa-map-marker-alt"></i> Yosemite NP, CA</p>
+                        <div class="trail-meta">
+                            <span><i class="fas fa-route"></i> 2.5 mi</span>
+                            <span><i class="fas fa-arrow-up"></i> 200 ft</span>
+                            <span><i class="fas fa-clock"></i> 1 hr</span>
+                        </div>
+                        <div class="trail-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.2 (74 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Hikes Section -->
+    <section class="section upcoming-section" id="upcoming">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge"><i class="fas fa-calendar-alt"></i> Schedule</span>
+                <h2 class="section-title">Upcoming Group Hikes</h2>
+                <p class="section-subtitle">Join us on our next adventure. All skill levels are welcome — just bring your enthusiasm!</p>
+            </div>
+            <div class="events-grid">
+                <!-- Event 1 -->
+                <div class="event-card reveal">
+                    <div class="event-date">
+                        <span class="event-month">MAR</span>
+                        <span class="event-day">08</span>
+                        <span class="event-weekday">Saturday</span>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-top">
+                            <span class="event-badge moderate">Moderate</span>
+                            <span class="event-spots"><i class="fas fa-users"></i> 12 spots left</span>
+                        </div>
+                        <h3 class="event-name">Cascade Ridge Sunrise Hike</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> North Cascades, WA</p>
+                        <div class="event-info">
+                            <span><i class="fas fa-clock"></i> 6:00 AM — Meet at trailhead</span>
+                            <span><i class="fas fa-route"></i> 8.2 mi round trip</span>
+                        </div>
+                        <p class="event-desc">Early morning summit push to catch the sunrise over the Cascades. Headlamps required for the first mile.</p>
+                        <a href="#contact" class="event-signup">Sign Up <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="event-card reveal">
+                    <div class="event-date">
+                        <span class="event-month">MAR</span>
+                        <span class="event-day">22</span>
+                        <span class="event-weekday">Saturday</span>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-top">
+                            <span class="event-badge easy">Easy</span>
+                            <span class="event-spots"><i class="fas fa-users"></i> 25 spots left</span>
+                        </div>
+                        <h3 class="event-name">Family Wildflower Walk</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Yosemite NP, CA</p>
+                        <div class="event-info">
+                            <span><i class="fas fa-clock"></i> 10:00 AM — Visitor Center</span>
+                            <span><i class="fas fa-route"></i> 2.5 mi loop</span>
+                        </div>
+                        <p class="event-desc">A relaxed family-friendly walk through blooming spring meadows. Naturalist-guided with photo stops!</p>
+                        <a href="#contact" class="event-signup">Sign Up <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="event-card reveal">
+                    <div class="event-date">
+                        <span class="event-month">APR</span>
+                        <span class="event-day">05</span>
+                        <span class="event-weekday">Saturday</span>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-top">
+                            <span class="event-badge hard">Hard</span>
+                            <span class="event-spots"><i class="fas fa-users"></i> 8 spots left</span>
+                        </div>
+                        <h3 class="event-name">Summit Peak Challenge</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Mt. Rainier, WA</p>
+                        <div class="event-info">
+                            <span><i class="fas fa-clock"></i> 5:30 AM — Paradise Lot</span>
+                            <span><i class="fas fa-route"></i> 12.4 mi out & back</span>
+                        </div>
+                        <p class="event-desc">Our biggest challenge of the spring. Prior high-altitude experience recommended. Post-hike cookout included!</p>
+                        <a href="#contact" class="event-signup">Sign Up <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image reveal">
+                    <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=800&q=80" alt="Hiking group on mountain">
+                    <div class="about-image-accent"></div>
+                </div>
+                <div class="about-content reveal">
+                    <span class="section-badge"><i class="fas fa-heart"></i> Our Story</span>
+                    <h2 class="section-title">More Than a Hiking Group</h2>
+                    <p>Lifestyle Hikers started as a small group of friends who shared a passion for the outdoors. What began as weekend walks quickly grew into a vibrant community of adventurers spanning all ages and skill levels.</p>
+                    <p>We believe that the best trails are the ones you share with others. Whether you're a seasoned thru-hiker or lacing up boots for the first time, you'll find your place here.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-users"></i></div>
+                            <div>
+                                <h4>Inclusive Community</h4>
+                                <p>All ages, all fitness levels. We hike together.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div>
+                                <h4>Safety First</h4>
+                                <p>Certified guides and planned routes on every hike.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-leaf"></i></div>
+                            <div>
+                                <h4>Leave No Trace</h4>
+                                <p>We protect the trails we love for future generations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge"><i class="fas fa-camera"></i> Moments</span>
+                <h2 class="section-title">Trail Gallery</h2>
+                <p class="section-subtitle">Snapshots from our adventures — every hike tells a story.</p>
+            </div>
+            <div class="gallery-grid reveal">
+                <div class="gallery-item gallery-item-tall">
+                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=600&q=80" alt="Hikers on mountain trail">
+                    <div class="gallery-overlay">
+                        <span><i class="fas fa-expand"></i></span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?auto=format&fit=crop&w=600&q=80" alt="Mountain summit view">
+                    <div class="gallery-overlay">
+                        <span><i class="fas fa-expand"></i></span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1445363692815-ebcd599f7621?auto=format&fit=crop&w=600&q=80" alt="Waterfall along trail">
+                    <div class="gallery-overlay">
+                        <span><i class="fas fa-expand"></i></span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item-wide">
+                    <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" alt="Sunrise over mountains">
+                    <div class="gallery-overlay">
+                        <span><i class="fas fa-expand"></i></span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80" alt="Forest trail">
+                    <div class="gallery-overlay">
+                        <span><i class="fas fa-expand"></i></span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item-tall">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80" alt="Alpine lake reflection">
+                    <div class="gallery-overlay">
+                        <span><i class="fas fa-expand"></i></span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=600&q=80" alt="Foggy forest">
+                    <div class="gallery-overlay">
+                        <span><i class="fas fa-expand"></i></span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=600&q=80" alt="Mountain path">
+                    <div class="gallery-overlay">
+                        <span><i class="fas fa-expand"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Contact Section -->
+    <section class="section cta-section" id="contact">
+        <div class="cta-bg">
+            <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=1920&q=80" alt="Mountain backdrop">
+            <div class="cta-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content reveal">
+                <h2 class="cta-title">Ready to Hit the Trail?</h2>
+                <p class="cta-subtitle">Join Lifestyle Hikers and become part of a community that lives for adventure. Your next great story starts here.</p>
+                <form class="cta-form" id="joinForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required id="formName">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required id="formEmail">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <select id="formExperience">
+                            <option value="" disabled selected>Your Hiking Experience</option>
+                            <option value="beginner">Beginner — I'm just starting out</option>
+                            <option value="intermediate">Intermediate — I hike regularly</option>
+                            <option value="advanced">Advanced — I eat mountains for breakfast</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="cta-submit" id="submitBtn">
+                        <span>Join the Community</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <i class="fas fa-mountain"></i>
+                        <span>Lifestyle Hikers</span>
+                    </a>
+                    <p>A community of passionate outdoor enthusiasts exploring the world's most beautiful trails together.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Strava"><i class="fab fa-strava"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#trails">Featured Trails</a></li>
+                        <li><a href="#upcoming">Upcoming Hikes</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#">Trail Map</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Join Us</a></li>
+                        <li><a href="#">Code of Conduct</a></li>
+                        <li><a href="#">Safety Guidelines</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:hello@lifestylehikers.com">hello@lifestylehikers.com</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook Group</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lifestyle Hikers. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
