@@ -1141,6 +1141,171 @@ textarea {
     pointer-events: none;
 }
 
+/* --- CTA Join Button (Google Form link) --- */
+.cta-join-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    padding: var(--space-lg) var(--space-3xl);
+    background: linear-gradient(135deg, var(--clr-primary), var(--clr-primary-light));
+    color: var(--clr-white);
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    font-size: 1.15rem;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    text-decoration: none;
+    margin-top: var(--space-xl);
+    box-shadow: var(--shadow-md);
+}
+
+.cta-join-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-glow);
+    color: var(--clr-white);
+}
+
+/* ========================================
+   MERCHANDISE SECTION
+   ======================================== */
+.merch-section {
+    background: var(--clr-dark-surface);
+}
+
+.merch-content {
+    display: flex;
+    justify-content: center;
+}
+
+.merch-card {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    background: var(--clr-dark-card);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all var(--transition-base);
+}
+
+.merch-card:hover {
+    border-color: var(--clr-primary-light);
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
+}
+
+.merch-card-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 280px;
+    padding: var(--space-3xl);
+    background: linear-gradient(135deg, rgba(45, 106, 79, 0.15), rgba(64, 145, 108, 0.08));
+    position: relative;
+}
+
+.merch-tshirt-display {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.merch-tshirt-icon {
+    font-size: 8rem;
+    color: var(--clr-primary);
+    opacity: 0.9;
+    filter: drop-shadow(0 4px 20px rgba(45, 106, 79, 0.3));
+}
+
+.merch-logo-overlay {
+    position: absolute;
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--clr-accent-light);
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(4px);
+}
+
+.merch-card-body {
+    padding: var(--space-2xl);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.merch-item-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr-white);
+    margin-bottom: var(--space-md);
+}
+
+.merch-item-desc {
+    color: var(--clr-text-muted);
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
+    font-size: 0.95rem;
+}
+
+.merch-sizes {
+    display: flex;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xl);
+    flex-wrap: wrap;
+}
+
+.size-tag {
+    padding: var(--space-xs) var(--space-md);
+    background: var(--clr-glass-light);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--clr-text);
+    letter-spacing: 0.5px;
+}
+
+.merch-order-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-2xl);
+    background: linear-gradient(135deg, var(--clr-accent), #e5a41e);
+    color: var(--clr-dark);
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all var(--transition-base);
+    width: fit-content;
+    box-shadow: 0 4px 15px rgba(233, 196, 106, 0.3);
+}
+
+.merch-order-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(233, 196, 106, 0.45);
+    color: var(--clr-dark);
+}
+
+@media (max-width: 768px) {
+    .merch-card {
+        flex-direction: column;
+    }
+
+    .merch-card-visual {
+        min-width: unset;
+        padding: var(--space-2xl);
+    }
+
+    .merch-tshirt-icon {
+        font-size: 5rem;
+    }
+}
+
 /* ========================================
    FOOTER
    ======================================== */
