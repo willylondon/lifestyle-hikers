@@ -1,0 +1,35 @@
+title: Lifestyle Hikers
+description: "Jamaica's premier hiking community exploring the Blue Mountains, waterfalls, rivers, and hidden trails across the island."
+url: "https://willylondon.github.io"
+baseurl: "/lifestyle-hikers"
+timezone: America/Jamaica
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+
+# Site settings
+email: hello@lifestylehikers.com
+formspree_id: "xpwzgkvl"  # Replace with your Formspree form ID
+
+# Social links
+social:
+  instagram: "#"
+  facebook: "#"
+  youtube: "#"
+  whatsapp: "#"
+
+# Default front matter
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"

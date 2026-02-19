@@ -1,0 +1,34 @@
+# Gallery images — Add new photos by adding entries here
+# Each item needs: image URL, alt text, and optionally a size class (tall, wide, or leave blank)
+
+- image: "https://images.unsplash.com/photo-1545167496-28be8f7d5e5d?auto=format&fit=crop&w=600&q=80"
+  alt: "Jamaica tropical mountain landscape"
+  size: "tall"
+
+- image: "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&w=600&q=80"
+  alt: "Blue Mountain Peak view"
+  size: ""
+
+- image: "https://images.unsplash.com/photo-1432405972618-c6b0cfba1b4a?auto=format&fit=crop&w=600&q=80"
+  alt: "Jamaica waterfall swimming hole"
+  size: ""
+
+- image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&w=800&q=80"
+  alt: "River through Jamaican rainforest"
+  size: "wide"
+
+- image: "https://images.unsplash.com/photo-1552083974-186346df2e9a?auto=format&fit=crop&w=600&q=80"
+  alt: "Tropical forest trail Jamaica"
+  size: ""
+
+- image: "https://images.unsplash.com/photo-1500259571355-332da5cb07aa?auto=format&fit=crop&w=600&q=80"
+  alt: "Misty Blue Mountain ridge"
+  size: "tall"
+
+- image: "https://images.unsplash.com/photo-1580746738699-3975c8421a74?auto=format&fit=crop&w=600&q=80"
+  alt: "Dunn's River Falls climbers"
+  size: ""
+
+- image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80"
+  alt: "Jamaica coastline sunset"
+  size: ""

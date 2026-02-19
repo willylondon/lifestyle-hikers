@@ -1,0 +1,80 @@
+# Trail data — Add, edit, or remove trails here
+# Each trail needs: name, location, difficulty, distance, elevation, time, rating, reviews, image
+
+- name: "Blue Mountain Peak Trail"
+  location: "Portland / St. Thomas"
+  difficulty: "hard"
+  distance: "7.5 mi"
+  elevation: "3,200 ft"
+  time: "6-8 hrs"
+  rating: 4.9
+  stars: 5
+  half_star: false
+  reviews: 312
+  image: "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&w=800&q=80"
+  alt: "Blue Mountain Peak Jamaica"
+
+- name: "Dunn's River Falls Climb"
+  location: "Ocho Rios, St. Ann"
+  difficulty: "moderate"
+  distance: "0.4 mi"
+  elevation: "600 ft"
+  time: "1-2 hrs"
+  rating: 4.7
+  stars: 4
+  half_star: true
+  reviews: 256
+  image: "https://images.unsplash.com/photo-1580746738699-3975c8421a74?auto=format&fit=crop&w=800&q=80"
+  alt: "Dunn's River Falls Jamaica"
+
+- name: "Reach Falls Nature Trail"
+  location: "Manchioneal, Portland"
+  difficulty: "easy"
+  distance: "1.2 mi"
+  elevation: "180 ft"
+  time: "1-2 hrs"
+  rating: 4.8
+  stars: 5
+  half_star: false
+  reviews: 189
+  image: "https://images.unsplash.com/photo-1432405972618-c6b0cfba1b4a?auto=format&fit=crop&w=800&q=80"
+  alt: "Reach Falls Portland Jamaica"
+
+- name: "Hollywell Forest Park Loop"
+  location: "Irish Town, St. Andrew"
+  difficulty: "moderate"
+  distance: "4.5 mi"
+  elevation: "1,200 ft"
+  time: "3-4 hrs"
+  rating: 4.6
+  stars: 4
+  half_star: true
+  reviews: 145
+  image: "https://images.unsplash.com/photo-1552083974-186346df2e9a?auto=format&fit=crop&w=800&q=80"
+  alt: "Hollywell Recreation Park Jamaica"
+
+- name: "Cunha Cunha Pass"
+  location: "John Crow Mountains, Portland"
+  difficulty: "hard"
+  distance: "9.3 mi"
+  elevation: "2,800 ft"
+  time: "7-9 hrs"
+  rating: 4.9
+  stars: 5
+  half_star: false
+  reviews: 98
+  image: "https://images.unsplash.com/photo-1500259571355-332da5cb07aa?auto=format&fit=crop&w=800&q=80"
+  alt: "Cunha Cunha Pass Blue Mountains Jamaica"
+
+- name: "YS Falls Riverside Walk"
+  location: "Middle Quarters, St. Elizabeth"
+  difficulty: "easy"
+  distance: "1.8 mi"
+  elevation: "150 ft"
+  time: "1-2 hrs"
+  rating: 4.4
+  stars: 4
+  half_star: false
+  reviews: 112
+  image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&w=800&q=80"
+  alt: "YS Falls Jamaica"

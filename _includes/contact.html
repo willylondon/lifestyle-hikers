@@ -1,0 +1,39 @@
+<!-- CTA / Contact Section — Formspree Integration -->
+<section class="section cta-section" id="contact">
+    <div class="cta-bg">
+        <img src="https://images.unsplash.com/photo-1500259571355-332da5cb07aa?auto=format&fit=crop&w=1920&q=80"
+            alt="Jamaica mountain backdrop">
+        <div class="cta-overlay"></div>
+    </div>
+    <div class="container">
+        <div class="cta-content reveal">
+            <h2 class="cta-title">Ready fi Hit di Trail?</h2>
+            <p class="cta-subtitle">Join Lifestyle Hikers and discover Jamaica one trail at a time. Your next great
+                adventure starts here.</p>
+            <form class="cta-form" id="joinForm" action="https://formspree.io/f/{{ site.formspree_id }}" method="POST">
+                <input type="hidden" name="_subject" value="New Lifestyle Hikers Sign-up!">
+                <input type="hidden" name="_next" value="{{ site.url }}{{ site.baseurl }}/?joined=true">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required id="formName">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required id="formEmail">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <select name="experience" id="formExperience">
+                        <option value="" disabled selected>Your Hiking Experience</option>
+                        <option value="beginner">Beginner — Mi just a start out</option>
+                        <option value="intermediate">Intermediate — Mi hike regular</option>
+                        <option value="advanced">Advanced — Mi eat mountain fi breakfast</option>
+                    </select>
+                </div>
+                <button type="submit" class="cta-submit" id="submitBtn">
+                    <span>Join the Community</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
