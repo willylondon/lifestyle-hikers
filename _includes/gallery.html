@@ -7,7 +7,7 @@
             <p class="section-subtitle">Snapshots from our adventures across the island — every hike tells a story.</p>
         </div>
         <div class="gallery-grid reveal">
-            {% for photo in site.data.gallery %}
+            {% for photo in site.data.gallery.items %}
             <div
                 class="gallery-item {% if photo.size == 'tall' %}gallery-item-tall{% endif %}{% if photo.size == 'wide' %}gallery-item-wide{% endif %}">
                 <img src="{{ photo.image }}" alt="{{ photo.alt }}">

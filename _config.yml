@@ -9,11 +9,16 @@ markdown: kramdown
 plugins:
   - jekyll-seo-tag
 
+# Include admin folder for Decap CMS
+include:
+  - admin
+
 # Exclude from build
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - README-CMS.md
 
 # Site settings
 email: lifestylehikersja@gmail.com

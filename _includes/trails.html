@@ -14,7 +14,7 @@
             <button class="filter-btn" data-filter="hard">Hard</button>
         </div>
         <div class="trails-grid" id="trailsGrid">
-            {% for trail in site.data.trails %}
+            {% for trail in site.data.trails.items %}
             <div class="trail-card reveal" data-difficulty="{{ trail.difficulty }}">
                 <div class="trail-card-img">
                     <img src="{{ trail.image }}" alt="{{ trail.alt }}">
