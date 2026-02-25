@@ -1,0 +1,36 @@
+<!-- Upcoming Hikes Section — Data driven from _data/events.yml -->
+<section class="section upcoming-section" id="upcoming">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-badge"><i class="fas fa-calendar-alt"></i> Schedule</span>
+            <h2 class="section-title">Upcoming Group Hikes</h2>
+            <p class="section-subtitle">Join us on our next adventure across Jamaica. All skill levels welcome —
+                just bring yuh vibes!</p>
+        </div>
+        <div class="events-grid">
+            {% for event in site.data.events.items %}
+            <div class="event-card reveal">
+                <div class="event-date">
+                    <span class="event-month">{{ event.month }}</span>
+                    <span class="event-day">{{ event.day }}</span>
+                    <span class="event-weekday">{{ event.weekday }}</span>
+                </div>
+                <div class="event-details">
+                    <div class="event-top">
+                        <span class="event-badge {{ event.difficulty }}">{{ event.difficulty | capitalize }}</span>
+                        <span class="event-spots"><i class="fas fa-users"></i> {{ event.spots }} spots left</span>
+                    </div>
+                    <h3 class="event-name">{{ event.name }}</h3>
+                    <p class="event-location"><i class="fas fa-map-marker-alt"></i> {{ event.location }}</p>
+                    <div class="event-info">
+                        <span><i class="fas fa-clock"></i> {{ event.time }}</span>
+                        <span><i class="fas fa-route"></i> {{ event.distance }}</span>
+                    </div>
+                    <p class="event-desc">{{ event.description }}</p>
+                    <a href="#contact" class="event-signup">Sign Up <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

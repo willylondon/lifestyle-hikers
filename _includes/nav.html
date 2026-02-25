@@ -1,0 +1,26 @@
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="{{ '/' | relative_url }}" class="nav-logo">
+            <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Lifestyle Hikers Logo" class="nav-logo-img">
+            <span>Lifestyle Hikers</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="{{ '/' | relative_url }}#trails">Trails</a></li>
+            <li><a href="{{ '/' | relative_url }}#upcoming">Upcoming Hikes</a></li>
+            <li><a href="{{ '/' | relative_url }}#about">About Us</a></li>
+            <li><a href="{{ '/' | relative_url }}#gallery">Gallery</a></li>
+            <li><a href="{{ '/corporate.html' | relative_url }}" {% if page.url=='/corporate.html' %}class="active" {%
+                    endif %}>Corporate</a></li>
+            <li><a href="{{ '/' | relative_url }}#merch">Merch</a></li>
+            <li><a href="{{ '/blog' | relative_url }}" {% if page.url=='/blog' or page.layout=='post' %}class="active"
+                    {% endif %}>Blog</a></li>
+            <li><a href="{{ '/' | relative_url }}#contact" class="nav-cta">Join Us</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>

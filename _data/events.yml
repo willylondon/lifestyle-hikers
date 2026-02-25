@@ -1,0 +1,35 @@
+# Upcoming hikes — Managed via Decap CMS at /admin
+
+items:
+  - name: "Blue Mountain Peak Sunrise Hike"
+    location: "Penlyne Castle, Portland"
+    difficulty: "hard"
+    month: "MAR"
+    day: "08"
+    weekday: "Saturday"
+    time: "2:00 AM — Meet at Whitfield Hall"
+    distance: "7.5 mi round trip"
+    spots: 10
+    description: "The ultimate Jamaica hike! Start before dawn to catch the sunrise from the highest point on the island — 7,402 ft. Headlamps essential, warm layers recommended."
+
+  - name: "Reach Falls River Trek"
+    location: "Manchioneal, Portland"
+    difficulty: "easy"
+    month: "MAR"
+    day: "22"
+    weekday: "Saturday"
+    time: "9:00 AM — Meet at entrance"
+    distance: "1.2 mi loop"
+    spots: 25
+    description: "A relaxed family-friendly river trek through one of Jamaica's most stunning natural pools and cascades. Swim stops included!"
+
+  - name: "Hollywell Forest Exploration"
+    location: "Irish Town, St. Andrew"
+    difficulty: "moderate"
+    month: "APR"
+    day: "05"
+    weekday: "Saturday"
+    time: "7:00 AM — Hollywell Gate"
+    distance: "4.5 mi loop"
+    spots: 15
+    description: "Explore the cloud forest of the Blue Mountains. Bird watching, cool mountain air, and panoramic views of Kingston. Post-hike jerk chicken included!"

@@ -1,0 +1,57 @@
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="{{ '/' | relative_url }}" class="footer-logo">
+                    <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Lifestyle Hikers Logo"
+                        class="footer-logo-img">
+                    <span>Lifestyle Hikers</span>
+                </a>
+                <p>Jamaica's premier hiking community exploring the island's most beautiful mountains, waterfalls,
+                    and rivers together.</p>
+                <div class="footer-socials">
+                    <a href="{{ site.social.instagram }}" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="{{ site.social.facebook }}" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="{{ site.social.youtube }}" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="{{ site.social.whatsapp }}" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-links-group">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="{{ '/' | relative_url }}#trails">Featured Trails</a></li>
+                    <li><a href="{{ '/' | relative_url }}#upcoming">Upcoming Hikes</a></li>
+                    <li><a href="{{ '/' | relative_url }}#gallery">Gallery</a></li>
+                    <li><a href="{{ '/' | relative_url }}#merch">Merch</a></li>
+                    <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-group">
+                <h4>Community</h4>
+                <ul>
+                    <li><a href="{{ '/' | relative_url }}#about">About Us</a></li>
+                    <li><a href="{{ '/' | relative_url }}#contact">Join Us</a></li>
+                    <li><a href="#">Code of Conduct</a></li>
+                    <li><a href="#">Safety Guidelines</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-group">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="{{ site.social.instagram }}">Instagram</a></li>
+                    <li><a href="{{ site.social.whatsapp }}">WhatsApp Group</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; {{ 'now' | date: "%Y" }} Lifestyle Hikers Jamaica. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+            </div>
+        </div>
+    </div>
+</footer>

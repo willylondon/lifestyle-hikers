@@ -1,0 +1,289 @@
+---
+layout: default
+title: Corporate Packages
+description: Lifestyle Hikers Corporate Hiking Packages for team outings, executive wellness, and boutique experiences.
+---
+
+<style>
+    .corporate-hero {
+        padding: 120px 0 60px;
+        text-align: center;
+        background-color: var(--light-bg);
+    }
+
+    .corporate-hero h1 {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+    }
+
+    .corporate-hero p {
+        font-size: 1.1rem;
+        color: var(--text-light);
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .packages-section {
+        padding: 80px 0;
+        background-color: var(--white);
+    }
+
+    .packages-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+    }
+
+    .package-card {
+        background: var(--white);
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .package-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .package-card.featured {
+        background: var(--primary-color);
+        color: var(--white);
+    }
+
+    .package-card.featured * {
+        color: var(--white);
+    }
+
+    .package-badge {
+        position: absolute;
+        top: 20px;
+        right: -35px;
+        background: var(--secondary-color);
+        color: var(--white);
+        padding: 5px 40px;
+        transform: rotate(45deg);
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .package-icon {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+    }
+
+    .package-card.featured .package-icon {
+        color: var(--white);
+    }
+
+    .package-title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .package-size {
+        font-size: 0.9rem;
+        color: var(--text-light);
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+        display: block;
+    }
+    
+    .package-card.featured .package-size {
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .package-price {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .package-price span {
+        font-size: 1rem;
+        font-weight: 400;
+        color: var(--text-light);
+    }
+    
+    .package-card.featured .package-price span {
+         color: rgba(255, 255, 255, 0.8);
+    }
+
+    .package-best-for {
+        font-size: 0.95rem;
+        font-weight: 500;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        color: var(--text-light);
+    }
+    
+    .package-card.featured .package-best-for {
+        border-bottom-color: rgba(255, 255, 255, 0.2);
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .package-features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 30px 0;
+    }
+
+    .package-features li {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 15px;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .package-features li::before {
+        content: '\f00c';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        color: var(--primary-color);
+    }
+    
+    .package-card.featured .package-features li::before {
+        color: var(--secondary-color);
+    }
+
+    .package-cta {
+        display: block;
+        text-align: center;
+        padding: 15px 30px;
+        border-radius: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+
+    .package-cta-outline {
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+    }
+
+    .package-cta-outline:hover {
+        background: var(--primary-color);
+        color: var(--white);
+    }
+
+    .package-cta-solid {
+        background: var(--white);
+        color: var(--primary-color) !important;
+    }
+
+    .package-cta-solid:hover {
+        background: var(--light-bg);
+        transform: translateY(-2px);
+    }
+
+    .corporate-note {
+        margin-top: 60px;
+        padding: 30px;
+        background: var(--light-bg);
+        border-radius: 15px;
+        border-left: 4px solid var(--secondary-color);
+    }
+
+    .corporate-note p {
+        margin: 0;
+        color: var(--text-dark);
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .corporate-note strong {
+        color: var(--primary-color);
+    }
+</style>
+
+<section class="corporate-hero">
+    <div class="container reveal">
+        <h1>Corporate Hiking Packages</h1>
+        <p>Elevate your team's spirit, wellness, and camaraderie with our tailored outdoor experiences. From small strategic groups to company-wide adventures, we handle the logistics so you can focus on the journey.</p>
+    </div>
+</section>
+
+<section class="packages-section">
+    <div class="container">
+        <div class="packages-grid">
+            <!-- Small Group -->
+            <div class="package-card reveal" style="transition-delay: 0.1s;">
+                <i class="fas fa-users package-icon"></i>
+                <h3 class="package-title">Small Group</h3>
+                <span class="package-size">1–25 Participants</span>
+                <div class="package-price">JMD 5,000 – 10,000<span>/person</span></div>
+                <div class="package-best-for">
+                    <strong>Best for:</strong> Small team outings, executive wellness, boutique experiences.
+                </div>
+                <ul class="package-features">
+                    <li>Professional guide(s)</li>
+                    <li>Safety gear (if needed)</li>
+                    <li>Refreshment support</li>
+                    <li>Trail entry permits</li>
+                    <li>Basic first-aid support</li>
+                    <li>3–5 minute video recap of the hike plus professional photos</li>
+                </ul>
+                <a href="{{ '/' | relative_url }}#contact" class="package-cta package-cta-outline">Inquire Now</a>
+            </div>
+
+            <!-- Medium Group -->
+            <div class="package-card featured reveal" style="transition-delay: 0.2s;">
+                <div class="package-badge">Popular</div>
+                <i class="fas fa-users-cog package-icon"></i>
+                <h3 class="package-title">Medium Group</h3>
+                <span class="package-size">26–100 Participants</span>
+                <div class="package-price">JMD 7,000 – 12,000<span>/person</span></div>
+                <div class="package-best-for">
+                    <strong>Best for:</strong> Mid-size teams or company-wide wellness events.
+                </div>
+                <ul class="package-features">
+                    <li>Multiple professional guides and assistants</li>
+                    <li>Safety gear and communication support</li>
+                    <li>Refreshment support</li>
+                    <li>5–10 minute video recap of the hike plus professional photos</li>
+                </ul>
+                <a href="{{ '/' | relative_url }}#contact" class="package-cta package-cta-solid">Book This Package</a>
+            </div>
+
+            <!-- Large Group -->
+            <div class="package-card reveal" style="transition-delay: 0.3s;">
+                <i class="fas fa-network-wired package-icon"></i>
+                <h3 class="package-title">Large Group</h3>
+                <span class="package-size">101–150 Participants</span>
+                <div class="package-price">JMD 8,000 – 14,000<span>/person</span></div>
+                <div class="package-best-for">
+                    <strong>Best for:</strong> Large divisions, departments, or multi-location teams.
+                </div>
+                <ul class="package-features">
+                    <li>Extra professional guides and safety staff</li>
+                    <li>Refreshment support</li>
+                    <li>Logistics support for staggered group starts</li>
+                    <li>Optional wellness talk or guided stretching session before the hike</li>
+                </ul>
+                <a href="{{ '/' | relative_url }}#contact" class="package-cta package-cta-outline">Request Quote</a>
+            </div>
+        </div>
+
+        <div class="corporate-note reveal" style="transition-delay: 0.4s;">
+            <p><strong>Note:</strong> Larger groups require additional coordination and staffing. Pricing reflects expanded logistics and planning to ensure a seamless and safe experience for everyone involved.</p>
+        </div>
+    </div>
+</section>

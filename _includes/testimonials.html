@@ -1,0 +1,179 @@
+<!-- Testimonials Section (CSS Scroll Snapping) -->
+<section class="section testimonials-section" id="testimonials">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-badge"><i class="fas fa-comment-quote"></i> Reviews</span>
+            <h2 class="section-title">What Hikers Say</h2>
+            <p class="section-subtitle">Real experiences from our community and corporate partners.</p>
+        </div>
+
+        <div class="testimonials-slider reveal">
+            <!-- Review 1 -->
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <p class="testimonial-text">"The Blue Mountain hike was incredibly well-organized. The guides were
+                    patient, knowledgeable, and the recap video they provided was the perfect keepsake. Highly recommend
+                    Lifestyle Hikers!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar"><i class="fas fa-user"></i></div>
+                    <div class="author-info">
+                        <h4>Sarah Jenkins</h4>
+                        <span>Weekend Hiker</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <p class="testimonial-text">"We booked a Medium Group corporate package for our annual off-site. The
+                    logistics were flawless, and the team building that happened on the trail was invaluable. A top-tier
+                    experience."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar"><i class="fas fa-building"></i></div>
+                    <div class="author-info">
+                        <h4>Marcus Wright</h4>
+                        <span>HR Director, TechCorp JA</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <p class="testimonial-text">"Catherine's Peak has always been on my bucket list. Going with this group
+                    made it feel safe and fun. The vibes, the music at the end, and the amazing photos made the day
+                    perfect."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar"><i class="fas fa-user"></i></div>
+                    <div class="author-info">
+                        <h4>Aaliyah Thompson</h4>
+                        <span>Nature Enthusiast</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-hint reveal">
+            <i class="fas fa-arrows-alt-h"></i> Swipe to see more
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Scoped Testimonials CSS */
+    .testimonials-section {
+        background: linear-gradient(180deg, var(--clr-dark), var(--clr-dark-surface));
+    }
+
+    .testimonials-slider {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        gap: var(--space-xl);
+        padding: var(--space-xl) 0;
+        -ms-overflow-style: none;
+        /* IE/Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .testimonials-slider::-webkit-scrollbar {
+        display: none;
+        /* Chrome/Safari */
+    }
+
+    .testimonial-card {
+        flex: 0 0 100%;
+        /* Shows 1 on mobile */
+        scroll-snap-align: center;
+        background: var(--clr-dark-card);
+        border: 1px solid var(--clr-border);
+        border-radius: var(--radius-lg);
+        padding: var(--space-2xl);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    @media (min-width: 768px) {
+        .testimonial-card {
+            flex: 0 0 calc(50% - var(--space-xl) / 2);
+            /* Shows 2 on tablet */
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .testimonial-card {
+            flex: 0 0 calc(33.333% - (var(--space-xl) * 2) / 3);
+            /* Shows 3 on desktop */
+        }
+    }
+
+    .quote-icon {
+        font-size: 2rem;
+        color: var(--clr-primary-light);
+        opacity: 0.3;
+        margin-bottom: var(--space-md);
+    }
+
+    .testimonial-text {
+        font-size: 1.05rem;
+        font-style: italic;
+        color: var(--clr-text);
+        margin-bottom: var(--space-xl);
+        flex-grow: 1;
+    }
+
+    .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: var(--space-md);
+        border-top: 1px solid var(--clr-border);
+        padding-top: var(--space-md);
+    }
+
+    .author-avatar {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: var(--clr-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--clr-white);
+        font-size: 1.2rem;
+    }
+
+    .author-info h4 {
+        color: var(--clr-white);
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .author-info span {
+        color: var(--clr-text-muted);
+        font-size: 0.85rem;
+    }
+
+    .slider-hint {
+        text-align: center;
+        color: var(--clr-text-muted);
+        font-size: 0.85rem;
+        margin-top: var(--space-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        opacity: 0.6;
+    }
+
+    @media (min-width: 1024px) {
+        .slider-hint {
+            display: none;
+            /* Hide hint on desktop since all 3 fit */
+        }
+    }
+</style>

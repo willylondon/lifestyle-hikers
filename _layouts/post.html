@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} — {{ site.title }}</title>
+    <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
+    <link rel="icon" type="image/png" href="{{ '/assets/images/logo.png' | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    {% seo %}
+</head>
+
+<body>
+    {% include nav.html %}
+
+    <article class="blog-post-page">
+        <div class="container">
+            <div class="blog-post-header">
+                <a href="{{ '/blog' | relative_url }}" class="blog-back"><i class="fas fa-arrow-left"></i> Back to
+                    Blog</a>
+                <span class="section-badge"><i class="fas fa-hiking"></i> {{ page.category | default: "Trail Stories"
+                    }}</span>
+                <h1 class="blog-post-title">{{ page.title }}</h1>
+                <div class="blog-post-meta">
+                    <span><i class="fas fa-calendar"></i> {{ page.date | date: "%B %d, %Y" }}</span>
+                    {% if page.author %}<span><i class="fas fa-user"></i> {{ page.author }}</span>{% endif %}
+                    {% if page.location %}<span><i class="fas fa-map-marker-alt"></i> {{ page.location }}</span>{% endif
+                    %}
+                </div>
+                {% if page.image %}
+                <div class="blog-post-hero">
+                    <img src="{{ page.image }}" alt="{{ page.title }}">
+                </div>
+                {% endif %}
+            </div>
+            <div class="blog-post-content">
+                {{ content }}
+            </div>
+        </div>
+    </article>
+
+    {% include footer.html %}
+    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+items:
+  - stars: 5
+    alt: Blue Mountain Peak Jamaica
+    name: Blue Mountain Peak Trail
+    time: 6-8 hrs
+    location: Portland / St. Thomas
+    distance: 7.5 mi
+    reviews: 312
+    image: /assets/images/uploads/34f187fa-6161-450c-baaa-1f720bc3e1c3.jpeg
+    difficulty: hard
+    rating: 4.9
+    elevation: 3,200 ft
+    half_star: false
+  - stars: 4
+    alt: Dunn's River Falls Jamaica
+    name: Dunn's River Falls Climb
+    time: 1-2 hrs
+    location: Ocho Rios, St. Ann
+    distance: 0.4 mi
+    reviews: 256
+    image: https://images.unsplash.com/photo-1580746738699-3975c8421a74?auto=format&fit=crop&w=800&q=80
+    difficulty: moderate
+    rating: 4.7
+    elevation: 600 ft
+    half_star: true
+  - stars: 5
+    alt: Reach Falls Portland Jamaica
+    name: Reggae Falls Nature Trail
+    time: 1-2 hrs
+    location: St Thomas
+    distance: 1.2 mi
+    reviews: 189
+    image: /assets/images/uploads/shared39.jpeg
+    difficulty: easy
+    rating: 4.8
+    elevation: 180 ft
+    half_star: false
+  - stars: 4
+    alt: Hollywell Recreation Park Jamaica
+    name: Hollywell Forest Park Loop
+    time: 3-4 hrs
+    location: Irish Town, St. Andrew
+    distance: 4.5 mi
+    reviews: 145
+    image: /assets/images/uploads/img_9978.jpeg
+    difficulty: moderate
+    rating: 4.6
+    elevation: 1,200 ft
+    half_star: true
+  - stars: 5
+    alt: Cinchona Botanical Gardens
+    name: Cinchona Botanical Gardens
+    time: 1.5-2 hours
+    location: It sit about 5,000 feet above sea level, along the road between Mavis
+      Bank and Newcastle.
+    distance: 6.5 miles
+    reviews: 98
+    image: /assets/images/uploads/img_0905.jpeg
+    difficulty: moderate
+    rating: 4.9
+    elevation: 2,800 ft
+    half_star: false
+  - stars: 4
+    alt: YS Falls Jamaica
+    name: YS Falls Riverside Walk
+    time: 1-2 hrs
+    location: Middle Quarters, St. Elizabeth
+    distance: 1.8 mi
+    reviews: 112
+    image: https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&w=800&q=80
+    difficulty: easy
+    rating: 4.4
+    elevation: 150 ft
+    half_star: false

@@ -1,0 +1,86 @@
+<!-- Interactive Map Section -->
+<section class="section map-section" id="trail-map">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-badge"><i class="fas fa-map-marked-alt"></i> Explore</span>
+            <h2 class="section-title">Trail Locations</h2>
+            <p class="section-subtitle">Find your next adventure on our interactive map of Jamaica's top trails.</p>
+        </div>
+
+        <div class="map-container reveal">
+            <div id="leaflet-map"
+                style="height: 500px; width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--clr-border); box-shadow: var(--shadow-md); z-index: 1;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Leaflet CSS & JS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Initialize Map centered on Jamaica
+        const map = L.map('leaflet-map').setView([18.1096, -77.2975], 8);
+
+        // Add OpenStreetMap tiles (free, no API key needed)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        // Custom Hiking Icon
+        const hikeIcon = L.divIcon({
+            className: 'custom-map-marker',
+            html: '<div style="background-color: var(--clr-primary); color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; box-shadow: 0 0 10px rgba(0,0,0,0.5); border: 2px solid white;"><i class="fas fa-hiking"></i></div>',
+            iconSize: [30, 30],
+            iconAnchor: [15, 15]
+        });
+
+        // Trail Data
+        const trails = [
+            {
+                name: "Blue Mountain Peak",
+                coords: [18.0465, -76.5788],
+                difficulty: "Hard",
+                time: "7-8 Hours",
+                link: "#trails"
+            },
+            {
+                name: "Catherine's Peak",
+                coords: [18.0772, -76.7028],
+                difficulty: "Moderate",
+                time: "3-4 Hours",
+                link: "#trails"
+            },
+            {
+                name: "Kwame Falls",
+                coords: [18.2500, -76.8833],
+                difficulty: "Moderate",
+                time: "4-5 Hours",
+                link: "#trails"
+            }
+        ];
+
+        // Add Markers to Map
+        trails.forEach(trail => {
+            const popupContent = `
+            <div style="font-family: var(--font-body); text-align: center;">
+                <h4 style="margin: 0 0 5px 0; color: var(--clr-dark); font-family: var(--font-heading);">${trail.name}</h4>
+                <p style="margin: 0 0 10px 0; font-size: 0.9em; color: #666;">
+                    <strong>Diff:</strong> ${trail.difficulty}<br>
+                    <strong>Time:</strong> ${trail.time}
+                </p>
+                <a href="${trail.link}" style="display: inline-block; background: var(--clr-primary); color: white; padding: 5px 10px; border-radius: 4px; text-decoration: none; font-size: 0.8em;">View Details</a>
+            </div>
+        `;
+
+            L.marker(trail.coords, { icon: hikeIcon })
+                .addTo(map)
+                .bindPopup(popupContent);
+        });
+    });
+</script>

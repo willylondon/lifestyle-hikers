@@ -1,0 +1,48 @@
+<!-- Featured Trails Section — Data driven from _data/trails.yml -->
+<section class="section trails-section" id="trails">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-badge"><i class="fas fa-compass"></i> Explore</span>
+            <h2 class="section-title">Featured Jamaican Trails</h2>
+            <p class="section-subtitle">From misty Blue Mountain peaks to cascading waterfalls and river gorges —
+                discover Jamaica's best kept hiking secrets.</p>
+        </div>
+        <div class="trails-filter reveal">
+            <button class="filter-btn active" data-filter="all">All Trails</button>
+            <button class="filter-btn" data-filter="easy">Easy</button>
+            <button class="filter-btn" data-filter="moderate">Moderate</button>
+            <button class="filter-btn" data-filter="hard">Hard</button>
+        </div>
+        <div class="trails-grid" id="trailsGrid">
+            {% for trail in site.data.trails.items %}
+            <div class="trail-card reveal" data-difficulty="{{ trail.difficulty }}">
+                <div class="trail-card-img">
+                    <img src="{{ trail.image }}" alt="{{ trail.alt }}">
+                    <span class="trail-badge {{ trail.difficulty }}">{{ trail.difficulty | capitalize }}</span>
+                    <button class="trail-save" aria-label="Save trail"><i class="far fa-heart"></i></button>
+                </div>
+                <div class="trail-card-body">
+                    <h3 class="trail-name">{{ trail.name }}</h3>
+                    <p class="trail-location"><i class="fas fa-map-marker-alt"></i> {{ trail.location }}</p>
+                    <div class="trail-meta">
+                        <span><i class="fas fa-route"></i> {{ trail.distance }}</span>
+                        <span><i class="fas fa-arrow-up"></i> {{ trail.elevation }}</span>
+                        <span><i class="fas fa-clock"></i> {{ trail.time }}</span>
+                    </div>
+                    <div class="trail-rating">
+                        <div class="stars">
+                            {% if trail.stars >= 1 %}<i class="fas fa-star"></i>{% endif %}
+                            {% if trail.stars >= 2 %}<i class="fas fa-star"></i>{% endif %}
+                            {% if trail.stars >= 3 %}<i class="fas fa-star"></i>{% endif %}
+                            {% if trail.stars >= 4 %}<i class="fas fa-star"></i>{% endif %}
+                            {% if trail.stars >= 5 %}<i class="fas fa-star"></i>{% endif %}
+                            {% if trail.half_star %}<i class="fas fa-star-half-alt"></i>{% endif %}
+                        </div>
+                        <span class="rating-text">{{ trail.rating }} ({{ trail.reviews }} reviews)</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

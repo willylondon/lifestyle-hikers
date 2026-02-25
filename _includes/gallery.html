@@ -1,0 +1,21 @@
+<!-- Gallery Section — Data driven from _data/gallery.yml -->
+<section class="section gallery-section" id="gallery">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-badge"><i class="fas fa-camera"></i> Moments</span>
+            <h2 class="section-title">Jamaica Trail Gallery</h2>
+            <p class="section-subtitle">Snapshots from our adventures across the island — every hike tells a story.</p>
+        </div>
+        <div class="gallery-grid reveal">
+            {% for photo in site.data.gallery.items %}
+            <div
+                class="gallery-item {% if photo.size == 'tall' %}gallery-item-tall{% endif %}{% if photo.size == 'wide' %}gallery-item-wide{% endif %}">
+                <img src="{{ photo.image }}" alt="{{ photo.alt }}">
+                <div class="gallery-overlay">
+                    <span><i class="fas fa-expand"></i></span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
