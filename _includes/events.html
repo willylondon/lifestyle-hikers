@@ -8,7 +8,7 @@
                 just bring yuh vibes!</p>
         </div>
         <div class="events-grid">
-            {% assign sorted_events = site.data.events.items | sort: "date" %}
+            {% assign sorted_events = site.data.events.items | sort: "date" | reverse %}
             {% for event in sorted_events %}
             <div class="event-card reveal">
                 <div class="event-date">

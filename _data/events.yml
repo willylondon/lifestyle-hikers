@@ -1,33 +1,4 @@
 items:
-  - name: Blue Mountain Peak Sunrise Hike
-    date: "2025-03-08"
-    time: 2:00 AM — Meet at Whitfield Hall
-    spots: 10
-    location: Penlyne Castle, Portland
-    distance: 7.5 mi round trip
-    difficulty: hard
-    description: The ultimate Jamaica hike! Start before dawn to catch the sunrise
-      from the highest point on the island — 7,402 ft. Headlamps essential, warm
-      layers recommended.
-  - name: Reach Falls River Trek
-    date: "2025-03-22"
-    time: 9:00 AM — Meet at entrance
-    spots: 25
-    location: Manchioneal, Portland
-    distance: 1.2 mi loop
-    difficulty: easy
-    description: A relaxed family-friendly river trek through one of Jamaica's most
-      stunning natural pools and cascades. Swim stops included!
-  - name: Hollywell Forest Exploration
-    date: "2025-04-05"
-    time: 7:00 AM — Hollywell Gate
-    spots: 15
-    location: Irish Town, St. Andrew
-    distance: 4.5 mi loop
-    difficulty: moderate
-    description: Explore the cloud forest of the Blue Mountains. Bird watching, cool
-      mountain air, and panoramic views of Kingston. Post-hike jerk chicken
-      included!
   - name: "Fallen Edge-Stony Hill"
     location: "St. Andrew"
     date: "2006-03-21"
@@ -61,7 +32,7 @@ items:
     difficulty: "easy"
     description: "A scenic hike hugging the coastline leading to the beautiful cascades of Kwame Falls."
   - name: Cinchona Botanical Gardens
-    date: "2025-03-07"
+    date: "2026-03-07"
     time: 5:00 AM- Flow Head Office Parking Lot ,Half Way Tree Road
     spots: 1
     location: East Rural St. Andrew ( Blue Mountains)
