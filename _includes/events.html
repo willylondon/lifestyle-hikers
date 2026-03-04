@@ -9,7 +9,7 @@
         </div>
         <div class="events-grid">
             {% assign sorted_events = site.data.events.items | sort: "date" | reverse %}
-            {% for event in sorted_events %}
+            {% for event in sorted_events limit: 5 %}
             <div class="event-card reveal">
                 <div class="event-date">
                     <span class="event-month">{{ event.date | date: "%b" | upcase }}</span>
