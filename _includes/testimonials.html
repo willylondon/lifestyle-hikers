@@ -8,7 +8,9 @@
         </div>
 
         <div class="reviews-wrapper reveal">
-            <div class="reviews-track">
+            <div class="reviews-track" id="reviewsTrack">
+                <!-- Duplicate lists for infinite horizontal scrolling -->
+                {% for i in (1..2) %}
                 {% for review in site.data.testimonials.items %}
                 <div class="review-card">
                     <div class="review-author">
@@ -24,8 +26,8 @@
                             <span>{{ review.handle }}</span>
                             {% if review.rating %}
                             <div class="review-rating" style="color: #fbbf24; font-size: 0.85rem; margin-top: 3px;">
-                                {% for i in (1..5) %}
-                                {% if i <= review.rating %} <i class="fas fa-star"></i>
+                                {% for j in (1..5) %}
+                                {% if j <= review.rating %} <i class="fas fa-star"></i>
                                     {% else %}
                                     <i class="far fa-star"></i>
                                     {% endif %}
@@ -36,6 +38,7 @@
                     </div>
                     <p class="review-text">"{{ review.text }}"</p>
                 </div>
+                {% endfor %}
                 {% endfor %}
             </div>
 
@@ -64,8 +67,7 @@
         display: flex;
         gap: var(--space-xl);
         overflow-x: auto;
-        padding: var(--space-xl) var(--mask-width);
-        scroll-snap-type: x mandatory;
+        padding: var(--space-xl) 0;
         scrollbar-width: none;
         /* Hide scrollbar Firefox */
         -webkit-overflow-scrolling: touch;
@@ -85,7 +87,6 @@
     .review-card {
         flex-shrink: 0;
         width: 350px;
-        scroll-snap-align: center;
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%);
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: var(--radius-lg);
@@ -93,6 +94,10 @@
         display: flex;
         flex-direction: column;
         transition: all var(--transition-base);
+    }
+
+    .review-card:first-child {
+        margin-left: var(--mask-width);
     }
 
     .review-card:hover {
@@ -171,14 +176,16 @@
         }
 
         .reviews-track {
-            padding: var(--space-xl) var(--space-md);
-            scroll-padding-inline: var(--space-md);
+            padding: var(--space-xl) 0;
         }
 
         .review-card {
             width: 280px;
             padding: var(--space-xl);
-            scroll-snap-align: center;
+        }
+
+        .review-card:first-child {
+            margin-left: var(--mask-width);
         }
 
         .reviews-mask {
@@ -186,3 +193,45 @@
         }
     }
 </style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const track = document.getElementById('reviewsTrack');
+        if (!track) return;
+
+        let isPaused = false;
+        let animationId;
+        const scrollSpeed = 0.5;
+
+        function autoScroll() {
+            if (!isPaused) {
+                track.scrollLeft += scrollSpeed;
+                if (track.scrollLeft >= (track.scrollWidth / 2)) {
+                    track.scrollLeft = 0;
+                }
+            }
+            animationId = requestAnimationFrame(autoScroll);
+        }
+
+        animationId = requestAnimationFrame(autoScroll);
+
+        track.addEventListener('mouseenter', () => isPaused = true);
+        track.addEventListener('mouseleave', () => isPaused = false);
+
+        track.addEventListener('touchstart', () => isPaused = true, { passive: true });
+        track.addEventListener('touchend', () => {
+            setTimeout(() => isPaused = false, 1500);
+        }, { passive: true });
+
+        let scrollTimeout;
+        track.addEventListener('scroll', () => {
+            isPaused = true;
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                if (!track.matches(':hover')) {
+                    isPaused = false;
+                }
+            }, 1000);
+        }, { passive: true });
+    });
+</script>
