@@ -547,12 +547,13 @@ textarea {
     border: 1px solid var(--clr-border);
     transition: all var(--transition-base);
     cursor: pointer;
+    min-width: 0;
 }
 
 .trail-card:hover {
     transform: translateY(-8px);
     border-color: var(--clr-primary-light);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.4), var(--shadow-glow);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), var(--shadow-glow);
 }
 
 .trail-card-img {
@@ -717,7 +718,7 @@ textarea {
 
 .event-card:hover {
     border-color: var(--clr-primary-light);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transform: translateX(6px);
 }
 
@@ -865,7 +866,7 @@ textarea {
    ======================================== */
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: var(--space-4xl);
     align-items: center;
 }
@@ -959,7 +960,7 @@ textarea {
    ======================================== */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-auto-rows: 220px;
     gap: var(--space-md);
 }
@@ -1329,7 +1330,7 @@ textarea {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
     gap: var(--space-3xl);
     margin-bottom: var(--space-3xl);
 }
