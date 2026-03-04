@@ -18,38 +18,3 @@ items:
       🏛️ History
 
       Established in 1868 by Governor Sir John Peter Grant, it was originally a centre for experimental botanical work. The cinchona trees planted there produce quinine, used to treat malaria, which is where the garden gets its name. Moa In 1903, the Jamaican government leased Cinchona to the New York Botanical Gardens and, later, to the Smithsonian Institute
-  - month: MAR
-    weekday: Saturday
-    name: Blue Mountain Peak Sunrise Hike
-    time: 2:00 AM — Meet at Whitfield Hall
-    spots: 10
-    location: Penlyne Castle, Portland
-    distance: 7.5 mi round trip
-    difficulty: hard
-    day: "08"
-    description: The ultimate Jamaica hike! Start before dawn to catch the sunrise
-      from the highest point on the island — 7,402 ft. Headlamps essential, warm
-      layers recommended.
-  - month: MAR
-    weekday: Saturday
-    name: Reach Falls River Trek
-    time: 9:00 AM — Meet at entrance
-    spots: 25
-    location: Manchioneal, Portland
-    distance: 1.2 mi loop
-    difficulty: easy
-    day: "22"
-    description: A relaxed family-friendly river trek through one of Jamaica's most
-      stunning natural pools and cascades. Swim stops included!
-  - month: APR
-    weekday: Saturday
-    name: Hollywell Forest Exploration
-    time: 7:00 AM — Hollywell Gate
-    spots: 15
-    location: Irish Town, St. Andrew
-    distance: 4.5 mi loop
-    difficulty: moderate
-    day: "05"
-    description: Explore the cloud forest of the Blue Mountains. Bird watching, cool
-      mountain air, and panoramic views of Kingston. Post-hike jerk chicken
-      included!
