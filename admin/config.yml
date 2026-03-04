@@ -296,3 +296,41 @@ collections:
                 name: "alt"
                 widget: "string"
                 hint: "Describe the trail photo for accessibility"
+
+  # ------------------------------------------
+  # 5. REVIEWS / TESTIMONIALS (_data/testimonials.yml)
+  # ------------------------------------------
+  - name: "testimonials"
+    label: "⭐ Reviews"
+    description: "Manage the community and corporate testimonials shown on the homepage"
+    files:
+      - name: "reviews_list"
+        label: "Reviews List"
+        file: "_data/testimonials.yml"
+        fields:
+          - label: "Reviews"
+            name: "items"
+            widget: "list"
+            label_singular: "Review"
+            summary: "{{fields.name}} — {{fields.text}}"
+            fields:
+              - label: "Author Name"
+                name: "name"
+                widget: "string"
+                hint: "e.g. Sarah Jenkins"
+                
+              - label: "Handle / Title"
+                name: "handle"
+                widget: "string"
+                hint: "e.g. Weekend Hiker, or @sarahj_hikes"
+
+              - label: "Avatar Image"
+                name: "avatar"
+                widget: "image"
+                required: false
+                hint: "Upload a photo of the reviewer (optional)"
+
+              - label: "Review Text"
+                name: "text"
+                widget: "text"
+                hint: "The actual testimonial or quote"
