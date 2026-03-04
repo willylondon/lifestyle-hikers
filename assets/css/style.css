@@ -943,6 +943,17 @@ textarea {
     margin-bottom: 0;
 }
 
+.about-subheading {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--clr-primary-light);
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-md);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--clr-border);
+}
+
 /* ========================================
    GALLERY
    ======================================== */
