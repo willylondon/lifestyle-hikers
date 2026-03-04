@@ -8,12 +8,13 @@
                 just bring yuh vibes!</p>
         </div>
         <div class="events-grid">
-            {% for event in site.data.events.items %}
+            {% assign sorted_events = site.data.events.items | sort: "date" %}
+            {% for event in sorted_events %}
             <div class="event-card reveal">
                 <div class="event-date">
-                    <span class="event-month">{{ event.month }}</span>
-                    <span class="event-day">{{ event.day }}</span>
-                    <span class="event-weekday">{{ event.weekday }}</span>
+                    <span class="event-month">{{ event.date | date: "%b" | upcase }}</span>
+                    <span class="event-day">{{ event.date | date: "%d" }}</span>
+                    <span class="event-weekday">{{ event.date | date: "%A" }}</span>
                 </div>
                 <div class="event-details">
                     <div class="event-top">

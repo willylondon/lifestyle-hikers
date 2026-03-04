@@ -1,13 +1,72 @@
 items:
-  - month: MAR
-    weekday: Saturday
-    name: Cinchona Botanical Gardens
+  - name: Blue Mountain Peak Sunrise Hike
+    date: "2025-03-08"
+    time: 2:00 AM — Meet at Whitfield Hall
+    spots: 10
+    location: Penlyne Castle, Portland
+    distance: 7.5 mi round trip
+    difficulty: hard
+    description: The ultimate Jamaica hike! Start before dawn to catch the sunrise
+      from the highest point on the island — 7,402 ft. Headlamps essential, warm
+      layers recommended.
+  - name: Reach Falls River Trek
+    date: "2025-03-22"
+    time: 9:00 AM — Meet at entrance
+    spots: 25
+    location: Manchioneal, Portland
+    distance: 1.2 mi loop
+    difficulty: easy
+    description: A relaxed family-friendly river trek through one of Jamaica's most
+      stunning natural pools and cascades. Swim stops included!
+  - name: Hollywell Forest Exploration
+    date: "2025-04-05"
+    time: 7:00 AM — Hollywell Gate
+    spots: 15
+    location: Irish Town, St. Andrew
+    distance: 4.5 mi loop
+    difficulty: moderate
+    description: Explore the cloud forest of the Blue Mountains. Bird watching, cool
+      mountain air, and panoramic views of Kingston. Post-hike jerk chicken
+      included!
+  - name: "Fallen Edge-Stony Hill"
+    location: "St. Andrew"
+    date: "2006-03-21"
+    time: "7:00 AM — Meet at Trailhead"
+    spots: 15
+    distance: "3 mi loop"
+    difficulty: "moderate"
+    description: "A beautiful past hike through Fallen Edge-Stony Hill."
+  - name: "Nonsuch Falls"
+    location: "Portland"
+    date: "2026-02-07"
+    time: "8:00 AM"
+    spots: 20
+    distance: "2.5 mi round trip"
+    difficulty: "moderate"
+    description: "An adventurous past hike to the stunning Nonsuch Falls."
+  - name: "Catherine's Peak"
+    location: "St. Andrew"
+    date: "2026-01-24"
+    time: "6:30 AM"
+    spots: 12
+    distance: "4 mi out-and-back"
+    difficulty: "hard"
+    description: "A challenging steep climb to the summit of Catherine's Peak for incredible panoramic views."
+  - name: "Kwame Falls"
+    location: "St. Mary"
+    date: "2026-01-10"
+    time: "9:00 AM"
+    spots: 25
+    distance: "3 mi loop"
+    difficulty: "easy"
+    description: "A scenic hike hugging the coastline leading to the beautiful cascades of Kwame Falls."
+  - name: Cinchona Botanical Gardens
+    date: "2025-03-07"
     time: 5:00 AM- Flow Head Office Parking Lot ,Half Way Tree Road
     spots: 1
     location: East Rural St. Andrew ( Blue Mountains)
     distance: 5 mi one way
     difficulty: moderate
-    day: "07"
     description: >-
       
 

@@ -127,20 +127,12 @@ collections:
                   - label: "Hard"
                     value: "hard"
 
-              - label: "Month"
-                name: "month"
-                widget: "string"
-                hint: "3-letter month (e.g. MAR, APR, JUN)"
-
-              - label: "Day"
-                name: "day"
-                widget: "string"
-                hint: "Day number (e.g. 08, 22)"
-
-              - label: "Weekday"
-                name: "weekday"
-                widget: "string"
-                hint: "e.g. Saturday, Sunday"
+              - label: "Hike Date"
+                name: "date"
+                widget: "datetime"
+                date_format: "YYYY-MM-DD"
+                time_format: false
+                format: "YYYY-MM-DD"
 
               - label: "Time & Meeting Point"
                 name: "time"
