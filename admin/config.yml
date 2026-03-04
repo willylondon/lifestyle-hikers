@@ -322,6 +322,15 @@ collections:
                 required: false
                 hint: "Upload a photo of the reviewer (optional)"
 
+              - label: "Star Rating"
+                name: "rating"
+                widget: "number"
+                value_type: "int"
+                min: 1
+                max: 5
+                required: false
+                hint: "Provide a star rating from 1 to 5 (optional)"
+
               - label: "Review Text"
                 name: "text"
                 widget: "text"
