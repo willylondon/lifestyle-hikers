@@ -1,12 +1,17 @@
 items:
-  - name: Fallen Edge-Stony Hill
+  - name: Falling Edge-Stony Hill
     location: St. Andrew
     date: 2026-02-21
     time: 7:00 AM — Meet at Trailhead
     spots: 15
     distance: 3 mi loop
     difficulty: moderate
-    description: A beautiful past hike through Fallen Edge-Stony Hill.
+    description: "Falling Edge Waterfall, also known as Bowden Hill Falls, is one of
+      St. Andrew's best kept secrets — tucked away in the cool hills of Stony
+      Hill, just 30 minutes from Manor Park in Kingston. Kwame
+      waterfallsgratestj The 40-foot cascade pours into a refreshing natural
+      pool surrounded by lush greenery, reachable via a short 10–15 minute hike.
+      "
   - name: Nonsuch Falls
     location: Portland
     date: 2026-02-07
