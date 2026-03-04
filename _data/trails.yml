@@ -11,18 +11,6 @@ items:
     rating: 4.9
     elevation: 3,200 ft
     half_star: false
-  - stars: 4
-    alt: Dunn's River Falls Jamaica
-    name: Dunn's River Falls Climb
-    time: 1-2 hrs
-    location: Ocho Rios, St. Ann
-    distance: 0.4 mi
-    reviews: 256
-    image: https://images.unsplash.com/photo-1580746738699-3975c8421a74?auto=format&fit=crop&w=800&q=80
-    difficulty: moderate
-    rating: 4.7
-    elevation: 600 ft
-    half_star: true
   - stars: 5
     alt: Reach Falls Portland Jamaica
     name: Reggae Falls Nature Trail
@@ -61,14 +49,16 @@ items:
     elevation: 2,800 ft
     half_star: false
   - stars: 4
-    alt: YS Falls Jamaica
-    name: YS Falls Riverside Walk
-    time: 1-2 hrs
-    location: Middle Quarters, St. Elizabeth
-    distance: 1.8 mi
-    reviews: 112
-    image: https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&w=800&q=80
-    difficulty: easy
-    rating: 4.4
-    elevation: 150 ft
+    alt: Base Camp by nonsuch
+    name: Nonsuch Falls
+    time: 2.5 – 3 hrs (1.5 hrs down due to mud/terrain + ~1 hr back up, per the
+      article)
+    location: Nonsuch, Drapers — Portland, Jamaica
+    distance: 1.5 – 2 mi round trip (estimated; guided riverbed route)
+    reviews: 5
+    image: /assets/images/uploads/pxl_20260207_134511969.portrait-1-.jpg
+    difficulty: moderate
+    rating: 4.5
+    elevation: ~291 ft / 89 m (height of the falls itself; trail descends steeply
+      from base camp)
     half_star: false
