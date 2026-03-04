@@ -1,38 +1,50 @@
 items:
-  - name: "Fallen Edge-Stony Hill"
-    location: "St. Andrew"
-    date: "2026-02-21"
-    time: "7:00 AM — Meet at Trailhead"
+  - name: Fallen Edge-Stony Hill
+    location: St. Andrew
+    date: 2026-02-21
+    time: 7:00 AM — Meet at Trailhead
     spots: 15
-    distance: "3 mi loop"
-    difficulty: "moderate"
-    description: "A beautiful past hike through Fallen Edge-Stony Hill."
-  - name: "Nonsuch Falls"
-    location: "Portland"
-    date: "2026-02-07"
-    time: "8:00 AM"
+    distance: 3 mi loop
+    difficulty: moderate
+    description: A beautiful past hike through Fallen Edge-Stony Hill.
+  - name: Nonsuch Falls
+    location: Portland
+    date: 2026-02-07
+    time: 8:00 AM
     spots: 20
-    distance: "2.5 mi round trip"
-    difficulty: "moderate"
-    description: "An adventurous past hike to the stunning Nonsuch Falls."
-  - name: "Catherine's Peak"
-    location: "St. Andrew"
-    date: "2026-01-24"
-    time: "6:30 AM"
+    distance: 2.5 mi round trip
+    difficulty: moderate
+    description: An adventurous past hike to the stunning Nonsuch Falls.
+  - name: Catherine's Peak
+    location: St. Andrew
+    date: 2026-01-24
+    time: 6:30 AM
     spots: 12
-    distance: "4 mi out-and-back"
-    difficulty: "hard"
-    description: "A challenging steep climb to the summit of Catherine's Peak for incredible panoramic views."
-  - name: "Kwame Falls"
-    location: "St. Mary"
-    date: "2026-01-10"
-    time: "9:00 AM"
+    distance: 4 mi out-and-back
+    difficulty: hard
+    description: A challenging steep climb to the summit of Catherine's Peak for
+      incredible panoramic views.
+  - name: Kwame Falls
+    location: St. Mary
+    date: 2026-01-10
+    time: 5:00 AM
     spots: 25
-    distance: "3 mi loop"
-    difficulty: "easy"
-    description: "A scenic hike hugging the coastline leading to the beautiful cascades of Kwame Falls."
+    distance: 7 mi one way
+    difficulty: hard
+    description: Kwame Falls is a picturesque, off-the-beaten-path waterfall tucked
+      away in the rural community of Robin's Bay in St. Mary parish. It carries
+      deep historical significance, being named after Kwame, a warrior who
+      fought alongside the legendary Tacky in Jamaica's most notable
+      pre-emancipation rebellion of 1760. To reach the falls, visitors embark on
+      a roughly four-hour round-trip hike through lush tropical rainforest,
+      crossing the Kwame River multiple times and taking in sweeping views of
+      St. Mary's rugged coastline along the way. At the journey's end, a
+      graceful cascade tumbles into a deep, refreshing pool, known for having
+      warm spring-fed spots, surrounded by towering trees and vibrant foliage,
+      making the trek well worth the effort for nature lovers and adventure
+      seekers alike.
   - name: Cinchona Botanical Gardens
-    date: "2026-03-07"
+    date: 2026-03-07
     time: 5:00 AM- Flow Head Office Parking Lot ,Half Way Tree Road
     spots: 1
     location: East Rural St. Andrew ( Blue Mountains)
