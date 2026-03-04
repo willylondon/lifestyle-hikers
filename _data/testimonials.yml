@@ -1,17 +1,31 @@
 items:
-  - name: Sarah Jenkins
-    handle: Weekend Hiker
-    text: "The Blue Mountain hike was incredibly well-organized. The guides were patient, knowledgeable, and the recap video they provided was the perfect keepsake. Highly recommend Lifestyle Hikers!"
+  - name: Gary Reid
+    handle: Weekend hiker
+    text: "Hiking with Lifestyle Hikers is an exceptional experience that blends fitness, adventure, and genuine community. Each hike is well organized, safe, and welcoming, creating an atmosphere where participants feel both challenged and supported. Beyond the physical benefits, it’s mentally refreshing — a chance to reconnect with nature and build meaningful connections. It’s more than a hike; it’s a lifestyle built on growth and excellence."
+    rating: 5
     avatar: ""
-  - name: Marcus Wright
-    handle: HR Director, TechCorp JA
-    text: "We booked a Medium Group corporate package for our annual off-site. The logistics were flawless, and the team building that happened on the trail was invaluable. A top-tier experience."
+  - name: Mario Ashman
+    handle: Hiker, explorer
+    text: "Like meeting people, fellowship and exercise."
+    rating: 4
     avatar: ""
-  - name: Aaliyah Thompson
-    handle: Nature Enthusiast
-    text: "Catherine's Peak has always been on my bucket list. Going with this group made it feel safe and fun. The vibes, the music at the end, and the amazing photos made the day perfect."
+  - name: Okeno Walters
+    handle: Fitness
+    text: "Love to keep active."
+    rating: 5
     avatar: ""
-  - name: David Park
-    handle: "@davidtech"
-    text: "The energy this group brings is unmatched. I've never felt more welcome on a trail!"
+  - name: Carl Jones
+    handle: Weekend hiker
+    text: "The group was very welcoming. Very good interactions."
+    rating: 5
+    avatar: ""
+  - name: Keneisha Beddasingh
+    handle: Weekend hiker
+    text: "The experience has been extremely beneficial and healing."
+    rating: 5
+    avatar: ""
+  - name: Willy London
+    handle: Some weekends hiker
+    text: "It's usually a challenge waking up at 4:00am to be at the meeting spot by 5:00am on a day you should be resting, but I like a challenge and the group is so supportive and fun that you push through regardless. The feeling you get accomplishing such a climb and seeing how beautiful Jamaica is, is just breathtaking. I just love hiking with the group. Remember, it's a hike, not a race. Ask before you commit."
+    rating: 5
     avatar: ""

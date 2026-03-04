@@ -25,6 +25,17 @@
                             <div class="marquee-info">
                                 <h4>{{ review.name }}</h4>
                                 <span>{{ review.handle }}</span>
+                                {% if review.rating %}
+                                <div class="marquee-rating"
+                                    style="color: #fbbf24; font-size: 0.85rem; margin-top: 3px;">
+                                    {% for i in (1..5) %}
+                                    {% if i <= review.rating %} <i class="fas fa-star"></i>
+                                        {% else %}
+                                        <i class="far fa-star"></i>
+                                        {% endif %}
+                                        {% endfor %}
+                                </div>
+                                {% endif %}
                             </div>
                         </div>
                         <p class="marquee-text">"{{ review.text }}"</p>
