@@ -197,14 +197,14 @@ textarea {
     align-items: center;
     gap: var(--space-sm);
     font-family: var(--font-heading);
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: var(--clr-white);
     z-index: 1001;
 }
 
 .nav-logo-img {
-    height: 70px;
+    height: 100px;
     width: auto;
     object-fit: contain;
     border-radius: 6px;
@@ -1340,14 +1340,14 @@ textarea {
     align-items: center;
     gap: var(--space-sm);
     font-family: var(--font-heading);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--clr-white);
     margin-bottom: var(--space-lg);
 }
 
 .footer-logo-img {
-    height: 60px;
+    height: 90px;
     width: auto;
     object-fit: contain;
     border-radius: 6px;
