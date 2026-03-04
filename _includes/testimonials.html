@@ -199,39 +199,63 @@
         const track = document.getElementById('reviewsTrack');
         if (!track) return;
 
-        let isPaused = false;
+        const scrollSpeed = 0.5; // pixels per frame
+        let isAutoScrolling = true;
+        let isHovered = false;
+        let isTouching = false;
         let animationId;
-        const scrollSpeed = 0.5;
+        let lastManualScrollTime = 0;
 
-        function autoScroll() {
-            if (!isPaused) {
-                track.scrollLeft += scrollSpeed;
-                if (track.scrollLeft >= (track.scrollWidth / 2)) {
-                    track.scrollLeft = 0;
-                }
+        // Track the exact virtual position
+        let expectedScrollLeft = track.scrollLeft;
+
+        function checkInfiniteLoop() {
+            if (track.scrollLeft >= (track.scrollWidth / 2)) {
+                track.scrollLeft = track.scrollLeft - (track.scrollWidth / 2);
+                expectedScrollLeft = track.scrollLeft;
+            } else if (track.scrollLeft <= 0) {
+                track.scrollLeft = track.scrollLeft + (track.scrollWidth / 2);
+                expectedScrollLeft = track.scrollLeft;
             }
-            animationId = requestAnimationFrame(autoScroll);
         }
 
-        animationId = requestAnimationFrame(autoScroll);
+        function animationLoop() {
+            const timeSinceManualAction = Date.now() - lastManualScrollTime;
 
-        track.addEventListener('mouseenter', () => isPaused = true);
-        track.addEventListener('mouseleave', () => isPaused = false);
+            if (isAutoScrolling && !isHovered && !isTouching && timeSinceManualAction > 1500) {
+                expectedScrollLeft += scrollSpeed;
+                track.scrollLeft = expectedScrollLeft;
+                checkInfiniteLoop();
+            }
 
-        track.addEventListener('touchstart', () => isPaused = true, { passive: true });
+            animationId = requestAnimationFrame(animationLoop);
+        }
+
+        animationId = requestAnimationFrame(animationLoop);
+
+        track.addEventListener('mouseenter', () => isHovered = true);
+        track.addEventListener('mouseleave', () => {
+            isHovered = false;
+            expectedScrollLeft = track.scrollLeft;
+        });
+
+        track.addEventListener('touchstart', () => isTouching = true, { passive: true });
         track.addEventListener('touchend', () => {
-            setTimeout(() => isPaused = false, 1500);
+            isTouching = false;
+            lastManualScrollTime = Date.now();
+            expectedScrollLeft = track.scrollLeft;
         }, { passive: true });
 
-        let scrollTimeout;
         track.addEventListener('scroll', () => {
-            isPaused = true;
-            clearTimeout(scrollTimeout);
-            scrollTimeout = setTimeout(() => {
-                if (!track.matches(':hover')) {
-                    isPaused = false;
-                }
-            }, 1000);
+            // Check if this scroll was caused by OUR auto-scroll code
+            const dist = Math.abs(track.scrollLeft - expectedScrollLeft);
+
+            // If distance is larger than speed, it was a user scroll
+            if (dist > scrollSpeed * 2) {
+                lastManualScrollTime = Date.now();
+                expectedScrollLeft = track.scrollLeft;
+                checkInfiniteLoop();
+            }
         }, { passive: true });
     });
 </script>
