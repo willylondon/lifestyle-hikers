@@ -441,7 +441,7 @@ textarea {
     margin-bottom: var(--space-xs);
 }
 
-.stat-number::after {
+.stat-number.plus-sign::after {
     content: '+';
     font-size: 1.5rem;
     color: var(--clr-primary-light);
