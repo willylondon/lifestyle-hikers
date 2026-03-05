@@ -33,6 +33,13 @@ social:
   youtube: "#"
   whatsapp: "#"
 
+# Baseline statistics
+stats:
+  base_total_hikes: 205
+  base_hikes_this_year: 0
+  active_members: 61
+  trails_explored: 50
+
 # Default front matter
 defaults:
   - scope:

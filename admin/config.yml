@@ -27,6 +27,42 @@ slug:
 collections:
 
   # ------------------------------------------
+  # 0. SITE STATISTICS (_config.yml)
+  # ------------------------------------------
+  - name: "settings"
+    label: "⚙️ Site Settings"
+    description: "Manage website baseline statistics and settings"
+    files:
+      - name: "stats"
+        label: "Homepage Counters"
+        file: "_config.yml"
+        fields:
+          - label: "Statistics"
+            name: "stats"
+            widget: "object"
+            fields:
+              - label: "Baseline Total Hikes"
+                name: "base_total_hikes"
+                widget: "number"
+                value_type: "int"
+                hint: "The base number to add to the dynamic calculation of total hikes."
+              - label: "Baseline Hikes This Year"
+                name: "base_hikes_this_year"
+                widget: "number"
+                value_type: "int"
+                hint: "The base number to add to the dynamic calculation of hikes this year."
+              - label: "Active Members"
+                name: "active_members"
+                widget: "number"
+                value_type: "int"
+                hint: "The number of active members to display on the homepage."
+              - label: "Trails Explored"
+                name: "trails_explored"
+                widget: "number"
+                value_type: "int"
+                hint: "The number of trails explored to display on the homepage."
+
+  # ------------------------------------------
   # 1. BLOG POSTS (_posts folder)
   # ------------------------------------------
   - name: "posts"
