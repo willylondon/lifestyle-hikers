@@ -7,8 +7,6 @@ backend:
   name: github
   repo: willylondon/lifestyle-hikers
   branch: main
-  base_url: https://lifestyle-hikers-oauth.netlify.app
-  auth_endpoint: .netlify/functions/auth
 
 # Where uploaded images are stored
 media_folder: "assets/images/uploads"

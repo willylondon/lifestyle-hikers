@@ -21,6 +21,13 @@ exclude:
   - Gemfile.lock
   - README.md
   - README-CMS.md
+  - vendor/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - node_modules/
+  - .vercel/
 
 # Site settings
 email: lifestylehikersja@gmail.com
