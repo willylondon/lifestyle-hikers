@@ -7,6 +7,7 @@ backend:
   name: github
   repo: willylondon/lifestyle-hikers
   branch: main
+  app_id: Iv1.b81c2fe99d3dc7f7
 
 # Where uploaded images are stored
 media_folder: "assets/images/uploads"
