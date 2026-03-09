@@ -47,6 +47,11 @@
         return weightValue;
     }
 
+    function strideLengthMeters(heightCm) {
+        // Approximate walking stride length for mixed populations.
+        return 0.414 * (heightCm / 100);
+    }
+
     function formatDate(inputDate) {
         const parsed = new Date(inputDate + 'T12:00:00');
         if (Number.isNaN(parsed.getTime())) {
@@ -139,36 +144,92 @@
     }
 
     function calculate(payload) {
-        const metMap = {
-            easy: 5,
-            moderate: 6.5,
-            hard: 8
+        // Compendium of Physical Activities MET anchors for hiking categories.
+        const baseMetMap = {
+            easy: 3.8,
+            moderate: 5.3,
+            hard: 7.8
         };
 
         const durationHours = payload.durationMinutes / 60;
-        const inferredDistanceKm = payload.steps > 0 ? payload.steps * 0.000762 : 0;
+        const inferredDistanceKm = payload.steps > 0
+            ? (payload.steps * strideLengthMeters(payload.heightCm)) / 1000
+            : 0;
         const distanceKm = payload.distanceKmInput > 0 ? payload.distanceKmInput : inferredDistanceKm;
         const distanceMiles = distanceKm * 0.621371;
         const distanceSource = payload.distanceKmInput > 0
             ? 'entered distance (' + payload.distanceUnit + ')'
             : 'estimated from steps';
 
-        const met = metMap[payload.intensity] || metMap.moderate;
-        const baseCalories = met * payload.weightKg * durationHours;
-        const elevationCalories = payload.elevationGainM * (payload.weightKg / 100) * 0.12;
-        const caloriesBurned = baseCalories + elevationCalories;
+        const speedMMin = distanceKm > 0 ? (distanceKm * 1000) / payload.durationMinutes : 0;
+        const grade = distanceKm > 0 ? clamp(payload.elevationGainM / (distanceKm * 1000), 0, 0.25) : 0;
+        const baseMet = baseMetMap[payload.intensity] || baseMetMap.moderate;
 
-        const effortScore =
-            caloriesBurned / 520 +
-            durationHours * 1.25 +
-            payload.elevationGainM / 320 +
-            (payload.age >= 50 ? 0.8 : 0);
+        // ACSM walking equation approximation (valid at walking/hiking speeds).
+        let acsmMet = 0;
+        if (speedMMin > 0) {
+            const vo2 = (0.1 * speedMMin) + (1.8 * speedMMin * grade) + 3.5;
+            acsmMet = vo2 / 3.5;
+        }
 
-        const recoveryHours = clamp(14 + effortScore * 3.9, 12, 72);
-        const hydrationLiters = clamp(durationHours * 0.8 + distanceKm * 0.085, 2, 6);
-        const proteinGrams = clamp(payload.weightKg * 0.35, 22, 110);
-        const carbsGrams = clamp(caloriesBurned * 0.55 / 4, 90, 450);
-        const fatGrams = clamp(caloriesBurned * 0.2 / 9, 25, 140);
+        let effectiveMet = acsmMet > 0 ? (baseMet * 0.6) + (acsmMet * 0.4) : baseMet;
+        if (grade > 0.08) effectiveMet += 0.4;
+        if (grade > 0.12) effectiveMet += 0.6;
+        effectiveMet = clamp(effectiveMet, 2.5, 12);
+
+        const caloriesBurned = effectiveMet * payload.weightKg * durationHours;
+        const trainingLoad = (effectiveMet * durationHours) + (payload.elevationGainM / 450);
+        const recoveryHours = clamp(10 + (trainingLoad * 2.4) + (payload.age >= 50 ? 4 : 0), 12, 72);
+
+        let hydrationLiters = 0;
+        let hydrationMethod = '';
+        let bodyMassLossKg = 0;
+
+        // Hydration follows sports medicine guidance:
+        // replace ~150% of body-mass loss when pre/post mass is available.
+        if (payload.preHikeWeightInput > 0 && payload.postHikeWeightInput > 0 && payload.preHikeWeightInput > payload.postHikeWeightInput) {
+            bodyMassLossKg = toKg(payload.preHikeWeightInput - payload.postHikeWeightInput, payload.weightUnit);
+            hydrationLiters = clamp(bodyMassLossKg * 1.5, 1, 8);
+            hydrationMethod = 'based on 150% of body-mass loss';
+        } else {
+            const sweatRateMap = { easy: 0.45, moderate: 0.65, hard: 0.85 };
+            const estimatedSweatLoss = (sweatRateMap[payload.intensity] || sweatRateMap.moderate) * durationHours;
+            hydrationLiters = clamp((estimatedSweatLoss * 1.25) + 0.5, 1.5, 6.5);
+            hydrationMethod = 'estimated from duration and intensity';
+        }
+
+        const sodiumLowMg = round(hydrationLiters * 500, 0);
+        const sodiumHighMg = round(hydrationLiters * 700, 0);
+
+        // Carbohydrate and protein ranges align with sports nutrition position stands.
+        let carbLowPerKg = 0.8;
+        let carbHighPerKg = 1.0;
+        if (payload.intensity === 'hard' || payload.durationMinutes >= 90) {
+            carbLowPerKg = 1.0;
+            carbHighPerKg = 1.2;
+        } else if (payload.intensity === 'easy') {
+            carbLowPerKg = 0.6;
+            carbHighPerKg = 0.8;
+        }
+
+        let proteinLowPerKg = 1.4;
+        let proteinHighPerKg = 1.8;
+        if (payload.intensity === 'easy') {
+            proteinLowPerKg = 1.2;
+            proteinHighPerKg = 1.6;
+        } else if (payload.intensity === 'hard') {
+            proteinLowPerKg = 1.6;
+            proteinHighPerKg = 2.0;
+        }
+
+        const carbLowPerHour = round(carbLowPerKg * payload.weightKg, 0);
+        const carbHighPerHour = round(carbHighPerKg * payload.weightKg, 0);
+        const carbLow4h = round(carbLowPerHour * 4, 0);
+        const carbHigh4h = round(carbHighPerHour * 4, 0);
+        const proteinPostDose = round(clamp(payload.weightKg * 0.3, 20, 40), 0);
+        const proteinLowDaily = round(proteinLowPerKg * payload.weightKg, 0);
+        const proteinHighDaily = round(proteinHighPerKg * payload.weightKg, 0);
+
         const sleepHours = recoveryHours > 48 ? 9 : recoveryHours > 24 ? 8 : 7;
         const sleepDays = Math.max(1, Math.ceil(recoveryHours / 24));
         const totalSleepHours = sleepHours * sleepDays;
@@ -178,12 +239,21 @@
             distanceKm: round(distanceKm, 2),
             distanceMiles: round(distanceMiles, 2),
             distanceSource: distanceSource,
+            metUsed: round(effectiveMet, 1),
             recoveryHours: round(recoveryHours, 0),
             recoveryDays: round(recoveryHours / 24, 1),
             hydrationLiters: round(hydrationLiters, 1),
-            proteinGrams: round(proteinGrams, 0),
-            carbsGrams: round(carbsGrams, 0),
-            fatGrams: round(fatGrams, 0),
+            hydrationMethod: hydrationMethod,
+            bodyMassLossKg: round(bodyMassLossKg, 2),
+            sodiumLowMg: sodiumLowMg,
+            sodiumHighMg: sodiumHighMg,
+            carbLowPerHour: carbLowPerHour,
+            carbHighPerHour: carbHighPerHour,
+            carbLow4h: carbLow4h,
+            carbHigh4h: carbHigh4h,
+            proteinPostDose: proteinPostDose,
+            proteinLowDaily: proteinLowDaily,
+            proteinHighDaily: proteinHighDaily,
             sleepRange: recoveryHours > 48 ? '8-9 hours' : '7-8 hours',
             sleepHours: sleepHours,
             totalSleepHours: totalSleepHours
@@ -205,6 +275,7 @@
             '  <h2>' + escapeHtml(formatDate(payload.hikeDate)) + '</h2>' +
             '  <p>Intensity: <strong>' + escapeHtml(payload.intensityLabel) + '</strong></p>' +
             (resumeDate ? ('  <p>Suggested next hard hike date: <strong>' + escapeHtml(resumeDate) + '</strong></p>') : '') +
+            '  <p>Estimated MET level used: <strong>' + result.metUsed + '</strong></p>' +
             '</article>' +
             '<div class="rr-metrics">' +
             '  <article class="rr-metric rr-metric-hot rr-print-card"><h3>Total Calories</h3><p>' + result.caloriesBurned + ' <span>kcal</span></p></article>' +
@@ -222,16 +293,16 @@
             '</div>' +
             '<div class="rr-grid">' +
             '  <article class="rr-panel rr-print-card">' +
-            '    <h3>Recovery Requirements</h3>' +
+            '    <h3>Recovery Prescription</h3>' +
             '    <ul>' +
             '      <li><strong>Rest Window:</strong> ' + result.recoveryHours + ' hours (~' + result.recoveryDays + ' days)</li>' +
             '      <li><strong>Sleep tonight:</strong> ' + result.sleepHours + ' hours</li>' +
             '      <li><strong>Total sleep target:</strong> ' + result.totalSleepHours + ' hours across recovery window</li>' +
-            '      <li><strong>Hydration:</strong> ' + result.hydrationLiters + ' liters in next 24h</li>' +
-            '      <li><strong>Sleep range:</strong> ' + result.sleepRange + ' nightly</li>' +
-            '      <li><strong>Protein:</strong> ' + result.proteinGrams + ' g</li>' +
-            '      <li><strong>Carbs:</strong> ' + result.carbsGrams + ' g</li>' +
-            '      <li><strong>Healthy fats:</strong> ' + result.fatGrams + ' g</li>' +
+            '      <li><strong>Hydration:</strong> ' + result.hydrationLiters + ' L over next 24h (' + escapeHtml(result.hydrationMethod) + ')</li>' +
+            '      <li><strong>Electrolytes:</strong> ' + result.sodiumLowMg + '-' + result.sodiumHighMg + ' mg sodium across that fluid</li>' +
+            '      <li><strong>Post-hike protein:</strong> ~' + result.proteinPostDose + ' g within 2 hours</li>' +
+            '      <li><strong>Daily protein:</strong> ' + result.proteinLowDaily + '-' + result.proteinHighDaily + ' g/day</li>' +
+            '      <li><strong>Carbs (first 4h):</strong> ' + result.carbLow4h + '-' + result.carbHigh4h + ' g total (' + result.carbLowPerHour + '-' + result.carbHighPerHour + ' g/h)</li>' +
             '    </ul>' +
             '  </article>' +
             '  <article class="rr-panel rr-panel-activities rr-print-card">' +
@@ -239,21 +310,38 @@
             '    <ul>' +
             activityItems +
             '    </ul>' +
+            (result.bodyMassLossKg > 0 ? ('<p class="rr-mini-note"><strong>Observed body-mass loss:</strong> ' + result.bodyMassLossKg + ' kg.</p>') : '') +
             '  </article>' +
             '</div>' +
             '<div class="rr-grid">' +
-            '  <article class="rr-panel rr-print-card">' +
+            '  <article class="rr-panel rr-panel-food rr-print-card">' +
             '    <h3>Foods to Prioritize</h3>' +
             '    <ul>' + foodItems + '</ul>' +
             '  </article>' +
             '  <article class="rr-panel rr-print-card">' +
             '    <h3>Ready to Resume?</h3>' +
             '    <p>' + escapeHtml(readinessMessage(result.recoveryHours)) + '</p>' +
+            '    <ul>' +
+            '      <li><strong>Age:</strong> ' + payload.age + ' years</li>' +
+            '      <li><strong>Height:</strong> ' +
+            (payload.heightUnit === 'ft'
+                ? payload.heightInput + ' ft (' + round(payload.heightCm, 1) + ' cm)'
+                : round(payload.heightCm, 1) + ' cm (' + round(payload.heightCm / 30.48, 2) + ' ft)') +
+            '</li>' +
+            '      <li><strong>Weight:</strong> ' +
+            (payload.weightUnit === 'lbs'
+                ? payload.weightInput + ' lbs (' + round(payload.weightKg, 1) + ' kg)'
+                : round(payload.weightKg, 1) + ' kg (' + round(payload.weightKg * 2.20462, 1) + ' lbs)') +
+            '</li>' +
+            '      <li><strong>Steps:</strong> ' + payload.steps.toLocaleString() + '</li>' +
+            '      <li><strong>Elevation Gain:</strong> ' + payload.elevationGainM + ' m</li>' +
+            '    </ul>' +
             (payload.notes ? ('<p class="rr-note"><strong>Notes:</strong> ' + escapeHtml(payload.notes) + '</p>') : '') +
             '  </article>' +
             '</div>' +
             '<article class="rr-disclaimer rr-print-card">' +
-            '  <p>This report is educational and not medical advice.</p>' +
+            '  <p>This report uses evidence-based estimation and is not medical advice.</p>' +
+            '  <p>Method basis: Compendium MET values, ACSM walking equation, sports hydration guidance, ISSN nutrition ranges, and adult sleep guidance.</p>' +
             '</article>';
     }
 
@@ -274,6 +362,8 @@
         const weightUnit = byId('weightUnit');
         const weightValue = byId('weightValue');
         const weightValueLabel = byId('weightValueLabel');
+        const preHikeWeight = byId('preHikeWeight');
+        const postHikeWeight = byId('postHikeWeight');
         const distanceUnit = byId('distanceUnit');
         const distanceValue = byId('distanceValue');
         const distanceValueLabel = byId('distanceValueLabel');
@@ -317,12 +407,24 @@
                     weightValue.max = '551';
                     weightValue.step = '0.1';
                     weightValue.placeholder = 'e.g. 180';
+                    if (preHikeWeight && postHikeWeight) {
+                        preHikeWeight.step = '0.1';
+                        postHikeWeight.step = '0.1';
+                        preHikeWeight.placeholder = 'e.g. 180';
+                        postHikeWeight.placeholder = 'e.g. 178.5';
+                    }
                 } else {
                     weightValueLabel.textContent = 'Weight (kg)';
                     weightValue.min = '30';
                     weightValue.max = '250';
                     weightValue.step = '0.1';
                     weightValue.placeholder = '';
+                    if (preHikeWeight && postHikeWeight) {
+                        preHikeWeight.step = '0.1';
+                        postHikeWeight.step = '0.1';
+                        preHikeWeight.placeholder = 'e.g. 82';
+                        postHikeWeight.placeholder = 'e.g. 81.4';
+                    }
                 }
             }
         }
@@ -359,6 +461,8 @@
                 heightInput: asNumber(form.height_value.value),
                 weightUnit: form.weight_unit.value,
                 weightInput: asNumber(form.weight_value.value),
+                preHikeWeightInput: asNumber(form.pre_hike_weight.value),
+                postHikeWeightInput: asNumber(form.post_hike_weight.value),
                 durationMinutes: asNumber(form.duration_minutes.value),
                 distanceUnit: form.distance_unit.value,
                 distanceInput: asNumber(form.distance_value.value),

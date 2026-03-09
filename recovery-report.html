@@ -18,43 +18,54 @@ permalink: /recovery-report/
         <section class="rr-form-card reveal" aria-labelledby="rr-form-title">
             <h2 id="rr-form-title">Hike Inputs</h2>
             <p class="rr-helper">Privacy note: this tool runs in your browser and does not store entries in an account.</p>
+            <p class="rr-helper"><span class="rr-required">*</span> Required fields</p>
             <form id="recoveryForm" class="rr-form" novalidate>
                 <div class="rr-field">
-                    <label for="hikeDate">Hike Date</label>
+                    <label for="hikeDate">Hike Date <span class="rr-required">*</span></label>
                     <input id="hikeDate" name="hike_date" type="date" required>
                 </div>
                 <div class="rr-field">
-                    <label for="age">Age</label>
+                    <label for="age">Age <span class="rr-required">*</span></label>
                     <input id="age" name="age" type="number" min="12" max="100" required>
                 </div>
                 <div class="rr-field">
-                    <label for="heightUnit">Height Unit</label>
+                    <label for="heightUnit">Height Unit <span class="rr-required">*</span></label>
                     <select id="heightUnit" name="height_unit" required>
                         <option value="cm" selected>cm</option>
                         <option value="ft">ft</option>
                     </select>
                 </div>
                 <div class="rr-field">
-                    <label for="heightValue" id="heightValueLabel">Height (cm)</label>
+                    <label for="heightValue" id="heightValueLabel">Height (cm) <span class="rr-required">*</span></label>
                     <input id="heightValue" name="height_value" type="number" min="100" max="230" step="0.1" required>
                 </div>
                 <div class="rr-field">
-                    <label for="weightUnit">Weight Unit</label>
+                    <label for="weightUnit">Weight Unit <span class="rr-required">*</span></label>
                     <select id="weightUnit" name="weight_unit" required>
                         <option value="kg" selected>kg</option>
                         <option value="lbs">lbs</option>
                     </select>
                 </div>
                 <div class="rr-field">
-                    <label for="weightValue" id="weightValueLabel">Weight (kg)</label>
+                    <label for="weightValue" id="weightValueLabel">Weight (kg) <span class="rr-required">*</span></label>
                     <input id="weightValue" name="weight_value" type="number" min="30" max="250" step="0.1" required>
                 </div>
                 <div class="rr-field">
-                    <label for="durationMinutes">Duration (minutes)</label>
+                    <label for="preHikeWeight">Pre-hike weight (optional, improves hydration accuracy)</label>
+                    <input id="preHikeWeight" name="pre_hike_weight" type="number" min="0" step="0.1"
+                        placeholder="Use selected weight unit">
+                </div>
+                <div class="rr-field">
+                    <label for="postHikeWeight">Post-hike weight (optional)</label>
+                    <input id="postHikeWeight" name="post_hike_weight" type="number" min="0" step="0.1"
+                        placeholder="Use selected weight unit">
+                </div>
+                <div class="rr-field">
+                    <label for="durationMinutes">Duration (minutes) <span class="rr-required">*</span></label>
                     <input id="durationMinutes" name="duration_minutes" type="number" min="10" max="1200" required>
                 </div>
                 <div class="rr-field">
-                    <label for="distanceUnit">Distance Unit</label>
+                    <label for="distanceUnit">Distance Unit <span class="rr-required">*</span></label>
                     <select id="distanceUnit" name="distance_unit" required>
                         <option value="km" selected>km</option>
                         <option value="miles">miles</option>
@@ -76,7 +87,7 @@ permalink: /recovery-report/
                         value="0">
                 </div>
                 <div class="rr-field">
-                    <label for="intensity">Intensity</label>
+                    <label for="intensity">Intensity <span class="rr-required">*</span></label>
                     <select id="intensity" name="intensity" required>
                         <option value="easy">Easy</option>
                         <option value="moderate" selected>Moderate</option>

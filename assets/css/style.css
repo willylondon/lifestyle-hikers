@@ -1936,6 +1936,11 @@ textarea {
     font-size: 0.95rem;
 }
 
+.rr-required {
+    color: #f87171;
+    font-weight: 700;
+}
+
 .rr-form {
     display: grid;
     gap: var(--space-lg);
@@ -2139,6 +2144,11 @@ textarea {
     color: var(--clr-text-muted);
 }
 
+.rr-mini-note {
+    margin-top: var(--space-md);
+    font-size: 0.9rem;
+}
+
 .rr-note {
     margin-top: var(--space-md);
     padding: var(--space-md);
@@ -2262,6 +2272,18 @@ textarea {
     .rr-note,
     .rr-disclaimer {
         display: none !important;
+    }
+
+    .rr-required {
+        color: #000 !important;
+    }
+
+    .rr-panel-food {
+        display: none !important;
+    }
+
+    .rr-report .rr-grid:last-of-type {
+        grid-template-columns: 1fr;
     }
 
     .rr-report-header h2 {
