@@ -1,0 +1,82 @@
+---
+layout: default
+title: Recovery Report
+permalink: /recovery-report/
+---
+
+<main class="rr-page section">
+    <div class="container">
+        <section class="rr-intro reveal">
+            <span class="section-badge"><i class="fas fa-mountain"></i> Lifestyle Hikers Recovery Lab</span>
+            <h1 class="section-title">Post-Hike Recovery Report</h1>
+            <p class="section-subtitle">
+                Enter your hike details and generate a personalized report with calorie burn, recovery timing, hydration,
+                and nutrition guidance. Then save it as a PDF. No login is required.
+            </p>
+        </section>
+
+        <section class="rr-form-card reveal" aria-labelledby="rr-form-title">
+            <h2 id="rr-form-title">Hike Inputs</h2>
+            <p class="rr-helper">Privacy note: this tool runs in your browser and does not store entries in an account.</p>
+            <form id="recoveryForm" class="rr-form" novalidate>
+                <div class="rr-field">
+                    <label for="hikeDate">Hike Date</label>
+                    <input id="hikeDate" name="hike_date" type="date" required>
+                </div>
+                <div class="rr-field">
+                    <label for="age">Age</label>
+                    <input id="age" name="age" type="number" min="12" max="100" required>
+                </div>
+                <div class="rr-field">
+                    <label for="heightCm">Height (cm)</label>
+                    <input id="heightCm" name="height_cm" type="number" min="100" max="230" step="0.1" required>
+                </div>
+                <div class="rr-field">
+                    <label for="weightKg">Weight (kg)</label>
+                    <input id="weightKg" name="weight_kg" type="number" min="30" max="250" step="0.1" required>
+                </div>
+                <div class="rr-field">
+                    <label for="durationMinutes">Duration (minutes)</label>
+                    <input id="durationMinutes" name="duration_minutes" type="number" min="10" max="1200" required>
+                </div>
+                <div class="rr-field">
+                    <label for="distanceKm">Distance (km)</label>
+                    <input id="distanceKm" name="distance_km" type="number" min="0" max="250" step="0.01"
+                        placeholder="Optional if steps entered">
+                </div>
+                <div class="rr-field">
+                    <label for="steps">Steps</label>
+                    <input id="steps" name="steps" type="number" min="0" max="250000"
+                        placeholder="Optional if distance entered">
+                </div>
+                <div class="rr-field">
+                    <label for="elevationGain">Elevation Gain (m)</label>
+                    <input id="elevationGain" name="elevation_gain_m" type="number" min="0" max="8000" step="0.1"
+                        value="0">
+                </div>
+                <div class="rr-field">
+                    <label for="intensity">Intensity</label>
+                    <select id="intensity" name="intensity" required>
+                        <option value="easy">Easy</option>
+                        <option value="moderate" selected>Moderate</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="rr-field rr-field-full">
+                    <label for="notes">Notes (optional)</label>
+                    <textarea id="notes" name="notes" rows="3" maxlength="500"
+                        placeholder="How did your body feel during this hike?"></textarea>
+                </div>
+                <div class="rr-actions rr-field-full">
+                    <button type="submit" class="rr-btn rr-btn-primary">Generate Report</button>
+                    <button type="button" class="rr-btn rr-btn-ghost" id="savePdfBtn" disabled>Save as PDF</button>
+                </div>
+            </form>
+            <p id="recoveryError" class="rr-error" role="alert" hidden></p>
+        </section>
+
+        <section id="reportOutput" class="rr-report" hidden aria-live="polite"></section>
+    </div>
+</main>
+
+<script src="{{ '/assets/js/recovery-report.js' | relative_url }}"></script>
