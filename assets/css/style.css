@@ -213,7 +213,7 @@ textarea {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: var(--space-2xl);
+    gap: clamp(0.75rem, 1.8vw, 1.7rem);
 }
 
 .nav-links a {
@@ -222,6 +222,7 @@ textarea {
     color: var(--clr-text);
     position: relative;
     padding: var(--space-xs) 0;
+    white-space: nowrap;
 }
 
 .nav-links a::after {
@@ -247,6 +248,8 @@ textarea {
     border-radius: var(--radius-xl);
     font-weight: 600 !important;
     transition: all var(--transition-base) !important;
+    margin-left: var(--space-sm);
+    flex-shrink: 0;
 }
 
 .nav-cta::after {
