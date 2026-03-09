@@ -40,6 +40,13 @@
         return distanceValue;
     }
 
+    function toKg(weightValue, weightUnit) {
+        if (weightUnit === 'lbs') {
+            return weightValue * 0.45359237;
+        }
+        return weightValue;
+    }
+
     function formatDate(inputDate) {
         const parsed = new Date(inputDate + 'T12:00:00');
         if (Number.isNaN(parsed.getTime())) {
@@ -199,7 +206,11 @@
                 ? payload.heightInput + ' ft (' + round(payload.heightCm, 1) + ' cm)'
                 : round(payload.heightCm, 1) + ' cm (' + round(payload.heightCm / 30.48, 2) + ' ft)') +
             '</li>' +
-            '      <li><strong>Weight:</strong> ' + payload.weightKg + ' kg</li>' +
+            '      <li><strong>Weight:</strong> ' +
+            (payload.weightUnit === 'lbs'
+                ? payload.weightInput + ' lbs (' + round(payload.weightKg, 1) + ' kg)'
+                : round(payload.weightKg, 1) + ' kg (' + round(payload.weightKg * 2.20462, 1) + ' lbs)') +
+            '</li>' +
             '      <li><strong>Steps:</strong> ' + payload.steps.toLocaleString() + '</li>' +
             '      <li><strong>Elevation Gain:</strong> ' + payload.elevationGainM + ' m</li>' +
             '    </ul>' +
@@ -235,6 +246,9 @@
         const heightUnit = byId('heightUnit');
         const heightValue = byId('heightValue');
         const heightValueLabel = byId('heightValueLabel');
+        const weightUnit = byId('weightUnit');
+        const weightValue = byId('weightValue');
+        const weightValueLabel = byId('weightValueLabel');
         const distanceUnit = byId('distanceUnit');
         const distanceValue = byId('distanceValue');
         const distanceValueLabel = byId('distanceValueLabel');
@@ -270,6 +284,22 @@
                     distanceValue.step = '0.01';
                 }
             }
+
+            if (weightUnit && weightValue && weightValueLabel) {
+                if (weightUnit.value === 'lbs') {
+                    weightValueLabel.textContent = 'Weight (lbs)';
+                    weightValue.min = '66';
+                    weightValue.max = '551';
+                    weightValue.step = '0.1';
+                    weightValue.placeholder = 'e.g. 180';
+                } else {
+                    weightValueLabel.textContent = 'Weight (kg)';
+                    weightValue.min = '30';
+                    weightValue.max = '250';
+                    weightValue.step = '0.1';
+                    weightValue.placeholder = '';
+                }
+            }
         }
 
         if (heightUnit) {
@@ -277,6 +307,9 @@
         }
         if (distanceUnit) {
             distanceUnit.addEventListener('change', syncUnitFields);
+        }
+        if (weightUnit) {
+            weightUnit.addEventListener('change', syncUnitFields);
         }
         syncUnitFields();
 
@@ -299,7 +332,8 @@
                 age: asNumber(form.age.value),
                 heightUnit: form.height_unit.value,
                 heightInput: asNumber(form.height_value.value),
-                weightKg: asNumber(form.weight_kg.value),
+                weightUnit: form.weight_unit.value,
+                weightInput: asNumber(form.weight_value.value),
                 durationMinutes: asNumber(form.duration_minutes.value),
                 distanceUnit: form.distance_unit.value,
                 distanceInput: asNumber(form.distance_value.value),
@@ -310,9 +344,10 @@
                 notes: form.notes.value.trim()
             };
             payload.heightCm = toCm(payload.heightInput, payload.heightUnit);
+            payload.weightKg = toKg(payload.weightInput, payload.weightUnit);
             payload.distanceKmInput = toKm(payload.distanceInput, payload.distanceUnit);
 
-            if (!payload.hikeDate || !payload.age || !payload.heightInput || !payload.weightKg || !payload.durationMinutes) {
+            if (!payload.hikeDate || !payload.age || !payload.heightInput || !payload.weightInput || !payload.durationMinutes) {
                 showError('Please complete all required fields.');
                 return;
             }

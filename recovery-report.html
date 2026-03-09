@@ -39,8 +39,15 @@ permalink: /recovery-report/
                     <input id="heightValue" name="height_value" type="number" min="100" max="230" step="0.1" required>
                 </div>
                 <div class="rr-field">
-                    <label for="weightKg">Weight (kg)</label>
-                    <input id="weightKg" name="weight_kg" type="number" min="30" max="250" step="0.1" required>
+                    <label for="weightUnit">Weight Unit</label>
+                    <select id="weightUnit" name="weight_unit" required>
+                        <option value="kg" selected>kg</option>
+                        <option value="lbs">lbs</option>
+                    </select>
+                </div>
+                <div class="rr-field">
+                    <label for="weightValue" id="weightValueLabel">Weight (kg)</label>
+                    <input id="weightValue" name="weight_value" type="number" min="30" max="250" step="0.1" required>
                 </div>
                 <div class="rr-field">
                     <label for="durationMinutes">Duration (minutes)</label>
