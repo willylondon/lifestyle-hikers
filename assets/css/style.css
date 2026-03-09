@@ -2183,6 +2183,17 @@ textarea {
 }
 
 @media print {
+    @page {
+        size: letter portrait;
+        margin: 0.35in;
+    }
+
+    html,
+    body {
+        font-size: 10.5px;
+        line-height: 1.25;
+    }
+
     body {
         background: #fff;
         color: #111;
@@ -2200,9 +2211,24 @@ textarea {
         background: #fff;
     }
 
+    .container {
+        max-width: none;
+        padding: 0;
+    }
+
     .rr-report {
         margin: 0;
-        gap: 0.7rem;
+        gap: 0.35rem;
+    }
+
+    .rr-metrics {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.35rem;
+    }
+
+    .rr-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.35rem;
     }
 
     .rr-print-card,
@@ -2210,11 +2236,11 @@ textarea {
     .rr-panel,
     .rr-metric,
     .rr-disclaimer {
-        border: 1px solid #ccc !important;
+        border: 1px solid #000 !important;
         background: #fff !important;
         color: #111 !important;
         box-shadow: none !important;
-        break-inside: avoid;
+        padding: 0.4rem 0.5rem !important;
     }
 
     .rr-report-header p,
@@ -2225,5 +2251,44 @@ textarea {
     .rr-panel ul,
     .rr-disclaimer {
         color: #333 !important;
+    }
+
+    .rr-metric p,
+    .rr-panel li strong {
+        color: #111 !important;
+    }
+
+    .rr-kicker,
+    .rr-note,
+    .rr-disclaimer {
+        display: none !important;
+    }
+
+    .rr-report-header h2 {
+        font-size: 1rem;
+        margin-bottom: 0.15rem;
+    }
+
+    .rr-report-header p,
+    .rr-metric small,
+    .rr-panel p {
+        margin-top: 0.1rem;
+        font-size: 0.72rem;
+    }
+
+    .rr-metric h3,
+    .rr-panel h3 {
+        font-size: 0.84rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .rr-metric p {
+        font-size: 1.12rem;
+        line-height: 1.1;
+    }
+
+    .rr-panel ul {
+        gap: 0.12rem;
+        font-size: 0.74rem;
     }
 }

@@ -111,6 +111,33 @@
         return 'Prioritize sleep, hydration, and gentle mobility for at least 2 days before hard activity.';
     }
 
+    function recoveryActivities(recoveryHours, intensity) {
+        if (recoveryHours > 48 || intensity === 'hard') {
+            return [
+                'Light walk: 20-30 minutes at easy pace',
+                'Stretching or mobility: 15 minutes morning and evening',
+                'Massage or foam rolling: 10-15 minutes',
+                'Easy bike ride: 20-30 minutes on day 2 if soreness is low'
+            ];
+        }
+
+        if (recoveryHours > 24) {
+            return [
+                'Light walk: 20 minutes',
+                'Stretching: 10-15 minutes',
+                'Massage or foam rolling: 8-10 minutes',
+                'Easy bike ride: 15-20 minutes if energy feels normal'
+            ];
+        }
+
+        return [
+            'Light walk: 15-20 minutes',
+            'Stretching: 10 minutes',
+            'Massage or foam rolling: 5-8 minutes',
+            'Optional easy ride: 10-15 minutes'
+        ];
+    }
+
     function calculate(payload) {
         const metMap = {
             easy: 5,
@@ -142,6 +169,9 @@
         const proteinGrams = clamp(payload.weightKg * 0.35, 22, 110);
         const carbsGrams = clamp(caloriesBurned * 0.55 / 4, 90, 450);
         const fatGrams = clamp(caloriesBurned * 0.2 / 9, 25, 140);
+        const sleepHours = recoveryHours > 48 ? 9 : recoveryHours > 24 ? 8 : 7;
+        const sleepDays = Math.max(1, Math.ceil(recoveryHours / 24));
+        const totalSleepHours = sleepHours * sleepDays;
 
         return {
             caloriesBurned: round(caloriesBurned, 0),
@@ -154,12 +184,17 @@
             proteinGrams: round(proteinGrams, 0),
             carbsGrams: round(carbsGrams, 0),
             fatGrams: round(fatGrams, 0),
-            sleepRange: recoveryHours > 48 ? '8-9 hours' : '7-8 hours'
+            sleepRange: recoveryHours > 48 ? '8-9 hours' : '7-8 hours',
+            sleepHours: sleepHours,
+            totalSleepHours: totalSleepHours
         };
     }
 
     function renderReport(target, payload, result) {
         const foodItems = foodsForIntensity(payload.intensity)
+            .map(function (item) { return '<li>' + escapeHtml(item) + '</li>'; })
+            .join('');
+        const activityItems = recoveryActivities(result.recoveryHours, payload.intensity)
             .map(function (item) { return '<li>' + escapeHtml(item) + '</li>'; })
             .join('');
         const resumeDate = addHoursToDate(payload.hikeDate, result.recoveryHours);
@@ -190,29 +225,19 @@
             '    <h3>Recovery Requirements</h3>' +
             '    <ul>' +
             '      <li><strong>Rest Window:</strong> ' + result.recoveryHours + ' hours (~' + result.recoveryDays + ' days)</li>' +
+            '      <li><strong>Sleep tonight:</strong> ' + result.sleepHours + ' hours</li>' +
+            '      <li><strong>Total sleep target:</strong> ' + result.totalSleepHours + ' hours across recovery window</li>' +
             '      <li><strong>Hydration:</strong> ' + result.hydrationLiters + ' liters in next 24h</li>' +
-            '      <li><strong>Sleep:</strong> ' + result.sleepRange + ' nightly</li>' +
+            '      <li><strong>Sleep range:</strong> ' + result.sleepRange + ' nightly</li>' +
             '      <li><strong>Protein:</strong> ' + result.proteinGrams + ' g</li>' +
             '      <li><strong>Carbs:</strong> ' + result.carbsGrams + ' g</li>' +
             '      <li><strong>Healthy fats:</strong> ' + result.fatGrams + ' g</li>' +
             '    </ul>' +
             '  </article>' +
-            '  <article class="rr-panel rr-print-card">' +
-            '    <h3>Profile Snapshot</h3>' +
+            '  <article class="rr-panel rr-panel-activities rr-print-card">' +
+            '    <h3>Recovery Activity Recommendations</h3>' +
             '    <ul>' +
-            '      <li><strong>Age:</strong> ' + payload.age + ' years</li>' +
-            '      <li><strong>Height:</strong> ' +
-            (payload.heightUnit === 'ft'
-                ? payload.heightInput + ' ft (' + round(payload.heightCm, 1) + ' cm)'
-                : round(payload.heightCm, 1) + ' cm (' + round(payload.heightCm / 30.48, 2) + ' ft)') +
-            '</li>' +
-            '      <li><strong>Weight:</strong> ' +
-            (payload.weightUnit === 'lbs'
-                ? payload.weightInput + ' lbs (' + round(payload.weightKg, 1) + ' kg)'
-                : round(payload.weightKg, 1) + ' kg (' + round(payload.weightKg * 2.20462, 1) + ' lbs)') +
-            '</li>' +
-            '      <li><strong>Steps:</strong> ' + payload.steps.toLocaleString() + '</li>' +
-            '      <li><strong>Elevation Gain:</strong> ' + payload.elevationGainM + ' m</li>' +
+            activityItems +
             '    </ul>' +
             '  </article>' +
             '</div>' +
