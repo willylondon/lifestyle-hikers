@@ -10,6 +10,7 @@ logo: "/assets/images/logo.png"
 markdown: kramdown
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Include admin folder for Decap CMS
 include:

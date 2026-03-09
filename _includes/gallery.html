@@ -10,7 +10,7 @@
             {% for photo in site.data.gallery.items %}
             <div
                 class="gallery-item {% if photo.size == 'tall' %}gallery-item-tall{% endif %}{% if photo.size == 'wide' %}gallery-item-wide{% endif %}">
-                <img src="{{ photo.image }}" alt="{{ photo.alt }}">
+                <img src="{{ photo.image }}" alt="{{ photo.alt }}" loading="lazy" decoding="async">
                 <div class="gallery-overlay">
                     <span><i class="fas fa-expand"></i></span>
                 </div>

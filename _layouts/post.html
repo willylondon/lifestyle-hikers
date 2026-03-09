@@ -4,8 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} — {{ site.title }}</title>
-    <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
     <link rel="icon" type="image/png" href="{{ '/assets/images/logo.png' | relative_url }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +21,7 @@
     <article class="blog-post-page">
         <div class="container">
             <div class="blog-post-header">
-                <a href="{{ '/blog' | relative_url }}" class="blog-back"><i class="fas fa-arrow-left"></i> Back to
+                <a href="{{ '/blog/' | relative_url }}" class="blog-back"><i class="fas fa-arrow-left"></i> Back to
                     Blog</a>
                 <span class="section-badge"><i class="fas fa-hiking"></i> {{ page.category | default: "Trail Stories"
                     }}</span>
@@ -36,7 +34,7 @@
                 </div>
                 {% if page.image %}
                 <div class="blog-post-hero">
-                    <img src="{{ page.image }}" alt="{{ page.title }}">
+                    <img src="{{ page.image }}" alt="{{ page.title }}" fetchpriority="high">
                 </div>
                 {% endif %}
             </div>

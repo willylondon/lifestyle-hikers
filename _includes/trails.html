@@ -17,7 +17,7 @@
             {% for trail in site.data.trails.items %}
             <div class="trail-card reveal" data-difficulty="{{ trail.difficulty }}">
                 <div class="trail-card-img">
-                    <img src="{{ trail.image }}" alt="{{ trail.alt }}">
+                    <img src="{{ trail.image }}" alt="{{ trail.alt | default: trail.name }}" loading="lazy" decoding="async">
                     <span class="trail-badge {{ trail.difficulty }}">{{ trail.difficulty | capitalize }}</span>
                     <button class="trail-save" aria-label="Save trail"><i class="far fa-heart"></i></button>
                 </div>

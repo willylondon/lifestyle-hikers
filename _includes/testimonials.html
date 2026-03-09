@@ -16,7 +16,7 @@
                     <div class="review-author">
                         <div class="review-avatar">
                             {% if review.avatar and review.avatar != "" %}
-                            <img src="{{ review.avatar | relative_url }}" alt="{{ review.name }}">
+                            <img src="{{ review.avatar | relative_url }}" alt="{{ review.name }}" loading="lazy" decoding="async">
                             {% else %}
                             <i class="fas fa-user"></i>
                             {% endif %}

@@ -13,7 +13,7 @@
             <li><a href="{{ '/corporate.html' | relative_url }}" {% if page.url=='/corporate.html' %}class="active" {%
                     endif %}>Corporate</a></li>
             <li><a href="{{ '/' | relative_url }}#merch">Merch</a></li>
-            <li><a href="{{ '/blog' | relative_url }}" {% if page.url=='/blog' or page.layout=='post' %}class="active"
+            <li><a href="{{ '/blog/' | relative_url }}" {% if page.url=='/blog/' or page.url=='/blog.html' or page.layout=='post' %}class="active"
                     {% endif %}>Blog</a></li>
             <li><a href="{{ '/' | relative_url }}#contact" class="nav-cta">Join Us</a></li>
         </ul>

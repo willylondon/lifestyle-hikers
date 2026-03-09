@@ -2,13 +2,14 @@
 layout: default
 title: Blog
 description: Trail stories, hiking tips, and updates from Lifestyle Hikers Jamaica.
+permalink: /blog/
 ---
 
 <section class="section blog-section">
     <div class="container">
         <div class="section-header reveal">
             <span class="section-badge"><i class="fas fa-pen-fancy"></i> Stories</span>
-            <h2 class="section-title">Trail Stories & Updates</h2>
+            <h1 class="section-title">Trail Stories & Updates</h1>
             <p class="section-subtitle">Guides, recaps, and adventures from the Lifestyle Hikers community.</p>
         </div>
 
@@ -17,7 +18,7 @@ description: Trail stories, hiking tips, and updates from Lifestyle Hikers Jamai
             <article class="blog-card reveal">
                 {% if post.image %}
                 <div class="blog-card-img">
-                    <img src="{{ post.image }}" alt="{{ post.title }}">
+                    <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy" decoding="async">
                     {% if post.category %}
                     <span class="blog-category">{{ post.category }}</span>
                     {% endif %}

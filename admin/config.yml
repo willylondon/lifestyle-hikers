@@ -78,6 +78,12 @@ collections:
         widget: "string"
         hint: "The headline for your blog post"
 
+      - label: "SEO Description"
+        name: "description"
+        widget: "text"
+        required: false
+        hint: "1-2 short sentences (about 140-160 characters) for Google search snippets."
+
       - label: "Date"
         name: "date"
         widget: "datetime"
@@ -117,7 +123,7 @@ collections:
         name: "tags"
         widget: "list"
         required: false
-        hint: "Comma-separated tags (e.g. blue-mountains, waterfall, sunrise)"
+        hint: "Add one keyword phrase per item (e.g. 'hiking in jamaica')."
 
       - label: "Body"
         name: "body"
