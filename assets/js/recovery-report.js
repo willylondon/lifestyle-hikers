@@ -26,6 +26,20 @@
             .replaceAll("'", '&#039;');
     }
 
+    function toCm(heightValue, heightUnit) {
+        if (heightUnit === 'ft') {
+            return heightValue * 30.48;
+        }
+        return heightValue;
+    }
+
+    function toKm(distanceValue, distanceUnit) {
+        if (distanceUnit === 'miles') {
+            return distanceValue * 1.60934;
+        }
+        return distanceValue;
+    }
+
     function formatDate(inputDate) {
         const parsed = new Date(inputDate + 'T12:00:00');
         if (Number.isNaN(parsed.getTime())) {
@@ -99,9 +113,11 @@
 
         const durationHours = payload.durationMinutes / 60;
         const inferredDistanceKm = payload.steps > 0 ? payload.steps * 0.000762 : 0;
-        const distanceKm = payload.distanceKm > 0 ? payload.distanceKm : inferredDistanceKm;
+        const distanceKm = payload.distanceKmInput > 0 ? payload.distanceKmInput : inferredDistanceKm;
         const distanceMiles = distanceKm * 0.621371;
-        const distanceSource = payload.distanceKm > 0 ? 'entered distance' : 'estimated from steps';
+        const distanceSource = payload.distanceKmInput > 0
+            ? 'entered distance (' + payload.distanceUnit + ')'
+            : 'estimated from steps';
 
         const met = metMap[payload.intensity] || metMap.moderate;
         const baseCalories = met * payload.weightKg * durationHours;
@@ -150,7 +166,15 @@
             '</article>' +
             '<div class="rr-metrics">' +
             '  <article class="rr-metric rr-metric-hot rr-print-card"><h3>Total Calories</h3><p>' + result.caloriesBurned + ' <span>kcal</span></p></article>' +
-            '  <article class="rr-metric rr-metric-cool rr-print-card"><h3>Total Distance</h3><p>' + result.distanceMiles + ' <span>mi</span></p><small>' + result.distanceKm + ' km (' + escapeHtml(result.distanceSource) + ')</small></article>' +
+            '  <article class="rr-metric rr-metric-cool rr-print-card"><h3>Total Distance</h3><p>' +
+            (payload.distanceUnit === 'miles'
+                ? result.distanceMiles + ' <span>mi</span>'
+                : result.distanceKm + ' <span>km</span>') +
+            '</p><small>' +
+            (payload.distanceUnit === 'miles'
+                ? result.distanceKm + ' km'
+                : result.distanceMiles + ' mi') +
+            ' (' + escapeHtml(result.distanceSource) + ')</small></article>' +
             '  <article class="rr-metric rr-print-card"><h3>Duration</h3><p>' + payload.durationMinutes + ' <span>min</span></p></article>' +
             '  <article class="rr-metric rr-print-card"><h3>Recovery Needed</h3><p>' + result.recoveryHours + ' <span>hours</span></p></article>' +
             '</div>' +
@@ -170,7 +194,11 @@
             '    <h3>Profile Snapshot</h3>' +
             '    <ul>' +
             '      <li><strong>Age:</strong> ' + payload.age + ' years</li>' +
-            '      <li><strong>Height:</strong> ' + payload.heightCm + ' cm</li>' +
+            '      <li><strong>Height:</strong> ' +
+            (payload.heightUnit === 'ft'
+                ? payload.heightInput + ' ft (' + round(payload.heightCm, 1) + ' cm)'
+                : round(payload.heightCm, 1) + ' cm (' + round(payload.heightCm / 30.48, 2) + ' ft)') +
+            '</li>' +
             '      <li><strong>Weight:</strong> ' + payload.weightKg + ' kg</li>' +
             '      <li><strong>Steps:</strong> ' + payload.steps.toLocaleString() + '</li>' +
             '      <li><strong>Elevation Gain:</strong> ' + payload.elevationGainM + ' m</li>' +
@@ -204,9 +232,53 @@
         }
 
         const dateInput = byId('hikeDate');
+        const heightUnit = byId('heightUnit');
+        const heightValue = byId('heightValue');
+        const heightValueLabel = byId('heightValueLabel');
+        const distanceUnit = byId('distanceUnit');
+        const distanceValue = byId('distanceValue');
+        const distanceValueLabel = byId('distanceValueLabel');
         if (dateInput) {
             dateInput.value = new Date().toISOString().slice(0, 10);
         }
+
+        function syncUnitFields() {
+            if (heightUnit && heightValue && heightValueLabel) {
+                if (heightUnit.value === 'ft') {
+                    heightValueLabel.textContent = 'Height (ft)';
+                    heightValue.min = '3';
+                    heightValue.max = '8';
+                    heightValue.step = '0.01';
+                    heightValue.placeholder = 'e.g. 5.9';
+                } else {
+                    heightValueLabel.textContent = 'Height (cm)';
+                    heightValue.min = '100';
+                    heightValue.max = '230';
+                    heightValue.step = '0.1';
+                    heightValue.placeholder = '';
+                }
+            }
+
+            if (distanceUnit && distanceValue && distanceValueLabel) {
+                if (distanceUnit.value === 'miles') {
+                    distanceValueLabel.textContent = 'Distance (miles)';
+                    distanceValue.max = '155';
+                    distanceValue.step = '0.01';
+                } else {
+                    distanceValueLabel.textContent = 'Distance (km)';
+                    distanceValue.max = '250';
+                    distanceValue.step = '0.01';
+                }
+            }
+        }
+
+        if (heightUnit) {
+            heightUnit.addEventListener('change', syncUnitFields);
+        }
+        if (distanceUnit) {
+            distanceUnit.addEventListener('change', syncUnitFields);
+        }
+        syncUnitFields();
 
         function showError(message) {
             errorEl.textContent = message;
@@ -225,23 +297,27 @@
             const payload = {
                 hikeDate: form.hike_date.value,
                 age: asNumber(form.age.value),
-                heightCm: asNumber(form.height_cm.value),
+                heightUnit: form.height_unit.value,
+                heightInput: asNumber(form.height_value.value),
                 weightKg: asNumber(form.weight_kg.value),
                 durationMinutes: asNumber(form.duration_minutes.value),
-                distanceKm: asNumber(form.distance_km.value),
+                distanceUnit: form.distance_unit.value,
+                distanceInput: asNumber(form.distance_value.value),
                 steps: Math.round(asNumber(form.steps.value)),
                 elevationGainM: asNumber(form.elevation_gain_m.value),
                 intensity: form.intensity.value,
                 intensityLabel: form.intensity.value.charAt(0).toUpperCase() + form.intensity.value.slice(1),
                 notes: form.notes.value.trim()
             };
+            payload.heightCm = toCm(payload.heightInput, payload.heightUnit);
+            payload.distanceKmInput = toKm(payload.distanceInput, payload.distanceUnit);
 
-            if (!payload.hikeDate || !payload.age || !payload.heightCm || !payload.weightKg || !payload.durationMinutes) {
+            if (!payload.hikeDate || !payload.age || !payload.heightInput || !payload.weightKg || !payload.durationMinutes) {
                 showError('Please complete all required fields.');
                 return;
             }
 
-            if (!payload.distanceKm && !payload.steps) {
+            if (!payload.distanceInput && !payload.steps) {
                 showError('Please provide either distance or steps.');
                 return;
             }

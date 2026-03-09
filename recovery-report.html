@@ -28,8 +28,15 @@ permalink: /recovery-report/
                     <input id="age" name="age" type="number" min="12" max="100" required>
                 </div>
                 <div class="rr-field">
-                    <label for="heightCm">Height (cm)</label>
-                    <input id="heightCm" name="height_cm" type="number" min="100" max="230" step="0.1" required>
+                    <label for="heightUnit">Height Unit</label>
+                    <select id="heightUnit" name="height_unit" required>
+                        <option value="cm" selected>cm</option>
+                        <option value="ft">ft</option>
+                    </select>
+                </div>
+                <div class="rr-field">
+                    <label for="heightValue" id="heightValueLabel">Height (cm)</label>
+                    <input id="heightValue" name="height_value" type="number" min="100" max="230" step="0.1" required>
                 </div>
                 <div class="rr-field">
                     <label for="weightKg">Weight (kg)</label>
@@ -40,8 +47,15 @@ permalink: /recovery-report/
                     <input id="durationMinutes" name="duration_minutes" type="number" min="10" max="1200" required>
                 </div>
                 <div class="rr-field">
-                    <label for="distanceKm">Distance (km)</label>
-                    <input id="distanceKm" name="distance_km" type="number" min="0" max="250" step="0.01"
+                    <label for="distanceUnit">Distance Unit</label>
+                    <select id="distanceUnit" name="distance_unit" required>
+                        <option value="km" selected>km</option>
+                        <option value="miles">miles</option>
+                    </select>
+                </div>
+                <div class="rr-field">
+                    <label for="distanceValue" id="distanceValueLabel">Distance (km)</label>
+                    <input id="distanceValue" name="distance_value" type="number" min="0" max="250" step="0.01"
                         placeholder="Optional if steps entered">
                 </div>
                 <div class="rr-field">
