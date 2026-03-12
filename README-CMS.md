@@ -57,6 +57,7 @@ Once the CMS is set up (see Setup section below), here's how to use it:
 - Click the **image icon** in any image field
 - Choose **Upload** to add from your computer, or **Insert from URL** to paste a link
 - Uploaded images are stored in `assets/images/uploads/`
+- After publish, GitHub Actions automatically creates optimized WebP versions for CMS uploads and rewrites matching content references when needed
 
 ---
 
