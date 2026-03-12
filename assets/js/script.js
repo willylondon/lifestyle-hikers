@@ -4,6 +4,17 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const normalizeSearchValue = (value) => String(value || '')
+        .toLowerCase()
+        .normalize('NFKD')
+        .replace(/[^\p{L}\p{N}]+/gu, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+
+    const tokenizeSearchValue = (value) => normalizeSearchValue(value)
+        .split(' ')
+        .filter(Boolean)
+        .map(token => (token.length > 3 && token.endsWith('s') ? token.slice(0, -1) : token));
 
     // --- Mobile Navigation Toggle ---
     const navToggle = document.getElementById('navToggle');
@@ -113,14 +124,16 @@ document.addEventListener('DOMContentLoaded', () => {
     let activeFilter = 'all';
 
     const updateTrailFilters = () => {
-        const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+        const query = searchInput ? searchInput.value.trim() : '';
+        const queryTokens = tokenizeSearchValue(query);
         let visibleCount = 0;
 
         trailCards.forEach(card => {
             const difficulty = card.getAttribute('data-difficulty');
-            const haystack = card.getAttribute('data-search') || '';
+            const haystackTokens = tokenizeSearchValue(card.getAttribute('data-search') || '');
             const matchesFilter = activeFilter === 'all' || difficulty === activeFilter;
-            const matchesSearch = query === '' || haystack.includes(query);
+            const matchesSearch = queryTokens.length === 0
+                || queryTokens.every(token => haystackTokens.some(candidate => candidate.includes(token)));
             const isVisible = matchesFilter && matchesSearch;
 
             card.hidden = !isVisible;
@@ -138,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (searchResults) {
-            if (query) {
+            if (queryTokens.length > 0) {
                 searchResults.textContent = visibleCount === 1
                     ? '1 trail matches your search.'
                     : `${visibleCount} trails match your search.`;
