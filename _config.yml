@@ -4,7 +4,7 @@ url: "https://www.lifestylehikers.com"
 baseurl: ""
 timezone: America/Jamaica
 image: "/assets/images/uploads/img_7939-1200w.webp"
-logo: "/assets/images/logo.png"
+logo: "/assets/images/logo-light.png"
 
 # Build settings
 markdown: kramdown
