@@ -6,7 +6,7 @@ author: Willy London
 category: Trail Stories
 description: Firsthand guide to hiking Cinchona Botanical Gardens from Guava Ridge in Jamaica, with route challenge, timing, and practical tips.
 location: Cinchona Botanical Garden, East Rural, St. Andrew
-image: /assets/images/uploads/37c23df0-f8b1-4754-ac0d-a90becc8a0fb.jpeg
+image: /assets/images/uploads/37c23df0-f8b1-4754-ac0d-a90becc8a0fb-1200w.webp
 tags:
   - cinchona botanical gardens
   - blue mountains jamaica
@@ -26,7 +26,7 @@ Known as the "Hill Gardens," Cinchona sits between roughly 4,500 and 5,500 feet 
 
 We started at 5:13 AM with a prayer and reached Section by 7:38 AM, then pushed uphill toward Cinchona.
 
-![Lifestyle Hikers at the start point near Section before climbing to Cinchona Botanical Gardens](/assets/images/uploads/PHOTO-2026-03-08-08-58-07.jpg)
+![Lifestyle Hikers at the start point near Section before climbing to Cinchona Botanical Gardens](/assets/images/uploads/PHOTO-2026-03-08-08-58-07-1200w.webp)
 
 The route from **Guava Ridge to Section** gives you a real look at rural Jamaican mountain life. You pass through coffee country, old district roads, and long stretches where the incline keeps tightening.
 

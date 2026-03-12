@@ -6,7 +6,7 @@ author: Lifestyle Hikers
 category: Trail Stories
 description: Kwame Falls hike recap from Lifestyle Hikers, including trail challenge, river crossings, and why this Jamaica adventure was worth every step.
 location: Kwame Falls, St Mary
-image: /assets/images/uploads/img_7939.jpeg
+image: /assets/images/uploads/img_7939-1200w.webp
 tags:
   - kwame falls
   - st mary jamaica

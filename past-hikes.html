@@ -1,6 +1,8 @@
 ---
 layout: default
-title: Past Hikes | Lifestyle Hikers
+title: Past Hikes
+description: Browse completed Lifestyle Hikers adventures across Jamaica, from mountain climbs to waterfall trails.
+image: /assets/images/uploads/img_0700-1200w.webp
 ---
 
 <section class="section upcoming-section" style="padding-top: 150px; min-height: 80vh;">
@@ -13,7 +15,12 @@ title: Past Hikes | Lifestyle Hikers
         </div>
         <div class="events-grid">
             {% assign sorted_events = site.data.events.items | sort: "date" | reverse %}
+            {% assign now_date = "now" | date: "%s" %}
+            {% assign past_events_count = 0 %}
             {% for event in sorted_events %}
+            {% assign event_date = event.date | date: "%s" %}
+            {% if event_date <= now_date %}
+            {% assign past_events_count = past_events_count | plus: 1 %}
             <div class="event-card reveal">
                 <div class="event-date">
                     <span class="event-month">{{ event.date | date: "%b" | upcase }}</span>
@@ -23,12 +30,7 @@ title: Past Hikes | Lifestyle Hikers
                 <div class="event-details">
                     <div class="event-top">
                         <span class="event-badge {{ event.difficulty }}">{{ event.difficulty | capitalize }}</span>
-                        <!-- Hidden spots left for past events so it's clean -->
-                        {% capture now_date %}{{ 'now' | date: "%s" }}{% endcapture %}
-                        {% capture event_date %}{{ event.date | date: "%s" }}{% endcapture %}
-                        {% if event_date > now_date %}
-                        <span class="event-spots"><i class="fas fa-users"></i> {{ event.spots }} spots left</span>
-                        {% endif %}
+                        <span style="color: var(--clr-text-muted); font-size: 0.9rem;"><i class="fas fa-check-circle"></i> Completed</span>
                     </div>
                     <h3 class="event-name">{{ event.name }}</h3>
                     <p class="event-location"><i class="fas fa-map-marker-alt"></i> {{ event.location }}</p>
@@ -37,18 +39,16 @@ title: Past Hikes | Lifestyle Hikers
                         <span><i class="fas fa-route"></i> {{ event.distance }}</span>
                     </div>
                     <p class="event-desc">{{ event.description }}</p>
-                    <div style="margin-top: auto;">
-                        {% if event_date > now_date %}
-                        <a href="/#contact" class="event-signup">Sign Up <i class="fas fa-arrow-right"></i></a>
-                        {% else %}
-                        <span style="color: var(--clr-text-muted); font-size: 0.9rem;"><i
-                                class="fas fa-check-circle"></i> Completed</span>
-                        {% endif %}
-                    </div>
                 </div>
             </div>
+            {% endif %}
             {% endfor %}
         </div>
+        {% if past_events_count == 0 %}
+        <div class="events-empty reveal">
+            <p>The archive is still empty. Once the first hike wraps, this page will start keeping the story.</p>
+        </div>
+        {% endif %}
         <div style="text-align: center; margin-top: var(--space-4xl);" class="reveal">
             <a href="/" class="btn btn-outline"
                 style="padding: var(--space-md) var(--space-xl); display: inline-flex; align-items: center; gap: var(--space-sm); border: 2px solid var(--clr-primary-light); color: var(--clr-primary-light); border-radius: var(--radius-full); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: all var(--transition-base);">

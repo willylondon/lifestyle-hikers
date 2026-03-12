@@ -2,7 +2,7 @@
 <header class="hero" id="hero">
     <div class="hero-bg">
         <img src="{{ '/assets/images/hero.webp' | relative_url }}"
-            alt="Lifestyle Hikers group walking along a Jamaican trail" class="hero-img">
+            alt="Lifestyle Hikers group walking along a Jamaican trail" class="hero-img" fetchpriority="high">
         <div class="hero-overlay"></div>
     </div>
     <div class="hero-content">
@@ -10,12 +10,16 @@
         <h1 class="hero-title reveal">Explore <span class="text-gradient">Jamaica</span></h1>
         <p class="hero-subtitle reveal">Discover the Blue Mountains, hidden waterfalls, lush river trails, and
             breathtaking coastlines with a community that lives for the outdoors.</p>
-        <div class="hero-search reveal">
+        <div class="hero-search reveal" role="search" aria-labelledby="trail-search-label">
             <div class="search-box">
-                <i class="fas fa-search"></i>
-                <input type="text" placeholder="Search trails, parishes, or landmarks..." id="searchInput">
-                <button class="search-btn" id="searchBtn">Explore</button>
+                <i class="fas fa-search" aria-hidden="true"></i>
+                <label class="sr-only" id="trail-search-label" for="searchInput">Search featured trails</label>
+                <input type="text" placeholder="Search trails, parishes, or landmarks..." id="searchInput"
+                    aria-describedby="trailSearchHelp trailSearchResults">
+                <button class="search-btn" id="searchBtn" type="button">Explore</button>
             </div>
+            <p class="sr-only" id="trailSearchHelp">Search by trail name, parish, or landmark to filter the featured trails below.</p>
+            <p class="search-results-summary" id="trailSearchResults" aria-live="polite"></p>
         </div>
         {% assign now_unix = 'now' | date: "%s" | plus: 0 %}
         {% assign current_year = 'now' | date: "%Y" %}
@@ -54,8 +58,8 @@
     </div>
     </div>
     <div class="hero-scroll">
-        <a href="#trails">
-            <i class="fas fa-chevron-down"></i>
+        <a href="#trails" aria-label="Jump to featured trails">
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
         </a>
     </div>
 </header>

@@ -3,29 +3,33 @@
    ======================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     // --- Mobile Navigation Toggle ---
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
 
-    navToggle.addEventListener('click', () => {
-        navToggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
-        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-    });
-
-    // Close mobile nav when clicking a link
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            navToggle.classList.remove('active');
-            navLinks.classList.remove('active');
-            document.body.style.overflow = '';
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', () => {
+            const isActive = navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active', isActive);
+            navToggle.setAttribute('aria-expanded', String(isActive));
+            document.body.style.overflow = isActive ? 'hidden' : '';
         });
-    });
+
+        // Close mobile nav when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            });
+        });
+    }
 
     // --- Sticky Navbar Background on Scroll ---
     const navbar = document.getElementById('navbar');
-    const heroSection = document.getElementById('hero');
 
     const handleScroll = () => {
         if (window.scrollY > 80) {
@@ -40,19 +44,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Scroll Reveal (IntersectionObserver) ---
     const revealElements = document.querySelectorAll('.reveal');
 
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                revealObserver.unobserve(entry.target);
-            }
+    if (prefersReducedMotion) {
+        revealElements.forEach(el => el.classList.add('visible'));
+    } else {
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
         });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    });
 
-    revealElements.forEach(el => revealObserver.observe(el));
+        revealElements.forEach(el => revealObserver.observe(el));
+    }
 
     // --- Animated Counter (Hero Stats) ---
     const statNumbers = document.querySelectorAll('.stat-number');
@@ -61,6 +69,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const animateCounters = () => {
         statNumbers.forEach(stat => {
             const target = parseInt(stat.getAttribute('data-count'));
+            if (prefersReducedMotion) {
+                stat.textContent = target;
+                return;
+            }
             const duration = 2000;
             const start = performance.now();
 
@@ -94,24 +106,59 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Trail Filter Buttons ---
     const filterBtns = document.querySelectorAll('.filter-btn');
     const trailCards = document.querySelectorAll('.trail-card');
+    const trailsEmpty = document.getElementById('trailsEmpty');
+    const searchBtn = document.getElementById('searchBtn');
+    const searchInput = document.getElementById('searchInput');
+    const searchResults = document.getElementById('trailSearchResults');
+    let activeFilter = 'all';
+
+    const updateTrailFilters = () => {
+        const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+        let visibleCount = 0;
+
+        trailCards.forEach(card => {
+            const difficulty = card.getAttribute('data-difficulty');
+            const haystack = card.getAttribute('data-search') || '';
+            const matchesFilter = activeFilter === 'all' || difficulty === activeFilter;
+            const matchesSearch = query === '' || haystack.includes(query);
+            const isVisible = matchesFilter && matchesSearch;
+
+            card.hidden = !isVisible;
+
+            if (isVisible) {
+                visibleCount += 1;
+                card.style.animation = prefersReducedMotion ? '' : 'fadeInUp 0.5s ease forwards';
+            } else {
+                card.style.animation = '';
+            }
+        });
+
+        if (trailsEmpty) {
+            trailsEmpty.hidden = visibleCount !== 0;
+        }
+
+        if (searchResults) {
+            if (query) {
+                searchResults.textContent = visibleCount === 1
+                    ? '1 trail matches your search.'
+                    : `${visibleCount} trails match your search.`;
+            } else if (activeFilter !== 'all') {
+                searchResults.textContent = visibleCount === 1
+                    ? 'Showing 1 trail.'
+                    : `Showing ${visibleCount} trails.`;
+            } else {
+                searchResults.textContent = '';
+            }
+        }
+    };
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Update active button
             filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-
-            const filter = btn.getAttribute('data-filter');
-
-            trailCards.forEach(card => {
-                const difficulty = card.getAttribute('data-difficulty');
-                if (filter === 'all' || difficulty === filter) {
-                    card.style.display = '';
-                    card.style.animation = 'fadeInUp 0.5s ease forwards';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
+            filterBtns.forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
+            activeFilter = btn.getAttribute('data-filter');
+            updateTrailFilters();
         });
     });
 
@@ -135,25 +182,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Search Bar (Demo Behavior) ---
-    const searchBtn = document.getElementById('searchBtn');
-    const searchInput = document.getElementById('searchInput');
-
     if (searchBtn && searchInput) {
         searchBtn.addEventListener('click', () => {
             const query = searchInput.value.trim();
+            updateTrailFilters();
             if (query) {
-                // Scroll to trails section
-                document.getElementById('trails').scrollIntoView({ behavior: 'smooth' });
-                searchInput.value = '';
+                document.getElementById('trails').scrollIntoView({
+                    behavior: prefersReducedMotion ? 'auto' : 'smooth'
+                });
             }
         });
 
+        searchInput.addEventListener('input', updateTrailFilters);
         searchInput.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') {
+                e.preventDefault();
                 searchBtn.click();
             }
         });
     }
+
+    updateTrailFilters();
 
     // --- Join Form Submission (Formspree) ---
     const joinForm = document.getElementById('joinForm');
@@ -211,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 const offset = 80;
                 const y = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                window.scrollTo({ top: y, behavior: 'smooth' });
+                window.scrollTo({ top: y, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
             }
         });
     });

@@ -3,6 +3,7 @@ layout: default
 title: Blog
 description: Trail stories, hiking tips, and updates from Lifestyle Hikers Jamaica.
 permalink: /blog/
+image: /assets/images/uploads/37c23df0-f8b1-4754-ac0d-a90becc8a0fb-1200w.webp
 ---
 
 <section class="section blog-section">
@@ -35,8 +36,9 @@ permalink: /blog/
                         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
                     </h3>
                     <p class="blog-card-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
-                    <a href="{{ post.url | relative_url }}" class="blog-read-more">
-                        Read More <i class="fas fa-arrow-right"></i>
+                    <a href="{{ post.url | relative_url }}" class="blog-read-more"
+                        aria-label="Read the full story: {{ post.title }}">
+                        Read Story <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </article>

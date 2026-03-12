@@ -12,13 +12,13 @@
                 <!-- Duplicate lists for infinite horizontal scrolling -->
                 {% for i in (1..2) %}
                 {% for review in site.data.testimonials.items %}
-                <div class="review-card">
+                <div class="review-card"{% if i == 2 %} aria-hidden="true"{% endif %}>
                     <div class="review-author">
                         <div class="review-avatar">
                             {% if review.avatar and review.avatar != "" %}
                             <img src="{{ review.avatar | relative_url }}" alt="{{ review.name }}" loading="lazy" decoding="async">
                             {% else %}
-                            <i class="fas fa-user"></i>
+                            <i class="fas fa-user" aria-hidden="true"></i>
                             {% endif %}
                         </div>
                         <div class="review-info">
@@ -198,9 +198,10 @@
     document.addEventListener("DOMContentLoaded", function () {
         const track = document.getElementById('reviewsTrack');
         if (!track) return;
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
         const scrollSpeed = 0.5; // pixels per frame
-        let isAutoScrolling = true;
+        let isAutoScrolling = !reduceMotion;
         let isHovered = false;
         let isTouching = false;
         let animationId;
@@ -231,7 +232,9 @@
             animationId = requestAnimationFrame(animationLoop);
         }
 
-        animationId = requestAnimationFrame(animationLoop);
+        if (isAutoScrolling) {
+            animationId = requestAnimationFrame(animationLoop);
+        }
 
         track.addEventListener('mouseenter', () => isHovered = true);
         track.addEventListener('mouseleave', () => {

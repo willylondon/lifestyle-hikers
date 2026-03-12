@@ -8,8 +8,13 @@
                 just bring yuh vibes!</p>
         </div>
         <div class="events-grid">
-            {% assign sorted_events = site.data.events.items | sort: "date" | reverse %}
-            {% for event in sorted_events limit: 5 %}
+            {% assign now_unix = "now" | date: "%s" | plus: 0 %}
+            {% assign upcoming_events = site.data.events.items | sort: "date" %}
+            {% assign rendered_upcoming = 0 %}
+            {% for event in upcoming_events %}
+            {% assign event_unix = event.date | date: "%s" | plus: 0 %}
+            {% if event_unix >= now_unix and rendered_upcoming < 5 %}
+            {% assign rendered_upcoming = rendered_upcoming | plus: 1 %}
             <div class="event-card reveal">
                 <div class="event-date">
                     <span class="event-month">{{ event.date | date: "%b" | upcase }}</span>
@@ -31,12 +36,18 @@
                     <a href="#contact" class="event-signup">Sign Up <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
+            {% endif %}
             {% endfor %}
         </div>
+        {% if rendered_upcoming == 0 %}
+        <div class="events-empty reveal">
+            <p>No upcoming hikes are scheduled right now. Explore recent trail stories or check the archive for past adventures.</p>
+        </div>
+        {% endif %}
         <div style="text-align: center; margin-top: var(--space-3xl);" class="reveal">
             <a href="/past-hikes.html" class="btn btn-outline"
                 style="padding: var(--space-md) var(--space-xl); display: inline-flex; align-items: center; justify-content: center; border: 2px solid var(--clr-primary-light); color: var(--clr-primary-light); border-radius: var(--radius-full); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; transition: all var(--transition-base); gap: var(--space-sm);">
-                View All Past Hikes <i class="fas fa-arrow-right"></i>
+                View Hike Archive <i class="fas fa-arrow-right"></i>
             </a>
         </div>
     </div>

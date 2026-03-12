@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    {% assign meta_description = page.description | default: site.description %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="{{ '/assets/images/logo.png' | relative_url }}">
@@ -13,12 +14,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     {% seo %}
+    {% if meta_description %}
+    <meta name="twitter:description" content="{{ meta_description | escape }}">
+    {% endif %}
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     {% include nav.html %}
 
-    <article class="blog-post-page">
+    <article class="blog-post-page" id="main-content">
         <div class="container">
             <div class="blog-post-header">
                 <a href="{{ '/blog/' | relative_url }}" class="blog-back"><i class="fas fa-arrow-left"></i> Back to
