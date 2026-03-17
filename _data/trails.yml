@@ -1,0 +1,61 @@
+items:
+  - name: Blue Mountain Peak Trail
+    location: Portland / St. Thomas
+    difficulty: hard
+    distance: 7.5 mi
+    elevation: 3,200 ft
+    time: 6-8 hrs
+    rating: 4.9
+    stars: 5
+    half_star: false
+    reviews: 312
+    image: /assets/images/uploads/34f187fa-6161-450c-baaa-1f720bc3e1c3.jpeg
+    alt: Blue Mountain Peak Jamaica
+  - name: Reggae Falls Nature Trail
+    location: St Thomas
+    difficulty: easy
+    distance: 1.2 mi
+    elevation: 180 ft
+    time: 1-2 hrs
+    rating: 4.8
+    stars: 5
+    half_star: false
+    reviews: 189
+    image: /assets/images/uploads/shared39-1200w.webp
+    alt: Reggae Falls trail in St. Thomas, Jamaica
+  - name: Hollywell Forest Park Loop
+    location: Irish Town, St. Andrew
+    difficulty: moderate
+    distance: 4.5 mi
+    elevation: 1,200 ft
+    time: 3-4 hrs
+    rating: 4.6
+    stars: 4
+    half_star: true
+    reviews: 145
+    image: /assets/images/uploads/img_9978-1200w.webp
+    alt: View along the Hollywell Forest Park Loop in the Blue Mountains
+  - name: Cinchona Botanical Gardens
+    location: Blue Mountains, St. Andrew
+    difficulty: moderate
+    distance: 6.5 miles
+    elevation: 2,800 ft
+    time: 1.5-2 hours
+    rating: 4.9
+    stars: 5
+    half_star: false
+    reviews: 98
+    image: /assets/images/uploads/img_0905-1200w.webp
+    alt: Mountain ridge view near Cinchona Botanical Gardens in St. Andrew
+  - name: Nonsuch Falls
+    location: Nonsuch, Drapers — Portland, Jamaica
+    difficulty: moderate
+    distance: 1.5 – 2 mi round trip (estimated; guided riverbed route)
+    elevation: ~291 ft / 89 m (height of the falls itself; trail descends steeply from base camp)
+    time: 2.5 – 3 hrs (1.5 hrs down due to mud/terrain + ~1 hr back up, per the article)
+    rating: 4.5
+    stars: 4
+    half_star: false
+    reviews: 5
+    image: /assets/images/uploads/pxl_20260207_134511969.portrait-1--1200w.webp
+    alt: Hikers at the Nonsuch Falls base camp in Portland

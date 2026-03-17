@@ -1,0 +1,82 @@
+[
+  {
+    "url": "/",
+    "title": "Jamaica Hiking Community | Lifestyle Hikers",
+    "meta_description": "Jamaica's premier hiking community. Blue Mountains trails, hidden waterfalls, and expert guides for outdoor adventures.",
+    "canonical": "https://lifestylehikers.com/",
+    "word_count": 0,
+    "content_action": "keep",
+    "new_word_count": 0,
+    "change_required": false
+  },
+  {
+    "url": "/blog/",
+    "title": "Jamaica Hiking Blog & Guides | Lifestyle Hikers",
+    "meta_description": "Jamaica hiking tips, trail stories, and outdoor adventure guides. Expert advice for Blue Mountains trips from Lifestyle Hikers.",
+    "canonical": "https://lifestylehikers.com/blog/",
+    "word_count": 26,
+    "content_action": "keep",
+    "new_word_count": 26,
+    "change_required": false
+  },
+  {
+    "url": "/corporate/",
+    "title": "Corporate Hiking Packages Jamaica | Lifestyle Hikers",
+    "meta_description": "Book corporate hiking packages in Jamaica with Lifestyle Hikers. Perfect for team building, executive wellness, and group outdoor adventures.",
+    "canonical": "https://lifestylehikers.com/corporate/",
+    "word_count": 584,
+    "content_action": "keep",
+    "new_word_count": 584,
+    "change_required": false
+  },
+  {
+    "url": "/past-hikes/",
+    "title": "Past Hiking Adventures in Jamaica | Lifestyle Hikers",
+    "meta_description": "Browse past hiking adventures in Jamaica with Lifestyle Hikers. Explore our history of mountain climbs, waterfall trails, and outdoor group experiences.",
+    "canonical": "https://lifestylehikers.com/past-hikes/",
+    "word_count": 42,
+    "content_action": "keep",
+    "new_word_count": 42,
+    "change_required": false
+  },
+  {
+    "url": "",
+    "title": "Recovery Report",
+    "meta_description": "Generate a personalized post-hike recovery report with hydration, nutrition, and recovery timing guidance.",
+    "canonical": "",
+    "word_count": 112,
+    "content_action": "keep",
+    "new_word_count": 112,
+    "change_required": false
+  },
+  {
+    "url": "/kwame-falls-first-hike-2026/",
+    "title": "Kwame Falls Hike Jamaica Guide | Lifestyle Hikers",
+    "meta_description": "Kwame Falls hike guide in Jamaica with trail tips, river crossings, gear advice, and safety insights from Lifestyle Hikers.",
+    "canonical": "https://lifestylehikers.com/kwame-falls-first-hike-2026/",
+    "word_count": 1029,
+    "content_action": "keep",
+    "new_word_count": 1029,
+    "change_required": false
+  },
+  {
+    "url": "/cinchona-botanical-gardens-hike-guide/",
+    "title": "Cinchona Gardens Hike Jamaica | Lifestyle Hikers",
+    "meta_description": "Discover our Cinchona Botanical Gardens hike guide from Guava Ridge, Jamaica. Get practical tips on route difficulty, timing, and outdoor preparation.",
+    "canonical": "https://lifestylehikers.com/cinchona-botanical-gardens-hike-guide/",
+    "word_count": 867,
+    "content_action": "keep",
+    "new_word_count": 867,
+    "change_required": false
+  },
+  {
+    "url": "/holywell-vs-cinchona-first-hike-jamaica/",
+    "title": "Holywell vs Cinchona Jamaica Hike | Lifestyle Hikers",
+    "meta_description": "Compare Holywell vs Cinchona Botanical Gardens to find the best Blue Mountains hike in Jamaica for your experience level, pace, and outdoor goals.",
+    "canonical": "https://lifestylehikers.com/holywell-vs-cinchona-first-hike-jamaica/",
+    "word_count": 1084,
+    "content_action": "keep",
+    "new_word_count": 1084,
+    "change_required": false
+  }
+]

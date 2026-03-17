@@ -1,0 +1,57 @@
+title: Lifestyle Hikers
+description: "Jamaica's premier hiking community exploring the Blue Mountains, waterfalls, rivers, and hidden trails across the island."
+url: "https://www.lifestylehikers.com"
+baseurl: ""
+timezone: America/Jamaica
+image: "/assets/images/uploads/img_7939-1200w.webp"
+logo: "/assets/images/logo-light.png"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Include admin folder for Decap CMS
+include:
+  - admin
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - README-CMS.md
+  - vendor/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - node_modules/
+  - .vercel/
+
+# Site settings
+email: lifestylehikersja@gmail.com
+formspree_id: "mojnnanv"
+
+# Social links
+social:
+  instagram: "https://www.instagram.com/lifestylehikers"
+  facebook: "#"
+  youtube: "#"
+  whatsapp: "#"
+
+# Baseline statistics
+stats:
+  base_total_hikes: 205
+  base_hikes_this_year: 0
+  active_members: 61
+  trails_explored: 50
+
+# Default front matter
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"

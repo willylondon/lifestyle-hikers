@@ -1,0 +1,378 @@
+# ============================================
+# Decap CMS Configuration — Lifestyle Hikers
+# ============================================
+# Docs: https://decapcms.org/docs/
+
+backend:
+  name: github
+  repo: willylondon/lifestyle-hikers
+  branch: main
+  app_id: Iv1.b81c2fe99d3dc7f7
+
+# Where uploaded images are stored
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+# Slug formatting
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
+# ============================================
+# COLLECTIONS
+# ============================================
+
+collections:
+
+  # ------------------------------------------
+  # 0. SITE STATISTICS (_config.yml)
+  # ------------------------------------------
+  - name: "settings"
+    label: "⚙️ Site Settings"
+    description: "Manage website baseline statistics and settings"
+    files:
+      - name: "stats"
+        label: "Homepage Counters"
+        file: "_config.yml"
+        fields:
+          - label: "Statistics"
+            name: "stats"
+            widget: "object"
+            fields:
+              - label: "Baseline Total Hikes"
+                name: "base_total_hikes"
+                widget: "number"
+                value_type: "int"
+                hint: "The base number to add to the dynamic calculation of total hikes."
+              - label: "Baseline Hikes This Year"
+                name: "base_hikes_this_year"
+                widget: "number"
+                value_type: "int"
+                hint: "The base number to add to the dynamic calculation of hikes this year."
+              - label: "Active Members"
+                name: "active_members"
+                widget: "number"
+                value_type: "int"
+                hint: "The number of active members to display on the homepage."
+              - label: "Trails Explored"
+                name: "trails_explored"
+                widget: "number"
+                value_type: "int"
+                hint: "The number of trails explored to display on the homepage."
+
+  # ------------------------------------------
+  # 1. BLOG POSTS (_posts folder)
+  # ------------------------------------------
+  - name: "posts"
+    label: "📝 Blog Posts"
+    label_singular: "Blog Post"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sort: "date:desc"
+    summary: "{{title}} — {{date | date('MMM D, YYYY')}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        hint: "The headline for your blog post"
+
+      - label: "SEO Description"
+        name: "description"
+        widget: "text"
+        required: false
+        hint: "1-2 short sentences (about 140-160 characters) for Google search snippets."
+
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        format: "YYYY-MM-DD"
+
+      - label: "Author"
+        name: "author"
+        widget: "string"
+        default: "Lifestyle Hikers"
+
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - "Trail Stories"
+          - "Hike Recaps"
+          - "Trail Tips"
+          - "Gear Reviews"
+          - "Community News"
+        default: "Trail Stories"
+
+      - label: "Location"
+        name: "location"
+        widget: "string"
+        required: false
+        hint: "e.g. Blue Mountain Peak, Portland"
+
+      - label: "Featured Image"
+        name: "image"
+        widget: "image"
+        required: false
+        hint: "Upload or paste an image URL"
+
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        required: false
+        hint: "Add one keyword phrase per item (e.g. 'hiking in jamaica')."
+
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        hint: "Write your post here! Use headings, bold, lists, and images."
+
+  # ------------------------------------------
+  # 2. UPCOMING HIKES (_data/events.yml)
+  # ------------------------------------------
+  - name: "events"
+    label: "🥾 Upcoming Hikes"
+    description: "Manage upcoming group hikes shown on the homepage"
+    files:
+      - name: "upcoming_hikes"
+        label: "Upcoming Hikes List"
+        file: "_data/events.yml"
+        fields:
+          - label: "Hikes"
+            name: "items"
+            widget: "list"
+            label_singular: "Hike"
+            summary: "{{fields.name}} — {{fields.month}} {{fields.day}}"
+            fields:
+              - label: "Hike Name"
+                name: "name"
+                widget: "string"
+                hint: "e.g. Blue Mountain Peak Sunrise Hike"
+
+              - label: "Location"
+                name: "location"
+                widget: "string"
+                hint: "e.g. Penlyne Castle, Portland"
+
+              - label: "Difficulty"
+                name: "difficulty"
+                widget: "select"
+                options:
+                  - label: "Easy"
+                    value: "easy"
+                  - label: "Moderate"
+                    value: "moderate"
+                  - label: "Hard"
+                    value: "hard"
+
+              - label: "Hike Date"
+                name: "date"
+                widget: "datetime"
+                date_format: "YYYY-MM-DD"
+                time_format: false
+                format: "YYYY-MM-DD"
+
+              - label: "Time & Meeting Point"
+                name: "time"
+                widget: "string"
+                hint: "e.g. 2:00 AM — Meet at Whitfield Hall"
+
+              - label: "Distance"
+                name: "distance"
+                widget: "string"
+                hint: "e.g. 7.5 mi round trip"
+
+              - label: "Spots Available"
+                name: "spots"
+                widget: "number"
+                value_type: "int"
+                min: 0
+
+              - label: "Description"
+                name: "description"
+                widget: "text"
+                hint: "A short description of what to expect on this hike"
+
+  # ------------------------------------------
+  # 3. GALLERY (_data/gallery.yml)
+  # ------------------------------------------
+  - name: "gallery"
+    label: "📸 Gallery"
+    description: "Manage the photo gallery on the homepage"
+    files:
+      - name: "gallery_photos"
+        label: "Gallery Photos"
+        file: "_data/gallery.yml"
+        fields:
+          - label: "Photos"
+            name: "items"
+            widget: "list"
+            label_singular: "Photo"
+            summary: "{{fields.alt}}"
+            fields:
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                hint: "Upload a photo or paste a URL"
+
+              - label: "Caption / Alt Text"
+                name: "alt"
+                widget: "string"
+                hint: "Describe what's in the photo"
+
+              - label: "Size (Layout)"
+                name: "size"
+                widget: "select"
+                required: false
+                default: ""
+                hint: "Leave as Regular for most photos. Use Tall or Wide for feature photos."
+                options:
+                  - label: "Regular"
+                    value: ""
+                  - label: "Tall (spans 2 rows)"
+                    value: "tall"
+                  - label: "Wide (spans 2 columns)"
+                    value: "wide"
+
+  # ------------------------------------------
+  # 4. TRAILS (_data/trails.yml)
+  # ------------------------------------------
+  - name: "trails"
+    label: "🗺️ Trails"
+    description: "Manage the featured trails shown on the homepage"
+    files:
+      - name: "featured_trails"
+        label: "Featured Trails"
+        file: "_data/trails.yml"
+        fields:
+          - label: "Trails"
+            name: "items"
+            widget: "list"
+            label_singular: "Trail"
+            summary: "{{fields.name}} — {{fields.difficulty | upper}}"
+            fields:
+              - label: "Trail Name"
+                name: "name"
+                widget: "string"
+                hint: "e.g. Blue Mountain Peak Trail"
+
+              - label: "Location / Parish"
+                name: "location"
+                widget: "string"
+                hint: "e.g. Portland / St. Thomas"
+
+              - label: "Difficulty"
+                name: "difficulty"
+                widget: "select"
+                options:
+                  - label: "Easy"
+                    value: "easy"
+                  - label: "Moderate"
+                    value: "moderate"
+                  - label: "Hard"
+                    value: "hard"
+
+              - label: "Distance"
+                name: "distance"
+                widget: "string"
+                hint: "e.g. 7.5 mi"
+
+              - label: "Elevation Gain"
+                name: "elevation"
+                widget: "string"
+                hint: "e.g. 3,200 ft"
+
+              - label: "Duration"
+                name: "time"
+                widget: "string"
+                hint: "e.g. 6-8 hrs"
+
+              - label: "Rating"
+                name: "rating"
+                widget: "number"
+                value_type: "float"
+                min: 0
+                max: 5
+                step: 0.1
+                hint: "e.g. 4.9"
+
+              - label: "Star Icons (full stars)"
+                name: "stars"
+                widget: "number"
+                value_type: "int"
+                min: 0
+                max: 5
+                hint: "Number of full star icons to show (e.g. 5)"
+
+              - label: "Show Half Star?"
+                name: "half_star"
+                widget: "boolean"
+                default: false
+                hint: "Show a half-star after the full stars?"
+
+              - label: "Number of Reviews"
+                name: "reviews"
+                widget: "number"
+                value_type: "int"
+                min: 0
+                hint: "e.g. 312"
+
+              - label: "Trail Photo"
+                name: "image"
+                widget: "image"
+                hint: "Upload or paste a URL for the trail card image"
+
+              - label: "Photo Alt Text"
+                name: "alt"
+                widget: "string"
+                hint: "Describe the trail photo for accessibility"
+
+  # ------------------------------------------
+  # 5. REVIEWS / TESTIMONIALS (_data/testimonials.yml)
+  # ------------------------------------------
+  - name: "testimonials"
+    label: "⭐ Reviews"
+    description: "Manage the community and corporate testimonials shown on the homepage"
+    files:
+      - name: "reviews_list"
+        label: "Reviews List"
+        file: "_data/testimonials.yml"
+        fields:
+          - label: "Reviews"
+            name: "items"
+            widget: "list"
+            label_singular: "Review"
+            summary: "{{fields.name}} — {{fields.text}}"
+            fields:
+              - label: "Author Name"
+                name: "name"
+                widget: "string"
+                hint: "e.g. Sarah Jenkins"
+                
+              - label: "Handle / Title"
+                name: "handle"
+                widget: "string"
+                hint: "e.g. Weekend Hiker, or @sarahj_hikes"
+
+              - label: "Avatar Image"
+                name: "avatar"
+                widget: "image"
+                required: false
+                hint: "Upload a photo of the reviewer (optional)"
+
+              - label: "Star Rating"
+                name: "rating"
+                widget: "number"
+                value_type: "int"
+                min: 1
+                max: 5
+                required: false
+                hint: "Provide a star rating from 1 to 5 (optional)"
+
+              - label: "Review Text"
+                name: "text"
+                widget: "text"
+                hint: "The actual testimonial or quote"

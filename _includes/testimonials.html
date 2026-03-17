@@ -1,0 +1,264 @@
+<!-- Testimonials Section -->
+<section class="section testimonials-section" id="testimonials">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-badge"><i class="fas fa-comment-quote"></i> Reviews</span>
+            <h2 class="section-title">What Hikers Say</h2>
+            <p class="section-subtitle">Real experiences from our community and corporate partners.</p>
+        </div>
+
+        <div class="reviews-wrapper reveal">
+            <div class="reviews-track" id="reviewsTrack">
+                <!-- Duplicate lists for infinite horizontal scrolling -->
+                {% for i in (1..2) %}
+                {% for review in site.data.testimonials.items %}
+                <div class="review-card"{% if i == 2 %} aria-hidden="true"{% endif %}>
+                    <div class="review-author">
+                        <div class="review-avatar">
+                            {% if review.avatar and review.avatar != "" %}
+                            <img src="{{ review.avatar | relative_url }}" alt="{{ review.name }}" loading="lazy" decoding="async">
+                            {% else %}
+                            <i class="fas fa-user" aria-hidden="true"></i>
+                            {% endif %}
+                        </div>
+                        <div class="review-info">
+                            <h4>{{ review.name }}</h4>
+                            <span>{{ review.handle }}</span>
+                            {% if review.rating %}
+                            <div class="review-rating" style="color: #fbbf24; font-size: 0.85rem; margin-top: 3px;">
+                                {% for j in (1..5) %}
+                                {% if j <= review.rating %} <i class="fas fa-star"></i>
+                                    {% else %}
+                                    <i class="far fa-star"></i>
+                                    {% endif %}
+                                    {% endfor %}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <p class="review-text">"{{ review.text }}"</p>
+                </div>
+                {% endfor %}
+                {% endfor %}
+            </div>
+
+            <!-- Gradient masks for fade effect on edges -->
+            <div class="reviews-mask reviews-mask-left"></div>
+            <div class="reviews-mask reviews-mask-right"></div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Scoped Testimonials CSS */
+    .testimonials-section {
+        background: var(--clr-dark-surface);
+        overflow: hidden;
+    }
+
+    .reviews-wrapper {
+        position: relative;
+        width: 100%;
+        /* Desktop mask width */
+        --mask-width: 150px;
+    }
+
+    .reviews-track {
+        display: flex;
+        gap: var(--space-xl);
+        overflow-x: auto;
+        padding: var(--space-xl) 0;
+        scrollbar-width: none;
+        /* Hide scrollbar Firefox */
+        -webkit-overflow-scrolling: touch;
+        cursor: grab;
+    }
+
+    .reviews-track:active {
+        cursor: grabbing;
+    }
+
+    .reviews-track::-webkit-scrollbar {
+        display: none;
+        /* Hide scrollbar Chrome/Safari */
+    }
+
+    /* Shadcn-inspired Card Design */
+    .review-card {
+        flex-shrink: 0;
+        width: 350px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: var(--radius-lg);
+        padding: var(--space-2xl);
+        display: flex;
+        flex-direction: column;
+        transition: all var(--transition-base);
+    }
+
+    .review-card:first-child {
+        margin-left: var(--mask-width);
+    }
+
+    .review-card:hover {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.02) 100%);
+    }
+
+    .review-author {
+        display: flex;
+        align-items: center;
+        gap: var(--space-md);
+        margin-bottom: var(--space-md);
+    }
+
+    .review-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        overflow: hidden;
+        background: var(--clr-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--clr-white);
+        flex-shrink: 0;
+    }
+
+    .review-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .review-info h4 {
+        color: var(--clr-white);
+        font-family: var(--font-heading);
+        font-size: 1.05rem;
+        margin: 0 0 2px 0;
+        line-height: 1.2;
+    }
+
+    .review-info span {
+        color: var(--clr-text-muted);
+        font-size: 0.85rem;
+    }
+
+    .review-text {
+        font-size: 0.95rem;
+        color: var(--clr-text-muted);
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    /* Fade Masks */
+    .reviews-mask {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: var(--mask-width);
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    .reviews-mask-left {
+        left: 0;
+        background: linear-gradient(to right, var(--clr-dark-surface) 0%, transparent 100%);
+    }
+
+    .reviews-mask-right {
+        right: 0;
+        background: linear-gradient(to left, var(--clr-dark-surface) 0%, transparent 100%);
+    }
+
+    @media (max-width: 768px) {
+        .reviews-wrapper {
+            --mask-width: 40px;
+        }
+
+        .reviews-track {
+            padding: var(--space-xl) 0;
+        }
+
+        .review-card {
+            width: 280px;
+            padding: var(--space-xl);
+        }
+
+        .review-card:first-child {
+            margin-left: var(--mask-width);
+        }
+
+        .reviews-mask {
+            display: none;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const track = document.getElementById('reviewsTrack');
+        if (!track) return;
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        const scrollSpeed = 0.5; // pixels per frame
+        let isAutoScrolling = !reduceMotion;
+        let isHovered = false;
+        let isTouching = false;
+        let animationId;
+        let lastManualScrollTime = 0;
+
+        // Track the exact virtual position
+        let expectedScrollLeft = track.scrollLeft;
+
+        function checkInfiniteLoop() {
+            if (track.scrollLeft >= (track.scrollWidth / 2)) {
+                track.scrollLeft = track.scrollLeft - (track.scrollWidth / 2);
+                expectedScrollLeft = track.scrollLeft;
+            } else if (track.scrollLeft <= 0) {
+                track.scrollLeft = track.scrollLeft + (track.scrollWidth / 2);
+                expectedScrollLeft = track.scrollLeft;
+            }
+        }
+
+        function animationLoop() {
+            const timeSinceManualAction = Date.now() - lastManualScrollTime;
+
+            if (isAutoScrolling && !isHovered && !isTouching && timeSinceManualAction > 1500) {
+                expectedScrollLeft += scrollSpeed;
+                track.scrollLeft = expectedScrollLeft;
+                checkInfiniteLoop();
+            }
+
+            animationId = requestAnimationFrame(animationLoop);
+        }
+
+        if (isAutoScrolling) {
+            animationId = requestAnimationFrame(animationLoop);
+        }
+
+        track.addEventListener('mouseenter', () => isHovered = true);
+        track.addEventListener('mouseleave', () => {
+            isHovered = false;
+            expectedScrollLeft = track.scrollLeft;
+        });
+
+        track.addEventListener('touchstart', () => isTouching = true, { passive: true });
+        track.addEventListener('touchend', () => {
+            isTouching = false;
+            lastManualScrollTime = Date.now();
+            expectedScrollLeft = track.scrollLeft;
+        }, { passive: true });
+
+        track.addEventListener('scroll', () => {
+            // Check if this scroll was caused by OUR auto-scroll code
+            const dist = Math.abs(track.scrollLeft - expectedScrollLeft);
+
+            // If distance is larger than speed, it was a user scroll
+            if (dist > scrollSpeed * 2) {
+                lastManualScrollTime = Date.now();
+                expectedScrollLeft = track.scrollLeft;
+                checkInfiniteLoop();
+            }
+        }, { passive: true });
+    });
+</script>

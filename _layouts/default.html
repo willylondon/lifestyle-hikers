@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% assign meta_description = page.description | default: site.description %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{{ '/assets/images/logo.png' | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    {% seo %}
+    {% if meta_description %}
+    <meta name="twitter:description" content="{{ meta_description | escape }}">
+    {% endif %}
+    {% if page.robots %}
+    <meta name="robots" content="{{ page.robots }}">
+    {% endif %}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZY66KJYF0Y"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag("js", new Date());
+        gtag("config", "G-ZY66KJYF0Y");
+    </script>
+    {% assign schema_title = page.title | default: site.title %}
+    {% if page.layout == "post" %}
+        {% assign schema_type = "BlogPosting" %}
+    {% else %}
+        {% assign schema_type = "WebPage" %}
+    {% endif %}
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "{{ schema_type }}",
+     "headline": "{{ schema_title | escape }}",
+     "description": "{{ meta_description | escape }}",
+     "author": {
+       "@type": "Organization",
+       "name": "Lifestyle Hikers"
+     },
+     "publisher": {
+       "@type": "Organization",
+       "name": "Lifestyle Hikers"
+     }
+    }
+    </script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    {% include nav.html %}
+
+    <div id="main-content">
+        {{ content }}
+    </div>
+
+    {% include footer.html %}
+
+    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+items:
+  - name: Falling Edge-Stony Hill
+    location: St. Andrew
+    difficulty: moderate
+    date: 2026-02-21
+    time: 7:00 AM — Meet at Trailhead
+    distance: 3 mi loop
+    spots: 15
+    description: Falling Edge Waterfall, also known as Bowden Hill Falls, is one of St. Andrew's best kept secrets, tucked away in the cool hills of Stony Hill, just 30 minutes from Manor Park in St.Andrew. The 40-foot cascade pours into a refreshing natural pool surrounded by lush greenery, reachable via a short 10–15 minute hike.
+  - name: Nonsuch Falls
+    location: Portland
+    difficulty: hard
+    date: 2026-02-07
+    time: 5:00 AM
+    distance: 2.5 mi round trip
+    spots: 20
+    description: Nonsuch Falls, tucked away in the rural community of Nonsuch in Portland, is Jamaica's tallest waterfall at 291 feet — standing even higher than Niagara Falls. It's a hidden gem managed by a local family, offering guided hikes through lush rainforest down to the base, where natural pools await. The trek is challenging but well worth it.
+  - name: Catherine's Peak
+    location: St. Andrew
+    difficulty: hard
+    date: 2026-01-24
+    time: 6:30 AM
+    distance: 4 mi out-and-back
+    spots: 12
+    description: Catherine's Peak is the highest point in the parish of St. Andrew, rising to 5,050 feet within the Blue Mountains. It is named after Catherine Long, the wife of Sir Henry Moore, who served as Governor of Jamaica in the mid-1700s, as she is believed to have been the first white woman to scale the peak, making the ascent in 1760. The summit is easily spotted from a distance, identifiable by the cluster of communications antennas at the top. The trailhead begins at Newcastle, a Jamaica Defence Force training camp, where hikers can park and set off on foot.
+  - name: Kwame Falls
+    location: St. Mary
+    difficulty: hard
+    date: 2026-01-10
+    time: 5:00 AM
+    distance: 7 mi one way
+    spots: 25
+    description: Kwame Falls is a picturesque, off-the-beaten-path waterfall tucked away in the rural community of Robin's Bay in St. Mary parish. It carries deep historical significance, being named after Kwame, a warrior who fought alongside the legendary Tacky in Jamaica's most notable pre-emancipation rebellion of 1760. To reach the falls, visitors embark on a roughly four-hour round-trip hike through lush tropical rainforest, crossing the Kwame River multiple times and taking in sweeping views of St. Mary's rugged coastline along the way. At the journey's end, a graceful cascade tumbles into a deep, refreshing pool, known for having warm spring-fed spots, surrounded by towering trees and vibrant foliage, making the trek well worth the effort for nature lovers and adventure seekers alike.
+  - name: Cinchona Botanical Gardens
+    location: East Rural St. Andrew ( Blue Mountains)
+    difficulty: moderate
+    date: 2026-03-07
+    time: 5:00 AM- Flow Head Office Parking Lot ,Half Way Tree Road
+    distance: 5 mi one way
+    spots: 2
+    description: |-
+      🌿 What's There:
+      The gardens still showcase unique orchids and many other plant species, with a spectacular view of the east side of the Blue Mountains, Strawberry Hills, and Kingston. You'll find global varieties of temperate and semi-tropical plants,  from eucalyptus and rubber trees to cork oaks and lilies, plus a Bamboo Walk with a velvety moss floor. Lime Tree Farm The gardens are described as somewhat semi-abandoned, but the natural beauty more than compensates.
+      🏛️ History
+      Established in 1868 by Governor Sir John Peter Grant, it was originally a centre for experimental botanical work. The cinchona trees planted there produce quinine, used to treat malaria, which is where the garden gets its name. In 1903, the Jamaican government leased Cinchona to the New York Botanical Gardens and, later, to the Smithsonian Institute
+  - name: Hike Kingsworth, Jack's Hill
+    location: Jack's Hilll
+    difficulty: moderate
+    date: 2026-03-21
+    time: 5:00 Am - Hillel Academy
+    distance: 8 mi round trip
+    spots: 20
+    description: The hike to Kingsworth is both a physical climb and a peaceful escape, blending city views, hillside neighborhoods, and the quiet beauty that defines the higher elevations of Jack’s Hill. It’s a short adventure that reminds you how quickly Kingston transforms from urban energy to mountain calm.

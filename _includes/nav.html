@@ -1,0 +1,31 @@
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="{{ '/' | relative_url }}" class="nav-logo">
+            <span class="brand-lockup">
+                <img src="{{ '/assets/images/logo-tight-light.png' | relative_url }}" alt="Lifestyle Hikers"
+                    class="brand-logo-full brand-logo-nav">
+                <span class="brand-tag">Jamaica hiking community</span>
+            </span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="{{ '/' | relative_url }}#trails">Trails</a></li>
+            <li><a href="{{ '/' | relative_url }}#upcoming">Upcoming Hikes</a></li>
+            <li><a href="{{ '/' | relative_url }}#about">About Us</a></li>
+            <li><a href="{{ '/' | relative_url }}#gallery">Gallery</a></li>
+            <li><a href="{{ '/corporate.html' | relative_url }}" {% if page.url=='/corporate.html' %}class="active" {%
+                    endif %}>Corporate</a></li>
+            <li><a href="{{ '/' | relative_url }}#merch">Merch</a></li>
+            <li><a href="{{ '/blog/' | relative_url }}" {% if page.url=='/blog/' or page.url=='/blog.html' or page.layout=='post' %}class="active"
+                    {% endif %}>Blog</a></li>
+            <li><a href="{{ '/recovery-report/' | relative_url }}" {% if page.url=='/recovery-report/' or page.url=='/recovery-report.html' %}class="active"
+                    {% endif %}>Recovery Report</a></li>
+            <li><a href="{{ '/' | relative_url }}#contact" class="nav-cta">Join Us</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-controls="navLinks" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
