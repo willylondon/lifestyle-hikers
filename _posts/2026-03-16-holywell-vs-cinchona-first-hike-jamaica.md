@@ -7,7 +7,7 @@ category: Trail Guides
 description: "Compare Holywell vs Cinchona Botanical Gardens to find the best Blue Mountains hike in Jamaica for your experience level, pace, and outdoor goals."
 canonical: "https://lifestylehikers.com/holywell-vs-cinchona-first-hike-jamaica/"
 location: Holywell and Cinchona, Blue Mountains, Jamaica
-image: /assets/images/uploads/37c23df0-f8b1-4754-ac0d-a90becc8a0fb.jpeg
+image: /assets/images/uploads/holywell-2026.jpg
 tags:
   - holywell jamaica
   - cinchona botanical gardens

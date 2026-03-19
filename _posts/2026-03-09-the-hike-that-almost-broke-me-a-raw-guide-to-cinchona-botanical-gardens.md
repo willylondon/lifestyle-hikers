@@ -7,7 +7,7 @@ category: Trail Stories
 description: "Discover our Cinchona Botanical Gardens hike guide from Guava Ridge, Jamaica. Get practical tips on route difficulty, timing, and outdoor preparation."
 canonical: "https://lifestylehikers.com/cinchona-botanical-gardens-hike-guide/"
 location: Cinchona Botanical Garden, East Rural, St. Andrew
-image: /assets/images/uploads/37c23df0-f8b1-4754-ac0d-a90becc8a0fb-1200w.webp
+image: /assets/images/uploads/cinchona-2026.jpg
 tags:
   - cinchona botanical gardens
   - blue mountains jamaica
