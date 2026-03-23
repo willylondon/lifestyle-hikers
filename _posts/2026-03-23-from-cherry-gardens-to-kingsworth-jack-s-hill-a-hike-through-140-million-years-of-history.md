@@ -5,7 +5,7 @@ description: Lifestyle Hikers traces a route from Cherry Gardens to Kingsworth o
 date: 2026-03-23
 author: willy London
 category: Trail Stories
-permalink: ''
+permalink: /cherry-gardens-to-kingsworth-jacks-hill-hike
 location: Cherry Gardens
 image: /assets/images/uploads/Kingsworth.jpg
 tags:
