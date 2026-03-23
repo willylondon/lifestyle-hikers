@@ -1,9 +1,11 @@
 ---
 title: "From Cherry Gardens to Kingsworth, Jack's Hill: A Hike Through 140 Million Years of History"
+slug: cherry-gardens-to-kingsworth-jacks-hill-hike
 description: Lifestyle Hikers traces a route from Cherry Gardens to Kingsworth on Jack's Hill, Kingston, covering plantation history, Taino settlements, and one of the best ridge views in St. Andrew.
 date: 2026-03-23
 author: willy London
 category: Trail Stories
+permalink: ''
 location: Cherry Gardens
 image: /assets/images/uploads/Kingsworth.jpg
 tags:
