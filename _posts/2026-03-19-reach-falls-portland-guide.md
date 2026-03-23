@@ -1,5 +1,6 @@
 ---
 title: "Reach Falls Portland: A Complete Visitor and Hiking Guide | Lifestyle Hikers"
+slug: reach-falls-portland-jamaica
 date: 2026-03-19
 permalink: /reach-falls-portland-jamaica/
 author: Lifestyle Hikers

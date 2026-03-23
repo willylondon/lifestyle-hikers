@@ -1,5 +1,6 @@
 ---
 title: "Blue Mountain Peak: The Complete Hiker's Guide | Lifestyle Hikers"
+slug: blue-mountain-peak-hike
 date: 2026-03-19
 permalink: /blue-mountain-peak-hike/
 author: Lifestyle Hikers

@@ -1,5 +1,6 @@
 ---
 title: "Hiking in Jamaica for Beginners: What to Know Before Your First Trail | Lifestyle Hikers"
+slug: hiking-jamaica-beginners-guide
 date: 2026-03-19
 permalink: /hiking-jamaica-beginners-guide/
 author: Lifestyle Hikers

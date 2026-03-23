@@ -1,5 +1,6 @@
 ---
 title: "Cinchona Gardens Hike Jamaica | Lifestyle Hikers"
+slug: cinchona-botanical-gardens-hike-guide
 date: 2026-03-09
 permalink: /blog/cinchona-botanical-gardens-hike-guide/
 author: Willy London

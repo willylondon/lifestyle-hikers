@@ -1,6 +1,6 @@
-# 📝 Decap CMS — Content Management Guide
+# 📝 Sveltia CMS — Content Management Guide
 
-> **Lifestyle Hikers** uses [Decap CMS](https://decapcms.org/) (formerly Netlify CMS) so anyone on the team can add blog posts, update hikes, manage the gallery, and edit trails — **no coding required**.
+> **Lifestyle Hikers** uses [Sveltia CMS](https://github.com/sveltia/sveltia-cms), a Decap-compatible CMS, so anyone on the team can add blog posts, update hikes, manage the gallery, and edit trails — **no coding required**.
 
 ---
 
@@ -21,9 +21,11 @@ Once the CMS is set up (see Setup section below), here's how to use it:
 1. Click **📝 Blog Posts** → **New Blog Post**
 2. Fill in the fields:
    - **Title** — Your post headline
+   - **Slug** — The short URL name, like `blue-mountain-peak-hike`
    - **Date** — When the post should be dated
    - **Author** — Your name (defaults to "Lifestyle Hikers")
-   - **Category** — Pick from: Trail Stories, Hike Recaps, Trail Tips, Gear Reviews, Community News
+   - **Category** — Pick from: Trail Stories, Trail Guides, Hike Recaps, Trail Tips, Gear Reviews, Community News
+   - **Permalink** — Optional. Leave blank to use `/blog/<slug>/`, or enter a custom path like `/waterfalls-in-jamaica/`
    - **Location** — Where the hike was (optional)
    - **Featured Image** — Upload a photo or paste a URL
    - **Body** — Write your post using the rich text editor (supports bold, headings, lists, images)
@@ -123,7 +125,7 @@ If your friends don't have (or want) GitHub accounts, you can use **Netlify Iden
      name: git-gateway
      branch: main
    ```
-5. Add this script to `admin/index.html` before the Decap CMS script:
+5. Add this script to `admin/index.html` before the CMS script:
    ```html
    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
    ```

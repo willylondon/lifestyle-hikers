@@ -1,5 +1,6 @@
 ---
 title: "Hiking in Jamaica: The Complete Trail Guide (2026) | Lifestyle Hikers"
+slug: hiking-in-jamaica
 date: 2026-03-19
 permalink: /hiking-in-jamaica/
 author: Lifestyle Hikers

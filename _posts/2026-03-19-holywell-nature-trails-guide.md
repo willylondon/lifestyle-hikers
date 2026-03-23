@@ -1,5 +1,6 @@
 ---
 title: "Holywell Nature Trails: The Best Easy Hike Near Kingston | Lifestyle Hikers"
+slug: holywell-nature-trails-blue-mountains
 date: 2026-03-19
 permalink: /holywell-nature-trails-blue-mountains/
 author: Lifestyle Hikers

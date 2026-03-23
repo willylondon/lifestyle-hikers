@@ -1,5 +1,6 @@
 ---
 title: "Nonsuch Falls Portland: Jamaica's Hidden Rainforest Waterfall | Lifestyle Hikers"
+slug: nonsuch-falls-portland-jamaica
 date: 2026-03-19
 permalink: /nonsuch-falls-portland-jamaica/
 author: Lifestyle Hikers

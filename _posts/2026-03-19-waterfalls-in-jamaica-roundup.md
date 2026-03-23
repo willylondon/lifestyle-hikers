@@ -1,5 +1,6 @@
 ---
 title: "Waterfalls in Jamaica: 12 Trails Worth Getting Wet For | Lifestyle Hikers"
+slug: waterfalls-in-jamaica
 date: 2026-03-19
 permalink: /waterfalls-in-jamaica/
 author: Lifestyle Hikers

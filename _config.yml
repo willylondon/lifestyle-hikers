@@ -55,3 +55,4 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      permalink: /blog/:slug/

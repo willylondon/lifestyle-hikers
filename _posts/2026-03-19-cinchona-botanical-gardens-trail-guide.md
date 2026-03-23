@@ -1,5 +1,6 @@
 ---
 title: "Cinchona Botanical Gardens: Jamaica's Most Scenic Historic Trail | Lifestyle Hikers"
+slug: cinchona-botanical-gardens-trail
 date: 2026-03-19
 permalink: /cinchona-botanical-gardens-trail/
 author: Lifestyle Hikers

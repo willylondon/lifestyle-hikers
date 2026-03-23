@@ -69,7 +69,7 @@ collections:
     label_singular: "Blog Post"
     folder: "_posts"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{fields.slug}}"
     sort: "date:desc"
     summary: "{{title}} — {{date | date('MMM D, YYYY')}}"
     fields:
@@ -77,6 +77,11 @@ collections:
         name: "title"
         widget: "string"
         hint: "The headline for your blog post"
+
+      - label: "Slug"
+        name: "slug"
+        widget: "string"
+        hint: "Used for the filename and default blog URL. Example: blue-mountain-peak-hike"
 
       - label: "SEO Description"
         name: "description"
@@ -101,11 +106,18 @@ collections:
         widget: "select"
         options:
           - "Trail Stories"
+          - "Trail Guides"
           - "Hike Recaps"
           - "Trail Tips"
           - "Gear Reviews"
           - "Community News"
         default: "Trail Stories"
+
+      - label: "Permalink"
+        name: "permalink"
+        widget: "string"
+        required: false
+        hint: "Optional custom URL. Leave blank to use /blog/<slug>/ automatically."
 
       - label: "Location"
         name: "location"

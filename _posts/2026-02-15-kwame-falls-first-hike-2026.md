@@ -1,5 +1,6 @@
 ---
 title: "Kwame Falls Hike Jamaica Guide | Lifestyle Hikers"
+slug: kwame-falls-first-hike-2026
 date: 2026-01-10
 permalink: /blog/kwame-falls-first-hike-2026/
 author: Lifestyle Hikers

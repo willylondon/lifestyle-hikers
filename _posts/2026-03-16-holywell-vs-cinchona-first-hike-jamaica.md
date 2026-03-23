@@ -1,5 +1,6 @@
 ---
 title: "Holywell vs Cinchona Jamaica Hike | Lifestyle Hikers"
+slug: holywell-vs-cinchona-first-hike-jamaica
 date: 2026-03-16
 permalink: /blog/holywell-vs-cinchona-first-hike-jamaica/
 author: Lifestyle Hikers
