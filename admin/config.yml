@@ -113,12 +113,6 @@ collections:
           - "Community News"
         default: "Trail Stories"
 
-      - label: "Permalink"
-        name: "permalink"
-        widget: "string"
-        required: false
-        hint: "Optional custom URL. Leave blank to use /blog/<slug>/ automatically."
-
       - label: "Location"
         name: "location"
         widget: "string"
@@ -220,34 +214,34 @@ collections:
         file: "_data/gallery.yml"
         fields:
           - label: "Photos"
-            name: "items"
-            widget: "list"
-            label_singular: "Photo"
-            summary: "{{fields.alt}}"
-            fields:
-              - label: "Image"
-                name: "image"
-                widget: "image"
-                hint: "Upload a photo or paste a URL"
+          name: "items"
+          widget: "list"
+          label_singular: "Photo"
+          summary: "{{fields.alt}}"
+          fields:
+            - label: "Image"
+              name: "image"
+              widget: "image"
+              hint: "Upload a photo or paste a URL"
 
-              - label: "Caption / Alt Text"
-                name: "alt"
-                widget: "string"
-                hint: "Describe what's in the photo"
+            - label: "Caption / Alt Text"
+              name: "alt"
+              widget: "string"
+              hint: "Describe what's in the photo"
 
-              - label: "Size (Layout)"
-                name: "size"
-                widget: "select"
-                required: false
-                default: ""
-                hint: "Leave as Regular for most photos. Use Tall or Wide for feature photos."
-                options:
-                  - label: "Regular"
-                    value: ""
-                  - label: "Tall (spans 2 rows)"
-                    value: "tall"
-                  - label: "Wide (spans 2 columns)"
-                    value: "wide"
+            - label: "Size (Layout)"
+              name: "size"
+              widget: "select"
+              required: false
+              default: ""
+              hint: "Leave as Regular for most photos. Use Tall or Wide for feature photos."
+              options:
+                - label: "Regular"
+                  value: ""
+                - label: "Tall (spans 2 rows)"
+                  value: "tall"
+                - label: "Wide (spans 2 columns)"
+                  value: "wide"
 
   # ------------------------------------------
   # 4. TRAILS (_data/trails.yml)
