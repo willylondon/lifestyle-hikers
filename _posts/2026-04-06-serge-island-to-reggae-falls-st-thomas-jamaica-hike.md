@@ -5,7 +5,6 @@ description: We hiked Serge Island to Reggae Falls in St. Thomas, Jamaica in 45 
 date: 2026-04-04
 author: Lifestyle Hikers
 category: Trail Stories
-permalink: ''
 location: Reggae Falls, St. Thomas
 image: /assets/images/uploads/IMG_1531.jpg
 tags:
