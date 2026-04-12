@@ -1,5 +1,4 @@
 ---
-image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "Driven to Madness: My Experience with Reckless Jamaican Drivers"
 date: 2025-03-21
 slug: driven-to-madness-my-experience-with-reckless-jamaican-drivers

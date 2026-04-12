@@ -1,5 +1,4 @@
 ---
-image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "The Big 3: How Tastee, Juici, and Mother’s Shape Jamaica’s Patty Empire"
 date: 2025-04-30
 slug: the-big-3-how-tastee-juici-and-mother-s-shape-jamaica-s-patty-empire

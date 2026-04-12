@@ -1,5 +1,4 @@
 ---
-image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "Why Are JPS Bills So High? The Struggle of Jamaicans to Afford Electricity"
 date: 2025-03-13
 slug: why-are-jps-bills-so-high-the-struggle-of-jamaicans-to-afford-electricity

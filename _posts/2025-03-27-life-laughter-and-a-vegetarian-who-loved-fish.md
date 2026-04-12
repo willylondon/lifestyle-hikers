@@ -1,5 +1,4 @@
 ---
-image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "Life, Laughter, and a Vegetarian Who Loved Fish"
 date: 2025-03-27
 slug: life-laughter-and-a-vegetarian-who-loved-fish

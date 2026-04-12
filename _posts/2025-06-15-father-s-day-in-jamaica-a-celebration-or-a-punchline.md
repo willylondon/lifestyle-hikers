@@ -1,5 +1,4 @@
 ---
-image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "Father’s Day in Jamaica – A Celebration or a Punchline?"
 date: 2025-06-15
 slug: father-s-day-in-jamaica-a-celebration-or-a-punchline

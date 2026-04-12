@@ -1,5 +1,4 @@
 ---
-image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "When Winning Becomes Humiliation: The Hollow Victory of Jamaica’s 158–26 Basketball Game"
 date: 2025-12-11
 slug: when-winning-becomes-humiliation-the-hollow-victory-of-jamaica-s-158-26-basketba

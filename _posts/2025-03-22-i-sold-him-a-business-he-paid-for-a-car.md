@@ -1,5 +1,4 @@
 ---
-image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "I Sold Him a Business, He Paid for a Car"
 date: 2025-03-22
 slug: i-sold-him-a-business-he-paid-for-a-car

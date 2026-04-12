@@ -1,5 +1,4 @@
 ---
-image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "The Story of Palace Amusement: How Jamaica’s Cinema Giant Survived 100 Years and Why the Next Move…"
 date: 2025-05-01
 slug: the-story-of-palace-amusement-how-jamaica-s-cinema-giant-survived-100-years-and-

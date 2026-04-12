@@ -1,5 +1,4 @@
 ---
-image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "It Is Coptic Time Now"
 date: 2025-03-21
 slug: it-is-coptic-time-now

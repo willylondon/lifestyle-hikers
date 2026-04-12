@@ -1,5 +1,4 @@
 ---
-image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "Lionel Messi’s Historic Match in Jamaica: Cavalier FC’s Moment Overshadowed?"
 date: 2025-03-14
 slug: lionel-messi-s-historic-match-in-jamaica-cavalier-fc-s-moment-overshadowed

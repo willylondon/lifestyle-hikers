@@ -1,5 +1,4 @@
 ---
-image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "​The Debt She Paid: How I Learned That Kindness and Self-Worth Must Coexist
 ​A meditation on worth…"
 date: 2025-11-25

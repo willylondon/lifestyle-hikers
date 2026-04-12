@@ -1,5 +1,4 @@
 ---
-image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "You Are the Result of Thousands"
 date: 2025-03-24
 slug: you-are-the-result-of-thousands

@@ -1,5 +1,4 @@
 ---
-image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "The Arrogance of Man"
 date: 2025-09-12
 slug: the-arrogance-of-man

@@ -1,5 +1,4 @@
 ---
-image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "The Forgotten Legacy of the Ethiopian Zion Coptic Church in Jamaica"
 date: 2025-03-12
 slug: the-forgotten-legacy-of-the-ethiopian-zion-coptic-church-in-jamaica
