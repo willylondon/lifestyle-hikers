@@ -116,13 +116,13 @@ Blue Mountain Peak is not the place to test whether one small bottle can carry y
 
 ## What to pack
 
-- trail shoes or boots with grip ([shop hiking boots on Amazon](https://www.amazon.com/s?k=hiking+boots&tag=lifestylehike-20))
-- 2 to 3 litres of water
-- a warm or wind-resistant layer
-- headlamp or reliable light source ([shop headlamps on Amazon](https://www.amazon.com/s?k=headlamp&tag=lifestylehike-20))
+- trail shoes or boots with grip ([hiking boots on Amazon](https://www.amazon.com/s?k=hiking+boots&tag=lifestylehike-20))
+- [hydration bladder or 2–3 litre water bottle](https://www.amazon.com/s?k=hydration+bladder+hiking&tag=lifestylehike-20)
+- [warm fleece or wind-resistant layer](https://www.amazon.com/s?k=packable+fleece+jacket+hiking&tag=lifestylehike-20) — the summit is cold before dawn
+- headlamp or reliable light source ([headlamps on Amazon](https://www.amazon.com/s?k=headlamp+hiking&tag=lifestylehike-20))
 - snacks you can eat quickly
 - a charged phone
-- rain protection
+- [compact rain poncho](https://www.amazon.com/s?k=compact+rain+poncho+hiking&tag=lifestylehike-20)
 - cash for fees or local arrangements
 
 ## What to do before attempting the peak
@@ -156,3 +156,5 @@ Most hikers should plan for a full outing rather than a quick summit trip. Group
 ### Can beginners hike Blue Mountain Peak?
 
 Some can, but it should not usually be their first hike in Jamaica. A better approach is to build up through easier mountain trails first.
+
+*Disclosure: As an Amazon Associate I earn from qualifying purchases. Some links may be affiliate links that support this site at no extra cost to you.*

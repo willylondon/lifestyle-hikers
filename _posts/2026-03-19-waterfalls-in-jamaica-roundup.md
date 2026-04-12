@@ -133,10 +133,10 @@ Secret Falls is more established than the truly hidden spots, but it still gives
 
 At minimum, carry:
 
-- water shoes or footwear with grip
-- a waterproof bag
+- [water shoes with grip](https://www.amazon.com/s?k=water+shoes+grip+hiking&tag=lifestylehike-20) — slippery rock is a constant at every waterfall on this list
+- [waterproof dry bag](https://www.amazon.com/s?k=waterproof+dry+bag+phone+pouch&tag=lifestylehike-20) for your phone and valuables
 - a towel
-- water
+- [reusable water bottle](https://www.amazon.com/s?k=reusable+water+bottle+hiking&tag=lifestylehike-20)
 - a dry change of clothes
 - cash for local access or guide costs
 
@@ -157,3 +157,5 @@ Especially at smaller and community-based sites, rates and access arrangements c
 The best waterfall in Jamaica depends on what you want out of the day. If you want the most balanced all-round experience, start with Reach Falls. If you want a stronger challenge, go deeper with Nonsuch. If you want broad appeal and easy enjoyment, YS Falls and Mayfield are excellent.
 
 If you are still planning your wider hiking list, use [our complete hiking in Jamaica guide](/hiking-in-jamaica/) next. If you are completely new to trails, [our beginner guide](/hiking-jamaica-beginners-guide/) will help you choose the safest starting point.
+
+*Disclosure: As an Amazon Associate I earn from qualifying purchases. Some links may be affiliate links that support this site at no extra cost to you.*
