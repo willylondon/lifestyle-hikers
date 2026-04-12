@@ -1,4 +1,5 @@
 ---
+image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "A Note of Reflection
 Tonight I dreamed of my mother and sister."
 date: 2025-09-11

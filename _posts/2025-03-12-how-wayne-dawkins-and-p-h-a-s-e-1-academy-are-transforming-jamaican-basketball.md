@@ -1,4 +1,5 @@
 ---
+image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "How Wayne Dawkins and P.H.A.S.E. 1 Academy Are Transforming Jamaican Basketball"
 date: 2025-03-12
 slug: how-wayne-dawkins-and-p-h-a-s-e-1-academy-are-transforming-jamaican-basketball

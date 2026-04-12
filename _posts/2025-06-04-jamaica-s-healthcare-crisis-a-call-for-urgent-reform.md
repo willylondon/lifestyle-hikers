@@ -1,4 +1,5 @@
 ---
+image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "Jamaica’s Healthcare Crisis: A Call for Urgent Reform"
 date: 2025-06-04
 slug: jamaica-s-healthcare-crisis-a-call-for-urgent-reform

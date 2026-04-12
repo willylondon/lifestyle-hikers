@@ -1,4 +1,5 @@
 ---
+image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "“How Do We Become Better from Competition If There’s Nobody to Compete With?\""
 date: 2025-05-17
 slug: how-do-we-become-better-from-competition-if-there-s-nobody-to-compete-with

@@ -1,4 +1,5 @@
 ---
+image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "AJ Dybantsa’s Jamaican Roots Inspire a Game-Changing Basketball Initiative"
 date: 2025-05-13
 slug: aj-dybantsa-s-jamaican-roots-inspire-a-game-changing-basketball-initiative

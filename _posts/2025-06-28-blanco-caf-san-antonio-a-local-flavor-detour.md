@@ -1,4 +1,5 @@
 ---
+image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "Blanco Café San Antonio – A Local Flavor Detour"
 date: 2025-06-28
 slug: blanco-caf-san-antonio-a-local-flavor-detour

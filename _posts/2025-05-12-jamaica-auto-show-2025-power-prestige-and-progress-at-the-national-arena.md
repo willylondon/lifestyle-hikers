@@ -1,4 +1,5 @@
 ---
+image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "Jamaica Auto Show 2025: Power, Prestige, and Progress at the National Arena"
 date: 2025-05-12
 slug: jamaica-auto-show-2025-power-prestige-and-progress-at-the-national-arena

@@ -1,4 +1,5 @@
 ---
+image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "Royalton Blue Waters Review: Not What We Expected"
 date: 2025-07-31
 slug: royalton-blue-waters-review-not-what-we-expected

@@ -1,4 +1,5 @@
 ---
+image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "💧“No Water Again?” — Understanding the NWC Water Crisis in St. Andrew"
 date: 2025-03-21
 slug: no-water-again-understanding-the-nwc-water-crisis-in-st-andrew

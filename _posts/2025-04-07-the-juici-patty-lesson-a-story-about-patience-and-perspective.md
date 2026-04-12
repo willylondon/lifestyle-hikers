@@ -1,4 +1,5 @@
 ---
+image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "The Juici Patty Lesson: A Story About Patience and Perspective"
 date: 2025-04-07
 slug: the-juici-patty-lesson-a-story-about-patience-and-perspective

@@ -1,4 +1,5 @@
 ---
+image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "How I Turned My Words into a Voice Actor"
 date: 2025-05-06
 slug: how-i-turned-my-words-into-a-voice-actor

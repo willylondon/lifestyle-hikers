@@ -1,4 +1,5 @@
 ---
+image: /assets/images/uploads/lh-hiking-thumb.jpg
 layout: post
 title: "Essential Packing List for Hiking in Jamaica"
 date: 2026-04-10

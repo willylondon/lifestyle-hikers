@@ -1,4 +1,5 @@
 ---
+image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "Rohan Robinson: The Silent Architect of Jamaican Basketball"
 date: 2025-05-14
 slug: rohan-robinson-the-silent-architect-of-jamaican-basketball

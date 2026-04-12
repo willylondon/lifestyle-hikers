@@ -1,4 +1,5 @@
 ---
+image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "Is KFC Jamaica Worth It? The Love-Hate Relationship With Our ‘National Dish"
 date: 2025-03-12
 slug: is-kfc-jamaica-worth-it-the-love-hate-relationship-with-our-national-dish

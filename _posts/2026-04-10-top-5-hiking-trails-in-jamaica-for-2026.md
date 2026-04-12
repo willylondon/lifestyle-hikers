@@ -1,4 +1,5 @@
 ---
+image: /assets/images/uploads/lh-hiking-thumb.jpg
 layout: post
 title: 'Top 5 Hiking Trails in Jamaica for 2026'
 date: 2026-04-10

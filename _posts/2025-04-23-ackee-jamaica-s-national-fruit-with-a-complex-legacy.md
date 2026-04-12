@@ -1,4 +1,5 @@
 ---
+image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "🌿 Ackee: Jamaica’s National Fruit with a Complex Legacy"
 date: 2025-04-23
 slug: ackee-jamaica-s-national-fruit-with-a-complex-legacy

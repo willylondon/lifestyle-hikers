@@ -1,4 +1,5 @@
 ---
+image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "Independence Park and Jamaica Basketball: A Partnership Under Pressure"
 date: 2025-05-15
 slug: independence-park-and-jamaica-basketball-a-partnership-under-pressure

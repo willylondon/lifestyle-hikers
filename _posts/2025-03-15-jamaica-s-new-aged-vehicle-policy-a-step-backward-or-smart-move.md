@@ -1,4 +1,5 @@
 ---
+image: /assets/images/uploads/lh-hiking-thumb.jpg
 title: "Jamaica’s New Aged Vehicle Policy: A Step Backward or Smart Move?"
 date: 2025-03-15
 slug: jamaica-s-new-aged-vehicle-policy-a-step-backward-or-smart-move
