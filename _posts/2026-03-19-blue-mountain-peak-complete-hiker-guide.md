@@ -116,10 +116,10 @@ Blue Mountain Peak is not the place to test whether one small bottle can carry y
 
 ## What to pack
 
-- trail shoes or boots with grip
+- trail shoes or boots with grip ([shop hiking boots on Amazon](https://www.amazon.com/s?k=hiking+boots&tag=lifestylehike-20))
 - 2 to 3 litres of water
 - a warm or wind-resistant layer
-- headlamp or reliable light source
+- headlamp or reliable light source ([shop headlamps on Amazon](https://www.amazon.com/s?k=headlamp&tag=lifestylehike-20))
 - snacks you can eat quickly
 - a charged phone
 - rain protection
