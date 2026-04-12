@@ -81,10 +81,10 @@ Mountain weather matters here. Even in Jamaica's drier periods, Cinchona can fee
 
 Bring:
 
-- shoes with grip
+- [shoes with solid grip](https://www.amazon.com/s?k=trail+hiking+boots&tag=lifestylehike-20)
 - enough water for a proper climb
 - snacks
-- a light rain layer
+- [a light rain layer](https://www.amazon.com/s?k=lightweight+rain+jacket+packable&tag=lifestylehike-20)
 - an extra dry shirt if you sweat heavily
 - patience for changing visibility
 

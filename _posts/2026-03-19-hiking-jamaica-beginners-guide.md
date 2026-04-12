@@ -29,7 +29,7 @@ For an easy first trail, start with:
 - sneakers or trainers with decent grip
 - old clothes you can get muddy or wet
 - at least 1.5 litres of water
-- bug spray
+- [bug spray](https://www.amazon.com/s?k=deet+insect+repellent+spray&tag=lifestylehike-20)
 - a cap or hat
 - a small snack
 
@@ -151,7 +151,7 @@ For many beginners, Holywell is one of the best first choices because it is scen
 
 ### Do I need hiking boots for my first trail?
 
-Not always. For easy hikes, sturdy sneakers with grip can be enough. For harder or wetter routes, proper trail footwear is a better choice.
+Not always. For easy hikes, sturdy sneakers with grip can be enough. For harder or wetter routes, [proper trail footwear](https://www.amazon.com/s?k=trail+hiking+boots&tag=lifestylehike-20) is a better choice.
 
 ### Is hiking in Jamaica safe for beginners?
 

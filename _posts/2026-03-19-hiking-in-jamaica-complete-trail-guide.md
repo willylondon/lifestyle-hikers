@@ -114,11 +114,11 @@ Before any long drive, especially into the Blue Mountains or Portland, check loc
 
 You do not need expensive gear to start, but you do need the basics.
 
-- shoes with grip
+- [shoes with grip](https://www.amazon.com/s?k=trail+hiking+shoes&tag=lifestylehike-20)
 - at least 2 litres of water for moderate or hard hikes
-- bug spray
-- a rain layer
-- sunscreen
+- [bug spray](https://www.amazon.com/s?k=deet+insect+repellent+spray&tag=lifestylehike-20)
+- [a rain layer](https://www.amazon.com/s?k=lightweight+waterproof+rain+jacket&tag=lifestylehike-20)
+- [sunscreen](https://www.amazon.com/s?k=reef+safe+sunscreen+spf+50&tag=lifestylehike-20)
 - snacks that are easy to eat on the move
 - cash in JMD for entrance fees, parking, or local guides
 
