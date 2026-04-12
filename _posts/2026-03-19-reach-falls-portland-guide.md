@@ -57,12 +57,12 @@ It is not the same category as [Nonsuch Falls](/nonsuch-falls-portland-jamaica/)
 
 ## What to pack for Reach Falls
 
-- water shoes or sandals with grip
+- [water shoes with grip](https://www.amazon.com/s?k=water+shoes+grip+hiking&tag=lifestylehike-20) — non-negotiable on wet rock
 - swimwear
 - a dry change of clothes
-- waterproof bag for phone and valuables
+- [waterproof dry bag](https://www.amazon.com/s?k=waterproof+dry+bag+phone+pouch&tag=lifestylehike-20) for phone and valuables
 - towel
-- drinking water
+- [reusable water bottle](https://www.amazon.com/s?k=reusable+water+bottle+hiking&tag=lifestylehike-20)
 - light snacks
 - cash for entrance or guide-related costs
 
@@ -127,3 +127,5 @@ Strongly recommended. Wet rock is a constant factor, and proper grip makes the d
 ### Can Reach Falls be done in the same trip as Nonsuch?
 
 Yes, but many people prefer splitting them across two days so Reach can stay relaxed and Nonsuch can be treated as the harder outing.
+
+*Disclosure: As an Amazon Associate I earn from qualifying purchases. Some links may be affiliate links that support this site at no extra cost to you.*

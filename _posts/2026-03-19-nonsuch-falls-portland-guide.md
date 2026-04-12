@@ -71,12 +71,12 @@ That direct contact matters because:
 
 ## What to bring
 
-- trail shoes with grip
-- water
+- [trail shoes with solid grip](https://www.amazon.com/s?k=trail+hiking+shoes+grip&tag=lifestylehike-20) — the descent gets slippery fast
+- [hiking water bottle](https://www.amazon.com/s?k=hiking+water+bottle&tag=lifestylehike-20)
 - light snacks
 - swimwear if you plan to get in the water
 - a towel
-- a waterproof bag
+- [waterproof dry bag](https://www.amazon.com/s?k=waterproof+dry+bag+phone+pouch&tag=lifestylehike-20) for phone and valuables
 - cash for local costs
 - a dry shirt for the drive back
 
@@ -135,3 +135,5 @@ Treat it as a guide-led experience. That is usually the best way to handle route
 ### Is Nonsuch better than Reach Falls?
 
 Not better for everyone. Nonsuch is stronger for hikers seeking a tougher, less commercial rainforest outing. Reach is better for flexibility and easier access.
+
+*Disclosure: As an Amazon Associate I earn from qualifying purchases. Some links may be affiliate links that support this site at no extra cost to you.*

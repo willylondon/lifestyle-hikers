@@ -90,9 +90,9 @@ Because operating details can change, confirm current entry information before y
 A few practical rules:
 
 - arrive early enough to enjoy the cooler part of the day
-- bring a light jacket or sweater
-- use proper footwear, even for shorter trails
-- bring water even if the hike seems easy
+- bring a [packable fleece or light jacket](https://www.amazon.com/s?k=packable+fleece+jacket+hiking&tag=lifestylehike-20) — temperatures drop quickly once the mist rolls in
+- use proper footwear, even for shorter trails — [trail shoes with grip](https://www.amazon.com/s?k=trail+hiking+shoes&tag=lifestylehike-20) make a real difference on damp mountain paths
+- bring water even if the hike seems easy — a [durable water bottle](https://www.amazon.com/s?k=hiking+water+bottle&tag=lifestylehike-20) is worth keeping in your pack at all times
 
 Guides are not always necessary at Holywell the way they are on more remote routes, but local guidance can still improve the day if you want more context on birds, plants, and the wider Blue Mountains area.
 
@@ -133,3 +133,5 @@ Close enough to work well as a day trip, which is one of the main reasons it is 
 ### Is Holywell better than Cinchona for first-timers?
 
 Usually yes. If you want help deciding, read our [Holywell vs Cinchona comparison](/blog/holywell-vs-cinchona-first-hike-jamaica/).
+
+*Disclosure: As an Amazon Associate I earn from qualifying purchases. Some links may be affiliate links that support this site at no extra cost to you.*
