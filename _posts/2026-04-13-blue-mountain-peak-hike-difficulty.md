@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Conquering the Blue Mountain Peak Hike: A Thrilling Adventure"
-date: 2026-04-10
+date: 2026-04-13
 categories: [Hiking, Adventure, Jamaica]
 excerpt: "Embark on the ultimate challenge with the Blue Mountain Peak hike in Jamaica. Discover the difficulties and triumphs that await adventurers."
 author: "Your Name"
