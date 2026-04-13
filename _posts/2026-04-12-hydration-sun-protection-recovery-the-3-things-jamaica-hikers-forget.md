@@ -1,12 +1,14 @@
 ---
-title: "Hydration, Sun Protection, and Recovery: The 3 Things Jamaica Hikers Forget"
-date: 2026-04-12
+title: 'Hydration, Sun Protection, and Recovery: The 3 Things Jamaica Hikers Forget'
 slug: hydration-sun-protection-recovery-the-3-things-jamaica-hikers-forget
+description: ''
+date: 2026-04-12
+author: Willy London
+category: Trail Guide
+location: Jamaica
+image: /assets/images/uploads/a2bf2073-87f6-48f2-bc42-ae274d0eeac6.webp
+excerpt: After years of leading hikes across Jamaica's Blue Mountains, rivers, and hidden trails, I've watched the same three mistakes catch hikers every single time. Here's how to fix them.
 layout: post
-category: "Trail Guide"
-excerpt: "After years of leading hikes across Jamaica's Blue Mountains, rivers, and hidden trails, I've watched the same three mistakes catch hikers every single time. Here's how to fix them."
-author: "Willy London"
-location: "Jamaica"
 ---
 
 Every hike, without fail, someone in the group runs out of water before we reach the halfway point.
@@ -21,7 +23,7 @@ After years of leading hikes for Lifestyle Hikers across Jamaica, I've watched t
 
 So let me do that right now.
 
----
+***
 
 ## Mistake #1: You Are Not Drinking Enough Water - You're Just Sipping
 
@@ -39,7 +41,7 @@ I personally use a hydration pack on every hike now. Having water accessible on 
 
 One more thing - set a reminder on your phone if you have to. Drink before you feel thirsty. By the time you feel thirsty, you're already dehydrated.
 
----
+***
 
 ## Mistake #2: You Are Getting Burned and You Don't Even Realize It
 
@@ -57,7 +59,7 @@ Wear a wide-brim hat that covers your face, ears, and neck. I recommend a hat wi
 
 Beyond the hat - apply sunscreen. At minimum SPF 30, and reapply if you're on a long hike. The back of your neck and your ears are the spots most people forget.
 
----
+***
 
 ## Mistake #3: You Are Not Replacing What You Lost After the Hike
 
@@ -75,7 +77,7 @@ My personal go-to is [REDMOND Re-Lyte Electrolyte Powder](https://www.amazon.com
 
 If you really pushed hard, pair the electrolytes with a small snack with protein and carbs within the hour. Your body will thank you the next morning.
 
----
+***
 
 ## Put These Three Things Together
 
@@ -91,6 +93,6 @@ The trails aren't going anywhere. Make sure you're in good enough shape to keep 
 
 See you on the trail.
 
----
+***
 
-*What's the one hiking mistake you've personally made? Drop it in the comments - I'd love to hear what people have learned the hard way.*
+_What's the one hiking mistake you've personally made? Drop it in the comments - I'd love to hear what people have learned the hard way._
