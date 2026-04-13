@@ -6,6 +6,7 @@ date: 2026-04-12
 author: Willy London
 category: Trail Stories
 location: Jamaica
+image: /assets/images/uploads/blue-mountain-2026.jpg
 excerpt: The blisters, the sunburn, the dehydration - I learned everything the hard way. Here is the guide I wish someone gave me before I stepped onto my first Jamaican trail.
 layout: post
 ---
