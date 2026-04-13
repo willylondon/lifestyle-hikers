@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Embark on a Jamaican Adventure: Top Hiking Trails Await"
-date: 2026-04-10
+date: 2026-04-13
 categories: [Travel, Jamaica, Hiking]
 excerpt: "Explore the beauty of Jamaica through its top hiking trails. Discover hidden gems and breathtaking vistas for your next outdoor adventure!"
 author: "Your Name"
