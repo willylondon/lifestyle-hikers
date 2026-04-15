@@ -10,9 +10,82 @@
             <h2 class="cta-title">Ready fi Hit di Trail?</h2>
             <p class="cta-subtitle">Join Lifestyle Hikers and discover Jamaica one trail at a time. Your next great
                 adventure starts here.</p>
-            <a href="https://forms.gle/Ad8Q71ueUbbenAZFA" target="_blank" rel="noopener noreferrer" class="cta-join-btn">
-                <i class="fas fa-users"></i> Join the Community
-            </a>
+
+            <!-- Signup form — fields map to Google Form entry IDs -->
+            <form class="cta-form" id="join-form" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" name="entry.1536938342" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="entry.210167821" placeholder="Email Address" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="entry.2117914245" placeholder="Phone / WhatsApp Number">
+                </div>
+                <div class="form-group">
+                    <select name="entry.1144046084">
+                        <option value="" disabled selected>Your Hiking Experience</option>
+                        <option value="Beginner - Mi just a start out">Beginner - Mi just a start out</option>
+                        <option value="Intermediate - Mi hike regular">Intermediate - Mi hike regular</option>
+                        <option value="Advanced - Mi eat mountain fi breakfast">Advanced - Mi eat mountain fi breakfast</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="entry.609835379" placeholder="How did you hear about us?">
+                </div>
+                <button type="submit" class="cta-join-btn">
+                    <i class="fas fa-users"></i> Join the Community
+                </button>
+            </form>
+
+            <!--
+                Success state — displayed only after JS confirms form submission.
+                The Telegram link is never present in the initial DOM;
+                it is injected by the script below after the form submits.
+            -->
+            <div id="join-success" style="display:none;" aria-live="polite">
+                <h3 class="cta-title" style="font-size:clamp(1.6rem,4vw,2.4rem);margin-bottom:var(--space-lg);">You&#39;re in! &#x1F97E;</h3>
+                <p class="cta-subtitle">Welcome to Lifestyle Hikers Jamaica. Your next step is to
+                    follow our official Telegram channel &mdash; this is where all hike schedules,
+                    trail drops, photos and updates live.</p>
+                <div id="join-success-cta" style="margin-top:var(--space-xl);"></div>
+                <p class="cta-subtitle" style="margin-top:var(--space-xl);font-size:1rem;">
+                    See you on the trail! &#x1F1EF;&#x1F1F2;
+                </p>
+            </div>
         </div>
     </div>
+
+    <script>
+    (function () {
+        var FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSfPyoz1DLVHq9bGz2MdvfHxG5Ss5SXzLkl0WeceVoFLV-6Zbg/formResponse';
+        var form    = document.getElementById('join-form');
+        var success = document.getElementById('join-success');
+        var ctaSlot = document.getElementById('join-success-cta');
+
+        function revealTelegram() {
+            form.style.display = 'none';
+            var link = atob('aHR0cHM6Ly90Lm1lLytGQndMQjhsMk5jYzFNRFV4');
+            var btn  = document.createElement('a');
+            btn.href = link;
+            btn.target = '_blank';
+            btn.rel  = 'noopener noreferrer';
+            btn.className = 'cta-join-btn';
+            btn.style.cssText = 'background:#229ED9;display:inline-flex;align-items:center;gap:0.6rem;';
+            btn.innerHTML = '<i class="fab fa-telegram" aria-hidden="true"></i> Join Our Telegram Channel';
+            ctaSlot.appendChild(btn);
+            success.style.display = 'block';
+        }
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var params = new URLSearchParams(new FormData(form));
+            fetch(FORM_ACTION, { method: 'POST', mode: 'no-cors', body: params })
+                .then(revealTelegram)
+                .catch(revealTelegram);
+        });
+    })();
+    </script>
 </section>
