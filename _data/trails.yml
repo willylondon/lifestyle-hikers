@@ -59,3 +59,15 @@ items:
     reviews: 5
     image: /assets/images/uploads/pxl_20260207_134511969.portrait-1--1200w.webp
     alt: Hikers at the Nonsuch Falls base camp in Portland
+  - name: Sugar Loaf
+    location: Gordon Town, St. Andrew
+    difficulty: moderate
+    distance: 6 mi
+    elevation: 2,017 ft
+    time: 3 hrs
+    rating: 4
+    stars: 4
+    half_star: false
+    reviews: 4
+    image: /assets/images/uploads/sugar loaf.jpg
+    alt: top of the hill looking down liguanea
