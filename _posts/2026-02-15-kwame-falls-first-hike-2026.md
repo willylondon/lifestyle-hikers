@@ -6,7 +6,7 @@ permalink: /blog/kwame-falls-first-hike-2026/
 author: Lifestyle Hikers
 category: Trail Stories
 description: "Kwame Falls hike guide in Jamaica with trail tips, river crossings, gear advice, and safety insights from Lifestyle Hikers."
-canonical: "https://lifestylehikers.com/kwame-falls-first-hike-2026/"
+canonical: "https://www.lifestylehikers.com/kwame-falls-first-hike-2026/"
 location: Kwame Falls, St Mary
 image: /assets/images/uploads/img_7939-1200w.webp
 tags:

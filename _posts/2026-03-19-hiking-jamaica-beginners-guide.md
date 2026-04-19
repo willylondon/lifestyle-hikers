@@ -6,7 +6,7 @@ permalink: /hiking-jamaica-beginners-guide/
 author: Lifestyle Hikers
 category: Trail Tips
 description: "New to hiking in Jamaica? Start here for beginner trails, what gear you actually need, safety basics, and how to build confidence on your first outings."
-canonical: "https://lifestylehikers.com/hiking-jamaica-beginners-guide/"
+canonical: "https://www.lifestylehikers.com/hiking-jamaica-beginners-guide/"
 image: /assets/images/uploads/IMG_1951-1200w.webp
 tags:
   - hiking jamaica beginners

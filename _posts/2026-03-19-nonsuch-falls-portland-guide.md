@@ -6,7 +6,7 @@ permalink: /nonsuch-falls-portland-jamaica/
 author: Lifestyle Hikers
 category: Trail Guides
 description: "Discover what to expect at Nonsuch Falls in Portland, Jamaica, from the guided descent and rainforest setting to who this challenging waterfall adventure suits best."
-canonical: "https://lifestylehikers.com/nonsuch-falls-portland-jamaica/"
+canonical: "https://www.lifestylehikers.com/nonsuch-falls-portland-jamaica/"
 image: /assets/images/uploads/img_0905-1200w.webp
 tags:
   - nonsuch falls jamaica

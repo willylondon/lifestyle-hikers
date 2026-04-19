@@ -6,7 +6,7 @@ permalink: /hiking-in-jamaica/
 author: Lifestyle Hikers
 category: Trail Guides
 description: "Your complete guide to hiking in Jamaica, from Blue Mountain Peak to hidden waterfall trails. Difficulty levels, seasons, gear, and local tips from Lifestyle Hikers."
-canonical: "https://lifestylehikers.com/hiking-in-jamaica/"
+canonical: "https://www.lifestylehikers.com/hiking-in-jamaica/"
 image: /assets/images/uploads/img_7939-1200w.webp
 tags:
   - hiking in jamaica

@@ -6,7 +6,7 @@ permalink: /blog/post-hike-recovery-report-tool-jamaica/
 author: Lifestyle Hikers
 category: Recovery & Wellness
 description: "Use our free Post-Hike Recovery Report tool to get personalized hydration, nutrition, sleep, and recovery guidance after every hike in Jamaica. No login required."
-canonical: "https://lifestylehikers.com/blog/post-hike-recovery-report-tool-jamaica/"
+canonical: "https://www.lifestylehikers.com/blog/post-hike-recovery-report-tool-jamaica/"
 image: /assets/images/uploads/recovery-report-thumbnail.png
 tags:
   - post-hike recovery

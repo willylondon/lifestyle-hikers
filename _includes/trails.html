@@ -15,7 +15,7 @@
         </div>
         <div class="trails-grid" id="trailsGrid">
             {% for trail in site.data.trails.items %}
-            <div class="trail-card reveal" data-difficulty="{{ trail.difficulty }}">
+            <div class="trail-card reveal" data-difficulty="{{ trail.difficulty }}" data-search="{{ trail.name }} {{ trail.location }} {{ trail.alt | default: '' }}">
                 <div class="trail-card-img">
                     <img src="{{ trail.image }}" alt="{{ trail.alt | default: trail.name }}" loading="lazy" decoding="async">
                     <span class="trail-badge {{ trail.difficulty }}">{{ trail.difficulty | capitalize }}</span>

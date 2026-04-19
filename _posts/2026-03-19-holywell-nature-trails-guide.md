@@ -6,7 +6,7 @@ permalink: /holywell-nature-trails-blue-mountains/
 author: Lifestyle Hikers
 category: Trail Guides
 description: "Holywell Recreation Area offers one of the best easy hikes near Kingston, Jamaica. Use this guide for trails, wildlife, what to pack, and how to plan your day."
-canonical: "https://lifestylehikers.com/holywell-nature-trails-blue-mountains/"
+canonical: "https://www.lifestylehikers.com/holywell-nature-trails-blue-mountains/"
 image: /assets/images/uploads/holywell-2026.jpg
 tags:
   - holywell nature trails

@@ -6,7 +6,7 @@ permalink: /reach-falls-portland-jamaica/
 author: Lifestyle Hikers
 category: Trail Guides
 description: "Planning a trip to Reach Falls in Portland, Jamaica? Use this guide for trail expectations, swimming tips, what to pack, and how to pair it with other Portland stops."
-canonical: "https://lifestylehikers.com/reach-falls-portland-jamaica/"
+canonical: "https://www.lifestylehikers.com/reach-falls-portland-jamaica/"
 image: /assets/images/uploads/reach-falls-2026.webp
 tags:
   - reach falls jamaica

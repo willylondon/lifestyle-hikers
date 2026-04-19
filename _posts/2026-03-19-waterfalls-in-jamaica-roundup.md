@@ -6,7 +6,7 @@ permalink: /waterfalls-in-jamaica/
 author: Lifestyle Hikers
 category: Trail Guides
 description: "12 waterfalls in Jamaica worth visiting, from famous cascades to hidden hikes. Use this guide to compare difficulty, swimming access, vibe, and trip style."
-canonical: "https://lifestylehikers.com/waterfalls-in-jamaica/"
+canonical: "https://www.lifestylehikers.com/waterfalls-in-jamaica/"
 image: /assets/images/uploads/shared39-1200w.webp
 tags:
   - waterfalls in jamaica
