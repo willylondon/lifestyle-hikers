@@ -6,6 +6,7 @@ date: 2026-04-20
 author: Lifestyle Hikers
 category: Trail Stories
 location: Port Royal, Kingston Harbour
+image: /assets/images/uploads/port royal 1.jpg
 tags:
   - Port Royal, Jamaica History, Lifestyle Hikers, Kingston, Outdoor Workout, Trail Stories
 ---
@@ -15,6 +16,8 @@ Just before sunset on Saturday, we rolled out along the Palisadoes strip and hea
 Port Royal has a reputation. They used to call it the Wickedest City on Earth, and honestly, once you get there, you feel why. There is something in the air. A weight. Like the ground remembers things.
 
 We started with a light 10-minute jog on the sand. Easy enough. The hill work we have been doing is clearly paying off. Then came the high knees, jumping jacks, and squats. Standard Lifestyle Hikers warmup energy.
+
+![](/assets/images/uploads/Port%20royal%203.jpg "port royal beach")
 
 But before any of that, we paused for a prayer from our newest member. We do not start without grounding ourselves first.
 
@@ -79,5 +82,6 @@ If you are still building your outdoor setup, check out [hiking gear and backpac
 
 Follow Lifestyle Hikers at [@lifestylehikers](https://www.instagram.com/lifestylehikers), browse more trail stories on the [Lifestyle Hikers blog](/blog/), and watch for the next link-up.
 
----
-*Disclosure: This post contains affiliate links. As an Amazon Associate, we earn from qualifying purchases at no extra cost to you.*
+***
+
+_Disclosure: This post contains affiliate links. As an Amazon Associate, we earn from qualifying purchases at no extra cost to you._
