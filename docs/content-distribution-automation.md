@@ -18,14 +18,20 @@ Blog posts live in `_posts/`.
 
 The website does not render the new automation fields. Existing homepage hike cards and blog pages should continue to behave the same way.
 
-## Existing n8n Workflows To Audit
+## Live n8n Workflows
 
-The local second brain notes list two related live workflows:
+The live webhook distributor is:
+
+- `Lifestyle Hikers Content Distributor`, workflow ID `NNQgOBo7m5sOKzue`
+- Webhook path: `lifestyle-hikers-content-distributor`
+- Current status: active
+
+It reuses proven pieces from these existing workflows:
 
 - `Hike Announcement Auto-Broadcaster`, workflow ID `IlWbcMoDLTHVDPKE`
 - `Lifestyle Hikers Telegram Updates`, workflow ID `uMs9wPpFYVksCxfz`
 
-Before changing live n8n behavior, audit both workflows and decide whether to merge, replace, or preserve their current responsibilities.
+The older workflows are preserved so they can be compared or rolled back if needed.
 
 ## Required GitHub Secrets
 
@@ -37,7 +43,7 @@ Set these in the GitHub repository settings:
 
 Optional GitHub repository variable:
 
-- `CONTENT_DISTRIBUTION_DRY_RUN`: set to `true` while testing
+- `CONTENT_DISTRIBUTION_DRY_RUN`: currently set to `true` while testing
 
 ## CMS Fields
 
@@ -173,8 +179,9 @@ Read here:
 {{url}}
 ```
 
-If an image exists, n8n should use Telegram `sendPhoto`.
-If no image exists, n8n should use Telegram `sendMessage`.
+Current live behavior uses Telegram `sendMessage`. If a flyer or image exists, the image URL is included in the message text.
+
+A later upgrade can switch this to Telegram `sendPhoto` after testing against a private Telegram test channel.
 
 ## Brevo Behavior
 
