@@ -1,0 +1,93 @@
+name: Content Distribution Webhook
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "_data/events.yml"
+      - "_posts/**"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Build payloads without sending to n8n"
+        required: false
+        default: "true"
+
+permissions:
+  contents: read
+
+jobs:
+  notify-n8n:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Detect changed content
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            if [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
+              git diff --name-only HEAD^ HEAD > changed-files.txt
+            else
+              git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" > changed-files.txt
+            fi
+          else
+            printf "_data/events.yml\n" > changed-files.txt
+            find _posts -type f -name '*.md' >> changed-files.txt
+          fi
+          sed -n '1,120p' changed-files.txt
+
+      - name: Build distribution payloads
+        env:
+          GITHUB_SHA: ${{ github.sha }}
+          LIFESTYLE_HIKERS_SITE_URL: ${{ secrets.LIFESTYLE_HIKERS_SITE_URL }}
+        run: |
+          ruby scripts/build_content_distribution_payload.rb \
+            --root . \
+            --changed-files "$(cat changed-files.txt)" > distribution-payloads.json
+          jq -r '.[] | "\(.content_type) \(.announcement_id) \(.source_file)"' distribution-payloads.json
+
+      - name: Send payloads to n8n
+        env:
+          DRY_RUN_INPUT: ${{ github.event.inputs.dry_run }}
+          DRY_RUN_VAR: ${{ vars.CONTENT_DISTRIBUTION_DRY_RUN }}
+          N8N_CONTENT_WEBHOOK_URL: ${{ secrets.N8N_CONTENT_WEBHOOK_URL }}
+          LH_WEBHOOK_SECRET: ${{ secrets.LH_WEBHOOK_SECRET }}
+        run: |
+          count="$(jq 'length' distribution-payloads.json)"
+          echo "Payload count: $count"
+          if [ "$count" = "0" ]; then
+            echo "No ready content to distribute."
+            exit 0
+          fi
+
+          dry_run="${DRY_RUN_INPUT:-${DRY_RUN_VAR:-false}}"
+          if [ "$dry_run" = "true" ]; then
+            echo "Dry run enabled. Payloads were built but not sent."
+            exit 0
+          fi
+
+          if [ -z "$N8N_CONTENT_WEBHOOK_URL" ] || [ -z "$LH_WEBHOOK_SECRET" ]; then
+            echo "Missing required n8n webhook secrets."
+            exit 1
+          fi
+
+          jq -c '.[]' distribution-payloads.json | while read -r payload; do
+            label="$(printf '%s' "$payload" | jq -r '"\(.content_type) \(.announcement_id)"')"
+            status="$(curl --silent --show-error --output n8n-response.json --write-out "%{http_code}" \
+              --request POST "$N8N_CONTENT_WEBHOOK_URL" \
+              --header "Content-Type: application/json" \
+              --header "X-LH-SECRET: $LH_WEBHOOK_SECRET" \
+              --data "$payload")"
+
+            echo "$label -> HTTP $status"
+            if [ "$status" -lt 200 ] || [ "$status" -gt 299 ]; then
+              sed -n '1,80p' n8n-response.json
+              exit 1
+            fi
+          done

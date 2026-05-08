@@ -1,0 +1,18 @@
+{
+  "content_type": "blog",
+  "announcement_id": "blog-2026-04-10-top-5-hiking-trails-in-jamaica-for-2026",
+  "title": "Top 5 Hiking Trails in Jamaica for 2026",
+  "date": "2026-04-10",
+  "url": "https://www.lifestylehikers.com/blog/top-5-hiking-trails-in-jamaica-for-2026/",
+  "description": "Explore five Jamaican trails worth adding to your hiking list this year.",
+  "image_url": "https://www.lifestylehikers.com/assets/images/uploads/blue-mountain-2026.jpg",
+  "category": "Trail Guides",
+  "tags": [
+    "hiking in jamaica",
+    "trail guides"
+  ],
+  "send_to_telegram": true,
+  "send_to_brevo": false,
+  "source_file": "_posts/2026-04-10-top-5-hiking-trails-in-jamaica-for-2026.md",
+  "source_commit_sha": "example"
+}

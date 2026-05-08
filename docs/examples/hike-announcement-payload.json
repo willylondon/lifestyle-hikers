@@ -1,0 +1,18 @@
+{
+  "content_type": "hike",
+  "announcement_id": "hike-savage-hill-2026-05-09",
+  "name": "Savage Hill",
+  "date": "2026-05-09",
+  "time": "5:00 AM - Gordon Town Square",
+  "location": "Gordon Town",
+  "difficulty": "hard",
+  "distance": "6 mile",
+  "spots": 20,
+  "description": "Get ready for an exhilarating challenge as we take on Savage Hill via Red Light to return this Saturday.",
+  "flyer_url": "https://www.lifestylehikers.com/assets/images/uploads/savage-hill.jpg",
+  "registration_url": "https://www.lifestylehikers.com/#contact",
+  "send_to_telegram": true,
+  "send_to_brevo": true,
+  "source_file": "_data/events.yml",
+  "source_commit_sha": "example"
+}

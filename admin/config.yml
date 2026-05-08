@@ -125,6 +125,75 @@ collections:
         required: false
         hint: "Upload or paste an image URL"
 
+      - label: "Distribution Status"
+        name: "distribution_status"
+        widget: "select"
+        required: false
+        default: "draft"
+        hint: "Set to Ready only when this blog should be announced to Telegram."
+        options:
+          - label: "Draft"
+            value: "draft"
+          - label: "Ready"
+            value: "ready"
+          - label: "Sent"
+            value: "sent"
+          - label: "Failed"
+            value: "failed"
+
+      - label: "Announcement ID"
+        name: "announcement_id"
+        widget: "string"
+        required: false
+        hint: "Optional stable ID for duplicate protection. Leave blank to generate from the post slug."
+
+      - label: "Send to Telegram"
+        name: "send_to_telegram"
+        widget: "boolean"
+        required: false
+        default: true
+
+      - label: "Send to Brevo"
+        name: "send_to_brevo"
+        widget: "boolean"
+        required: false
+        default: false
+        hint: "Leave off for blog posts unless a blog email workflow is intentionally configured."
+
+      - label: "Announcement Sent At"
+        name: "announcement_sent_at"
+        widget: "datetime"
+        required: false
+        hint: "Optional automation bookkeeping field."
+
+      - label: "Telegram Sent"
+        name: "telegram_sent"
+        widget: "boolean"
+        required: false
+        default: false
+
+      - label: "Brevo Sent"
+        name: "brevo_sent"
+        widget: "boolean"
+        required: false
+        default: false
+
+      - label: "Telegram Message ID"
+        name: "telegram_message_id"
+        widget: "string"
+        required: false
+
+      - label: "Brevo Message ID"
+        name: "brevo_message_id"
+        widget: "string"
+        required: false
+
+      - label: "Announcement Error"
+        name: "announcement_error"
+        widget: "text"
+        required: false
+        hint: "Safe error summary only. Do not paste secrets."
+
       - label: "Tags"
         name: "tags"
         widget: "list"
@@ -201,6 +270,86 @@ collections:
                 name: "description"
                 widget: "text"
                 hint: "A short description of what to expect on this hike"
+
+              - label: "Flyer Image"
+                name: "flyer"
+                widget: "image"
+                required: false
+                hint: "Optional flyer used for Telegram and Brevo announcements."
+
+              - label: "Registration Link"
+                name: "registration_url"
+                widget: "string"
+                required: false
+                hint: "Signup link, WhatsApp link, Google Form link, or hike detail page."
+
+              - label: "Distribution Status"
+                name: "distribution_status"
+                widget: "select"
+                required: false
+                default: "draft"
+                hint: "Set to Ready only when this hike should be announced."
+                options:
+                  - label: "Draft"
+                    value: "draft"
+                  - label: "Ready"
+                    value: "ready"
+                  - label: "Sent"
+                    value: "sent"
+                  - label: "Failed"
+                    value: "failed"
+
+              - label: "Announcement ID"
+                name: "announcement_id"
+                widget: "string"
+                required: false
+                hint: "Optional stable ID for duplicate protection. Leave blank to generate from the hike name and date."
+
+              - label: "Send to Telegram"
+                name: "send_to_telegram"
+                widget: "boolean"
+                required: false
+                default: true
+
+              - label: "Send to Brevo"
+                name: "send_to_brevo"
+                widget: "boolean"
+                required: false
+                default: true
+
+              - label: "Announcement Sent At"
+                name: "announcement_sent_at"
+                widget: "datetime"
+                required: false
+                hint: "Optional automation bookkeeping field."
+
+              - label: "Telegram Sent"
+                name: "telegram_sent"
+                widget: "boolean"
+                required: false
+                default: false
+
+              - label: "Brevo Sent"
+                name: "brevo_sent"
+                widget: "boolean"
+                required: false
+                default: false
+
+              - label: "Telegram Message ID"
+                name: "telegram_message_id"
+                widget: "string"
+                required: false
+
+              - label: "Brevo Message ID"
+                name: "brevo_message_id"
+                widget: "string"
+                required: false
+
+              - label: "Announcement Error"
+                name: "announcement_error"
+                widget: "text"
+                required: false
+                hint: "Safe error summary only. Do not paste secrets."
 
   # ------------------------------------------
   # 3. GALLERY (_data/gallery.yml)

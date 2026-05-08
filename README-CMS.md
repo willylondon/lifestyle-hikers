@@ -28,6 +28,9 @@ Once the CMS is set up (see Setup section below), here's how to use it:
    - **Permalink** — Optional. Leave blank to use `/blog/<slug>/`, or enter a custom path like `/waterfalls-in-jamaica/`
    - **Location** — Where the hike was (optional)
    - **Featured Image** — Upload a photo or paste a URL
+   - **Distribution Status** — Leave as `Draft` until you want Telegram to announce the post, then set to `Ready`
+   - **Send to Telegram** — Keep enabled for blog link announcements
+   - **Send to Brevo** — Leave disabled for blogs unless a blog email workflow is configured
    - **Body** — Write your post using the rich text editor (supports bold, headings, lists, images)
    - **Tags** — Add tags like "blue-mountains", "waterfall"
 3. Click **Publish** when ready (or **Save Draft** to finish later)
@@ -38,7 +41,10 @@ Once the CMS is set up (see Setup section below), here's how to use it:
 2. You'll see all current hikes listed
 3. Click one to edit, or click **Add Hike** to create a new one
 4. Fill in: name, location, difficulty, date, meeting time, distance, spots, description
-5. Click **Publish** to save changes
+5. Optional: add a flyer image and registration link for Telegram/Brevo announcements
+6. Leave **Distribution Status** as `Draft` while editing
+7. Set **Distribution Status** to `Ready` only when the hike should be announced
+8. Click **Publish** to save changes
 
 ### Managing the Gallery
 
