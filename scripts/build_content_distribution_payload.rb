@@ -22,6 +22,7 @@ ROOT = File.expand_path(options[:root])
 configured_site_url = ENV["LIFESTYLE_HIKERS_SITE_URL"].to_s.strip
 SITE_URL = (configured_site_url.empty? ? "https://www.lifestylehikers.com" : configured_site_url).sub(%r{/\z}, "")
 SOURCE_SHA = ENV["GITHUB_SHA"].to_s
+RAW_REPO_URL = "https://raw.githubusercontent.com/willylondon/lifestyle-hikers"
 
 def slugify(value)
   value.to_s.downcase.gsub(/[^a-z0-9]+/, "-").gsub(/\A-|-+\z/, "")
@@ -33,7 +34,17 @@ def full_url(value)
   path = value.to_s.strip
   return path if path.match?(%r{\Ahttps?://}i)
 
-  "#{SITE_URL}/#{path.sub(%r{\A/+}, "")}"
+  "#{SITE_URL}/#{path.sub(%r{\A/+}, "") }"
+end
+
+def raw_file_url(value)
+  return nil if value.nil? || value.to_s.strip.empty?
+
+  path = value.to_s.strip
+  return path if path.match?(%r{\Ahttps?://}i)
+  return full_url(path) if SOURCE_SHA.empty?
+
+  "#{RAW_REPO_URL}/#{SOURCE_SHA}/#{path.sub(%r{\A/+}, "") }"
 end
 
 def date_string(value)
@@ -103,7 +114,7 @@ if events_changed
       "distance" => event["distance"],
       "spots" => event["spots"],
       "description" => event["description"],
-      "flyer_url" => full_url(event["flyer"]),
+      "flyer_url" => raw_file_url(event["flyer"]),
       "registration_url" => full_url(event["registration_url"]),
       "send_to_telegram" => bool_value(event["send_to_telegram"], true),
       "send_to_brevo" => bool_value(event["send_to_brevo"], true),
@@ -142,7 +153,7 @@ post_paths.each do |post_path|
     "date" => date,
     "url" => full_url(url_path),
     "description" => description,
-    "image_url" => full_url(frontmatter["image"]),
+    "image_url" => raw_file_url(frontmatter["image"]),
     "category" => frontmatter["category"],
     "tags" => Array(frontmatter["tags"]),
     "send_to_telegram" => bool_value(frontmatter["send_to_telegram"], true),
