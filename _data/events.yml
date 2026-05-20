@@ -144,6 +144,8 @@ items:
       👕 Change of clothes
 
       See you on the sand!
+    registration_url: ''
+    announcement_id: ''
     announcement_sent_at: ''
     telegram_message_id: ''
     brevo_message_id: ''
@@ -213,7 +215,7 @@ items:
     announcement_id: ''
     send_to_telegram: true
     send_to_brevo: true
-    announcement_sent_at: ''
+    announcement_sent_at: 2026-05-20T07:28:00
     telegram_sent: false
     brevo_sent: false
     telegram_message_id: ''
