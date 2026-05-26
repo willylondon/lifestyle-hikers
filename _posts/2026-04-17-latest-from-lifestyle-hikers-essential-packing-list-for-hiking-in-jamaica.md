@@ -2,6 +2,7 @@
 layout: post
 title: "Essential Packing List for Hiking in Jamaica"
 date: 2026-04-17
+published: false
 categories: [Hiking, Jamaica, Travel]
 excerpt: "Discover the essential packing list for hiking in Jamaica. From gear to personal items, ensure your adventure is safe and enjoyable!"
 ---

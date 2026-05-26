@@ -1,8 +1,8 @@
 ---
 layout: default
-title: "Jamaica Hiking Blog & Guides | Lifestyle Hikers"
+title: "Jamaica Hiking Blog & Guides"
 description: "Jamaica hiking tips, trail stories, and outdoor adventure guides. Expert advice for Blue Mountains trips from Lifestyle Hikers."
-canonical: "https://www.lifestylehikers.com/blog/"
+canonical_url: "https://www.lifestylehikers.com/blog/"
 permalink: /blog/
 image: /assets/images/uploads/37c23df0-f8b1-4754-ac0d-a90becc8a0fb-1200w.webp
 ---
@@ -15,8 +15,9 @@ image: /assets/images/uploads/37c23df0-f8b1-4754-ac0d-a90becc8a0fb-1200w.webp
             <p class="section-subtitle">Guides, recaps, and adventures from the Lifestyle Hikers community.</p>
         </div>
 
+        {% assign visible_posts = site.posts | where_exp: "post", "post.title and post.title != ''" %}
         <div class="blog-grid">
-            {% for post in site.posts %}
+            {% for post in visible_posts %}
             <article class="blog-card reveal">
                 {% if post.image %}
                 <div class="blog-card-img">
@@ -36,7 +37,8 @@ image: /assets/images/uploads/37c23df0-f8b1-4754-ac0d-a90becc8a0fb-1200w.webp
                     <h3 class="blog-card-title">
                         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
                     </h3>
-                    <p class="blog-card-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+                    {% assign fallback_excerpt = post.description | default: post.excerpt | strip_html | truncate: 150 %}
+                    <p class="blog-card-excerpt">{{ fallback_excerpt }}</p>
                     <a href="{{ post.url | relative_url }}" class="blog-read-more"
                         aria-label="Read the full story: {{ post.title }}">
                         Read Story <i class="fas fa-arrow-right"></i>
@@ -46,7 +48,7 @@ image: /assets/images/uploads/37c23df0-f8b1-4754-ac0d-a90becc8a0fb-1200w.webp
             {% endfor %}
         </div>
 
-        {% if site.posts.size == 0 %}
+        {% if visible_posts.size == 0 %}
         <div class="blog-empty reveal">
             <i class="fas fa-hiking"></i>
             <h3>No posts yet</h3>

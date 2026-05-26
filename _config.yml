@@ -22,6 +22,16 @@ exclude:
   - Gemfile.lock
   - README.md
   - README-CMS.md
+  - SPONSOR_BRIEF.md
+  - MEDIA_KIT_V2_COPY.md
+  - lifestylehikers_article_outlines.md
+  - outreach/
+  - output/
+  - scripts/
+  - tmp/
+  - _site/
+  - .DS_Store
+  - docs/
   - vendor/
   - vendor/bundle/
   - vendor/cache/

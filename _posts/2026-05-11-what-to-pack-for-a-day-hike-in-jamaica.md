@@ -1,9 +1,13 @@
 ---
 layout: post
-title: What to Pack for a Day Hike in Jamaica: A Lifestyle Hikers Guide
+title: "What to Pack for a Day Hike in Jamaica: A Lifestyle Hikers Guide"
 date: 2026-05-11
-categories: Lifestyle Hikers
-excerpt: Explore the essentials you need for a day hike in Jamaica to ensure a safe and enjoyable adventure.
+categories: [Hiking, Jamaica, Guides]
+author: "Lifestyle Hikers"
+description: "Use this practical day-hike packing list to stay safe, comfortable, and prepared on trails across Jamaica."
+excerpt: "Use this practical day-hike packing list to stay safe, comfortable, and prepared on trails across Jamaica."
+slug: what-to-pack-for-a-day-hike-in-jamaica
+permalink: /blog/2026-05-11-what-to-pack-for-a-day-hike-in-jamaica/
 image: "https://images.unsplash.com/photo-1557129603-ff35a0c70e5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MzI1NDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg1MjYwMTJ8&ixlib=rb-4.1.0&q=80&w=1080"
 image_alt: "green mountain under blue sky"
 ---

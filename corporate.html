@@ -1,8 +1,8 @@
 ---
 layout: default
-title: "Corporate Hiking Packages Jamaica | Lifestyle Hikers"
-description: "Book corporate hiking packages in Jamaica with Lifestyle Hikers. Perfect for team building, executive wellness, and group outdoor adventures."
-canonical: "https://www.lifestylehikers.com/corporate/"
+title: "Corporate Hiking Experiences in Jamaica"
+description: "Partner with Lifestyle Hikers for team-building hikes, wellness activations, and brand-aligned outdoor experiences in Jamaica."
+canonical_url: "https://www.lifestylehikers.com/corporate/"
 image: /assets/images/uploads/img_0700-1200w.webp
 ---
 
@@ -29,6 +29,181 @@ image: /assets/images/uploads/img_0700-1200w.webp
     .packages-section {
         padding: 80px 0;
         background-color: var(--white);
+    }
+
+    .proof-section,
+    .audience-section,
+    .partnership-section,
+    .deliverables-section,
+    .cta-section {
+        padding: 80px 0;
+    }
+
+    .proof-section,
+    .deliverables-section {
+        background: var(--light-bg);
+    }
+
+    .section-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 16px;
+        border-radius: 999px;
+        background: rgba(47, 111, 74, 0.12);
+        color: var(--primary-color);
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 18px;
+    }
+
+    .section-copy {
+        max-width: 720px;
+        color: var(--text-light);
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+
+    .proof-grid,
+    .audience-grid,
+    .partnership-grid,
+    .deliverables-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 24px;
+        margin-top: 36px;
+    }
+
+    .proof-card,
+    .audience-card,
+    .partnership-card,
+    .deliverable-card,
+    .cta-card {
+        background: var(--white);
+        border-radius: 22px;
+        padding: 28px;
+        border: 1px solid rgba(12, 32, 22, 0.08);
+        box-shadow: 0 16px 36px rgba(12, 32, 22, 0.06);
+    }
+
+    .proof-number {
+        display: block;
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1;
+        font-weight: 800;
+        color: var(--primary-color);
+        margin-bottom: 12px;
+    }
+
+    .proof-label,
+    .audience-card h3,
+    .partnership-card h3,
+    .deliverable-card h3,
+    .cta-card h3 {
+        color: var(--text-dark);
+    }
+
+    .proof-card p,
+    .audience-card p,
+    .partnership-card p,
+    .deliverable-card p,
+    .cta-card p {
+        margin: 0;
+        color: var(--text-light);
+        line-height: 1.65;
+    }
+
+    .partnership-card ul,
+    .deliverable-list {
+        list-style: none;
+        padding: 0;
+        margin: 18px 0 0;
+    }
+
+    .partnership-card li,
+    .deliverable-list li {
+        position: relative;
+        padding-left: 22px;
+        margin-bottom: 12px;
+        color: var(--text-dark);
+        line-height: 1.55;
+    }
+
+    .partnership-card li::before,
+    .deliverable-list li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: var(--secondary-color);
+    }
+
+    .cta-section {
+        background: linear-gradient(135deg, rgba(18, 52, 35, 0.98), rgba(45, 106, 79, 0.94));
+        color: var(--white);
+    }
+
+    .cta-shell {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+        gap: 28px;
+        align-items: start;
+    }
+
+    .cta-section h2,
+    .cta-section h3,
+    .cta-section p,
+    .cta-section li,
+    .cta-section a,
+    .cta-section .section-kicker {
+        color: var(--white);
+    }
+
+    .cta-section .section-kicker {
+        background: rgba(255, 255, 255, 0.14);
+    }
+
+    .cta-card {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.18);
+        box-shadow: none;
+    }
+
+    .cta-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 28px;
+    }
+
+    .cta-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 14px 24px;
+        border-radius: 999px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .cta-btn-primary {
+        background: var(--secondary-color);
+    }
+
+    .cta-btn-secondary {
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    .cta-btn:hover {
+        transform: translateY(-2px);
     }
 
     .packages-grid {
@@ -214,17 +389,123 @@ image: /assets/images/uploads/img_0700-1200w.webp
     .corporate-note strong {
         color: var(--primary-color);
     }
+
+    @media (max-width: 900px) {
+        .cta-shell {
+            grid-template-columns: 1fr;
+        }
+    }
 </style>
 
 <section class="corporate-hero">
     <div class="container reveal">
-        <h1>Corporate Hiking Packages</h1>
-        <p>Elevate your team's spirit, wellness, and camaraderie with our tailored outdoor experiences. From small strategic groups to company-wide adventures, we handle the logistics so you can focus on the journey.</p>
+        <h1>Corporate Hikes and Brand Partnerships</h1>
+        <p>Lifestyle Hikers helps brands, teams, and communities connect through guided outdoor experiences in Jamaica. We design team-building hikes, wellness activations, and sponsor-friendly trail moments that feel grounded, local, and memorable.</p>
+    </div>
+</section>
+
+<section class="proof-section">
+    <div class="container">
+        <div class="reveal">
+            <span class="section-kicker"><i class="fas fa-chart-line"></i> Why Partner</span>
+            <h2 class="section-title">A real community with room to grow</h2>
+            <p class="section-copy">Lifestyle Hikers already has the core ingredients brands look for: an active local audience, recurring events, visual trail content, and a clear wellness and eco-tourism lane in Jamaica. The opportunity now is to package that momentum properly for partners.</p>
+        </div>
+        <div class="proof-grid">
+            <article class="proof-card reveal" style="transition-delay: 0.05s;">
+                <span class="proof-number">{{ site.stats.base_total_hikes }}+</span>
+                <h3 class="proof-label">Total hikes completed</h3>
+                <p>Consistent outings give partners recurring exposure instead of a one-off logo placement.</p>
+            </article>
+            <article class="proof-card reveal" style="transition-delay: 0.1s;">
+                <span class="proof-number">{{ site.stats.trails_explored }}+</span>
+                <h3 class="proof-label">Trails explored</h3>
+                <p>From Blue Mountain routes to waterfall and river trails, the brand already has a broad island story.</p>
+            </article>
+            <article class="proof-card reveal" style="transition-delay: 0.15s;">
+                <span class="proof-number">{{ site.stats.active_members }}</span>
+                <h3 class="proof-label">Active members</h3>
+                <p>A focused community makes it easier for sponsors to reach a clearly aligned lifestyle audience.</p>
+            </article>
+            <article class="proof-card reveal" style="transition-delay: 0.2s;">
+                <span class="proof-number">3</span>
+                <h3 class="proof-label">Core sponsor lanes</h3>
+                <p>Wellness, hydration, and tourism are the most natural first partnership categories for Lifestyle Hikers.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="audience-section">
+    <div class="container">
+        <div class="reveal">
+            <span class="section-kicker"><i class="fas fa-users"></i> Audience Snapshot</span>
+            <h2 class="section-title">Who brands get in front of</h2>
+            <p class="section-copy">Lifestyle Hikers sits at the intersection of wellness, local exploration, community, and Jamaica travel storytelling. That makes it useful for corporate wellness teams, consumer brands, and destination partners alike.</p>
+        </div>
+        <div class="audience-grid">
+            <article class="audience-card reveal" style="transition-delay: 0.05s;">
+                <h3>Wellness-minded professionals</h3>
+                <p>People looking for healthier, more intentional ways to spend weekends and reset outside the city routine.</p>
+            </article>
+            <article class="audience-card reveal" style="transition-delay: 0.1s;">
+                <h3>Adventure-curious locals</h3>
+                <p>Community members who want Jamaica experiences beyond the usual social calendar and are open to trying new trails.</p>
+            </article>
+            <article class="audience-card reveal" style="transition-delay: 0.15s;">
+                <h3>Teams and workplace groups</h3>
+                <p>Companies looking for team bonding, employee wellness, and fresh event formats that feel more alive than hotel conference rooms.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="partnership-section">
+    <div class="container">
+        <div class="reveal">
+            <span class="section-kicker"><i class="fas fa-handshake"></i> Partnership Angles</span>
+            <h2 class="section-title">The three cleanest sponsorship plays right now</h2>
+            <p class="section-copy">These are the sponsor lanes that feel most believable today based on the audience, the content, and the kinds of brands already active in Jamaica.</p>
+        </div>
+        <div class="partnership-grid">
+            <article class="partnership-card reveal" style="transition-delay: 0.05s;">
+                <h3>Hydration and recovery partner</h3>
+                <p>Ideal for water, sports drink, snack, and wellness brands that want direct use-case relevance on trail days.</p>
+                <ul>
+                    <li>Branded refreshment stations</li>
+                    <li>Product sampling at meetup and finish points</li>
+                    <li>Recovery-focused content and recap reels</li>
+                </ul>
+            </article>
+            <article class="partnership-card reveal" style="transition-delay: 0.1s;">
+                <h3>Corporate wellness partner</h3>
+                <p>Ideal for banks, telecoms, insurers, and employers investing in staff wellness or community-facing activations.</p>
+                <ul>
+                    <li>Private company hike days</li>
+                    <li>Employee engagement and team-building experiences</li>
+                    <li>Wellness storytelling for internal and public channels</li>
+                </ul>
+            </article>
+            <article class="partnership-card reveal" style="transition-delay: 0.15s;">
+                <h3>Tourism and destination partner</h3>
+                <p>Ideal for tourism boards, attractions, and experience brands that want a more grounded Jamaica nature narrative.</p>
+                <ul>
+                    <li>Co-branded destination features</li>
+                    <li>Trail and attraction spotlight content</li>
+                    <li>Group or visitor experience packages</li>
+                </ul>
+            </article>
+        </div>
     </div>
 </section>
 
 <section class="packages-section">
     <div class="container">
+        <div class="reveal">
+            <span class="section-kicker"><i class="fas fa-route"></i> Team Experiences</span>
+            <h2 class="section-title">Corporate hike package ranges</h2>
+            <p class="section-copy">These packages work for internal team experiences right now. We can also build sponsor-supported versions that include product integration, content capture, or co-branding.</p>
+        </div>
         <div class="packages-grid">
             <!-- Small Group -->
             <div class="package-card reveal" style="transition-delay: 0.1s;">
@@ -285,7 +566,63 @@ image: /assets/images/uploads/img_0700-1200w.webp
         </div>
 
         <div class="corporate-note reveal" style="transition-delay: 0.4s;">
-            <p><strong>Note:</strong> Larger groups require additional coordination and staffing. Pricing reflects expanded logistics and planning to ensure a seamless and safe experience for everyone involved.</p>
+            <p><strong>Note:</strong> Larger groups and sponsor-backed activations require additional coordination, staffing, and logistics planning. Final pricing depends on route, transport, media coverage, safety needs, and branded deliverables.</p>
+        </div>
+    </div>
+</section>
+
+<section class="deliverables-section">
+    <div class="container">
+        <div class="reveal">
+            <span class="section-kicker"><i class="fas fa-camera"></i> Deliverables</span>
+            <h2 class="section-title">What partners can actually receive</h2>
+            <p class="section-copy">The strongest early offers are simple, useful, and easy to execute well. Lifestyle Hikers does not need to overpromise. It needs to deliver cleanly and consistently.</p>
+        </div>
+        <div class="deliverables-grid">
+            <article class="deliverable-card reveal" style="transition-delay: 0.05s;">
+                <h3>On-site visibility</h3>
+                <ul class="deliverable-list">
+                    <li>Brand mentions at meetup and trail briefing</li>
+                    <li>Optional sampling, signage, or branded gear moments</li>
+                    <li>Natural integration without disrupting the hike experience</li>
+                </ul>
+            </article>
+            <article class="deliverable-card reveal" style="transition-delay: 0.1s;">
+                <h3>Content output</h3>
+                <ul class="deliverable-list">
+                    <li>Event recap photos and short-form video</li>
+                    <li>Website mention or partner spotlight where relevant</li>
+                    <li>Story-driven Jamaica outdoor content that feels authentic</li>
+                </ul>
+            </article>
+            <article class="deliverable-card reveal" style="transition-delay: 0.15s;">
+                <h3>Community value</h3>
+                <ul class="deliverable-list">
+                    <li>Wellness-first positioning instead of generic sponsorship clutter</li>
+                    <li>Local trail access, community storytelling, and destination relevance</li>
+                    <li>A platform for repeat activations, not just a single post</li>
+                </ul>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-shell">
+            <div class="reveal">
+                <span class="section-kicker"><i class="fas fa-paper-plane"></i> Start The Conversation</span>
+                <h2 class="section-title">Ready to build a Jamaica outdoor partnership?</h2>
+                <p class="section-copy">If your brand wants to align with wellness, exploration, community, or destination storytelling, Lifestyle Hikers is ready to explore a focused first activation. The best starting point is a short call around your brand goals, timing, and ideal audience fit.</p>
+                <div class="cta-actions">
+                    <a class="cta-btn cta-btn-primary" href="mailto:{{ site.email }}?subject=Lifestyle%20Hikers%20Partnership%20Inquiry">Email Lifestyle Hikers</a>
+                    <a class="cta-btn cta-btn-secondary" href="https://www.instagram.com/lifestylehikers" target="_blank" rel="noopener">View Instagram</a>
+                </div>
+            </div>
+            <aside class="cta-card reveal" style="transition-delay: 0.1s;">
+                <h3>Best first-fit partners</h3>
+                <p>Hydration brands, telecoms, banks, insurers, tourism operators, and destination partners are the most natural categories for Lifestyle Hikers right now.</p>
+            </aside>
         </div>
     </div>
 </section>
