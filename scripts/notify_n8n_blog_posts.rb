@@ -88,7 +88,7 @@ def normalize_asset_url(site_base, raw_url)
 end
 
 def escape_url_path(path)
-  path.split('/').map { |segment| URI.encode_www_form_component(segment) }.join('/')
+  path.split('/').map { |segment| URI::DEFAULT_PARSER.escape(segment) }.join('/')
 end
 
 def git_remote_repository
