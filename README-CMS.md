@@ -66,6 +66,44 @@ Once the CMS is set up (see Setup section below), here's how to use it:
 - Choose **Upload** to add from your computer, or **Insert from URL** to paste a link
 - Uploaded images are stored in `assets/images/uploads/`
 - After publish, GitHub Actions automatically creates optimized WebP versions for CMS uploads and rewrites matching content references when needed
+- New blog posts notify the n8n content distributor automatically once the GitHub Action secrets are configured
+
+### n8n Blog Distribution
+
+CMS publishes work in tandem with the existing **Lifestyle Hikers Content Distributor** n8n workflow:
+
+1. Sveltia CMS saves the blog post into `_posts/` on the `main` branch
+2. GitHub Actions runs **Notify n8n Blog Publish**
+3. The action sends the blog title, description, URL, absolute `image_url`, tags, and Telegram caption to the n8n webhook
+4. n8n decides which channels to send to and posts to Telegram from the **Send Telegram Photo** or **Send Telegram Message** nodes
+
+Save these GitHub repository secrets:
+
+- `N8N_CONTENT_WEBHOOK_URL` - the production webhook URL from the n8n **Content Webhook** node
+- `N8N_WEBHOOK_SECRET` - the shared secret validated by the n8n workflow, sent as the `x-lh-secret` header
+
+The payload includes n8n's required `content_type: blog` and `announcement_id`, plus `send_to_telegram: true`. It also includes `image_url`, `image`, `flyer_url`, and `flyer` as direct raw GitHub image URLs when the CMS image is local. The `site_image_url` field keeps the public website image path for reference. This avoids a timing issue where n8n fires before the website deployment has finished publishing the new uploaded image.
+
+### Telegram Photo Reliability Fix
+
+Telegram can reject otherwise valid-looking image URLs with `Bad Request: failed to get HTTP URL content`. To make the n8n workflow resilient, the photo branch should download the image first and upload the binary file to Telegram:
+
+1. Add **Download Telegram Photo** between **Has Telegram Photo?** and **Send Telegram Photo**
+2. Set **Download Telegram Photo** to `GET`, URL `={{ $json.image_url }}`, response format `File`, binary field `data`, and follow redirects
+3. Change **Send Telegram Photo** to upload binary field `data`
+4. Keep the caption as `={{ $('Validate and Prepare').first().json.telegram_caption }}`
+5. Keep the chat ID as `={{ $('Validate and Prepare').first().json.telegram_chat_id }}`
+6. Set the photo download/photo send path to continue on error and fall back to **Send Telegram Message**
+
+### Manual Telegram Fallback
+
+The **Manual Telegram Blog Notification** workflow is kept as an emergency fallback only. It does not run automatically, so the repaired n8n workflow remains the single automatic distributor and avoids duplicate Telegram posts.
+
+Save these GitHub repository secrets only if the manual fallback is needed:
+
+- `TELEGRAM_BOT_TOKEN` - your bot token
+- `TELEGRAM_CHAT_ID` - the target group chat ID
+- `TELEGRAM_MESSAGE_THREAD_ID` - optional, only if posts should go into a specific forum topic
 
 ---
 

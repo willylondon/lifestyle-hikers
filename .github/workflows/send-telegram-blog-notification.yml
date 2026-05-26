@@ -1,0 +1,32 @@
+name: Manual Telegram Blog Notification
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch:
+    inputs:
+      post_path:
+        description: "Post path to send, for example _posts/2026-03-31-post-name.md"
+        required: true
+        type: string
+
+jobs:
+  notify:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Send manual Telegram notification
+        env:
+          GITHUB_EVENT_BEFORE: ${{ github.event.before }}
+          INPUT_POST_PATH: ${{ github.event.inputs.post_path }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_MESSAGE_THREAD_ID: ${{ secrets.TELEGRAM_MESSAGE_THREAD_ID }}
+        run: ruby scripts/notify_telegram_blog_posts.rb

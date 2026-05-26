@@ -1,0 +1,36 @@
+name: Notify n8n Blog Publish
+
+permissions:
+  contents: read
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "_posts/**"
+  workflow_dispatch:
+    inputs:
+      post_path:
+        description: "Optional post path to resend, for example _posts/2026-03-31-post-name.md"
+        required: false
+        type: string
+
+jobs:
+  notify:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Send blog publish event to n8n
+        env:
+          GITHUB_EVENT_BEFORE: ${{ github.event.before }}
+          INPUT_POST_PATH: ${{ github.event.inputs.post_path }}
+          N8N_CONTENT_WEBHOOK_URL: ${{ secrets.N8N_CONTENT_WEBHOOK_URL }}
+          N8N_WEBHOOK_SECRET: ${{ secrets.N8N_WEBHOOK_SECRET }}
+        run: ruby scripts/notify_n8n_blog_posts.rb
