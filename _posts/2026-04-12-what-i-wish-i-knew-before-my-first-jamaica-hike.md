@@ -6,7 +6,7 @@ date: 2026-04-12
 author: Willy London
 category: Trail Stories
 location: Jamaica
-image: /assets/images/uploads/blue-mountain-2026.jpg
+image: /assets/images/uploads/blue-mountain-2026.webp
 excerpt: The blisters, the sunburn, the dehydration - I learned everything the hard way. Here is the guide I wish someone gave me before I stepped onto my first Jamaican trail.
 layout: post
 ---
@@ -27,7 +27,7 @@ So here it is. The guide I wish someone had given me before my first hike in Jam
 
 Let me start with the biggest mistake I see beginners make - and the one that causes the most immediate suffering.
 
-![](/assets/images/uploads/shoes.jpg)
+![](/assets/images/uploads/shoes.webp)
 
 Wearing the wrong shoes.
 

@@ -8,7 +8,7 @@ category: Trail Stories
 description: "Discover our Cinchona Botanical Gardens hike guide from Guava Ridge, Jamaica. Get practical tips on route difficulty, timing, and outdoor preparation."
 canonical: "https://www.lifestylehikers.com/cinchona-botanical-gardens-hike-guide/"
 location: Cinchona Botanical Garden, East Rural, St. Andrew
-image: /assets/images/uploads/cinchona-2026.jpg
+image: /assets/images/uploads/cinchona-2026.webp
 tags:
   - cinchona botanical gardens
   - blue mountains jamaica
@@ -67,7 +67,7 @@ Preparation is the difference between a challenging adventure and a miserable or
 - **Mental Expectation:** Treat all "just around the corner" estimates from locals as highly optimistic. Mentally prepare for a sustained, uphill grind.
 - **Layering:** The temperature changes significantly between the start of the hike and the summit. Bring a light rain jacket or windbreaker—it can be downright cold at 5,000 feet when the mist settles.
 
-![Misty mountain conditions near the Cinchona trail showing low-visibility weather](/assets/images/uploads/1-optimized.jpg)
+![Misty mountain conditions near the Cinchona trail showing low-visibility weather](/assets/images/uploads/1-optimized.webp)
 
 ## Lifestyle Hikers Verdict
 

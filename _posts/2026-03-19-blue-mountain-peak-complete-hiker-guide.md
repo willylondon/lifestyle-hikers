@@ -7,7 +7,7 @@ author: Lifestyle Hikers
 category: Trail Guides
 description: "Everything you need to hike Blue Mountain Peak in Jamaica, including route overview, timing, weather, what to pack, and how to plan a sunrise summit."
 canonical: "https://www.lifestylehikers.com/blue-mountain-peak-hike/"
-image: /assets/images/uploads/blue-mountain-2026.jpg
+image: /assets/images/uploads/blue-mountain-2026.webp
 tags:
   - blue mountain peak hike
   - hiking blue mountains jamaica

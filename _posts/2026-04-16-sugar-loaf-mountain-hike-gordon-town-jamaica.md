@@ -6,7 +6,7 @@ date: 2026-04-16
 author: Lifestyle Hikers
 category: Trail Stories
 location: Sugar Loaf, Gordon Town, St. Andrew
-image: /assets/images/uploads/sugar loaf.jpg
+image: /assets/images/uploads/sugar loaf.webp
 tags:
   - Trail Report, St. Andrew, Blue Mountains, Gordon Town, Mountain Hike, Kingston Hikes
 ---

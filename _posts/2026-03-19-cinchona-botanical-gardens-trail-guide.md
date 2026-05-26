@@ -7,7 +7,7 @@ author: Lifestyle Hikers
 category: Trail Guides
 description: "Plan a hike to Cinchona Botanical Gardens in Jamaica with trail expectations, route notes, mountain weather tips, and the history that makes this Blue Mountains route special."
 canonical: "https://www.lifestylehikers.com/cinchona-botanical-gardens-trail/"
-image: /assets/images/uploads/cinchona-2026.jpg
+image: /assets/images/uploads/cinchona-2026.webp
 tags:
   - cinchona botanical gardens jamaica
   - cinchona hike jamaica

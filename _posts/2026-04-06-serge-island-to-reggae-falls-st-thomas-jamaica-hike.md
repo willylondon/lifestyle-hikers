@@ -31,7 +31,7 @@ What is left is something that looks spectacular: a powerful curtain of water dr
 
 Locals have always called it **Dam Head**. The name "Reggae Falls" came later, either attributed to local developer Antonio Porter who marketed it as a tourist attraction, or according to some accounts, connected to Jamaica qualifying for the 1998 World Cup. Both stories circulate. Neither is definitively settled.
 
-The site sits at approximately **17.9726°N, 76.4819°W**, within the Morant River system in St. Thomas, on the south flank of the Blue Mountains near the Enriquillo-Plantain Garden Fault zone. That geological context matters because it explains why the landscape looks the way it does: steep, lush, and actively shaped by water and uplift.![](/assets/images/uploads/IMG_1473.jpg "Quarry")
+The site sits at approximately **17.9726°N, 76.4819°W**, within the Morant River system in St. Thomas, on the south flank of the Blue Mountains near the Enriquillo-Plantain Garden Fault zone. That geological context matters because it explains why the landscape looks the way it does: steep, lush, and actively shaped by water and uplift.![](/assets/images/uploads/IMG_1473.webp "Quarry")
 
 ***
 
@@ -81,7 +81,7 @@ This is the kind of hike we built Lifestyle Hikers for: accessible terrain, real
 
 **Thinking about doing this one?** Drop into the comments or reach us on Instagram @lifestylehikers. And if you are new to the community, you know what to do: attend three hikes, then join the WhatsApp group.
 
-More trails coming.![](/assets/images/uploads/IMG_1504.jpg)
+More trails coming.![](/assets/images/uploads/IMG_1504.webp)
 
 ***
 

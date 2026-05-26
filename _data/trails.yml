@@ -9,7 +9,7 @@ items:
     stars: 5
     half_star: false
     reviews: 312
-    image: /assets/images/uploads/blue-mountain-2026.jpg
+    image: /assets/images/uploads/blue-mountain-2026.webp
     alt: Blue Mountain Peak Jamaica
   - name: Reggae Falls Nature Trail
     location: St Thomas
@@ -33,7 +33,7 @@ items:
     stars: 4
     half_star: true
     reviews: 145
-    image: /assets/images/uploads/holywell-2026.jpg
+    image: /assets/images/uploads/holywell-2026.webp
     alt: Holywell Nature Trails in the Blue Mountains
   - name: Cinchona Botanical Gardens
     location: Blue Mountains, St. Andrew
@@ -45,7 +45,7 @@ items:
     stars: 5
     half_star: false
     reviews: 98
-    image: /assets/images/uploads/cinchona-2026.jpg
+    image: /assets/images/uploads/cinchona-2026.webp
     alt: Cinchona Botanical Gardens trail in the Blue Mountains
   - name: Nonsuch Falls
     location: Nonsuch, Drapers — Portland, Jamaica
@@ -69,5 +69,5 @@ items:
     stars: 4
     half_star: false
     reviews: 4
-    image: /assets/images/uploads/sugar loaf.jpg
+    image: /assets/images/uploads/sugar loaf.webp
     alt: top of the hill looking down liguanea

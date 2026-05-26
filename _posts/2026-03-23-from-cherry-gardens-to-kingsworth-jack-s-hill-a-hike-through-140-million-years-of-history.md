@@ -7,7 +7,7 @@ author: willy London
 category: Trail Stories
 permalink: /cherry-gardens-to-kingsworth-jacks-hill-hike
 location: Cherry Gardens
-image: /assets/images/uploads/Kingsworth.jpg
+image: /assets/images/uploads/Kingsworth.webp
 tags:
   - Kingston hiking, Jack's Hill, Cherry Gardens, Jamaica hiking trail, St Andrew hike, Lifestyle Hikers, Kingsworth, Jamaica history hike
 ---

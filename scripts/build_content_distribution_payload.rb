@@ -47,6 +47,16 @@ def raw_file_url(value)
   "#{RAW_REPO_URL}/#{SOURCE_SHA}/#{path.sub(%r{\A/+}, "") }"
 end
 
+def raw_file_url(value)
+  return nil if value.nil? || value.to_s.strip.empty?
+
+  path = value.to_s.strip
+  return path if path.match?(%r{\Ahttps?://}i)
+  return full_url(path) if SOURCE_SHA.empty?
+
+  "#{RAW_REPO_URL}/#{SOURCE_SHA}/#{path.sub(%r{\A/+}, "")}"
+end
+
 def date_string(value)
   return nil if value.nil? || value.to_s.strip.empty?
   return value.iso8601 if value.respond_to?(:iso8601)
