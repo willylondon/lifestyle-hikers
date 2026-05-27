@@ -28,14 +28,14 @@ def changed_post_paths
   before_sha = ENV.fetch('GITHUB_EVENT_BEFORE', '').strip
   after_sha = ENV.fetch('GITHUB_SHA', '').strip
 
-  diff_output =
+  diff_command =
     if before_sha.empty? || before_sha.match?(/\A0+\z/)
-      run_command('git', 'diff-tree', '--no-commit-id', '--name-only', '-r', after_sha, '--', '_posts')
+      ['git', 'diff-tree', '--no-commit-id', '--name-only', '--diff-filter=A', '-r', after_sha, '--', '_posts']
     else
-      run_command('git', 'diff', '--name-only', before_sha, after_sha, '--', '_posts')
+      ['git', 'diff', '--name-only', '--diff-filter=A', before_sha, after_sha, '--', '_posts']
     end
 
-  diff_output
+  run_command(*diff_command)
     .lines
     .map(&:strip)
     .grep(/\A_posts\/.+\.md\z/)
