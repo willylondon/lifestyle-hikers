@@ -38,7 +38,6 @@ jobs:
             fi
           else
             printf "_data/events.yml\n" > changed-files.txt
-            find _posts -type f -name '*.md' >> changed-files.txt
           fi
           sed -n '1,120p' changed-files.txt
 

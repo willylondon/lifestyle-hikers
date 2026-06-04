@@ -80,6 +80,14 @@ rescue ArgumentError
   value.to_s
 end
 
+def past_date?(value)
+  return false if value.nil? || value.to_s.strip.empty?
+
+  Date.parse(value.to_s) < Date.today
+rescue ArgumentError
+  false
+end
+
 def bool_value(value, default)
   return default if value.nil?
   return value if value == true || value == false
@@ -127,6 +135,8 @@ if events_changed
     next unless event["distribution_status"].to_s == "ready"
 
     date = date_string(event["date"])
+    next if past_date?(date)
+
     flyer_url = raw_file_url(event["flyer"])
     registration_url = full_url(event["registration_url"])
 
