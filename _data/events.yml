@@ -221,3 +221,23 @@ items:
     telegram_message_id: ''
     brevo_message_id: ''
     announcement_error: ''
+  - name: Judgement Cliff -Hike 2
+    location: St Thomas
+    difficulty: easy
+    date: 2026-06-06
+    time: 5:00 Am - Rocky Park Harbour View , The Basketball court from Across the old drive in
+    distance: 7 miles
+    spots: 20
+    description: Are you ready? Step into history and challenge yourself on our upcoming expedition to one of Jamaica's most spectacular geological marvels. Join us for a thrilling 7-mile trek to the awe-inspiring Judgement Cliff in St. Thomas.
+    flyer: /assets/images/uploads/Judgement Cliff.jpg
+    registration_url: ''
+    distribution_status: ready
+    announcement_id: ''
+    send_to_telegram: true
+    send_to_brevo: true
+    announcement_sent_at: 2026-06-04T10:38:00
+    telegram_sent: false
+    brevo_sent: false
+    telegram_message_id: ''
+    brevo_message_id: ''
+    announcement_error: ''
