@@ -4,6 +4,7 @@
 require "date"
 require "json"
 require "optparse"
+require "uri"
 require "yaml"
 
 options = {
@@ -34,7 +35,30 @@ def full_url(value)
   path = value.to_s.strip
   return path if path.match?(%r{\Ahttps?://}i)
 
-  "#{SITE_URL}/#{path.sub(%r{\A/+}, "") }"
+  "#{SITE_URL}/#{escape_url_path(path.sub(%r{\A/+}, ""))}"
+end
+
+def escape_url_path(path)
+  path.to_s.split("/").map { |segment| URI::DEFAULT_PARSER.escape(segment) }.join("/")
+end
+
+def add_distribution_aliases(payload)
+  send_to_telegram = payload["send_to_telegram"]
+  send_to_brevo = payload["send_to_brevo"]
+  channels = []
+  channels << "telegram" if send_to_telegram
+  channels << "brevo" if send_to_brevo
+
+  payload.merge(
+    "contentType" => payload["content_type"],
+    "channels" => channels,
+    "telegram" => send_to_telegram,
+    "send_telegram" => send_to_telegram,
+    "sendTelegram" => send_to_telegram,
+    "brevo" => send_to_brevo,
+    "send_brevo" => send_to_brevo,
+    "sendBrevo" => send_to_brevo
+  )
 end
 
 def raw_file_url(value)
@@ -44,17 +68,7 @@ def raw_file_url(value)
   return path if path.match?(%r{\Ahttps?://}i)
   return full_url(path) if SOURCE_SHA.empty?
 
-  "#{RAW_REPO_URL}/#{SOURCE_SHA}/#{path.sub(%r{\A/+}, "") }"
-end
-
-def raw_file_url(value)
-  return nil if value.nil? || value.to_s.strip.empty?
-
-  path = value.to_s.strip
-  return path if path.match?(%r{\Ahttps?://}i)
-  return full_url(path) if SOURCE_SHA.empty?
-
-  "#{RAW_REPO_URL}/#{SOURCE_SHA}/#{path.sub(%r{\A/+}, "")}"
+  "#{RAW_REPO_URL}/#{SOURCE_SHA}/#{escape_url_path(path.sub(%r{\A/+}, ""))}"
 end
 
 def date_string(value)
@@ -113,10 +127,14 @@ if events_changed
     next unless event["distribution_status"].to_s == "ready"
 
     date = date_string(event["date"])
-    payload = {
+    flyer_url = raw_file_url(event["flyer"])
+    registration_url = full_url(event["registration_url"])
+
+    payload = add_distribution_aliases({
       "content_type" => "hike",
       "announcement_id" => event["announcement_id"].to_s.strip.empty? ? "hike-#{slugify(event["name"])}-#{date}" : event["announcement_id"].to_s.strip,
       "name" => event["name"],
+      "title" => event["name"],
       "date" => date,
       "time" => event["time"],
       "location" => event["location"],
@@ -124,13 +142,18 @@ if events_changed
       "distance" => event["distance"],
       "spots" => event["spots"],
       "description" => event["description"],
-      "flyer_url" => raw_file_url(event["flyer"]),
-      "registration_url" => full_url(event["registration_url"]),
+      "flyer_url" => flyer_url,
+      "flyer" => flyer_url,
+      "image_url" => flyer_url,
+      "image" => flyer_url,
+      "registration_url" => registration_url,
+      "url" => registration_url,
+      "link" => registration_url,
       "send_to_telegram" => bool_value(event["send_to_telegram"], true),
       "send_to_brevo" => bool_value(event["send_to_brevo"], true),
       "source_file" => "_data/events.yml",
       "source_commit_sha" => SOURCE_SHA
-    }
+    })
 
     missing = required_errors(payload, %w[content_type announcement_id name date time location description])
     missing.empty? ? payloads << payload : errors << "#{payload["announcement_id"]}: #{missing.join(", ")}"
@@ -156,21 +179,27 @@ post_paths.each do |post_path|
   description = frontmatter["description"].to_s.strip
   description = excerpt_from_body(body) if description.empty?
 
-  payload = {
+  image_url = raw_file_url(frontmatter["image"])
+
+  payload = add_distribution_aliases({
     "content_type" => "blog",
     "announcement_id" => frontmatter["announcement_id"].to_s.strip.empty? ? "blog-#{date}-#{slugify(slug)}" : frontmatter["announcement_id"].to_s.strip,
     "title" => frontmatter["title"],
     "date" => date,
     "url" => full_url(url_path),
+    "link" => full_url(url_path),
     "description" => description,
-    "image_url" => raw_file_url(frontmatter["image"]),
+    "image_url" => image_url,
+    "image" => image_url,
+    "flyer_url" => image_url,
+    "flyer" => image_url,
     "category" => frontmatter["category"],
     "tags" => Array(frontmatter["tags"]),
     "send_to_telegram" => bool_value(frontmatter["send_to_telegram"], true),
     "send_to_brevo" => bool_value(frontmatter["send_to_brevo"], false),
     "source_file" => source_file,
     "source_commit_sha" => SOURCE_SHA
-  }
+  })
 
   missing = required_errors(payload, %w[content_type announcement_id title date url])
   missing.empty? ? payloads << payload : errors << "#{payload["announcement_id"]}: #{missing.join(", ")}"
