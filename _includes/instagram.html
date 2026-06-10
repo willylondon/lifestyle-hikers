@@ -12,14 +12,6 @@
             <!-- Curator.io Instagram Feed -->
             <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" rel="noopener noreferrer"
                     class="crt-logo crt-tag">Powered by Curator.io</a></div>
-            <script type="text/javascript">
-                /* curator-feed-default-feed-layout */
-                (function () {
-                    var i, e, d = document, s = "script"; i = d.createElement("script"); i.async = 1; i.charset = "UTF-8";
-                    i.src = "https://cdn.curator.io/published/7a229ffc-c29f-4224-a039-63db290c5395.js";
-                    e = d.getElementsByTagName(s)[0]; e.parentNode.insertBefore(i, e);
-                })();
-            </script>
         </div>
 
         <div style="text-align: center; margin-top: var(--space-xl);" class="reveal">
@@ -30,4 +22,33 @@
             </a>
         </div>
     </div>
+    <script>
+        (function () {
+            var feed = document.getElementById('curator-feed-default-feed-layout');
+            if (!feed) return;
+
+            var loaded = false;
+            function loadCuratorFeed() {
+                if (loaded) return;
+                loaded = true;
+                var script = document.createElement('script');
+                script.async = true;
+                script.charset = 'UTF-8';
+                script.src = 'https://cdn.curator.io/published/7a229ffc-c29f-4224-a039-63db290c5395.js';
+                document.head.appendChild(script);
+            }
+
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function (entries) {
+                    if (entries.some(function (entry) { return entry.isIntersecting; })) {
+                        loadCuratorFeed();
+                        observer.disconnect();
+                    }
+                }, { rootMargin: '600px 0px' });
+                observer.observe(feed);
+            } else {
+                window.addEventListener('load', loadCuratorFeed, { once: true });
+            }
+        })();
+    </script>
 </section>

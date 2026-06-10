@@ -9,7 +9,9 @@ items:
     stars: 5
     half_star: false
     reviews: 312
-    image: /assets/images/uploads/blue-mountain-2026.webp
+    image: /assets/images/uploads/blue-mountain-2026-card.webp
+    image_width: 700
+    image_height: 500
     alt: Blue Mountain Peak Jamaica
   - name: Reggae Falls Nature Trail
     location: St Thomas
@@ -21,7 +23,9 @@ items:
     stars: 5
     half_star: false
     reviews: 189
-    image: /assets/images/uploads/shared39-1200w.webp
+    image: /assets/images/uploads/reggae-falls-card.webp
+    image_width: 700
+    image_height: 500
     alt: Reggae Falls trail in St. Thomas, Jamaica
   - name: Holywell Nature Trails
     location: Holywell, St. Andrew
@@ -33,7 +37,9 @@ items:
     stars: 4
     half_star: true
     reviews: 145
-    image: /assets/images/uploads/holywell-2026.webp
+    image: /assets/images/uploads/holywell-2026-card.webp
+    image_width: 700
+    image_height: 500
     alt: Holywell Nature Trails in the Blue Mountains
   - name: Cinchona Botanical Gardens
     location: Blue Mountains, St. Andrew
@@ -45,7 +51,9 @@ items:
     stars: 5
     half_star: false
     reviews: 98
-    image: /assets/images/uploads/cinchona-2026.webp
+    image: /assets/images/uploads/cinchona-2026-card.webp
+    image_width: 700
+    image_height: 500
     alt: Cinchona Botanical Gardens trail in the Blue Mountains
   - name: Nonsuch Falls
     location: Nonsuch, Drapers — Portland, Jamaica
@@ -57,7 +65,9 @@ items:
     stars: 4
     half_star: false
     reviews: 5
-    image: /assets/images/uploads/pxl_20260207_134511969.portrait-1--1200w.webp
+    image: /assets/images/uploads/nonsuch-falls-card.webp
+    image_width: 700
+    image_height: 500
     alt: Hikers at the Nonsuch Falls base camp in Portland
   - name: Sugar Loaf
     location: Gordon Town, St. Andrew
@@ -69,5 +79,7 @@ items:
     stars: 4
     half_star: false
     reviews: 4
-    image: /assets/images/uploads/sugar loaf.webp
+    image: /assets/images/uploads/sugar-loaf-card.webp
+    image_width: 700
+    image_height: 500
     alt: top of the hill looking down liguanea

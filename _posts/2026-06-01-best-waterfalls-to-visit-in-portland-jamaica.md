@@ -4,6 +4,8 @@ title: "Exploring the Best Waterfalls in Portland, Jamaica for Lifestyle Hikers"
 date: 2026-06-01
 categories: Lifestyle, Travel, Hiking
 excerpt: Discover the serenity and natural beauty of Portland, Jamaica through its enchanting waterfalls. Find the perfect destinations for your next hiking adventure.
+permalink: /blog/2026-06-01-best-waterfalls-to-visit-in-portland-jamaica/
+---
 
 # Exploring the Best Waterfalls in Portland, Jamaica for Lifestyle Hikers
 

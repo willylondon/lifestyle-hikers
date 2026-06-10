@@ -6,7 +6,7 @@
                 <a href="{{ '/' | relative_url }}" class="footer-logo">
                     <span class="brand-lockup">
                         <img src="{{ '/assets/images/logo-tight-light.png' | relative_url }}" alt="Lifestyle Hikers"
-                            class="brand-logo-full brand-logo-footer">
+                            class="brand-logo-full brand-logo-footer" width="250" height="171" loading="lazy" decoding="async">
                         <span class="brand-tag">Explore. Climb. Connect.</span>
                     </span>
                 </a>
@@ -28,7 +28,7 @@
                 </div>
             </div>
             <div class="footer-links-group">
-                <h4>Explore</h4>
+                <h3>Explore</h3>
                 <ul>
                     <li><a href="{{ '/' | relative_url }}#trails">Featured Trails</a></li>
                     <li><a href="{{ '/' | relative_url }}#upcoming">Upcoming Hikes</a></li>
@@ -38,14 +38,14 @@
                 </ul>
             </div>
             <div class="footer-links-group">
-                <h4>Community</h4>
+                <h3>Community</h3>
                 <ul>
                     <li><a href="{{ '/' | relative_url }}#about">About Us</a></li>
                     <li><a href="{{ '/' | relative_url }}#contact">Join Us</a></li>
                 </ul>
             </div>
             <div class="footer-links-group">
-                <h4>Connect</h4>
+                <h3>Connect</h3>
                 <ul>
                     <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
                     {% if site.social.instagram and site.social.instagram != "#" %}

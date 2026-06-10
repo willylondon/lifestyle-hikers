@@ -22,7 +22,7 @@
                             {% endif %}
                         </div>
                         <div class="review-info">
-                            <h4>{{ review.name }}</h4>
+                            <h3 class="review-name">{{ review.name }}</h3>
                             <span>{{ review.handle }}</span>
                             {% if review.rating %}
                             <div class="review-rating" style="color: #fbbf24; font-size: 0.85rem; margin-top: 3px;">
@@ -130,7 +130,7 @@
         object-fit: cover;
     }
 
-    .review-info h4 {
+    .review-info .review-name {
         color: var(--clr-white);
         font-family: var(--font-heading);
         font-size: 1.05rem;

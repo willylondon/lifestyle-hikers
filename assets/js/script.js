@@ -55,9 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Scroll Reveal (IntersectionObserver) ---
     const revealElements = document.querySelectorAll('.reveal');
 
-    if (prefersReducedMotion) {
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
         revealElements.forEach(el => el.classList.add('visible'));
     } else {
+        document.documentElement.classList.add('reveal-ready');
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {

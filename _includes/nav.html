@@ -4,7 +4,7 @@
         <a href="{{ '/' | relative_url }}" class="nav-logo">
             <span class="brand-lockup">
                 <img src="{{ '/assets/images/logo-tight-light.png' | relative_url }}" alt="Lifestyle Hikers"
-                    class="brand-logo-full brand-logo-nav">
+                    class="brand-logo-full brand-logo-nav" width="250" height="171" fetchpriority="high" decoding="async">
                 <span class="brand-tag">Jamaica hiking community</span>
             </span>
         </a>
@@ -13,7 +13,7 @@
             <li><a href="{{ '/' | relative_url }}#upcoming">Upcoming Hikes</a></li>
             <li><a href="{{ '/' | relative_url }}#about">About Us</a></li>
             <li><a href="{{ '/' | relative_url }}#gallery">Gallery</a></li>
-            <li><a href="{{ '/corporate.html' | relative_url }}" {% if page.url=='/corporate.html' %}class="active" {%
+            <li><a href="{{ '/corporate/' | relative_url }}" {% if page.url=='/corporate/' or page.url=='/corporate.html' %}class="active" {%
                     endif %}>Corporate</a></li>
             <li><a href="{{ '/' | relative_url }}#merch">Merch</a></li>
             <li><a href="{{ '/blog/' | relative_url }}" {% if page.url=='/blog/' or page.url=='/blog.html' or page.layout=='post' %}class="active"

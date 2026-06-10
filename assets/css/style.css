@@ -1521,7 +1521,7 @@ textarea:focus-visible {
     transform: translateY(-3px);
 }
 
-.footer-links-group h4 {
+.footer-links-group h3 {
     font-family: var(--font-heading);
     font-size: 1rem;
     font-weight: 600;
@@ -1843,6 +1843,11 @@ textarea:focus-visible {
    SCROLL REVEAL ANIMATIONS
    ======================================== */
 .reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-ready .reveal {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
