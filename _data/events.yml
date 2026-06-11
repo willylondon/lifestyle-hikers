@@ -232,8 +232,8 @@ items:
     flyer: /assets/images/uploads/Judgement Cliff.jpg
     registration_url: ''
     distribution_status: ready
-    announcement_id: hike-judgement-cliff-hike-2-2026-06-06-brevo-resend
-    send_to_telegram: true
+    announcement_id: hike-judgement-cliff-2026-06-13-email-resend
+    send_to_telegram: false
     send_to_brevo: true
     announcement_sent_at: 2026-06-11T07:31:00
     telegram_sent: false
