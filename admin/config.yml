@@ -44,21 +44,25 @@ collections:
                 name: "base_total_hikes"
                 widget: "number"
                 value_type: "int"
+                min: 0
                 hint: "The base number to add to the dynamic calculation of total hikes."
               - label: "Baseline Hikes This Year"
                 name: "base_hikes_this_year"
                 widget: "number"
                 value_type: "int"
+                min: 0
                 hint: "The base number to add to the dynamic calculation of hikes this year."
               - label: "Active Members"
                 name: "active_members"
                 widget: "number"
                 value_type: "int"
+                min: 0
                 hint: "The number of active members to display on the homepage."
               - label: "Trails Explored"
                 name: "trails_explored"
                 widget: "number"
                 value_type: "int"
+                min: 0
                 hint: "The number of trails explored to display on the homepage."
 
   # ------------------------------------------
@@ -266,6 +270,80 @@ collections:
                 value_type: "int"
                 min: 0
 
+              - label: "Event Status"
+                name: "event_status"
+                widget: "select"
+                required: false
+                default: "upcoming"
+                hint: "Leave existing records unchanged; old dates are treated as completed on the public site."
+                options:
+                  - label: "Upcoming"
+                    value: "upcoming"
+                  - label: "Sold out"
+                    value: "sold_out"
+                  - label: "Members only"
+                    value: "members_only"
+                  - label: "Cancelled"
+                    value: "cancelled"
+                  - label: "Completed"
+                    value: "completed"
+
+              - label: "Capacity"
+                name: "capacity"
+                widget: "number"
+                value_type: "int"
+                min: 0
+                required: false
+                hint: "CMS-managed capacity only. This is not connected to live bookings."
+
+              - label: "Price (JMD)"
+                name: "price_jmd"
+                widget: "number"
+                value_type: "int"
+                min: 0
+                required: false
+
+              - label: "Meeting Point"
+                name: "meeting_point"
+                widget: "string"
+                required: false
+                hint: "Keep the legacy Time & Meeting Point field for old records."
+
+              - label: "Departure Time"
+                name: "departure_time"
+                widget: "string"
+                required: false
+
+              - label: "Transport Information"
+                name: "transport_information"
+                widget: "text"
+                required: false
+
+              - label: "Booking Deadline"
+                name: "booking_deadline"
+                widget: "datetime"
+                required: false
+
+              - label: "Payment Methods"
+                name: "payment_methods"
+                widget: "select"
+                multiple: true
+                required: false
+                options:
+                  - label: "Bank transfer"
+                    value: "bank_transfer"
+                  - label: "Cash"
+                    value: "cash"
+                  - label: "Local transfer"
+                    value: "local_transfer"
+                  - label: "Manual confirmation"
+                    value: "manual_confirmation"
+
+              - label: "Waitlist Link"
+                name: "waitlist_url"
+                widget: "string"
+                required: false
+
               - label: "Description"
                 name: "description"
                 widget: "text"
@@ -414,6 +492,18 @@ collections:
                 widget: "string"
                 hint: "e.g. Blue Mountain Peak Trail"
 
+              - label: "Stable Slug"
+                name: "slug"
+                widget: "string"
+                required: false
+                hint: "Lowercase URL key, for example blue-mountain-peak. Do not change an established slug without a redirect."
+
+              - label: "Parish"
+                name: "parish"
+                widget: "string"
+                required: false
+                hint: "Primary parish, or multiple parishes where the route crosses a boundary."
+
               - label: "Location / Parish"
                 name: "location"
                 widget: "string"
@@ -435,6 +525,14 @@ collections:
                 widget: "string"
                 hint: "e.g. 7.5 mi"
 
+              - label: "Distance (kilometres)"
+                name: "distance_km"
+                widget: "number"
+                value_type: "float"
+                min: 0
+                required: false
+                hint: "Metric value used by Trail Explorer filters. Keep the legacy Distance field for old records."
+
               - label: "Elevation Gain"
                 name: "elevation"
                 widget: "string"
@@ -444,6 +542,91 @@ collections:
                 name: "time"
                 widget: "string"
                 hint: "e.g. 6-8 hrs"
+
+              - label: "Minimum Duration (minutes)"
+                name: "duration_minutes_min"
+                widget: "number"
+                value_type: "int"
+                min: 0
+                required: false
+
+              - label: "Maximum Duration (minutes)"
+                name: "duration_minutes_max"
+                widget: "number"
+                value_type: "int"
+                min: 0
+                required: false
+
+              - label: "Route Type"
+                name: "route_type"
+                widget: "select"
+                required: false
+                default: "not_recorded"
+                options:
+                  - label: "Not recorded"
+                    value: "not_recorded"
+                  - label: "Out and back"
+                    value: "out_and_back"
+                  - label: "Loop"
+                    value: "loop"
+                  - label: "Point to point"
+                    value: "point_to_point"
+
+              - label: "Trail Status"
+                name: "trail_status"
+                widget: "select"
+                required: false
+                default: "not_verified"
+                options:
+                  - label: "Not verified"
+                    value: "not_verified"
+                  - label: "Open"
+                    value: "open"
+                  - label: "Use caution"
+                    value: "caution"
+                  - label: "Closed"
+                    value: "closed"
+
+              - label: "Last Verified Date"
+                name: "last_verified_date"
+                widget: "datetime"
+                date_format: "YYYY-MM-DD"
+                time_format: false
+                format: "YYYY-MM-DD"
+                required: false
+
+              - label: "River Crossing"
+                name: "river_crossing"
+                widget: "boolean"
+                required: false
+                default: false
+
+              - label: "Guide Requirement"
+                name: "guide_requirement"
+                widget: "select"
+                required: false
+                default: "not_recorded"
+                options:
+                  - label: "Not recorded"
+                    value: "not_recorded"
+                  - label: "Not required"
+                    value: "not_required"
+                  - label: "Recommended"
+                    value: "recommended"
+                  - label: "Required"
+                    value: "required"
+
+              - label: "Preparation Note"
+                name: "preparation_note"
+                widget: "text"
+                required: false
+                hint: "Short practical preparation guidance. Do not claim real-time safety."
+
+              - label: "Existing Trail Guide URL"
+                name: "guide_url"
+                widget: "string"
+                required: false
+                hint: "Link to an existing long-form guide or story."
 
               - label: "Rating"
                 name: "rating"

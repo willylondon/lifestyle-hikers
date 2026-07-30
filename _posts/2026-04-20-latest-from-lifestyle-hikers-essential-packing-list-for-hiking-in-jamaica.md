@@ -1,4 +1,5 @@
 ---
+published: false
 layout: post
 title: "Essential Packing List for Hiking in Jamaica: Your Ultimate Guide"
 date: 2026-04-20

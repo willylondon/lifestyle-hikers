@@ -1,10 +1,20 @@
 items:
   - name: Blue Mountain Peak Trail
+    slug: blue-mountain-peak
+    parish: Portland / St. Thomas
     location: Portland / St. Thomas
     difficulty: hard
     distance: 7.5 mi
+    distance_km: 12.1
     elevation: 3,200 ft
     time: 6-8 hrs
+    duration_minutes_min: 360
+    duration_minutes_max: 480
+    trail_status: not_verified
+    guide_requirement: not_recorded
+    river_crossing: false
+    preparation_note: Prepare for a long, high-elevation route and confirm access, weather, and guide arrangements before departure.
+    guide_url: /blue-mountain-peak-hike/
     rating: 4.9
     stars: 5
     half_star: false
@@ -14,11 +24,21 @@ items:
     image_height: 500
     alt: Blue Mountain Peak Jamaica
   - name: Reggae Falls Nature Trail
+    slug: reggae-falls
+    parish: St. Thomas
     location: St Thomas
     difficulty: easy
     distance: 1.2 mi
+    distance_km: 1.9
     elevation: 180 ft
     time: 1-2 hrs
+    duration_minutes_min: 60
+    duration_minutes_max: 120
+    trail_status: not_verified
+    guide_requirement: not_recorded
+    river_crossing: false
+    preparation_note: Wear footwear with grip around wet rock and confirm local access conditions before setting out.
+    guide_url: /blog/serge-island-to-reggae-falls-st-thomas-jamaica-hike/
     rating: 4.8
     stars: 5
     half_star: false
@@ -28,11 +48,20 @@ items:
     image_height: 500
     alt: Reggae Falls trail in St. Thomas, Jamaica
   - name: Holywell Nature Trails
+    slug: holywell-nature-trails
+    parish: St. Andrew
     location: Holywell, St. Andrew
     difficulty: easy
     distance: 1-2.4 km trail options
     elevation: approx. 3,500 ft
     time: 1-3 hrs
+    duration_minutes_min: 60
+    duration_minutes_max: 180
+    trail_status: not_verified
+    guide_requirement: not_recorded
+    river_crossing: false
+    preparation_note: Carry a light rain layer and choose a route that matches your time and fitness.
+    guide_url: /holywell-nature-trails-blue-mountains/
     rating: 4.6
     stars: 4
     half_star: true
@@ -42,11 +71,21 @@ items:
     image_height: 500
     alt: Holywell Nature Trails in the Blue Mountains
   - name: Cinchona Botanical Gardens
+    slug: cinchona-botanical-gardens
+    parish: St. Andrew
     location: Blue Mountains, St. Andrew
     difficulty: hard
     distance: 6.5 miles
+    distance_km: 10.5
     elevation: 2,800 ft
     time: 5-7 hrs
+    duration_minutes_min: 300
+    duration_minutes_max: 420
+    trail_status: not_verified
+    guide_requirement: not_recorded
+    river_crossing: false
+    preparation_note: Plan for a sustained mountain hike, changing weather, and limited services along the route.
+    guide_url: /cinchona-botanical-gardens-trail/
     rating: 4.9
     stars: 5
     half_star: false
@@ -56,11 +95,21 @@ items:
     image_height: 500
     alt: Cinchona Botanical Gardens trail in the Blue Mountains
   - name: Nonsuch Falls
+    slug: nonsuch-falls
+    parish: Portland
     location: Nonsuch, Drapers — Portland, Jamaica
     difficulty: hard
     distance: 1.5 – 2 mi round trip (estimated; guided riverbed route)
+    distance_km: 3.2
     elevation: ~291 ft / 89 m (height of the falls itself; trail descends steeply from base camp)
     time: 2.5 – 3 hrs (1.5 hrs down due to mud/terrain + ~1 hr back up, per the article)
+    duration_minutes_min: 150
+    duration_minutes_max: 180
+    trail_status: not_verified
+    guide_requirement: required
+    river_crossing: true
+    preparation_note: A local guide and footwear suitable for steep, muddy river terrain are strongly required.
+    guide_url: /nonsuch-falls-portland-jamaica/
     rating: 4.5
     stars: 4
     half_star: false
@@ -70,11 +119,21 @@ items:
     image_height: 500
     alt: Hikers at the Nonsuch Falls base camp in Portland
   - name: Sugar Loaf
+    slug: sugar-loaf
+    parish: St. Andrew
     location: Gordon Town, St. Andrew
     difficulty: moderate
     distance: 6 mi
+    distance_km: 9.7
     elevation: 2,017 ft
     time: 3 hrs
+    duration_minutes_min: 180
+    duration_minutes_max: 180
+    trail_status: not_verified
+    guide_requirement: not_recorded
+    river_crossing: false
+    preparation_note: Bring sun protection, sufficient water, and footwear with grip for loose hillside terrain.
+    guide_url: /blog/sugar-loaf-mountain-hike-gordon-town-jamaica/
     rating: 4
     stars: 4
     half_star: false
