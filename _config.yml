@@ -28,6 +28,7 @@ exclude:
   - outreach/
   - output/
   - scripts/
+  - work/
   - tmp/
   - _site/
   - .DS_Store
