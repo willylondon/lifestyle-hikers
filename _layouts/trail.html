@@ -1,0 +1,64 @@
+---
+layout: default
+---
+{% assign trail = site.data.trails.items | where: "slug", page.trail_slug | first %}
+{% if trail %}
+<main class="trail-detail-page">
+    <section class="trail-detail-hero">
+        <img src="{{ trail.image | relative_url }}" alt="{{ trail.alt | default: trail.name }}" width="{{ trail.image_width | default: 700 }}" height="{{ trail.image_height | default: 500 }}">
+        <div class="trail-detail-overlay"></div>
+        <div class="container trail-detail-heading">
+            <a href="{{ '/trails/' | relative_url }}" class="blog-back"><i class="fas fa-arrow-left" aria-hidden="true"></i> All trails</a>
+            <h1>{{ trail.name }}</h1>
+            <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> {{ trail.parish | default: trail.location }}</p>
+        </div>
+    </section>
+
+    <section class="trail-detail-content">
+        <div class="container trail-detail-grid">
+            <div>
+                <section class="detail-panel" aria-labelledby="trail-summary-title">
+                    <h2 id="trail-summary-title">Trail summary</h2>
+                    <dl class="detail-facts">
+                        <div><dt>Difficulty</dt><dd>{{ trail.difficulty | capitalize }}</dd></div>
+                        <div><dt>Distance</dt><dd>{% if trail.distance_km %}{{ trail.distance_km }} km <small>({{ trail.distance }})</small>{% else %}{{ trail.distance }}{% endif %}</dd></div>
+                        <div><dt>Estimated duration</dt><dd>{{ trail.time }}</dd></div>
+                        <div><dt>Elevation</dt><dd>{{ trail.elevation }}</dd></div>
+                        <div><dt>Route type</dt><dd>{{ trail.route_type | default: "not_recorded" | replace: "_", " " | capitalize }}</dd></div>
+                        <div><dt>Trail status</dt><dd>{{ trail.trail_status | default: "not_verified" | replace: "_", " " | capitalize }}</dd></div>
+                        <div><dt>Guide</dt><dd>{{ trail.guide_requirement | default: "not_recorded" | replace: "_", " " | capitalize }}</dd></div>
+                        <div><dt>River crossing</dt><dd>{% if trail.river_crossing %}Present{% else %}Not recorded{% endif %}</dd></div>
+                    </dl>
+                    <p class="verified-date">{% if trail.last_verified_date %}Last verified {{ trail.last_verified_date | date: "%-d %B %Y" }}{% else %}No recent verification date is recorded.{% endif %}</p>
+                </section>
+
+                <section class="detail-panel" aria-labelledby="preparation-title">
+                    <h2 id="preparation-title">Preparation</h2>
+                    <p>{{ trail.preparation_note | default: "Confirm current access, weather, equipment, and guide needs before departure." }}</p>
+                    <p class="advisory-copy">Conditions can change rapidly. This information is advisory and does not guarantee trail safety.</p>
+                </section>
+
+                {% if trail.guide_url %}
+                <section class="detail-panel" aria-labelledby="guide-title">
+                    <h2 id="guide-title">Long-form trail guide</h2>
+                    <p>The existing Lifestyle Hikers story and photography remain available as the detailed guide for this route.</p>
+                    <a class="card-link" href="{{ trail.guide_url | relative_url }}">Read the trail guide <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                </section>
+                {% endif %}
+            </div>
+
+            <aside class="trail-action-panel">
+                <h2>Plan this hike</h2>
+                <a class="btn btn-primary" href="{{ '/hikes/' | relative_url }}">Book This Hike</a>
+                <a class="btn btn-outline" href="{{ '/#contact' | relative_url }}">Request a Private Hike</a>
+                <button type="button" class="btn btn-quiet trail-detail-save" data-save-trail="{{ trail.slug }}" aria-pressed="false">
+                    <i class="far fa-heart" aria-hidden="true"></i> <span>Save Trail</span>
+                </button>
+                <p>Saved trails stay only in this browser. No account or private profile is created.</p>
+            </aside>
+        </div>
+    </section>
+</main>
+{% else %}
+<main class="discovery-page"><div class="container"><h1>Trail not found</h1><p>This trail record is not available.</p></div></main>
+{% endif %}

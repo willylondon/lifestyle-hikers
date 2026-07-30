@@ -19,7 +19,8 @@
                 <div class="trail-card-img">
                     <img src="{{ trail.image }}" alt="{{ trail.alt | default: trail.name }}" width="{{ trail.image_width | default: 700 }}" height="{{ trail.image_height | default: 500 }}" loading="lazy" decoding="async">
                     <span class="trail-badge {{ trail.difficulty }}">{{ trail.difficulty | capitalize }}</span>
-                    <button class="trail-save" aria-label="Save trail"><i class="far fa-heart"></i></button>
+                    <button class="trail-save" type="button" data-save-trail="{{ trail.slug | default: trail.name | slugify }}"
+                        aria-label="Save {{ trail.name }}" aria-pressed="false"><i class="far fa-heart" aria-hidden="true"></i></button>
                 </div>
                 <div class="trail-card-body">
                     <h3 class="trail-name">{{ trail.name }}</h3>
@@ -40,6 +41,7 @@
                         </div>
                         <span class="rating-text">{{ trail.rating }} ({{ trail.reviews }} reviews)</span>
                     </div>
+                    <a class="card-link" href="{{ '/trails/' | append: trail.slug | append: '/' | relative_url }}">View trail <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
             </div>
             {% endfor %}

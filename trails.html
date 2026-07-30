@@ -1,0 +1,159 @@
+---
+layout: default
+title: "Find Hiking Trails in Jamaica"
+description: "Search and compare Jamaican hiking trails by parish, difficulty, distance, duration, river crossings, and guide requirements."
+permalink: /trails/
+image: /assets/images/hero.webp
+---
+
+<main class="discovery-page">
+    <section class="discovery-intro">
+        <div class="container">
+            <h1>Find a Trail</h1>
+            <p>Search and compare Jamaican trails by parish, difficulty, distance, duration, and preparation needs.</p>
+        </div>
+    </section>
+
+    <section class="trail-explorer" aria-labelledby="trail-results-heading">
+        <div class="container">
+            <div class="explorer-controls" role="search" aria-label="Filter Jamaican trails">
+                <div class="explorer-search">
+                    <label for="explorerSearch">Search trails or parishes</label>
+                    <input id="explorerSearch" type="search" placeholder="Search trails or parishes" autocomplete="off">
+                </div>
+                <div class="explorer-filter-grid">
+                    <label>Parish
+                        <select id="parishFilter">
+                            <option value="">All parishes</option>
+                            {% assign parishes = site.data.trails.items | map: "parish" | compact | uniq | sort %}
+                            {% for parish in parishes %}
+                            <option value="{{ parish | downcase | escape }}">{{ parish }}</option>
+                            {% endfor %}
+                        </select>
+                    </label>
+                    <label>Difficulty
+                        <select id="difficultyFilter">
+                            <option value="">Any difficulty</option>
+                            <option value="easy">Easy</option>
+                            <option value="moderate">Moderate</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                    </label>
+                    <label>Distance
+                        <select id="distanceFilter">
+                            <option value="">Any distance</option>
+                            <option value="short">Under 5 km</option>
+                            <option value="medium">5–10 km</option>
+                            <option value="long">Over 10 km</option>
+                        </select>
+                    </label>
+                </div>
+                <details class="more-filters">
+                    <summary>More filters</summary>
+                    <div class="more-filter-grid">
+                        <label>Duration
+                            <select id="durationFilter">
+                                <option value="">Any duration</option>
+                                <option value="short">Up to 2 hours</option>
+                                <option value="medium">2–4 hours</option>
+                                <option value="long">Over 4 hours</option>
+                            </select>
+                        </label>
+                        <label>River crossing
+                            <select id="riverFilter">
+                                <option value="">Either</option>
+                                <option value="true">Present</option>
+                                <option value="false">Not recorded</option>
+                            </select>
+                        </label>
+                        <label>Guide
+                            <select id="guideFilter">
+                                <option value="">Any requirement</option>
+                                <option value="required">Required</option>
+                                <option value="recommended">Recommended</option>
+                                <option value="not_required">Not required</option>
+                                <option value="not_recorded">Not recorded</option>
+                            </select>
+                        </label>
+                    </div>
+                </details>
+                <div class="explorer-control-footer">
+                    <button type="button" class="text-button" id="clearTrailFilters">Clear filters</button>
+                    <label>Sort by
+                        <select id="trailSort">
+                            <option value="verified">Recently verified</option>
+                            <option value="name">Trail name</option>
+                            <option value="difficulty">Difficulty</option>
+                            <option value="distance">Distance</option>
+                            <option value="duration">Duration</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+
+            <div class="results-heading">
+                <h2 id="trail-results-heading">Jamaican trails</h2>
+                <p id="trailResultCount" aria-live="polite"></p>
+            </div>
+
+            <div class="explorer-grid" id="explorerGrid">
+                {% for trail in site.data.trails.items %}
+                <article class="explorer-card"
+                    data-name="{{ trail.name | downcase | escape }}"
+                    data-parish="{{ trail.parish | default: trail.location | downcase | escape }}"
+                    data-difficulty="{{ trail.difficulty }}"
+                    data-distance="{{ trail.distance_km | default: 0 }}"
+                    data-duration="{{ trail.duration_minutes_max | default: 0 }}"
+                    data-river="{{ trail.river_crossing | default: false }}"
+                    data-guide="{{ trail.guide_requirement | default: 'not_recorded' }}"
+                    data-verified="{{ trail.last_verified_date | default: '' }}">
+                    <a class="explorer-card-image" href="{{ '/trails/' | append: trail.slug | append: '/' | relative_url }}">
+                        <img src="{{ trail.image | relative_url }}" alt="{{ trail.alt | default: trail.name }}"
+                            width="{{ trail.image_width | default: 700 }}" height="{{ trail.image_height | default: 500 }}"
+                            loading="lazy" decoding="async">
+                    </a>
+                    <div class="explorer-card-body">
+                        <div class="explorer-card-topline">
+                            <span class="trail-badge {{ trail.difficulty }}">{{ trail.difficulty | capitalize }}</span>
+                            <button type="button" class="trail-save" data-save-trail="{{ trail.slug }}"
+                                aria-label="Save {{ trail.name }}" aria-pressed="false"><i class="far fa-heart" aria-hidden="true"></i></button>
+                        </div>
+                        <h3><a href="{{ '/trails/' | append: trail.slug | append: '/' | relative_url }}">{{ trail.name }}</a></h3>
+                        <p class="trail-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            {{ trail.parish | default: trail.location }}</p>
+                        <dl class="trail-facts">
+                            <div><dt>Distance</dt><dd>{% if trail.distance_km %}{{ trail.distance_km }} km{% else %}{{ trail.distance }}{% endif %}</dd></div>
+                            <div><dt>Duration</dt><dd>{{ trail.time }}</dd></div>
+                            <div><dt>Status</dt><dd>{{ trail.trail_status | default: "not_verified" | replace: "_", " " | capitalize }}</dd></div>
+                        </dl>
+                        <p class="verified-date">
+                            {% if trail.last_verified_date %}
+                            Last verified {{ trail.last_verified_date | date: "%-d %b %Y" }}
+                            {% else %}
+                            Not yet verified
+                            {% endif %}
+                        </p>
+                        {% if trail.preparation_note %}<p class="preparation-note">{{ trail.preparation_note }}</p>{% endif %}
+                        <a class="card-link" href="{{ '/trails/' | append: trail.slug | append: '/' | relative_url }}">
+                            View trail <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+
+            <div class="explorer-empty" id="trailExplorerEmpty" hidden>
+                <i class="fas fa-search" aria-hidden="true"></i>
+                <h3>No trails match your filters</h3>
+                <p>Try adjusting or clearing the filters to see more trails.</p>
+            </div>
+
+            <aside class="advisory-note">
+                <i class="fas fa-circle-info" aria-hidden="true"></i>
+                <p>Trail information is advisory, not a safety guarantee. Conditions can change quickly; check current weather, official notices, and local guidance before hiking.</p>
+            </aside>
+        </div>
+    </section>
+</main>
+
+<script src="{{ '/assets/js/trail-explorer.js' | relative_url }}"></script>

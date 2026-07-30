@@ -10,20 +10,22 @@
         <h1 class="hero-title reveal">Explore <span class="text-gradient">Jamaica</span></h1>
         <p class="hero-subtitle reveal">Discover the Blue Mountains, hidden waterfalls, lush river trails, and
             breathtaking coastlines with a community that lives for the outdoors.</p>
-        <div class="hero-search reveal" role="search" aria-labelledby="trail-search-label">
-            <div class="search-box">
-                <i class="fas fa-search" aria-hidden="true"></i>
-                <label class="sr-only" id="trail-search-label" for="searchInput">Search featured trails</label>
-                <input type="text" placeholder="Search trails..." id="searchInput"
-                    aria-describedby="trailSearchHelp trailSearchResults">
-                <button class="search-btn" id="searchBtn" type="button">Explore</button>
-            </div>
-            <p class="sr-only" id="trailSearchHelp">Search by trail name, parish, or landmark to filter the featured trails below.</p>
-            <p class="search-results-summary" id="trailSearchResults" aria-live="polite"></p>
+        <div class="hero-actions reveal">
+            <a class="btn btn-primary" href="{{ '/trails/' | relative_url }}">Find a Trail</a>
+            <a class="btn btn-outline" href="{{ '/hikes/' | relative_url }}">Book a Hike</a>
+            <a class="hero-secondary-link" href="#contact">Join Lifestyle Hikers</a>
         </div>
         {% assign now_unix = 'now' | date: "%s" | plus: 0 %}
         {% assign current_year = 'now' | date: "%Y" %}
 
+        {% assign safe_trails_explored = site.stats.trails_explored | plus: 0 %}
+        {% if safe_trails_explored < 0 %}{% assign safe_trails_explored = 0 %}{% endif %}
+        {% assign safe_active_members = site.stats.active_members | plus: 0 %}
+        {% if safe_active_members < 0 %}{% assign safe_active_members = 0 %}{% endif %}
+        {% assign safe_base_total = site.stats.base_total_hikes | plus: 0 %}
+        {% if safe_base_total < 0 %}{% assign safe_base_total = 0 %}{% endif %}
+        {% assign safe_base_year = site.stats.base_hikes_this_year | plus: 0 %}
+        {% if safe_base_year < 0 %}{% assign safe_base_year = 0 %}{% endif %}
         {% assign additional_total_hikes = 0 %}
         {% assign additional_hikes_this_year = 0 %}
 
@@ -33,16 +35,16 @@
 
         {% if event_unix < now_unix %} {% assign additional_total_hikes=additional_total_hikes | plus: 1 %} {% if
             event_year==current_year %} {% assign additional_hikes_this_year=additional_hikes_this_year | plus: 1 %} {%
-            endif %} {% endif %} {% endfor %} {% assign total_hikes=site.stats.base_total_hikes | plus:
-            additional_total_hikes %} {% assign hikes_this_year=site.stats.base_hikes_this_year | plus:
+            endif %} {% endif %} {% endfor %} {% assign total_hikes=safe_base_total | plus:
+            additional_total_hikes %} {% assign hikes_this_year=safe_base_year | plus:
             additional_hikes_this_year %} <div class="hero-stats reveal">
             <div class="stat">
-                <span class="stat-number plus-sign" data-count="{{ site.stats.trails_explored }}">{{ site.stats.trails_explored }}</span>
+                <span class="stat-number plus-sign" data-count="{{ safe_trails_explored }}">{{ safe_trails_explored }}</span>
                 <span class="stat-label">Trails Explored</span>
             </div>
             <div class="stat-divider"></div>
             <div class="stat">
-                <span class="stat-number plus-sign" data-count="{{ site.stats.active_members }}">{{ site.stats.active_members }}</span>
+                <span class="stat-number plus-sign" data-count="{{ safe_active_members }}">{{ safe_active_members }}</span>
                 <span class="stat-label">Active Members</span>
             </div>
             <div class="stat-divider"></div>
