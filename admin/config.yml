@@ -498,6 +498,26 @@ collections:
                 required: false
                 hint: "Lowercase URL key, for example blue-mountain-peak. Do not change an established slug without a redirect."
 
+              - label: "Feature on Homepage"
+                name: "featured"
+                widget: "boolean"
+                required: false
+                default: false
+                hint: "Keep this selective so the homepage trail section stays uncluttered. All trails still appear in Trail Explorer."
+
+              - label: "Available for Lifestyle Hikers Booking"
+                name: "bookable"
+                widget: "boolean"
+                required: false
+                default: false
+                hint: "Turn on only when Lifestyle Hikers has confirmed it can safely accept bookings for this route."
+
+              - label: "Trail Summary"
+                name: "summary"
+                widget: "text"
+                required: false
+                hint: "A concise, factual description of what hikers can expect."
+
               - label: "Parish"
                 name: "parish"
                 widget: "string"
@@ -595,6 +615,21 @@ collections:
                 format: "YYYY-MM-DD"
                 required: false
 
+              - label: "Verification Level"
+                name: "verification_level"
+                widget: "string"
+                required: false
+                hint: "For example source_confirmed or event_route_confirmed. Do not use field_verified without a recent on-the-ground check."
+
+              - label: "Online Source Checked Date"
+                name: "source_checked_date"
+                widget: "datetime"
+                date_format: "YYYY-MM-DD"
+                time_format: false
+                format: "YYYY-MM-DD"
+                required: false
+                hint: "Date the linked source was checked. This is not a field-condition verification date."
+
               - label: "River Crossing"
                 name: "river_crossing"
                 widget: "boolean"
@@ -621,6 +656,61 @@ collections:
                 widget: "text"
                 required: false
                 hint: "Short practical preparation guidance. Do not claim real-time safety."
+
+              - label: "Trailhead"
+                name: "trailhead"
+                widget: "text"
+                required: false
+
+              - label: "Access Note"
+                name: "access_note"
+                widget: "text"
+                required: false
+                hint: "Record permissions, ticketing, opening, guide, or unconfirmed-access limitations."
+
+              - label: "Parking"
+                name: "parking"
+                widget: "text"
+                required: false
+
+              - label: "Footwear"
+                name: "footwear"
+                widget: "text"
+                required: false
+
+              - label: "Equipment"
+                name: "equipment"
+                widget: "list"
+                required: false
+                field:
+                  label: "Item"
+                  name: "item"
+                  widget: "string"
+
+              - label: "Known Hazards"
+                name: "known_hazards"
+                widget: "list"
+                required: false
+                field:
+                  label: "Hazard"
+                  name: "hazard"
+                  widget: "string"
+
+              - label: "Research Source Label"
+                name: "source_label"
+                widget: "string"
+                required: false
+
+              - label: "Research Source URL"
+                name: "source_url"
+                widget: "string"
+                required: false
+                hint: "Prefer an official operator, tourism authority, Forestry Department, or conservation manager."
+
+              - label: "Official Access or Booking URL"
+                name: "booking_url"
+                widget: "string"
+                required: false
 
               - label: "Existing Trail Guide URL"
                 name: "guide_url"
@@ -662,6 +752,33 @@ collections:
                 name: "image"
                 widget: "image"
                 hint: "Upload or paste a URL for the trail card image"
+
+              - label: "Representative Image Only"
+                name: "image_is_representative"
+                widget: "boolean"
+                required: false
+                default: false
+                hint: "Turn on when the image represents the region or terrain but is not the named trail."
+
+              - label: "Photo Caption"
+                name: "image_caption"
+                widget: "text"
+                required: false
+
+              - label: "Photo Credit"
+                name: "image_credit"
+                widget: "string"
+                required: false
+
+              - label: "Photo Credit URL"
+                name: "image_credit_url"
+                widget: "string"
+                required: false
+
+              - label: "Photo Licence"
+                name: "image_license"
+                widget: "string"
+                required: false
 
               - label: "Photo Alt Text"
                 name: "alt"

@@ -17,6 +17,22 @@ layout: default
     <section class="trail-detail-content">
         <div class="container trail-detail-grid">
             <div>
+                {% if trail.image_caption or trail.image_credit %}
+                <p class="trail-photo-note">
+                    {% if trail.image_caption %}{{ trail.image_caption }}{% endif %}
+                    {% if trail.image_credit %}
+                    Photo: {% if trail.image_credit_url %}<a href="{{ trail.image_credit_url | escape }}" target="_blank" rel="noopener noreferrer">{{ trail.image_credit }}</a>{% else %}{{ trail.image_credit }}{% endif %}{% if trail.image_license %} · {{ trail.image_license }}{% endif %}
+                    {% endif %}
+                </p>
+                {% endif %}
+
+                {% if trail.summary %}
+                <section class="detail-panel" aria-labelledby="trail-overview-title">
+                    <h2 id="trail-overview-title">What to expect</h2>
+                    <p>{{ trail.summary }}</p>
+                </section>
+                {% endif %}
+
                 <section class="detail-panel" aria-labelledby="trail-summary-title">
                     <h2 id="trail-summary-title">Trail summary</h2>
                     <dl class="detail-facts">
@@ -29,8 +45,26 @@ layout: default
                         <div><dt>Guide</dt><dd>{{ trail.guide_requirement | default: "not_recorded" | replace: "_", " " | capitalize }}</dd></div>
                         <div><dt>River crossing</dt><dd>{% if trail.river_crossing %}Present{% else %}Not recorded{% endif %}</dd></div>
                     </dl>
-                    <p class="verified-date">{% if trail.last_verified_date %}Last verified {{ trail.last_verified_date | date: "%-d %B %Y" }}{% else %}No recent verification date is recorded.{% endif %}</p>
+                    <p class="verified-date">{% if trail.last_verified_date %}Last field verification {{ trail.last_verified_date | date: "%-d %B %Y" }}{% elsif trail.source_checked_date %}Online source checked {{ trail.source_checked_date | date: "%-d %B %Y" }}. Field conditions have not been independently verified.{% else %}No recent verification date is recorded.{% endif %}</p>
                 </section>
+
+                {% if trail.trailhead or trail.access_note or trail.parking %}
+                <section class="detail-panel" aria-labelledby="trail-access-title">
+                    <h2 id="trail-access-title">Access and planning</h2>
+                    {% if trail.trailhead %}<h3>Trailhead</h3><p>{{ trail.trailhead }}</p>{% endif %}
+                    {% if trail.access_note %}<h3>Access</h3><p>{{ trail.access_note }}</p>{% endif %}
+                    {% if trail.parking %}<h3>Parking</h3><p>{{ trail.parking }}</p>{% endif %}
+                </section>
+                {% endif %}
+
+                {% if trail.known_hazards or trail.equipment or trail.footwear %}
+                <section class="detail-panel trail-readiness" aria-labelledby="trail-readiness-title">
+                    <h2 id="trail-readiness-title">Hazards and equipment</h2>
+                    {% if trail.known_hazards %}<div><h3>Known hazards</h3><ul>{% for hazard in trail.known_hazards %}<li>{{ hazard }}</li>{% endfor %}</ul></div>{% endif %}
+                    {% if trail.footwear %}<div><h3>Footwear</h3><p>{{ trail.footwear }}</p></div>{% endif %}
+                    {% if trail.equipment %}<div><h3>Bring</h3><ul>{% for item in trail.equipment %}<li>{{ item }}</li>{% endfor %}</ul></div>{% endif %}
+                </section>
+                {% endif %}
 
                 <section class="detail-panel" aria-labelledby="preparation-title">
                     <h2 id="preparation-title">Preparation</h2>
@@ -45,12 +79,25 @@ layout: default
                     <a class="card-link" href="{{ trail.guide_url | relative_url }}">Read the trail guide <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                 </section>
                 {% endif %}
+
+                {% if trail.source_url %}
+                <section class="detail-panel source-panel" aria-labelledby="source-title">
+                    <h2 id="source-title">Research source</h2>
+                    <p>This listing was prepared from the source below. A source check confirms published information, not current on-the-ground safety or access.</p>
+                    <a class="card-link" href="{{ trail.source_url | escape }}" target="_blank" rel="noopener noreferrer">{{ trail.source_label | default: "View source" }} <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                </section>
+                {% endif %}
             </div>
 
             <aside class="trail-action-panel">
                 <h2>Plan this hike</h2>
+                {% if trail.bookable == false %}
+                <p>This researched listing is not currently offered as a Lifestyle Hikers booking.</p>
+                {% else %}
                 <a class="btn btn-primary" href="{{ '/hikes/' | relative_url }}">Book This Hike</a>
                 <a class="btn btn-outline" href="{{ '/#contact' | relative_url }}">Request a Private Hike</a>
+                {% endif %}
+                {% if trail.booking_url %}<a class="btn btn-quiet" href="{{ trail.booking_url | escape }}" target="_blank" rel="noopener noreferrer">Check Official Access</a>{% endif %}
                 <button type="button" class="btn btn-quiet trail-detail-save" data-save-trail="{{ trail.slug }}" aria-pressed="false">
                     <i class="far fa-heart" aria-hidden="true"></i> <span>Save Trail</span>
                 </button>

@@ -41,6 +41,30 @@ Optional image dimensions:
 - `image_width`
 - `image_height`
 
+Additional CMS-managed research fields include:
+
+- `featured`
+- `bookable`
+- `summary`
+- `verification_level`
+- `source_checked_date`
+- `trailhead`
+- `access_note`
+- `parking`
+- `footwear`
+- `equipment`
+- `known_hazards`
+- `source_label`
+- `source_url`
+- `booking_url`
+- `image_is_representative`
+- `image_caption`
+- `image_credit`
+- `image_credit_url`
+- `image_license`
+
+`source_checked_date` records an online research check only. It must never be displayed as a current field-condition verification. Representative images must be labelled and must not imply they depict the named trail.
+
 Planned additive fields and defaults are defined in `docs/cms-compatibility-plan.md`.
 
 ## Events/hikes
@@ -109,4 +133,3 @@ Fields: `name`, `handle`, `text`, optional `avatar`, optional integer `rating` f
 ## Private data prohibition
 
 Public Git content must not contain attendee lists, emergency contacts, medical details, payments, waiver signatures, private profiles, or precise private report locations.
-

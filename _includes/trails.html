@@ -14,7 +14,8 @@
             <button class="filter-btn" data-filter="hard">Hard</button>
         </div>
         <div class="trails-grid" id="trailsGrid">
-            {% for trail in site.data.trails.items %}
+            {% assign featured_trails = site.data.trails.items | where: "featured", true %}
+            {% for trail in featured_trails %}
             <div class="trail-card reveal" data-difficulty="{{ trail.difficulty }}" data-search="{{ trail.name }} {{ trail.location }} {{ trail.alt | default: '' }}">
                 <div class="trail-card-img">
                     <img src="{{ trail.image }}" alt="{{ trail.alt | default: trail.name }}" width="{{ trail.image_width | default: 700 }}" height="{{ trail.image_height | default: 500 }}" loading="lazy" decoding="async">
@@ -30,7 +31,7 @@
                         <span><i class="fas fa-arrow-up"></i> {{ trail.elevation }}</span>
                         <span><i class="fas fa-clock"></i> {{ trail.time }}</span>
                     </div>
-                    <div class="trail-rating">
+                    {% if trail.reviews and trail.reviews > 0 %}<div class="trail-rating">
                         <div class="stars">
                             {% if trail.stars >= 1 %}<i class="fas fa-star"></i>{% endif %}
                             {% if trail.stars >= 2 %}<i class="fas fa-star"></i>{% endif %}
@@ -40,7 +41,7 @@
                             {% if trail.half_star %}<i class="fas fa-star-half-alt"></i>{% endif %}
                         </div>
                         <span class="rating-text">{{ trail.rating }} ({{ trail.reviews }} reviews)</span>
-                    </div>
+                    </div>{% endif %}
                     <a class="card-link" href="{{ '/trails/' | append: trail.slug | append: '/' | relative_url }}">View trail <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
             </div>
