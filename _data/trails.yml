@@ -1,5 +1,6 @@
 items:
   - name: Blue Mountain Peak Trail
+    featured: true
     slug: blue-mountain-peak
     parish: Portland / St. Thomas
     location: Portland / St. Thomas
@@ -24,6 +25,7 @@ items:
     image_height: 500
     alt: Blue Mountain Peak Jamaica
   - name: Reggae Falls Nature Trail
+    featured: true
     slug: reggae-falls
     parish: St. Thomas
     location: St Thomas
@@ -48,6 +50,7 @@ items:
     image_height: 500
     alt: Reggae Falls trail in St. Thomas, Jamaica
   - name: Holywell Nature Trails
+    featured: true
     slug: holywell-nature-trails
     parish: St. Andrew
     location: Holywell, St. Andrew
@@ -71,6 +74,7 @@ items:
     image_height: 500
     alt: Holywell Nature Trails in the Blue Mountains
   - name: Cinchona Botanical Gardens
+    featured: true
     slug: cinchona-botanical-gardens
     parish: St. Andrew
     location: Blue Mountains, St. Andrew
@@ -95,6 +99,7 @@ items:
     image_height: 500
     alt: Cinchona Botanical Gardens trail in the Blue Mountains
   - name: Nonsuch Falls
+    featured: true
     slug: nonsuch-falls
     parish: Portland
     location: Nonsuch, Drapers — Portland, Jamaica
@@ -119,6 +124,7 @@ items:
     image_height: 500
     alt: Hikers at the Nonsuch Falls base camp in Portland
   - name: Sugar Loaf
+    featured: true
     slug: sugar-loaf
     parish: St. Andrew
     location: Gordon Town, St. Andrew
@@ -142,3 +148,735 @@ items:
     image_width: 700
     image_height: 500
     alt: top of the hill looking down liguanea
+  - name: Island Gully Falls / Blue Hole Forest Trails
+    featured: false
+    bookable: false
+    slug: island-gully-falls
+    parish: St. Ann
+    location: White River Valley, near Ocho Rios, St. Ann
+    summary: Follow streamside forest paths through a ticketed waterfall property known for vivid mineral pools, cascades, swimming areas, and plantation ruins.
+    difficulty: moderate
+    distance: Varies by guided route
+    elevation: Not published
+    time: Allow 2-3 hrs
+    duration_minutes_min: 120
+    duration_minutes_max: 180
+    route_type: not_recorded
+    trail_status: caution
+    verification_level: source_confirmed
+    source_checked_date: 2026-07-31
+    guide_requirement: recommended
+    river_crossing: true
+    trailhead: Island Gully Falls ticket entrance in the hills above Ocho Rios.
+    access_note: This is a managed, ticketed nature attraction. Confirm current admission, opening hours, water levels, and guide arrangements before travelling.
+    parking: Visitor facilities and parking are reported on the official tourism listing; confirm availability when booking.
+    footwear: Closed water shoes with reliable wet-rock grip.
+    equipment:
+      - Swimwear and towel
+      - Dry change of clothes
+      - Waterproof phone pouch
+    known_hazards:
+      - Slippery rock and uneven forest paths
+      - River current and changing water depth
+      - Makeshift bridges on some guided sections
+    preparation_note: Use a local guide for the rocky streamside sections and do not jump or swim outside designated areas.
+    source_label: Visit Jamaica — Island Gully Falls
+    source_url: https://www.visitjamaica.com/experiences/natural-wonders/waterfalls-rivers/island-gully-falls/
+    booking_url: https://www.visitjamaica.com/experiences/natural-wonders/waterfalls-rivers/island-gully-falls/
+    rating: 0
+    stars: 0
+    half_star: false
+    reviews: 0
+    image: /assets/images/uploads/reggae-falls-card.webp
+    image_width: 700
+    image_height: 500
+    image_is_representative: true
+    image_caption: Representative Lifestyle Hikers waterfall image; replace with an approved Island Gully photograph when available.
+    image_credit: Lifestyle Hikers
+    alt: Jamaican waterfall and forest used as a representative image for Island Gully Falls
+  - name: Reach Falls Upstream River Trail
+    featured: false
+    bookable: false
+    slug: reach-falls-upstream
+    parish: Portland
+    location: Reach, Portland
+    summary: A guided journey upstream along the Driver's River through montane forest, natural pools, cascades, and the attraction's well-known underwater cave.
+    difficulty: moderate
+    distance: Varies with guided upstream tour
+    elevation: Not published
+    time: Allow 2-3 hrs
+    duration_minutes_min: 120
+    duration_minutes_max: 180
+    route_type: out_and_back
+    trail_status: caution
+    verification_level: source_confirmed
+    source_checked_date: 2026-07-31
+    guide_requirement: required
+    river_crossing: true
+    trailhead: Reach Falls visitor entrance in Reach, Portland.
+    access_note: The upstream river experience is guided and may depend on river conditions. Confirm the tour directly before departure.
+    parking: Visitor parking is associated with the managed attraction; confirm current arrangements.
+    footwear: Water shoes with toe protection and strong grip.
+    equipment:
+      - Swimwear and towel
+      - Dry bag or waterproof pouch
+      - Drinking water
+    known_hazards:
+      - Slippery limestone and submerged rock
+      - Changing river flow after rain
+      - Cave and deep-water sections
+    preparation_note: Book the upstream guide, carry only water-resistant essentials, and avoid the river after heavy rainfall.
+    guide_url: /blog/reach-falls-portland-jamaica-what-to-know-before-you-go/
+    source_label: Visit Jamaica — Reach Falls
+    source_url: https://www.visitjamaica.com/listing/reach-falls/468/
+    booking_url: https://www.visitjamaica.com/listing/reach-falls/468/
+    rating: 0
+    stars: 0
+    half_star: false
+    reviews: 0
+    image: /assets/images/uploads/reach-falls-commons.jpg
+    image_width: 1400
+    image_height: 935
+    image_credit: Morten Idriss Nygaar / Wikimedia Commons
+    image_credit_url: https://commons.wikimedia.org/wiki/File:Reach_Falls_-_panoramio.jpg
+    image_license: CC BY-SA 3.0
+    alt: Reach Falls and surrounding rainforest in Portland, Jamaica
+  - name: Mayfield Falls Riverwalk
+    featured: false
+    bookable: false
+    slug: mayfield-falls-riverwalk
+    parish: Westmoreland
+    location: Glenbrook, Westmoreland
+    summary: A guided riverwalk through tropical vegetation and a chain of cascades, with sections travelled in the river and alongside it.
+    difficulty: moderate
+    distance: Route length not published
+    elevation: Not published
+    time: Allow 2-3 hrs
+    duration_minutes_min: 120
+    duration_minutes_max: 180
+    route_type: out_and_back
+    trail_status: caution
+    verification_level: source_confirmed
+    source_checked_date: 2026-07-31
+    guide_requirement: required
+    river_crossing: true
+    trailhead: Mayfield Falls visitor area near Glenbrook.
+    access_note: An active tourism booking page confirms the riverwalk. Confirm the departure point, transfer details, admission, and river conditions with the operator.
+    parking: Confirm at booking; some products include hotel transfer.
+    footwear: Secure water shoes with textured soles.
+    equipment:
+      - Swimwear and towel
+      - Dry change of clothing
+      - Waterproof pouch
+    known_hazards:
+      - Continuous wet footing
+      - Slippery cascades and uneven riverbed
+      - Stronger current following rainfall
+    preparation_note: Expect to get wet and follow the guide's route through the river rather than attempting unguided shortcuts.
+    source_label: Visit Jamaica — Mayfield Falls Mineral Springs & Riverwalk
+    source_url: https://book.visitjamaica.com/travel/activities-and-tours/mayfield-falls-mineral-springs-riverwalk-montego-bay
+    booking_url: https://book.visitjamaica.com/travel/activities-and-tours/mayfield-falls-mineral-springs-riverwalk-montego-bay
+    rating: 0
+    stars: 0
+    half_star: false
+    reviews: 0
+    image: /assets/images/uploads/nonsuch-falls-card.webp
+    image_width: 700
+    image_height: 500
+    image_is_representative: true
+    image_caption: Representative Lifestyle Hikers river-falls image; replace with an approved Mayfield Falls photograph when available.
+    image_credit: Lifestyle Hikers
+    alt: Jamaican river waterfall used as a representative image for Mayfield Falls
+  - name: Dunn's River Falls Climb
+    featured: false
+    bookable: false
+    slug: dunns-river-falls-climb
+    parish: St. Ann
+    location: Ocho Rios, St. Ann
+    summary: Jamaica's best-known waterfall climb follows terraced limestone cascades from near the beach through a managed attraction with guides and visitor facilities.
+    difficulty: moderate
+    distance: Approximately 180 m waterfall climb
+    distance_km: 0.18
+    elevation: Falls rise approximately 55 m
+    time: Allow 1.5-3 hrs
+    duration_minutes_min: 90
+    duration_minutes_max: 180
+    route_type: point_to_point
+    trail_status: caution
+    verification_level: source_confirmed
+    source_checked_date: 2026-07-31
+    guide_requirement: recommended
+    river_crossing: true
+    trailhead: Dunn's River Falls and Park visitor entrance near Ocho Rios.
+    access_note: This is a managed, ticketed waterfall attraction rather than a wilderness trail. Confirm hours, admission, cruise-day crowds, and climb conditions.
+    parking: Managed visitor parking is available at the attraction; confirm current terms.
+    footwear: Properly fitted water shoes with strong grip.
+    equipment:
+      - Swimwear and towel
+      - Dry change of clothing
+      - Waterproof pouch
+    known_hazards:
+      - Slippery terraced limestone
+      - Moving water and crowded climbing lines
+      - Uneven steps and pools
+    preparation_note: Use the designated climbing route and local guides, especially during strong flow or busy periods.
+    source_label: Visit Jamaica — Dunn's River Falls
+    source_url: https://www.visitjamaica.com/experiences/natural-wonders/waterfalls-rivers/dunns-river-falls/
+    booking_url: https://www.visitjamaica.com/experiences/natural-wonders/waterfalls-rivers/dunns-river-falls/
+    rating: 0
+    stars: 0
+    half_star: false
+    reviews: 0
+    image: /assets/images/uploads/dunns-river-falls-commons.jpg
+    image_width: 1400
+    image_height: 787
+    image_credit: Dr. Thomas Liptak / Wikimedia Commons
+    image_credit_url: https://commons.wikimedia.org/wiki/File:Jamaica_Ocho_Rios_Dunn%27s_River_Falls_1.jpg
+    image_license: CC BY-SA 4.0
+    alt: Terraced cascades at Dunn's River Falls in Ocho Rios, Jamaica
+  - name: Serge Island Forest Reserve Trail
+    featured: false
+    bookable: false
+    slug: serge-island-forest-reserve
+    parish: St. Thomas
+    location: Hillside and Trinityville, St. Thomas
+    summary: A rugged cross-country forest route beginning near Reggae Falls, crossing the Johnson River, and climbing into the 707-hectare Serge Island Forest Reserve.
+    difficulty: hard
+    distance: 12 km event route
+    distance_km: 12
+    elevation: Not published
+    time: Full-day trek
+    duration_minutes_min: 300
+    duration_minutes_max: 480
+    route_type: not_recorded
+    trail_status: caution
+    verification_level: event_route_confirmed
+    source_checked_date: 2026-07-31
+    guide_requirement: required
+    river_crossing: true
+    trailhead: Hillside Square near Reggae Falls, St. Thomas, for the published Forest Trek route.
+    access_note: The Forestry Department confirms this as its March 2026 Forest Trek route, rated 7/10. Registration is closed and routine independent public access is not established; contact Forestry before visiting.
+    parking: Use only arrangements confirmed by the Forestry Department or an authorised local guide.
+    footwear: Sturdy hiking footwear with aggressive grip and secure river-crossing capability.
+    equipment:
+      - At least 2 litres of water
+      - Sun and rain protection
+      - Personal first-aid essentials
+    known_hazards:
+      - Rugged steep terrain
+      - Johnson River crossing
+      - Heat exposure and limited services
+      - Hurricane-affected forest sections
+    preparation_note: Do not treat the published event route as an always-open self-guided trail; obtain current access and guide confirmation from Forestry.
+    guide_url: /blog/serge-island-to-reggae-falls-st-thomas-jamaica-hike/
+    source_label: Forestry Department — Forest Trek 2026
+    source_url: https://www.forestry.gov.jm/ForestTrek
+    rating: 0
+    stars: 0
+    half_star: false
+    reviews: 0
+    image: /assets/images/uploads/reggae-falls-card.webp
+    image_width: 700
+    image_height: 500
+    image_caption: Reggae Falls near the published starting area for the Serge Island Forest Trek route.
+    image_credit: Lifestyle Hikers
+    alt: Reggae Falls near the Serge Island Forest Reserve route in St. Thomas
+  - name: Bogue II Forest Reserve Trail
+    featured: false
+    bookable: false
+    slug: bogue-ii-forest-reserve
+    parish: St. Ann
+    location: Bogue II Forest Reserve above Dunn's River, St. Ann
+    summary: A forest route through a 455-hectare reserve containing white-sand rivers, forest habitat, and remnants associated with the Belmont Great House property.
+    difficulty: hard
+    distance: 10 km event route
+    distance_km: 10
+    elevation: Not published
+    time: Allow 4-6 hrs
+    duration_minutes_min: 240
+    duration_minutes_max: 360
+    route_type: not_recorded
+    trail_status: caution
+    verification_level: event_route_confirmed
+    source_checked_date: 2026-07-31
+    guide_requirement: required
+    river_crossing: true
+    trailhead: Published event access is through Forestry Department arrangements in the Bogue II Forest Reserve.
+    access_note: Forestry confirms a 10 km Forest Trek route, but the public page is event-specific and does not establish routine self-guided access. Obtain permission and current route details first.
+    parking: No independent public parking arrangement is confirmed.
+    footwear: Supportive hiking footwear suitable for wet forest ground.
+    equipment:
+      - At least 2 litres of water
+      - Rain protection
+      - Sun and insect protection
+    known_hazards:
+      - Remote forest terrain
+      - River and wet-ground sections
+      - Unconfirmed wayfinding outside organised events
+    preparation_note: Contact the Forestry Department before planning this route and use an authorised guide outside an organised Forest Trek.
+    source_label: Forestry Department — Return to Bogue II
+    source_url: https://www.forestry.gov.jm/Forest-Trek-Application
+    rating: 0
+    stars: 0
+    half_star: false
+    reviews: 0
+    image: /assets/images/uploads/dunns-river-falls-commons.jpg
+    image_width: 1400
+    image_height: 787
+    image_is_representative: true
+    image_caption: Dunn's River Falls below the Bogue II watershed; this is a regional context image, not the forest trail itself.
+    image_credit: Dr. Thomas Liptak / Wikimedia Commons
+    image_credit_url: https://commons.wikimedia.org/wiki/File:Jamaica_Ocho_Rios_Dunn%27s_River_Falls_1.jpg
+    image_license: CC BY-SA 4.0
+    alt: Dunn's River Falls below the Bogue II Forest Reserve watershed in St. Ann
+  - name: Cockpit Country Guided Hike
+    featured: false
+    bookable: false
+    slug: cockpit-country-guided-hike
+    parish: Trelawny / St. James / St. Elizabeth
+    location: Cockpit Country, western Jamaica
+    summary: Guided day hikes enter Jamaica's rugged cockpit-karst interior through communities such as Windsor, Albert Town, Flagstaff, and Accompong, combining forest, caves, biodiversity, and Maroon heritage.
+    difficulty: hard
+    distance: Varies by community route
+    elevation: Repeated steep karst hills
+    time: 3 hrs to full day
+    duration_minutes_min: 180
+    duration_minutes_max: 480
+    route_type: not_recorded
+    trail_status: caution
+    verification_level: protected_area_confirmed
+    source_checked_date: 2026-07-31
+    guide_requirement: required
+    river_crossing: false
+    trailhead: Use only a trailhead supplied by a recognised community guide or conservation partner.
+    access_note: Cockpit Country is a protected, rugged and often inaccessible landscape, not one single marked trail. Select a named community route and confirm permission and guide arrangements.
+    parking: Varies by community and must be arranged with the guide.
+    footwear: Sturdy hiking boots with strong grip.
+    equipment:
+      - At least 2 litres of water
+      - Long trousers and insect protection
+      - Headlamp for any approved cave component
+      - Offline navigation carried by the guide
+    known_hazards:
+      - Complex navigation and limited mobile coverage
+      - Steep wet limestone terrain
+      - Caves, sinkholes and fragile habitat
+      - Heat, insects and remote access
+    preparation_note: Never enter the interior unguided; choose a specific community-operated route and follow all protected-area instructions.
+    source_label: Windsor Research Centre — Cockpit Country
+    source_url: https://wrc.cockpitcountry.com/
+    rating: 0
+    stars: 0
+    half_star: false
+    reviews: 0
+    image: /assets/images/uploads/cockpit-country-commons.jpg
+    image_width: 1120
+    image_height: 746
+    image_credit: Fabian Tompsett / Wikimedia Commons
+    image_credit_url: https://commons.wikimedia.org/wiki/File:Cockpit_Country.jpg
+    image_license: CC BY-SA 3.0
+    alt: Forested cockpit karst hills in Jamaica's Cockpit Country
+  - name: Bunker's Hill Cultural Trail
+    featured: false
+    bookable: false
+    slug: bunkers-hill-cultural-trail
+    parish: Trelawny
+    location: Wakefield, Trelawny
+    summary: A community-guided rainforest hike crossing a river and climbing to caves connected with Taino and Maroon history, followed by a riverside cultural experience.
+    difficulty: moderate
+    distance: Route length not published
+    elevation: Steep cave approach
+    time: Allow 2-4 hrs
+    duration_minutes_min: 120
+    duration_minutes_max: 240
+    route_type: out_and_back
+    trail_status: caution
+    verification_level: source_confirmed
+    source_checked_date: 2026-07-31
+    guide_requirement: required
+    river_crossing: true
+    trailhead: Bunker's Hill Cultural Xperience in Wakefield, Trelawny.
+    access_note: This is a guided community tourism experience. Contact the operator to confirm tour time, price, meal options, fitness requirements, and water conditions.
+    parking: Parking and visitor amenities are listed; confirm when reserving.
+    footwear: Hiking shoes that can handle mud, rock, and shallow water.
+    equipment:
+      - Drinking water
+      - Insect protection
+      - Change of clothes for river or cave activities
+    known_hazards:
+      - Steep climb to the cave
+      - Mud, wet rock and river edges
+      - Enclosed cave environment
+    preparation_note: Reserve a guided visit and disclose any mobility or enclosed-space concerns before the tour.
+    source_label: Visit Jamaica — Bunker's Hill Cultural Xperience
+    source_url: https://www.visitjamaica.com/listing/bunkers-hill-cultural-xperience-%26-river-tour/2878/
+    booking_url: https://www.visitjamaica.com/listing/bunkers-hill-cultural-xperience-%26-river-tour/2878/
+    rating: 0
+    stars: 0
+    half_star: false
+    reviews: 0
+    image: /assets/images/uploads/cockpit-country-commons.jpg
+    image_width: 1120
+    image_height: 746
+    image_is_representative: true
+    image_caption: Regional Cockpit Country landscape; confirm an approved Bunker's Hill trail photograph with the operator.
+    image_credit: Fabian Tompsett / Wikimedia Commons
+    image_credit_url: https://commons.wikimedia.org/wiki/File:Cockpit_Country.jpg
+    image_license: CC BY-SA 3.0
+    alt: Cockpit Country forest landscape representing the Bunker's Hill trail region
+  - name: Montpelier Waterfall Hike
+    featured: false
+    bookable: false
+    slug: montpelier-waterfall-hike
+    parish: St. James
+    location: Montpelier Estate, St. James
+    summary: A managed estate hike through tropical vegetation to Montpelier Waterfall, offered as part of a guided nature-adventure property beside the Great River.
+    difficulty: moderate
+    distance: Route length not published
+    elevation: Not published
+    time: Varies by booked experience
+    duration_minutes_min: 120
+    duration_minutes_max: 240
+    route_type: out_and_back
+    trail_status: caution
+    verification_level: source_confirmed
+    source_checked_date: 2026-07-31
+    guide_requirement: required
+    river_crossing: true
+    trailhead: Chukka Jungle Outpost at Montpelier Estate.
+    access_note: Access is through a commercial guided experience. Confirm whether the waterfall hike is available alone or only within an activity package.
+    parking: Managed attraction parking; confirm with the operator.
+    footwear: Closed shoes with wet-trail grip; water shoes may be required for combined river activities.
+    equipment:
+      - Drinking water
+      - Sun and rain protection
+      - Swimwear if entering the river or falls
+    known_hazards:
+      - Wet and uneven estate paths
+      - Slippery waterfall approaches
+      - River conditions after rain
+    preparation_note: Book directly with the operator and confirm the precise hike component, minimum age, equipment, and weather policy.
+    source_label: Visit Jamaica — Montego Bay outdoor experiences
+    source_url: https://www.visitjamaica.com/resort-areas/montego-bay/things-to-do/?regionids=11&skip=27&sort=qualityScore
+    rating: 0
+    stars: 0
+    half_star: false
+    reviews: 0
+    image: /assets/images/uploads/nonsuch-falls-card.webp
+    image_width: 700
+    image_height: 500
+    image_is_representative: true
+    image_caption: Representative Lifestyle Hikers waterfall image; replace with an operator-approved Montpelier photograph.
+    image_credit: Lifestyle Hikers
+    alt: Jamaican waterfall used as a representative image for the Montpelier Waterfall Hike
+  - name: Palmetto Falls Nature Trail
+    featured: false
+    bookable: false
+    slug: palmetto-falls-nature-trail
+    parish: St. Mary
+    location: Palmetto Grove, St. Mary
+    summary: A restored 129-acre rural sanctuary combining waterfalls, farmland, heritage interpretation, local food, and bookable nature tours.
+    difficulty: easy
+    distance: Tour route not published
+    elevation: Not published
+    time: Confirm when booking
+    route_type: not_recorded
+    trail_status: caution
+    verification_level: operator_confirmed
+    source_checked_date: 2026-07-31
+    guide_requirement: required
+    river_crossing: true
+    trailhead: Palmetto Falls visitor site, Palmetto Grove, St. Mary.
+    access_note: Tours are bookable through the operator. Confirm the walking route, accessibility, opening days, price, swimming conditions, and meal arrangements.
+    parking: Confirm with the operator when reserving.
+    footwear: Comfortable walking shoes; bring water shoes if the booked tour enters wet areas.
+    equipment:
+      - Drinking water
+      - Sun and insect protection
+      - Swimwear and towel if advised
+    known_hazards:
+      - Wet surfaces near cascades
+      - Farm and natural terrain
+      - Conditions may vary by booked activity
+    preparation_note: Ask the operator which activities are included and select a route appropriate for the group's mobility and comfort around water.
+    source_label: Palmetto Falls — official operator site
+    source_url: https://www.palmettofalls.com/
+    booking_url: https://www.palmettofalls.com/
+    rating: 0
+    stars: 0
+    half_star: false
+    reviews: 0
+    image: /assets/images/uploads/reggae-falls-card.webp
+    image_width: 700
+    image_height: 500
+    image_is_representative: true
+    image_caption: Representative Lifestyle Hikers waterfall image; replace with an approved Palmetto Falls photograph.
+    image_credit: Lifestyle Hikers
+    alt: Jamaican waterfall and tropical vegetation used as a representative image for Palmetto Falls
+  - name: Bull Head Mountain Trail
+    featured: false
+    bookable: false
+    slug: bull-head-mountain
+    parish: Clarendon
+    location: Brandon Hill to Reckford, Clarendon
+    summary: A demanding point-to-point forest hike travelling from Brandon Hill through Bull Head Forest Reserve to Bull Head Mountain peak and onward to Reckford.
+    difficulty: hard
+    distance: 10 km event route
+    distance_km: 10
+    elevation: Peak elevation not confirmed for this listing
+    time: Allow 4-6 hrs
+    duration_minutes_min: 240
+    duration_minutes_max: 360
+    route_type: point_to_point
+    trail_status: caution
+    verification_level: historical_event_route
+    source_checked_date: 2026-07-31
+    guide_requirement: required
+    river_crossing: false
+    trailhead: Brandon Hill was the start of the Forestry Department's 2023 route; the published finish was Reckford.
+    access_note: Forestry documented this 10 km route and rated it 6/10, but a 2023 fire affected the trail. Current access and recovery conditions must be confirmed before any visit.
+    parking: No current independent parking or shuttle plan is confirmed.
+    footwear: Supportive hiking boots with grip for steep forest terrain.
+    equipment:
+      - At least 2 litres of water
+      - Sun and rain protection
+      - Personal first-aid essentials
+    known_hazards:
+      - Fire-affected and potentially eroded sections
+      - Steep remote forest terrain
+      - Point-to-point transport requirement
+      - Limited wayfinding outside an organised hike
+    preparation_note: Contact Forestry for a current condition report, obtain a guide, and arrange transport at both ends before attempting the route.
+    source_label: Forestry Department — Forest Trek 2023
+    source_url: https://www.forestry.gov.jm/newsDetails?newsID=89
+    rating: 0
+    stars: 0
+    half_star: false
+    reviews: 0
+    image: /assets/images/uploads/sugar-loaf-card.webp
+    image_width: 700
+    image_height: 500
+    image_is_representative: true
+    image_caption: Representative Lifestyle Hikers mountain image; a current Bull Head trail photograph is still required.
+    image_credit: Lifestyle Hikers
+    alt: Jamaican mountain terrain used as a representative image for Bull Head Mountain
+  - name: Tacky Falls Trail
+    featured: false
+    bookable: false
+    slug: tacky-falls
+    parish: St. Mary
+    location: Islington area, St. Mary
+    summary: A remote local-guide trek through undeveloped terrain to a tall, secluded waterfall associated by name with the history of Tacky's Rebellion.
+    difficulty: hard
+    distance: Informal route; distance not verified
+    elevation: Waterfall reported over 60 m high
+    time: Confirm with local guide
+    route_type: out_and_back
+    trail_status: caution
+    verification_level: source_confirmed_access_unverified
+    source_checked_date: 2026-07-31
+    guide_requirement: required
+    river_crossing: true
+    trailhead: Obtain the current meeting point directly from a trusted St. Mary guide; no formal public trailhead is documented.
+    access_note: Visit Jamaica describes the route as having no formal paths or signs and specifically recommends local knowledge. Current land access and conditions are not independently confirmed.
+    parking: Not recorded; arrange with the guide and do not block community access.
+    footwear: Sturdy hiking footwear with excellent mud and wet-rock grip.
+    equipment:
+      - At least 2 litres of water
+      - Long trousers and insect protection
+      - Dry bag and first-aid essentials
+    known_hazards:
+      - No formal signs or maintained path
+      - Steep, slippery waterfall terrain
+      - Remote access and limited emergency response
+      - Changing river conditions
+    preparation_note: Do not attempt this route without a trusted local guide, explicit access permission, and a same-day weather and river check.
+    source_label: Visit Jamaica — lesser-known waterfalls
+    source_url: https://www.visitjamaica.com/blog/post/trip-ideas-explore-further-6-waterfalls-to-get-you-off-the-resort/
+    rating: 0
+    stars: 0
+    half_star: false
+    reviews: 0
+    image: /assets/images/uploads/reggae-falls-card.webp
+    image_width: 700
+    image_height: 500
+    image_is_representative: true
+    image_caption: Representative Lifestyle Hikers waterfall image; this is not a photograph of Tacky Falls.
+    image_credit: Lifestyle Hikers
+    alt: Jamaican waterfall used as a clearly labelled representative image for Tacky Falls
+  - name: Two Sisters Caves Approach
+    featured: false
+    bookable: false
+    slug: two-sisters-caves
+    parish: St. Catherine
+    location: Hellshire Hills, St. Catherine
+    summary: A dry-limestone approach to two connected cave features with freshwater sinkholes and reported Taino cultural significance in the rugged Hellshire Hills.
+    difficulty: moderate
+    distance: Access route not published
+    elevation: Not published
+    time: Confirm with experienced guide
+    route_type: out_and_back
+    trail_status: caution
+    verification_level: site_confirmed_access_unverified
+    source_checked_date: 2026-07-31
+    guide_requirement: required
+    river_crossing: false
+    trailhead: A safe public trailhead is not documented; obtain access instructions from an experienced authorised guide.
+    access_note: The cave site is confirmed by Jamaica's tourism authority, but current opening arrangements, land access, and a marked hiking route are not published.
+    parking: Not recorded.
+    footwear: Closed hiking shoes with grip for sharp limestone; helmet and cave equipment as directed by the guide.
+    equipment:
+      - Helmet and dependable headlamp
+      - Backup light
+      - Drinking water and sun protection
+    known_hazards:
+      - Heat and exposed dry-limestone terrain
+      - Sinkholes, cave edges and uneven rock
+      - Darkness and enclosed passages
+      - Sensitive wildlife and archaeological features
+    preparation_note: Explore only with an experienced cave guide, proper lighting and helmets; never enter during uncertain weather or without permission.
+    source_label: Visit Jamaica — caves and underground wonders
+    source_url: https://www.visitjamaica.com/experiences/natural-wonders/caves/
+    rating: 0
+    stars: 0
+    half_star: false
+    reviews: 0
+    image: /assets/images/hero.webp
+    image_width: 1920
+    image_height: 1080
+    image_is_representative: true
+    image_caption: Representative Lifestyle Hikers landscape image; an approved Two Sisters Caves photograph is still required.
+    image_credit: Lifestyle Hikers
+    alt: Jamaican outdoor landscape used as a representative image for the Two Sisters Caves approach
+  - name: Gourie Forest and Cave Trail
+    featured: false
+    bookable: false
+    slug: gourie-forest-and-cave
+    parish: Manchester
+    location: Gourie Forest Management Area, Manchester
+    summary: A forest and cave recreation prospect in the Gourie Forest Management Area, where Forestry previously developed cabins, a gazebo, public facilities, camping, and hiking plans.
+    difficulty: moderate
+    distance: Public route not documented
+    elevation: Not published
+    time: Confirm with Forestry
+    route_type: not_recorded
+    trail_status: caution
+    verification_level: recreation_area_confirmed_access_unverified
+    source_checked_date: 2026-07-31
+    guide_requirement: required
+    river_crossing: false
+    trailhead: Confirm the current entrance and meeting point with the Forestry Department.
+    access_note: Government documents confirm the recreation area and its hiking intent, but current visitor hours, trail condition, cave access, and operating facilities are not adequately published.
+    parking: Not currently confirmed.
+    footwear: Hiking boots; cave helmet and lighting only under qualified guidance.
+    equipment:
+      - Drinking water
+      - Headlamp and backup light for approved cave access
+      - Rain and insect protection
+    known_hazards:
+      - Unconfirmed trail maintenance and wayfinding
+      - Cave darkness and uneven ground
+      - Remote forest conditions
+    preparation_note: Contact Forestry before travelling and arrange a qualified local or cave guide; do not assume older recreational facilities are operational.
+    source_label: Forestry Department — Gourie Forest Recreational Facility report
+    source_url: https://www.forestry.gov.jm/resourcedocs/Forestry_Department_Annual_Report_2015-2016.pdf
+    rating: 0
+    stars: 0
+    half_star: false
+    reviews: 0
+    image: /assets/images/uploads/cinchona-2026-card.webp
+    image_width: 700
+    image_height: 500
+    image_is_representative: true
+    image_caption: Representative Lifestyle Hikers forest image; an approved Gourie trail photograph is still required.
+    image_credit: Lifestyle Hikers
+    alt: Jamaican forest used as a representative image for Gourie Forest and Cave Trail
+  - name: Dolphin Head Mountains Guided Hike
+    featured: false
+    bookable: false
+    slug: dolphin-head-mountains
+    parish: Hanover / Westmoreland
+    location: Dolphin Head Mountains, Hanover and Westmoreland
+    summary: A biodiversity-focused mountain and forest reserve prospect in western Jamaica, suited to carefully arranged guided exploration rather than casual self-guided hiking.
+    difficulty: hard
+    distance: Public route not documented
+    elevation: Not published
+    time: Confirm with Forestry or local guide
+    route_type: not_recorded
+    trail_status: caution
+    verification_level: reserve_confirmed_access_unverified
+    source_checked_date: 2026-07-31
+    guide_requirement: required
+    river_crossing: false
+    trailhead: No dependable public trailhead is documented; arrange access through Forestry and a recognised local guide.
+    access_note: Official sources confirm the forest reserve and its ecological importance, but not a maintained public hiking product. This listing is a research lead, not an invitation to enter independently.
+    parking: Not recorded.
+    footwear: Sturdy hiking boots suitable for steep, wet and overgrown terrain.
+    equipment:
+      - At least 2 litres of water
+      - Long trousers and insect protection
+      - Rain layer and first-aid essentials
+    known_hazards:
+      - Unmarked or unmaintained routes
+      - Steep remote terrain and limited mobile coverage
+      - Sensitive habitat and possible access restrictions
+    preparation_note: Obtain explicit access approval, a recognised local guide, and a current route plan before visiting the reserve.
+    source_label: Forestry Department — Dolphin Head fauna assessment
+    source_url: https://www.forestry.gov.jm/resourcedocs/Faunal_Report_Dolphin_Head.pdf
+    rating: 0
+    stars: 0
+    half_star: false
+    reviews: 0
+    image: /assets/images/uploads/blue-mountain-2026-card.webp
+    image_width: 700
+    image_height: 500
+    image_is_representative: true
+    image_caption: Representative Lifestyle Hikers mountain image; this is not a photograph of Dolphin Head.
+    image_credit: Lifestyle Hikers
+    alt: Jamaican mountain landscape used as a representative image for Dolphin Head Mountains
+  - name: YS Falls Nature Walk and Falls Climb
+    featured: false
+    bookable: false
+    slug: ys-falls-nature-walk
+    parish: St. Elizabeth
+    location: YS Estate, St. Elizabeth
+    summary: A managed nature attraction centred on a seven-tier waterfall, spring-fed pools, estate scenery, and optional waterfall-climbing and adventure activities.
+    difficulty: easy
+    distance: Short managed nature walk
+    elevation: Seven-tier waterfall; route gain not published
+    time: Allow 2-4 hrs
+    duration_minutes_min: 120
+    duration_minutes_max: 240
+    route_type: out_and_back
+    trail_status: caution
+    verification_level: source_confirmed
+    source_checked_date: 2026-07-31
+    guide_requirement: not_recorded
+    river_crossing: true
+    trailhead: YS Falls visitor entrance and tractor-drawn jitney transfer point on YS Estate.
+    access_note: This is a ticketed attraction and nature walk rather than a wilderness trail. Confirm operating days, admission, transport, and which water activities are available.
+    parking: Managed visitor parking is associated with the attraction; confirm current arrangements.
+    footwear: Comfortable walking shoes plus secure water shoes for wet activities.
+    equipment:
+      - Swimwear and towel
+      - Sun protection
+      - Dry change of clothing
+    known_hazards:
+      - Slippery surfaces near cascades
+      - Water depth and flow
+      - Activity-specific age, height or weather restrictions
+    preparation_note: Use designated paths and swimming areas and confirm whether falls climbing is operating on the day of your visit.
+    source_label: Visit Jamaica — YS Falls
+    source_url: https://www.visitjamaica.com/experiences/natural-wonders/waterfalls-rivers/ys-falls/
+    booking_url: https://www.visitjamaica.com/experiences/natural-wonders/waterfalls-rivers/ys-falls/
+    rating: 0
+    stars: 0
+    half_star: false
+    reviews: 0
+    image: /assets/images/uploads/ys-falls-commons.jpg
+    image_width: 330
+    image_height: 440
+    image_credit: Jamaica1962 / Wikimedia Commons
+    image_credit_url: https://commons.wikimedia.org/wiki/File:YS_Falls.jpg
+    image_license: CC0 1.0
+    alt: The seven-tiered YS Falls in St. Elizabeth, Jamaica

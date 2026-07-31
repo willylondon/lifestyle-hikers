@@ -129,6 +129,8 @@ image: /assets/images/hero.webp
                         <p class="verified-date">
                             {% if trail.last_verified_date %}
                             Last verified {{ trail.last_verified_date | date: "%-d %b %Y" }}
+                            {% elsif trail.source_checked_date %}
+                            Source checked {{ trail.source_checked_date | date: "%-d %b %Y" }} · field conditions not verified
                             {% else %}
                             Not yet verified
                             {% endif %}

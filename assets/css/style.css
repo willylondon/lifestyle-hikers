@@ -3021,6 +3021,19 @@ textarea:focus-visible {
     align-items: start;
 }
 
+.trail-photo-note {
+    margin: 0 0 var(--space-xl);
+    color: var(--clr-text-muted);
+    font-size: 0.78rem;
+    line-height: 1.6;
+}
+
+.trail-photo-note a {
+    color: var(--clr-primary-light);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 .detail-panel,
 .trail-action-panel {
     padding: var(--space-2xl);
@@ -3040,10 +3053,36 @@ textarea:focus-visible {
     margin-bottom: var(--space-lg);
 }
 
+.detail-panel h3 {
+    color: var(--clr-text);
+    font-size: 0.9rem;
+    margin: var(--space-lg) 0 var(--space-xs);
+}
+
+.detail-panel h2 + h3 {
+    margin-top: 0;
+}
+
 .detail-panel p,
 .trail-action-panel p {
     color: var(--clr-text-muted);
     line-height: 1.7;
+}
+
+.trail-readiness ul {
+    display: grid;
+    gap: var(--space-sm);
+    padding-left: 1.2rem;
+    color: var(--clr-text-muted);
+    line-height: 1.55;
+}
+
+.trail-readiness li::marker {
+    color: var(--clr-accent-light);
+}
+
+.source-panel {
+    border-color: rgba(233, 196, 106, 0.28);
 }
 
 .detail-facts {
