@@ -1,0 +1,99 @@
+---
+layout: default
+title: "Book a Hike in Jamaica"
+description: "Browse Lifestyle Hikers outings in Jamaica, including upcoming, sold-out, members-only, cancelled, and completed hikes."
+permalink: /hikes/
+image: /assets/images/hero.webp
+---
+
+<main class="discovery-page">
+    <section class="discovery-intro hikes-intro">
+        <div class="container">
+            <h1>Book a Hike</h1>
+            <p>Browse scheduled Lifestyle Hikers outings and use the organizer’s registration link to request your place.</p>
+        </div>
+    </section>
+
+    <section class="hikes-directory" aria-labelledby="hikes-heading">
+        <div class="container">
+            <div class="status-tabs" role="group" aria-label="Filter hikes by status">
+                <button type="button" class="status-tab active" data-hike-filter="upcoming" aria-pressed="true">Upcoming</button>
+                <button type="button" class="status-tab" data-hike-filter="sold_out" aria-pressed="false">Sold out</button>
+                <button type="button" class="status-tab" data-hike-filter="members_only" aria-pressed="false">Members only</button>
+                <button type="button" class="status-tab" data-hike-filter="cancelled" aria-pressed="false">Cancelled</button>
+                <button type="button" class="status-tab" data-hike-filter="completed" aria-pressed="false">Completed</button>
+            </div>
+
+            <div class="results-heading">
+                <h2 id="hikes-heading">Hike schedule</h2>
+                <p id="hikeResultCount" aria-live="polite"></p>
+            </div>
+
+            <div class="hike-list" id="hikeList">
+                {% assign now_unix = "now" | date: "%s" | plus: 0 %}
+                {% assign sorted_events = site.data.events.items | sort: "date" | reverse %}
+                {% for event in sorted_events %}
+                {% assign event_unix = event.date | date: "%s" | plus: 0 %}
+                {% assign derived_status = event.event_status %}
+                {% unless derived_status %}
+                    {% if event_unix < now_unix %}{% assign derived_status = "completed" %}{% else %}{% assign derived_status = "upcoming" %}{% endif %}
+                {% endunless %}
+                <article class="hike-directory-card" data-hike-status="{{ derived_status }}">
+                    <div class="hike-date-block" aria-label="{{ event.date | date: '%B %-d, %Y' }}">
+                        <span>{{ event.date | date: "%b" | upcase }}</span>
+                        <strong>{{ event.date | date: "%d" }}</strong>
+                        <small>{{ event.date | date: "%Y" }}</small>
+                    </div>
+                    <div class="hike-directory-main">
+                        <div class="hike-title-row">
+                            <div>
+                                <h3>{{ event.name }}</h3>
+                                <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> {{ event.location }}</p>
+                            </div>
+                            <span class="status-label status-{{ derived_status }}">{{ derived_status | replace: "_", " " | capitalize }}</span>
+                        </div>
+                        <dl class="hike-facts">
+                            <div><dt>Time</dt><dd>{{ event.departure_time | default: event.time }}</dd></div>
+                            <div><dt>Difficulty</dt><dd>{{ event.difficulty | capitalize }}</dd></div>
+                            <div><dt>Price</dt><dd>{% if event.price_jmd %}${{ event.price_jmd }} JMD{% else %}Contact organizer{% endif %}</dd></div>
+                            <div><dt>Meeting point</dt><dd>{{ event.meeting_point | default: event.location }}</dd></div>
+                            <div><dt>Spaces remaining</dt><dd>{% if event.spaces_remaining %}{{ event.spaces_remaining }}{% elsif event.spots %}{{ event.spots }} (CMS-managed){% else %}Contact organizer{% endif %}</dd></div>
+                            <div><dt>Transport</dt><dd>{{ event.transport_information | default: "Contact organizer" }}</dd></div>
+                        </dl>
+                        <p class="hike-description">{{ event.description }}</p>
+                    </div>
+                    <div class="hike-directory-actions">
+                        {% if derived_status == "upcoming" or derived_status == "members_only" %}
+                            {% if event.registration_url and event.registration_url != "" %}
+                            <a class="btn btn-primary" href="{{ event.registration_url }}" target="_blank" rel="noopener noreferrer">Request a Place</a>
+                            {% else %}
+                            <a class="btn btn-outline" href="{{ '/#contact' | relative_url }}">Contact Organizer</a>
+                            {% endif %}
+                        {% elsif derived_status == "sold_out" and event.waitlist_url %}
+                        <a class="btn btn-outline" href="{{ event.waitlist_url }}" target="_blank" rel="noopener noreferrer">Join Waitlist</a>
+                        {% else %}
+                        <span class="hike-unavailable">{{ derived_status | replace: "_", " " | capitalize }}</span>
+                        {% endif %}
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+
+            <div class="explorer-empty" id="hikesEmpty" hidden>
+                <i class="fas fa-calendar" aria-hidden="true"></i>
+                <h3>No hikes in this category</h3>
+                <p>Check another status or contact the organizer about a private hike.</p>
+            </div>
+
+            <div class="payment-guidance">
+                <div>
+                    <h2>Manual payment for the first release</h2>
+                    <p>Payment instructions are confirmed by the organizer after registration. This website does not collect card or bank details.</p>
+                </div>
+                <a class="btn btn-outline" href="{{ '/#contact' | relative_url }}">Request a Private Hike</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="{{ '/assets/js/hikes.js' | relative_url }}"></script>

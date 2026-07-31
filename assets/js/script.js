@@ -21,21 +21,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.getElementById('navLinks');
 
     if (navToggle && navLinks) {
+        const navbarElement = document.getElementById('navbar');
+        const closeNavigation = ({ restoreFocus = false } = {}) => {
+            navToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+            navbarElement?.classList.remove('menu-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+            if (restoreFocus) navToggle.focus();
+        };
+
         navToggle.addEventListener('click', () => {
             const isActive = navToggle.classList.toggle('active');
             navLinks.classList.toggle('active', isActive);
+            navbarElement?.classList.toggle('menu-open', isActive);
             navToggle.setAttribute('aria-expanded', String(isActive));
             document.body.style.overflow = isActive ? 'hidden' : '';
+            if (isActive) navLinks.querySelector('a')?.focus();
         });
 
         // Close mobile nav when clicking a link
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                navToggle.classList.remove('active');
-                navLinks.classList.remove('active');
-                navToggle.setAttribute('aria-expanded', 'false');
-                document.body.style.overflow = '';
+                closeNavigation();
             });
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && navLinks.classList.contains('active')) {
+                closeNavigation({ restoreFocus: true });
+            }
         });
     }
 
@@ -177,21 +192,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Trail Heart (Save) Toggle ---
-    document.querySelectorAll('.trail-save').forEach(btn => {
+    const savedTrailStorageKey = 'lifestyle-hikers:saved-trails';
+    let savedTrails = [];
+    try {
+        savedTrails = JSON.parse(localStorage.getItem(savedTrailStorageKey) || '[]');
+        if (!Array.isArray(savedTrails)) savedTrails = [];
+    } catch (error) {
+        savedTrails = [];
+    }
+
+    const syncSaveButton = (btn) => {
+        const slug = btn.getAttribute('data-save-trail');
+        const isSaved = Boolean(slug && savedTrails.includes(slug));
+        btn.classList.toggle('saved', isSaved);
+        btn.setAttribute('aria-pressed', String(isSaved));
+        const icon = btn.querySelector('i');
+        if (icon) {
+            icon.classList.toggle('fas', isSaved);
+            icon.classList.toggle('far', !isSaved);
+        }
+        const label = btn.querySelector('span');
+        if (label) label.textContent = isSaved ? 'Saved' : 'Save Trail';
+    };
+
+    document.querySelectorAll('[data-save-trail]').forEach(btn => {
+        syncSaveButton(btn);
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
-            btn.classList.toggle('saved');
-            const icon = btn.querySelector('i');
-            if (btn.classList.contains('saved')) {
-                icon.classList.remove('far');
-                icon.classList.add('fas');
-                // Quick scale animation
-                btn.style.transform = 'scale(1.3)';
-                setTimeout(() => btn.style.transform = 'scale(1)', 200);
-            } else {
-                icon.classList.remove('fas');
-                icon.classList.add('far');
+            const slug = btn.getAttribute('data-save-trail');
+            if (!slug) return;
+            savedTrails = savedTrails.includes(slug)
+                ? savedTrails.filter(item => item !== slug)
+                : [...savedTrails, slug];
+            try {
+                localStorage.setItem(savedTrailStorageKey, JSON.stringify(savedTrails));
+            } catch (error) {
+                // The visual state still works for this page view when storage is unavailable.
             }
+            syncSaveButton(btn);
         });
     });
 

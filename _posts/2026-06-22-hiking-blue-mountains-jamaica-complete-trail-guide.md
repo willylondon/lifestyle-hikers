@@ -1,9 +1,11 @@
 ---
 layout: post
-title: Hiking Blue Mountains Jamaica: Your Complete Trail Guide
+title: "Hiking Blue Mountains Jamaica: Your Complete Trail Guide"
 date: 2026-06-22
 categories: Lifestyle Hikers
 excerpt: Discover the beauty of hiking in the Blue Mountains of Jamaica with this comprehensive trail guide tailored for Lifestyle Hikers.
+published: false
+---
 
 # Hiking Blue Mountains Jamaica: Your Complete Trail Guide
 

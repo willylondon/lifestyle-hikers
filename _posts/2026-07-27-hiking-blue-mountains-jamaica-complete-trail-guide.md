@@ -1,9 +1,10 @@
 ---
 layout: post
-title: Hiking Blue Mountains Jamaica: A Complete Trail Guide
+title: "Hiking Blue Mountains Jamaica: A Complete Trail Guide"
 date: 2026-07-27
 categories: Lifestyle Hikers
 excerpt: Explore the breathtaking Blue Mountains in Jamaica with this comprehensive trail guide tailored for Lifestyle Hikers.
+published: false
 ---
 
 The Blue Mountains of Jamaica offer a paradise for outdoor enthusiasts and nature lovers alike. Its lush greenery, stunning landscapes, and cool mountain air provide the perfect backdrop for a memorable hiking experience. If you're looking to embark on an unforgettable adventure, lacing up your boots to explore the Blue Mountains might just be the perfect escape. In this comprehensive guide, we will navigate through everything you need to know to conquer the trails of the Blue Mountains in Jamaica.

@@ -133,7 +133,7 @@ Recovery works best when it sits alongside smart preparation. Before your next h
 - [Cinchona Botanical Gardens Hike Guide](/blog/cinchona-botanical-gardens-hike-guide/) — know what the climb demands
 - [Holywell vs Cinchona: Which First Hike?](/blog/holywell-vs-cinchona-first-hike-jamaica/) — choose the right challenge for your level
 - [Kwame Falls Hike Guide](/blog/kwame-falls-first-hike-2026/) — a great introduction to waterfall trails
-- [Beginner's Guide to Hiking in Jamaica](/blog/hiking-jamaica-beginners-guide/) — full preparation checklist
+- [Beginner's Guide to Hiking in Jamaica](/hiking-jamaica-beginners-guide/) — full preparation checklist
 
 Then, when the hike is done, open the [Recovery Report](/recovery-report/) and give your body the same quality of attention you gave the trail.
 
