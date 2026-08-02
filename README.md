@@ -60,5 +60,17 @@ Run syntax/content/build checks and then test the rendered site on desktop and m
 
 ## Platform upgrade
 
-The current architecture and risks are documented in [docs/lifestyle-hikers-audit.md](docs/lifestyle-hikers-audit.md). Private booking, account, payment, waiver, emergency-contact, and moderated-report features require a private backend and authorization layer; they must not be implemented as public Git content.
+The current architecture and risks are documented in [docs/current-site-audit-2026-08.md](docs/current-site-audit-2026-08.md). Private booking, account, payment, waiver, emergency-contact, and moderated-report features require a private backend and authorization layer; they must not be implemented as public Git content.
+
+## August 2026 audit & improvements
+
+Branch: `feature/current-site-audit-and-platform-improvements`
+
+Key documents:
+- [Current site audit](docs/current-site-audit-2026-08.md)
+- [CMS compatibility matrix](docs/current-cms-compatibility-matrix.md)
+- [Implementation plan](docs/current-implementation-plan.md)
+- [Testing report](docs/current-testing-report.md)
+- [Private backend options](docs/private-platform-backend-options.md)
+- [Rollback plan](docs/rollback-plan.md)
 
