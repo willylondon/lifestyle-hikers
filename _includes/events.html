@@ -22,10 +22,11 @@
                 Recent Group Hikes
                 {% endif %}
             </h2>
-            <p class="section-subtitle">Join us on our next adventure across Jamaica. All skill levels welcome —
-                just bring yuh vibes!
-                {% if upcoming_count == 0 %}
-                Here are the latest completed hikes from the crew.
+            <p class="section-subtitle">
+                {% if upcoming_count > 0 %}
+                Join us on our next adventure across Jamaica. All skill levels welcome — just bring yuh vibes!
+                {% else %}
+                No public hike is open right now. Join the trail alert to catch the next drop, or browse the latest completed hikes from the crew.
                 {% endif %}
             </p>
         </div>
@@ -95,6 +96,12 @@
         </div>
         {% endif %}
         <div style="text-align: center; margin-top: var(--space-3xl);" class="reveal">
+            {% if upcoming_count == 0 %}
+            <a href="#contact" class="btn btn-primary"
+                style="padding: var(--space-md) var(--space-xl); display: inline-flex; align-items: center; justify-content: center; border-radius: var(--radius-full); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; transition: all var(--transition-base); gap: var(--space-sm); margin-right: var(--space-md);">
+                Join Trail Alert <i class="fas fa-arrow-right"></i>
+            </a>
+            {% endif %}
             <a href="/past-hikes/" class="btn btn-outline"
                 style="padding: var(--space-md) var(--space-xl); display: inline-flex; align-items: center; justify-content: center; border: 2px solid var(--clr-primary-light); color: var(--clr-primary-light); border-radius: var(--radius-full); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; transition: all var(--transition-base); gap: var(--space-sm);">
                 View Hike Archive <i class="fas fa-arrow-right"></i>
