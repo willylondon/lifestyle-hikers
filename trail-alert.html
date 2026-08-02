@@ -1,0 +1,116 @@
+---
+layout: default
+title: "Get Trail Alerts | Lifestyle Hikers"
+description: "Sign up for Lifestyle Hikers trail alerts and be the first to know when the next public hike drops in Jamaica."
+permalink: /trail-alert/
+canonical_url: "https://www.lifestylehikers.com/trail-alert/"
+image: /assets/images/hero-group-2026.jpg
+---
+
+<div class="section" style="padding:120px 0 80px;">
+  <div class="container" style="max-width:640px;">
+    <div class="reveal" style="text-align:center;margin-bottom:var(--space-3xl);">
+      <span class="section-badge"><i class="fas fa-bell"></i> Trail Alerts</span>
+      <h1 style="font-size:clamp(2rem,5vw,2.8rem);">Get Trail Alerts</h1>
+      <p style="font-size:1.1rem;color:var(--clr-text-muted);margin-top:var(--space-md);">
+        Be the first to know when the next public hike drops. We'll send you the schedule, meeting point, and what to bring — no spam, just trail updates.
+      </p>
+    </div>
+
+    <div class="reveal">
+      <form id="trail-alert-form" novalidate style="background:var(--clr-dark-surface);border-radius:var(--radius-lg);padding:var(--space-2xl);border:1px solid var(--clr-border);">
+        <div class="form-group" style="margin-bottom:var(--space-lg);">
+          <label for="ta-name" style="display:block;margin-bottom:var(--space-sm);font-weight:600;">Full Name *</label>
+          <input id="ta-name" type="text" name="entry.1536938342" autocomplete="name" required
+            style="width:100%;padding:12px 16px;border-radius:var(--radius-md);border:1px solid var(--clr-border);background:var(--clr-dark);color:var(--clr-text);font-size:1rem;">
+        </div>
+        <div class="form-group" style="margin-bottom:var(--space-lg);">
+          <label for="ta-email" style="display:block;margin-bottom:var(--space-sm);font-weight:600;">Email Address *</label>
+          <input id="ta-email" type="email" name="entry.210167821" autocomplete="email" required
+            style="width:100%;padding:12px 16px;border-radius:var(--radius-md);border:1px solid var(--clr-border);background:var(--clr-dark);color:var(--clr-text);font-size:1rem;">
+        </div>
+        <div class="form-group" style="margin-bottom:var(--space-lg);">
+          <label for="ta-phone" style="display:block;margin-bottom:var(--space-sm);font-weight:600;">Phone / WhatsApp Number <span style="font-weight:400;color:var(--clr-text-muted);">(optional)</span></label>
+          <input id="ta-phone" type="tel" name="entry.2117914245" autocomplete="tel"
+            style="width:100%;padding:12px 16px;border-radius:var(--radius-md);border:1px solid var(--clr-border);background:var(--clr-dark);color:var(--clr-text);font-size:1rem;">
+        </div>
+        <div class="form-group" style="margin-bottom:var(--space-lg);">
+          <label for="ta-experience" style="display:block;margin-bottom:var(--space-sm);font-weight:600;">Your Hiking Experience</label>
+          <select id="ta-experience" name="entry.1144046084"
+            style="width:100%;padding:12px 16px;border-radius:var(--radius-md);border:1px solid var(--clr-border);background:var(--clr-dark);color:var(--clr-text);font-size:1rem;">
+            <option value="" disabled selected>Select your experience level</option>
+            <option value="Beginner - Mi just a start out">Beginner</option>
+            <option value="Intermediate - Mi hike regular">Intermediate</option>
+            <option value="Advanced - Mi eat mountain fi breakfast">Advanced</option>
+          </select>
+        </div>
+        <div class="form-group" style="margin-bottom:var(--space-lg);">
+          <label for="ta-parish" style="display:block;margin-bottom:var(--space-sm);font-weight:600;">Preferred Hiking Area <span style="font-weight:400;color:var(--clr-text-muted);">(optional)</span></label>
+          <select id="ta-parish" name="entry.609835379"
+            style="width:100%;padding:12px 16px;border-radius:var(--radius-md);border:1px solid var(--clr-border);background:var(--clr-dark);color:var(--clr-text);font-size:1rem;">
+            <option value="" selected>No preference</option>
+            <option value="St. Andrew / Blue Mountains">St. Andrew / Blue Mountains</option>
+            <option value="Portland">Portland</option>
+            <option value="St. Thomas">St. Thomas</option>
+            <option value="St. Mary">St. Mary</option>
+            <option value="St. Ann">St. Ann</option>
+            <option value="St. Catherine">St. Catherine</option>
+            <option value="St. Elizabeth">St. Elizabeth</option>
+            <option value="Westmoreland">Westmoreland</option>
+            <option value="Trelawny">Trelawny</option>
+            <option value="Kingston">Kingston</option>
+          </select>
+        </div>
+
+        <p class="form-privacy" style="font-size:0.85rem;color:var(--clr-text-muted);margin-bottom:var(--space-lg);line-height:1.6;">
+          Your details are sent to the Lifestyle Hikers Google Form and used only to send you trail alerts and hike notifications. We do not share your information with third parties. You can unsubscribe at any time by contacting us. Do not include medical or payment information in this form.
+        </p>
+
+        <p id="ta-error" class="form-error" role="alert" hidden style="color:var(--clr-hard);margin-bottom:var(--space-md);font-size:0.9rem;"></p>
+
+        <button type="submit" class="btn btn-primary" style="width:100%;padding:14px;font-size:1.05rem;font-weight:700;border-radius:var(--radius-md);">
+          <i class="fas fa-bell"></i> Sign Up for Trail Alerts
+        </button>
+      </form>
+
+      <div id="ta-success" style="display:none;text-align:center;padding:var(--space-3xl);" aria-live="polite">
+        <div style="font-size:3rem;margin-bottom:var(--space-lg);">✅</div>
+        <h2 style="font-size:1.8rem;margin-bottom:var(--space-md);">You're on the list!</h2>
+        <p style="color:var(--clr-text-muted);margin-bottom:var(--space-xl);">
+          Thanks for signing up. We'll send trail alerts to your email when the next public hike is announced.
+        </p>
+        <a href="/" class="btn btn-outline">Back to Homepage</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSfPyoz1DLVHq9bGz2MdvfHxG5Ss5SXzLkl0WeceVoFLV-6Zbg/formResponse';
+  var form = document.getElementById('trail-alert-form');
+  var success = document.getElementById('ta-success');
+  var errorEl = document.getElementById('ta-error');
+  var submitBtn = form.querySelector('button[type="submit"]');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.reportValidity()) return;
+    errorEl.hidden = true;
+    submitBtn.disabled = true;
+    submitBtn.setAttribute('aria-busy', 'true');
+    var params = new URLSearchParams(new FormData(form));
+    fetch(FORM_ACTION, { method: 'POST', mode: 'no-cors', body: params })
+      .then(function () {
+        form.style.display = 'none';
+        success.style.display = 'block';
+      })
+      .catch(function () {
+        errorEl.textContent = 'We could not send your request. Check your connection and try again.';
+        errorEl.hidden = false;
+        submitBtn.disabled = false;
+        submitBtn.removeAttribute('aria-busy');
+      });
+  });
+})();
+</script>
