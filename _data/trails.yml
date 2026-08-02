@@ -328,8 +328,8 @@ items:
     half_star: false
     reviews: 0
     image: /assets/images/uploads/dunns-river-falls-commons.jpg
-    image_width: 1400
-    image_height: 787
+    image_width: 960
+    image_height: 539
     image_credit: Dr. Thomas Liptak / Wikimedia Commons
     image_credit_url: https://commons.wikimedia.org/wiki/File:Jamaica_Ocho_Rios_Dunn%27s_River_Falls_1.jpg
     image_license: CC BY-SA 4.0
@@ -421,8 +421,8 @@ items:
     half_star: false
     reviews: 0
     image: /assets/images/uploads/dunns-river-falls-commons.jpg
-    image_width: 1400
-    image_height: 787
+    image_width: 960
+    image_height: 539
     image_is_representative: true
     image_caption: Dunn's River Falls below the Bogue II watershed; this is a regional context image, not the forest trail itself.
     image_credit: Dr. Thomas Liptak / Wikimedia Commons
@@ -470,8 +470,8 @@ items:
     half_star: false
     reviews: 0
     image: /assets/images/uploads/cockpit-country-commons.jpg
-    image_width: 1120
-    image_height: 746
+    image_width: 960
+    image_height: 639
     image_credit: Fabian Tompsett / Wikimedia Commons
     image_credit_url: https://commons.wikimedia.org/wiki/File:Cockpit_Country.jpg
     image_license: CC BY-SA 3.0
@@ -516,8 +516,8 @@ items:
     half_star: false
     reviews: 0
     image: /assets/images/uploads/cockpit-country-commons.jpg
-    image_width: 1120
-    image_height: 746
+    image_width: 960
+    image_height: 639
     image_is_representative: true
     image_caption: Regional Cockpit Country landscape; confirm an approved Bunker's Hill trail photograph with the operator.
     image_credit: Fabian Tompsett / Wikimedia Commons

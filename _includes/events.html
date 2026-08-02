@@ -52,7 +52,7 @@
                         <span><i class="fas fa-clock"></i> {{ event.time }}</span>
                         <span><i class="fas fa-route"></i> {{ event.distance }}</span>
                     </div>
-                    <p class="event-desc">{{ event.description }}</p>
+                    <p class="event-desc">{{ event.description | strip_newlines | truncate: 180 }}</p>
                     <a href="#contact" class="event-signup">Sign Up <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                         <span><i class="fas fa-clock"></i> {{ event.time }}</span>
                         <span><i class="fas fa-route"></i> {{ event.distance }}</span>
                     </div>
-                    <p class="event-desc">{{ event.description }}</p>
+                    <p class="event-desc">{{ event.description | strip_newlines | truncate: 180 }}</p>
                 </div>
             </div>
             {% endif %}

@@ -6,11 +6,11 @@ permalink: /trails/
 image: /assets/images/hero.webp
 ---
 
-<main class="discovery-page">
+<div class="discovery-page">
     <section class="discovery-intro">
         <div class="container">
             <h1>Find a Trail</h1>
-            <p>Search and compare Jamaican trails by parish, difficulty, distance, duration, and preparation needs.</p>
+            <p>Search and compare Jamaican trails by parish, difficulty, distance, duration, and preparation needs. Use the filters to quickly find something that fits your crew, time, and fitness level.</p>
         </div>
     </section>
 
@@ -92,7 +92,10 @@ image: /assets/images/hero.webp
             </div>
 
             <div class="results-heading">
-                <h2 id="trail-results-heading">Jamaican trails</h2>
+                <div>
+                    <h2 id="trail-results-heading">Jamaican trails</h2>
+                    <p class="results-helper">Start with parish + difficulty if you're choosing a route for the first time.</p>
+                </div>
                 <p id="trailResultCount" aria-live="polite"></p>
             </div>
 
@@ -156,6 +159,6 @@ image: /assets/images/hero.webp
             </aside>
         </div>
     </section>
-</main>
+</div>
 
 <script src="{{ '/assets/js/trail-explorer.js' | relative_url }}"></script>

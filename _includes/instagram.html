@@ -4,22 +4,39 @@
         <div class="section-header reveal">
             <span class="section-badge"><i class="fab fa-instagram"></i> Community</span>
             <h2 class="section-title">Follow The Journey</h2>
-            <p class="section-subtitle">Tag @lifestylehikers or use #LifestyleHikersJA to be featured.</p>
+            <p class="section-subtitle">See recent trail moments from the crew, follow upcoming drops, and tag @lifestylehikers or #LifestyleHikersJA to be featured.</p>
         </div>
 
-        <div class="ig-feed-container reveal"
-            style="border-radius: var(--radius-lg); overflow: hidden; background: var(--clr-dark-card); border: 1px solid var(--clr-border);">
+        <div class="social-proof-grid reveal" aria-label="Lifestyle Hikers social proof highlights">
+            <article class="social-proof-card">
+                <span class="social-proof-label">Recent trail moments</span>
+                <h3>Fresh photos, reels, and hike recaps from the community.</h3>
+                <p>Use the Instagram feed to see the latest routes, group energy, and what recent hikes actually looked like on the ground.</p>
+            </article>
+            <article class="social-proof-card">
+                <span class="social-proof-label">Before the next drop</span>
+                <h3>Follow now so you do not miss the next public hike release.</h3>
+                <p>Instagram is one of the fastest ways to catch trail updates, schedule drops, and recap posts between hikes.</p>
+            </article>
+            <article class="social-proof-card social-proof-card--accent">
+                <span class="social-proof-label">Tag the crew</span>
+                <h3>@lifestylehikers · #LifestyleHikersJA</h3>
+                <p>Share your photos and videos from the trail for a chance to be featured in the community feed.</p>
+            </article>
+        </div>
+
+        <div class="ig-feed-container reveal">
             <!-- Curator.io Instagram Feed -->
             <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" rel="noopener noreferrer"
                     class="crt-logo crt-tag">Powered by Curator.io</a></div>
         </div>
 
-        <div style="text-align: center; margin-top: var(--space-xl);" class="reveal">
+        <div class="social-proof-actions reveal">
             <a href="https://www.instagram.com/lifestylehikers" target="_blank" rel="noopener noreferrer" class="nav-cta"
-                aria-label="Open Lifestyle Hikers on Instagram in a new tab"
-                style="display: inline-flex; align-items: center; gap: 8px;">
+                aria-label="Open Lifestyle Hikers on Instagram in a new tab">
                 <i class="fab fa-instagram"></i> View on Instagram
             </a>
+            <a href="{{ '/#contact' | relative_url }}" class="text-button">Join the next trail alert</a>
         </div>
     </div>
     <script>

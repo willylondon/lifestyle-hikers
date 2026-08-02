@@ -6,16 +6,39 @@ permalink: /hikes/
 image: /assets/images/hero.webp
 ---
 
-<main class="discovery-page">
+<div class="discovery-page">
     <section class="discovery-intro hikes-intro">
         <div class="container">
             <h1>Book a Hike</h1>
-            <p>Browse scheduled Lifestyle Hikers outings and use the organizer’s registration link to request your place.</p>
+            <p>Browse upcoming Lifestyle Hikers outings, join the next trail alert, or request a private group experience for your crew.</p>
         </div>
     </section>
 
+    {% assign now_unix = "now" | date: "%s" | plus: 0 %}
+    {% assign sorted_events = site.data.events.items | sort: "date" | reverse %}
+
     <section class="hikes-directory" aria-labelledby="hikes-heading">
         <div class="container">
+            <div class="booking-quick-actions">
+                <article class="booking-action-card booking-action-card--primary">
+                    <span class="booking-action-eyebrow">Next trail alert</span>
+                    <h2>Be first to know when the next public hike drops.</h2>
+                    <p>Join the community request form and we'll point you to the latest schedule, updates, and sign-up path.</p>
+                    <div class="booking-action-links">
+                        <a class="btn btn-primary" href="{{ '/#contact' | relative_url }}">Join the Community</a>
+                        <a class="text-button" href="https://forms.gle/TGFUS6svrLRx5rY37" target="_blank" rel="noopener noreferrer">Open the community form</a>
+                    </div>
+                </article>
+                <article class="booking-action-card">
+                    <span class="booking-action-eyebrow">Private group option</span>
+                    <h2>Planning for a team, school, or friend group?</h2>
+                    <p>Request a private hike and we'll coordinate route, timing, and what your group needs to know before the day.</p>
+                    <div class="booking-action-links">
+                        <a class="btn btn-outline" href="{{ '/#contact' | relative_url }}">Request a Private Hike</a>
+                    </div>
+                </article>
+            </div>
+
             <div class="status-tabs" role="group" aria-label="Filter hikes by status">
                 <button type="button" class="status-tab active" data-hike-filter="upcoming" aria-pressed="true">Upcoming</button>
                 <button type="button" class="status-tab" data-hike-filter="sold_out" aria-pressed="false">Sold out</button>
@@ -81,9 +104,34 @@ image: /assets/images/hero.webp
 
             <div class="explorer-empty" id="hikesEmpty" hidden>
                 <i class="fas fa-calendar" aria-hidden="true"></i>
-                <h3>No hikes in this category</h3>
-                <p>Check another status or contact the organizer about a private hike.</p>
+                <h3>No public hikes are open in this category right now</h3>
+                <p>Check another status, join the next trail alert, or request a private hike for your group.</p>
+                <div class="empty-state-actions">
+                    <a class="btn btn-primary" href="{{ '/#contact' | relative_url }}">Join the Trail Alert</a>
+                    <a class="btn btn-outline" href="{{ '/past-hikes/' | relative_url }}">See Past Hikes</a>
+                </div>
             </div>
+
+            {% if recent_completed.size > 0 %}
+            <section class="recent-proof" aria-labelledby="recent-proof-heading">
+                <div class="results-heading recent-proof-heading">
+                    <div>
+                        <h2 id="recent-proof-heading">Recent proof from the trail</h2>
+                        <p>Even when public booking is closed, the community is still active. Here are the latest completed outings.</p>
+                    </div>
+                </div>
+                <div class="recent-proof-grid">
+                    {% for event in recent_completed limit:3 %}
+                    <article class="recent-proof-card">
+                        <span class="status-label status-completed">Completed</span>
+                        <h3>{{ event.name }}</h3>
+                        <p class="recent-proof-meta">{{ event.date | date: "%-d %b %Y" }} · {{ event.location }}</p>
+                        <p>{{ event.description | strip_newlines | truncate: 140 }}</p>
+                    </article>
+                    {% endfor %}
+                </div>
+            </section>
+            {% endif %}
 
             <div class="payment-guidance">
                 <div>
@@ -94,6 +142,6 @@ image: /assets/images/hero.webp
             </div>
         </div>
     </section>
-</main>
+</div>
 
 <script src="{{ '/assets/js/hikes.js' | relative_url }}"></script>

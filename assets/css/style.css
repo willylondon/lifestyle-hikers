@@ -643,6 +643,7 @@ textarea:focus-visible {
 }
 
 .filter-btn {
+    min-height: 44px;
     padding: var(--space-sm) var(--space-xl);
     border-radius: var(--radius-xl);
     font-size: 0.9rem;
@@ -717,29 +718,29 @@ textarea:focus-visible {
 }
 
 .trail-badge.easy {
-    background: rgba(82, 183, 136, 0.15);
-    color: var(--clr-easy);
-    border: 1px solid rgba(82, 183, 136, 0.3);
+    background: #1f6b4f;
+    color: var(--clr-white);
+    border: 1px solid rgba(82, 183, 136, 0.5);
 }
 
 .trail-badge.moderate {
-    background: rgba(233, 196, 106, 0.15);
-    color: var(--clr-moderate);
-    border: 1px solid rgba(233, 196, 106, 0.3);
+    background: #8a6a16;
+    color: var(--clr-white);
+    border: 1px solid rgba(233, 196, 106, 0.5);
 }
 
 .trail-badge.hard {
-    background: rgba(231, 111, 81, 0.15);
-    color: var(--clr-hard);
-    border: 1px solid rgba(231, 111, 81, 0.3);
+    background: #9a3f2f;
+    color: var(--clr-white);
+    border: 1px solid rgba(231, 111, 81, 0.55);
 }
 
 .trail-save {
     position: absolute;
     top: var(--space-md);
     right: var(--space-md);
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -762,6 +763,13 @@ textarea:focus-visible {
 
 .trail-card-body {
     padding: var(--space-lg);
+}
+
+.trail-summary {
+    color: var(--clr-text-muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-top: var(--space-sm);
 }
 
 .trail-name {
@@ -1035,6 +1043,58 @@ textarea:focus-visible {
     line-height: 1.8;
 }
 
+.about-milestones {
+    display: grid;
+    gap: var(--space-lg);
+    margin: var(--space-xl) 0;
+}
+
+.about-milestone {
+    display: grid;
+    grid-template-columns: 110px minmax(0, 1fr);
+    gap: var(--space-lg);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.about-milestone-year {
+    color: var(--clr-accent-light);
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.about-stat-strip {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-md);
+    margin: var(--space-xl) 0 var(--space-2xl);
+}
+
+.about-stat-strip div {
+    display: grid;
+    gap: 0.25rem;
+    padding: var(--space-lg);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.about-stat-strip strong {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--clr-white);
+}
+
+.about-stat-strip span {
+    color: var(--clr-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.78rem;
+}
+
 .about-features {
     display: flex;
     flex-direction: column;
@@ -1157,6 +1217,66 @@ textarea:focus-visible {
 }
 
 /* ========================================
+   SOCIAL PROOF / INSTAGRAM
+   ======================================== */
+.social-proof-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+}
+
+.social-proof-card,
+.testimonial-summary-card,
+.review-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+}
+
+.social-proof-card--accent {
+    border-color: rgba(30, 185, 232, 0.28);
+}
+
+.social-proof-label {
+    color: var(--clr-accent-light);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.social-proof-card h3 {
+    color: var(--clr-white);
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    margin: var(--space-sm) 0 var(--space-md);
+    line-height: 1.25;
+}
+
+.social-proof-card p {
+    color: var(--clr-text-muted);
+    line-height: 1.65;
+}
+
+.ig-feed-container {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--clr-dark-card);
+    border: 1px solid var(--clr-border);
+}
+
+.social-proof-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+/* ========================================
    CTA / CONTACT SECTION
    ======================================== */
 .cta-section {
@@ -1211,6 +1331,12 @@ textarea:focus-visible {
     display: flex;
     flex-direction: column;
     gap: var(--space-md);
+}
+
+.form-privacy {
+    color: var(--clr-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 .form-row {
@@ -1308,6 +1434,99 @@ textarea:focus-visible {
     transform: translateY(-3px);
     box-shadow: var(--shadow-glow);
     color: var(--clr-white);
+}
+
+/* ========================================
+   TESTIMONIALS
+   ======================================== */
+.testimonials-section {
+    background: var(--clr-dark-surface);
+}
+
+.testimonial-summary {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+}
+
+.testimonial-summary-card {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.testimonial-summary-card strong {
+    color: var(--clr-white);
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    line-height: 1.2;
+}
+
+.testimonial-summary-card span {
+    color: var(--clr-text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-xl);
+}
+
+.review-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.review-author {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.review-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--clr-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-white);
+    flex-shrink: 0;
+}
+
+.review-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.review-name {
+    color: var(--clr-white);
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    line-height: 1.2;
+}
+
+.review-context {
+    color: var(--clr-text-muted);
+    font-size: 0.85rem;
+}
+
+.review-rating {
+    color: #fbbf24;
+    font-size: 0.85rem;
+    display: inline-flex;
+    gap: 0.2rem;
+}
+
+.review-text {
+    color: var(--clr-text-muted);
+    line-height: 1.7;
 }
 
 /* ========================================
@@ -1493,6 +1712,26 @@ textarea:focus-visible {
     line-height: 1.7;
     margin-bottom: var(--space-lg);
     max-width: 300px;
+}
+
+.footer-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.75rem 1rem;
+    margin-bottom: var(--space-lg);
+    border-radius: var(--radius-md);
+    background: rgba(64, 145, 108, 0.16);
+    border: 1px solid rgba(64, 145, 108, 0.3);
+    color: var(--clr-text);
+    font-weight: 600;
+}
+
+.footer-cta:hover {
+    color: var(--clr-white);
+    border-color: var(--clr-water);
+    background: linear-gradient(135deg, rgba(45, 106, 79, 0.3), rgba(19, 124, 162, 0.26));
 }
 
 .footer-socials {
@@ -2544,6 +2783,9 @@ textarea:focus-visible {
     padding: 0.75rem 0.5rem;
     text-decoration: underline;
     text-underline-offset: 4px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
 }
 
 .trail-intelligence-section {
@@ -2718,6 +2960,88 @@ textarea:focus-visible {
 
 .results-heading p {
     color: var(--clr-text-muted);
+    max-width: 62ch;
+}
+
+.booking-quick-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+}
+
+.booking-action-card,
+.recent-proof-card {
+    background: var(--clr-dark-card);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+}
+
+.booking-action-card--primary {
+    border-color: rgba(64, 145, 108, 0.45);
+    background: linear-gradient(135deg, rgba(45, 106, 79, 0.16), rgba(22, 33, 25, 0.92));
+}
+
+.booking-action-eyebrow {
+    color: var(--clr-accent-light);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.booking-action-card h2 {
+    color: var(--clr-white);
+    font-family: var(--font-heading);
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    margin: var(--space-sm) 0 var(--space-md);
+}
+
+.booking-action-card p,
+.recent-proof-card p,
+.recent-proof-meta {
+    color: var(--clr-text-muted);
+    line-height: 1.65;
+}
+
+.booking-action-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.empty-state-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.recent-proof {
+    margin-top: var(--space-3xl);
+}
+
+.recent-proof-heading {
+    margin-bottom: var(--space-lg);
+}
+
+.recent-proof-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-lg);
+}
+
+.recent-proof-card h3 {
+    color: var(--clr-white);
+    font-family: var(--font-heading);
+    margin: var(--space-md) 0 var(--space-xs);
+}
+
+.recent-proof-meta {
+    margin-bottom: var(--space-sm);
 }
 
 .explorer-grid {
@@ -2777,6 +3101,10 @@ textarea:focus-visible {
     font-family: var(--font-heading);
     font-size: 1.35rem;
     margin: var(--space-md) 0 var(--space-xs);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .explorer-card h3 a {
@@ -2820,6 +3148,13 @@ textarea:focus-visible {
     color: var(--clr-text-muted);
     line-height: 1.65;
     margin-top: var(--space-md);
+}
+
+.preparation-note {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .card-link {
@@ -3177,6 +3512,16 @@ textarea:focus-visible {
         grid-template-columns: 1fr;
     }
 
+    .social-proof-grid,
+    .testimonial-summary,
+    .testimonials-grid,
+    .about-milestone,
+    .about-stat-strip,
+    .booking-quick-actions,
+    .recent-proof-grid {
+        grid-template-columns: 1fr;
+    }
+
     .hike-directory-card {
         grid-template-columns: 70px minmax(0, 1fr);
         gap: var(--space-md);
@@ -3217,6 +3562,11 @@ textarea:focus-visible {
 
     .explorer-control-footer,
     .results-heading {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .social-proof-actions {
         align-items: stretch;
         flex-direction: column;
     }

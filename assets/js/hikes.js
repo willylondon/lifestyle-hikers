@@ -21,9 +21,15 @@
         });
         count.textContent = `${visible} ${visible === 1 ? 'hike' : 'hikes'}`;
         empty.hidden = visible !== 0;
+        list.dataset.activeStatus = status;
+    }
+
+    function firstAvailableStatus() {
+        const statuses = tabs.map(tab => tab.dataset.hikeFilter);
+        return statuses.find(status => cards.some(card => card.dataset.hikeStatus === status)) || 'upcoming';
     }
 
     tabs.forEach(tab => tab.addEventListener('click', () => applyFilter(tab.dataset.hikeFilter)));
-    applyFilter('upcoming');
+    applyFilter(firstAvailableStatus());
 })();
 
