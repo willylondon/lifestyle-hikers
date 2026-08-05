@@ -13,7 +13,7 @@
         <div class="hero-actions reveal">
             <a class="btn btn-primary" href="{{ '/hikes/' | relative_url }}">Book a Hike</a>
             <a class="btn btn-outline" href="{{ '/trails/' | relative_url }}">Find a Trail</a>
-            <a class="hero-secondary-link" href="#contact">Join the Community</a>
+            <a class="hero-secondary-link" href="{{ '/join/' | relative_url }}">Join the Community</a>
         </div>
         {% assign now_unix = 'now' | date: "%s" | plus: 0 %}
         {% assign current_year = 'now' | date: "%Y" %}

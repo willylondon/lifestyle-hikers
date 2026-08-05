@@ -10,6 +10,7 @@
             <h2 class="cta-title">Ready fi Hit di Trail?</h2>
             <p class="cta-subtitle">Join Lifestyle Hikers and discover Jamaica one trail at a time. Your next great
                 adventure starts here.</p>
+            <p class="form-expectation"><strong>What happens next:</strong> send the short request, follow the official Telegram channel, and allow up to two business days for a direct reply.</p>
 
             <!-- Signup form — fields map to Google Form entry IDs -->
             <form class="cta-form" id="join-form">
@@ -28,7 +29,7 @@
                     <input id="join-phone" type="tel" name="entry.2117914245" autocomplete="tel">
                 </div>
                 <div class="form-group">
-                    <label for="hiking-experience">Your Hiking Experience</label>
+                    <label for="hiking-experience">Your Hiking Experience <span>(optional)</span></label>
                     <select name="entry.1144046084" id="hiking-experience">
                         <option value="" disabled selected>Your Hiking Experience</option>
                         <option value="Beginner - Mi just a start out">Beginner - Mi just a start out</option>
@@ -40,7 +41,7 @@
                     <label for="join-referral">How did you hear about us? <span>(optional)</span></label>
                     <input id="join-referral" type="text" name="entry.609835379">
                 </div>
-                <p class="form-privacy">Your details are sent to the Lifestyle Hikers Google Form and used to respond to your community request. Do not include medical or payment information.</p>
+                <p class="form-privacy">Your details are sent to the Lifestyle Hikers Google Form and used to respond to your community request. Do not include medical or payment information. If you do not hear back within two business days, email <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
                 <p id="join-error" class="form-error" role="alert" hidden></p>
                 <button type="submit" class="cta-join-btn">
                     <i class="fas fa-users"></i> Join the Community
@@ -54,7 +55,7 @@
             -->
             <div id="join-success" style="display:none;" aria-live="polite">
                 <h3 class="cta-title" style="font-size:clamp(1.6rem,4vw,2.4rem);margin-bottom:var(--space-lg);">Request sent &#x1F97E;</h3>
-                <p class="cta-subtitle">Thanks for reaching out. Because Google Forms does not return a confirmation to this page, contact the team if you do not hear back. You can also
+                <p class="cta-subtitle">Your browser sent the request. Because Google Forms does not return a confirmation to this page, email the team if you do not hear back within two business days. You can also
                     follow our official Telegram channel &mdash; this is where all hike schedules,
                     trail drops, photos and updates live.</p>
                 <div id="join-success-cta" style="margin-top:var(--space-xl);"></div>
