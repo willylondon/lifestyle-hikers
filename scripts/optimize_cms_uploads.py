@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import re
+import shutil
 import subprocess
 import sys
 from dataclasses import dataclass
@@ -92,10 +93,14 @@ def build_plan(root: Path, public_path: str) -> ConversionPlan | None:
 def optimize_image(plan: ConversionPlan) -> None:
     plan.output_file.parent.mkdir(parents=True, exist_ok=True)
     temp_file = Path("/tmp") / f"{plan.output_file.stem}-tmp.png"
+    image_command = shutil.which("magick") or shutil.which("convert")
+    if not image_command:
+        raise RuntimeError("ImageMagick is required (expected 'magick' or 'convert' on PATH)")
+
     try:
         run(
             [
-                "magick",
+                image_command,
                 str(plan.source_file),
                 "-auto-orient",
                 "-resize",
