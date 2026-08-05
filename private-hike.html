@@ -1,0 +1,101 @@
+---
+layout: default
+title: "Request a Private Hike in Jamaica"
+description: "Request a private Lifestyle Hikers outing for friends, schools, teams, and community groups in Jamaica."
+permalink: /private-hike/
+image: /assets/images/hero-group-2026.jpg
+---
+
+<div class="journey-page inquiry-page">
+    <section class="journey-hero journey-hero--compact">
+        <div class="container journey-hero-content">
+            <a class="journey-back-link" href="{{ '/hikes/' | relative_url }}"><i class="fas fa-arrow-left" aria-hidden="true"></i> Hike schedule</a>
+            <h1>Request a Private Hike</h1>
+            <p>Tell us about your group, preferred timing, and the kind of experience you want. We will reply with the practical next steps.</p>
+        </div>
+    </section>
+
+    <section class="inquiry-section" aria-labelledby="private-form-title">
+        <div class="container inquiry-layout">
+            <aside class="inquiry-expectations">
+                <h2>What happens next</h2>
+                <ol>
+                    <li>We review your group size, timing, and trail preference.</li>
+                    <li>We confirm availability, route fit, and any guide or transport needs.</li>
+                    <li>You receive the plan and payment instructions directly from the organizer.</li>
+                </ol>
+                <p>This website does not collect card, bank, medical, waiver, or emergency-contact information.</p>
+            </aside>
+
+            <div class="inquiry-form-shell">
+                <h2 id="private-form-title">Tell us about your group</h2>
+                <p class="inquiry-form-intro">Required fields are marked. Allow up to two business days for a reply.</p>
+                <form class="inquiry-form" data-inquiry-form action="https://formspree.io/f/{{ site.formspree_id }}" method="POST">
+                    <input type="hidden" name="_subject" value="Private hike request from lifestylehikers.com">
+                    <input type="hidden" name="request_type" value="Private hike">
+                    <input class="sr-only" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="private-name">Full name <span aria-hidden="true">*</span></label>
+                            <input id="private-name" name="name" type="text" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="private-email">Email address <span aria-hidden="true">*</span></label>
+                            <input id="private-email" name="email" type="email" autocomplete="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="private-phone">Phone / WhatsApp <span>(optional)</span></label>
+                            <input id="private-phone" name="phone" type="tel" autocomplete="tel">
+                        </div>
+                        <div class="form-group">
+                            <label for="private-group-size">Group size <span aria-hidden="true">*</span></label>
+                            <select id="private-group-size" name="group_size" required>
+                                <option value="" selected disabled>Select group size</option>
+                                <option value="1-10">1–10 people</option>
+                                <option value="11-25">11–25 people</option>
+                                <option value="26-50">26–50 people</option>
+                                <option value="51+">51+ people</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="private-date">Preferred date <span>(optional)</span></label>
+                            <input id="private-date" name="preferred_date" type="date">
+                        </div>
+                        <div class="form-group">
+                            <label for="private-trail">Preferred trail <span>(optional)</span></label>
+                            <input id="private-trail" name="preferred_trail" type="text" data-query-param="trail" placeholder="Trail name or area">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="private-group-type">Group or organization <span>(optional)</span></label>
+                        <input id="private-group-type" name="group_or_organization" type="text" placeholder="Friends, school, workplace, community group">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="private-message">What kind of experience are you planning? <span aria-hidden="true">*</span></label>
+                        <textarea id="private-message" name="message" rows="6" required placeholder="Share your goals, fitness range, timing, and anything we should consider when recommending a route."></textarea>
+                    </div>
+
+                    <p class="form-privacy">Your enquiry is sent privately through Formspree to Lifestyle Hikers. Do not include medical, payment, waiver, or emergency-contact information.</p>
+                    <p class="form-error" data-form-error role="alert" hidden></p>
+                    <button class="cta-join-btn" type="submit">Send Private Hike Request</button>
+                </form>
+                <div class="inquiry-success" data-form-success tabindex="-1" hidden>
+                    <h2>Request received</h2>
+                    <p>Thanks. We will review the details and reply within two business days.</p>
+                    <a class="btn btn-outline" href="{{ '/trails/' | relative_url }}">Explore Trails</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script src="{{ '/assets/js/inquiry-forms.js' | relative_url }}"></script>

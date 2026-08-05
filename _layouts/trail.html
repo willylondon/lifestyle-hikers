@@ -95,7 +95,7 @@ layout: default
                 <p>This researched listing is not currently offered as a Lifestyle Hikers booking.</p>
                 {% else %}
                 <a class="btn btn-primary" href="{{ '/hikes/' | relative_url }}">Book This Hike</a>
-                <a class="btn btn-outline" href="{{ '/#contact' | relative_url }}">Request a Private Hike</a>
+                <a class="btn btn-outline" href="{{ '/private-hike/' | relative_url }}?trail={{ trail.name | url_encode }}">Request a Private Hike</a>
                 {% endif %}
                 {% if trail.booking_url %}<a class="btn btn-quiet" href="{{ trail.booking_url | escape }}" target="_blank" rel="noopener noreferrer">Check Official Access</a>{% endif %}
                 <button type="button" class="btn btn-quiet trail-detail-save" data-save-trail="{{ trail.slug }}" aria-pressed="false">

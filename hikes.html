@@ -17,10 +17,12 @@ image: /assets/images/hero.webp
     {% assign today_key = "now" | date: "%Y%m%d" | plus: 0 %}
     {% assign sorted_events = site.data.events.items | sort: "date" | reverse %}
     {% assign completed_count = 0 %}
+    {% assign upcoming_count = 0 %}
     {% for event in sorted_events %}
         {% capture derived_status %}{% include event-status.html event=event today_key=today_key %}{% endcapture %}
         {% assign derived_status = derived_status | strip %}
         {% if derived_status == "completed" %}{% assign completed_count = completed_count | plus: 1 %}{% endif %}
+        {% if derived_status == "upcoming" %}{% assign upcoming_count = upcoming_count | plus: 1 %}{% endif %}
     {% endfor %}
 
     <section class="hikes-directory" aria-labelledby="hikes-heading">
@@ -31,8 +33,7 @@ image: /assets/images/hero.webp
                     <h2>Be first to know when the next public hike drops.</h2>
                     <p>Join the community request form and we'll point you to the latest schedule, updates, and sign-up path.</p>
                     <div class="booking-action-links">
-                        <a class="btn btn-primary" href="{{ '/#contact' | relative_url }}">Join the Community</a>
-                        <a class="text-button" href="https://forms.gle/TGFUS6svrLRx5rY37" target="_blank" rel="noopener noreferrer">Open the community form</a>
+                        <a class="btn btn-primary" href="{{ '/join/' | relative_url }}">Get Hike Alerts</a>
                     </div>
                 </article>
                 <article class="booking-action-card">
@@ -40,7 +41,7 @@ image: /assets/images/hero.webp
                     <h2>Planning for a team, school, or friend group?</h2>
                     <p>Request a private hike and we'll coordinate route, timing, and what your group needs to know before the day.</p>
                     <div class="booking-action-links">
-                        <a class="btn btn-outline" href="{{ '/#contact' | relative_url }}">Request a Private Hike</a>
+                        <a class="btn btn-outline" href="{{ '/private-hike/' | relative_url }}">Request a Private Hike</a>
                     </div>
                 </article>
             </div>
@@ -52,6 +53,9 @@ image: /assets/images/hero.webp
                 <button type="button" class="status-tab" data-hike-filter="cancelled" aria-pressed="false">Cancelled</button>
                 <button type="button" class="status-tab" data-hike-filter="completed" aria-pressed="false">Completed</button>
             </div>
+            <p class="status-summary" id="hikeStatusSummary" aria-live="polite">
+                {% if upcoming_count == 0 %}No upcoming hikes are open right now. Showing completed hikes.{% endif %}
+            </p>
 
             <div class="results-heading">
                 <h2 id="hikes-heading">Hike schedule</h2>
@@ -93,7 +97,7 @@ image: /assets/images/hero.webp
                             {% if event.registration_url and event.registration_url != "" %}
                             <a class="btn btn-primary" href="{{ event.registration_url }}" target="_blank" rel="noopener noreferrer">Request a Place</a>
                             {% else %}
-                            <a class="btn btn-outline" href="{{ '/#contact' | relative_url }}">Contact Organizer</a>
+                            <a class="btn btn-outline" href="{{ '/join/' | relative_url }}">Contact Organizer</a>
                             {% endif %}
                         {% elsif derived_status == "sold_out" and event.waitlist_url %}
                         <a class="btn btn-outline" href="{{ event.waitlist_url }}" target="_blank" rel="noopener noreferrer">Join Waitlist</a>
@@ -111,7 +115,7 @@ image: /assets/images/hero.webp
                 <h3>No public hikes are open in this category right now</h3>
                 <p>Check another status, join the next trail alert, or request a private hike for your group.</p>
                 <div class="empty-state-actions">
-                    <a class="btn btn-primary" href="{{ '/#contact' | relative_url }}">Join the Trail Alert</a>
+                    <a class="btn btn-primary" href="{{ '/join/' | relative_url }}">Get Hike Alerts</a>
                     <a class="btn btn-outline" href="{{ '/past-hikes/' | relative_url }}">See Past Hikes</a>
                 </div>
             </div>
@@ -150,7 +154,7 @@ image: /assets/images/hero.webp
                     <h2>Manual payment for the first release</h2>
                     <p>Payment instructions are confirmed by the organizer after registration. This website does not collect card or bank details.</p>
                 </div>
-                <a class="btn btn-outline" href="{{ '/#contact' | relative_url }}">Request a Private Hike</a>
+                <a class="btn btn-outline" href="{{ '/private-hike/' | relative_url }}">Request a Private Hike</a>
             </div>
         </div>
     </section>

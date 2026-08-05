@@ -1,0 +1,104 @@
+---
+layout: default
+title: "Corporate Hiking Enquiry"
+description: "Start a conversation about team hiking, corporate wellness, and Jamaica outdoor brand partnerships with Lifestyle Hikers."
+permalink: /corporate/inquiry/
+image: /assets/images/hero-group-2026.jpg
+---
+
+<div class="journey-page inquiry-page">
+    <section class="journey-hero journey-hero--compact">
+        <div class="container journey-hero-content">
+            <a class="journey-back-link" href="{{ '/corporate/' | relative_url }}"><i class="fas fa-arrow-left" aria-hidden="true"></i> Corporate experiences</a>
+            <h1>Start a Corporate Enquiry</h1>
+            <p>Share your team, wellness, sponsorship, or destination-partnership goals. We will respond with the most useful next step.</p>
+        </div>
+    </section>
+
+    <section class="inquiry-section" aria-labelledby="corporate-form-title">
+        <div class="container inquiry-layout">
+            <aside class="inquiry-expectations">
+                <h2>A focused first conversation</h2>
+                <p>Route, group size, safety needs, transport, content coverage, and branded deliverables can all affect the final plan.</p>
+                <ul>
+                    <li>Corporate wellness and team hikes</li>
+                    <li>Hydration and recovery partnerships</li>
+                    <li>Tourism and destination collaborations</li>
+                    <li>Community-aligned brand activations</li>
+                </ul>
+                <p>Allow up to two business days for a reply.</p>
+            </aside>
+
+            <div class="inquiry-form-shell">
+                <h2 id="corporate-form-title">Tell us what you are planning</h2>
+                <p class="inquiry-form-intro">Required fields are marked. No commitment is created by sending this enquiry.</p>
+                <form class="inquiry-form" data-inquiry-form action="https://formspree.io/f/{{ site.formspree_id }}" method="POST">
+                    <input type="hidden" name="_subject" value="Corporate enquiry from lifestylehikers.com">
+                    <input type="hidden" name="request_type" value="Corporate enquiry">
+                    <input class="sr-only" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="corporate-name">Contact name <span aria-hidden="true">*</span></label>
+                            <input id="corporate-name" name="name" type="text" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="corporate-email">Work email <span aria-hidden="true">*</span></label>
+                            <input id="corporate-email" name="email" type="email" autocomplete="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="corporate-organization">Organization <span aria-hidden="true">*</span></label>
+                            <input id="corporate-organization" name="organization" type="text" autocomplete="organization" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="corporate-phone">Phone / WhatsApp <span>(optional)</span></label>
+                            <input id="corporate-phone" name="phone" type="tel" autocomplete="tel">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="corporate-interest">Enquiry type <span aria-hidden="true">*</span></label>
+                            <select id="corporate-interest" name="inquiry_type" data-query-param="interest" required>
+                                <option value="" selected disabled>Select an enquiry type</option>
+                                <option value="Corporate wellness hike">Corporate wellness hike</option>
+                                <option value="Private team experience">Private team experience</option>
+                                <option value="Brand partnership">Brand partnership</option>
+                                <option value="Tourism or destination partnership">Tourism or destination partnership</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="corporate-group-size">Estimated group size <span>(optional)</span></label>
+                            <input id="corporate-group-size" name="estimated_group_size" type="number" min="1" inputmode="numeric">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="corporate-date">Preferred date or campaign window <span>(optional)</span></label>
+                        <input id="corporate-date" name="preferred_timing" type="text" placeholder="For example: October 2026 or Q1 2027">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="corporate-message">Goals and requirements <span aria-hidden="true">*</span></label>
+                        <textarea id="corporate-message" name="message" rows="6" required placeholder="Tell us the audience, objective, timing, and what a successful experience or partnership should achieve."></textarea>
+                    </div>
+
+                    <p class="form-privacy">Your enquiry is sent privately through Formspree to Lifestyle Hikers. Do not include payment details or confidential personal information.</p>
+                    <p class="form-error" data-form-error role="alert" hidden></p>
+                    <button class="cta-join-btn" type="submit">Send Corporate Enquiry</button>
+                </form>
+                <div class="inquiry-success" data-form-success tabindex="-1" hidden>
+                    <h2>Enquiry received</h2>
+                    <p>Thanks. We will review the details and reply within two business days.</p>
+                    <a class="btn btn-outline" href="{{ '/corporate/' | relative_url }}">Return to Corporate Experiences</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script src="{{ '/assets/js/inquiry-forms.js' | relative_url }}"></script>

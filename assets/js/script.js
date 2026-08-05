@@ -317,6 +317,45 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Keep direct/bookmarked homepage anchors aligned while lazy media above them settles.
+    const stabilizeHashTarget = () => {
+        if (!window.location.hash || window.location.hash === '#') return;
+
+        let selector;
+        try {
+            selector = decodeURIComponent(window.location.hash);
+        } catch (error) {
+            selector = window.location.hash;
+        }
+
+        const target = document.querySelector(selector);
+        if (!target) return;
+
+        const expectedHash = window.location.hash;
+        let attempts = 0;
+        const alignTarget = () => {
+            if (window.location.hash !== expectedHash) return;
+
+            const offset = 80;
+            const targetY = Math.max(0, target.getBoundingClientRect().top + window.pageYOffset - offset);
+            if (Math.abs(window.pageYOffset - targetY) > 3) {
+                window.scrollTo({ top: targetY, behavior: 'auto' });
+            }
+
+            attempts += 1;
+            if (attempts < 12) window.setTimeout(alignTarget, 250);
+        };
+
+        window.setTimeout(alignTarget, 50);
+    };
+
+    if (document.readyState === 'complete') {
+        stabilizeHashTarget();
+    } else {
+        window.addEventListener('load', stabilizeHashTarget, { once: true });
+    }
+    window.addEventListener('hashchange', stabilizeHashTarget);
+
     // --- Fade-in keyframe (used by filter) ---
     const style = document.createElement('style');
     style.textContent = `
