@@ -1,0 +1,9 @@
+{%- assign event_day = include.event.date | date: "%Y%m%d" | plus: 0 -%}
+{%- assign configured_status = include.event.event_status | default: "auto" -%}
+{%- if event_day < include.today_key -%}
+  {%- if configured_status == "cancelled" -%}cancelled{%- else -%}completed{%- endif -%}
+{%- elsif configured_status == "auto" or configured_status == "" -%}
+  upcoming
+{%- else -%}
+  {{- configured_status -}}
+{%- endif -%}

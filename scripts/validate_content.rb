@@ -54,10 +54,37 @@ trail_slugs = trails.map { |trail| trail["slug"] }.compact
 errors << "_data/trails.yml: trail slugs must be present and unique" unless trail_slugs.length == trails.length && trail_slugs.uniq.length == trails.length
 
 events = load_yaml(File.join(ROOT, "_data", "events.yml")).fetch("items", [])
+event_statuses = %w[auto upcoming sold_out members_only cancelled completed]
+event_difficulties = %w[easy moderate hard]
+event_identities = Hash.new { |hash, key| hash[key] = [] }
 events.each_with_index do |event, index|
   %w[name date location].each do |field|
     errors << "_data/events.yml item #{index + 1}: missing #{field}" if event[field].to_s.strip.empty?
   end
+
+  status = event["event_status"].to_s.strip
+  if !status.empty? && !event_statuses.include?(status)
+    errors << "_data/events.yml item #{index + 1}: invalid event_status #{status.inspect}"
+  end
+
+  difficulty = event["difficulty"].to_s.strip
+  if !difficulty.empty? && !event_difficulties.include?(difficulty)
+    errors << "_data/events.yml item #{index + 1}: invalid difficulty #{difficulty.inspect}"
+  end
+
+  %w[spots capacity spaces_remaining price_jmd].each do |field|
+    value = event[field]
+    errors << "_data/events.yml item #{index + 1}: #{field} cannot be negative" if value.is_a?(Numeric) && value.negative?
+  end
+
+  identity = [event["name"].to_s.strip.downcase, event["date"].to_s]
+  event_identities[identity] << index + 1 unless identity.any?(&:empty?)
+end
+
+event_identities.each do |(name, date), indexes|
+  next if indexes.length == 1
+
+  errors << "_data/events.yml: duplicate hike #{name.inspect} on #{date} at items #{indexes.join(', ')}"
 end
 
 stats = load_yaml(File.join(ROOT, "_config.yml")).fetch("stats", {})

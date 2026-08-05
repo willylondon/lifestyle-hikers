@@ -210,21 +210,24 @@ collections:
         hint: "Write your post here! Use headings, bold, lists, and images."
 
   # ------------------------------------------
-  # 2. UPCOMING HIKES (_data/events.yml)
+  # 2. HIKES & EVENTS (_data/events.yml)
   # ------------------------------------------
   - name: "events"
-    label: "🥾 Upcoming Hikes"
-    description: "Manage upcoming group hikes shown on the homepage"
+    label: "🥾 Hikes & Events"
+    description: "Add upcoming hikes or record hikes that already happened"
     files:
       - name: "upcoming_hikes"
-        label: "Upcoming Hikes List"
+        label: "Hike Schedule"
         file: "_data/events.yml"
         fields:
           - label: "Hikes"
             name: "items"
             widget: "list"
             label_singular: "Hike"
-            summary: "{{fields.name}} — {{fields.month}} {{fields.day}}"
+            summary: "{{fields.name}} — {{fields.date | date('MMM D, YYYY')}} — {{fields.event_status}}"
+            add_to_top: true
+            collapsed: true
+            hint: "Use Add Hike above this list. New hikes open at the top, and the public site sorts them by date automatically. Past dates are welcome."
             fields:
               - label: "Hike Name"
                 name: "name"
@@ -253,30 +256,38 @@ collections:
                 date_format: "YYYY-MM-DD"
                 time_format: false
                 format: "YYYY-MM-DD"
+                picker_utc: true
+                hint: "Choose the actual hike date, even if it has already passed. Past dates are published as completed automatically."
 
               - label: "Time & Meeting Point"
                 name: "time"
                 widget: "string"
-                hint: "e.g. 2:00 AM — Meet at Whitfield Hall"
+                required: false
+                hint: "Optional for past hikes. Example: 2:00 AM — Meet at Whitfield Hall"
 
               - label: "Distance"
                 name: "distance"
                 widget: "string"
-                hint: "e.g. 7.5 mi round trip"
+                required: false
+                hint: "Optional. Example: 7.5 mi round trip"
 
               - label: "Spots Available"
                 name: "spots"
                 widget: "number"
                 value_type: "int"
                 min: 0
+                required: false
+                hint: "Optional for completed hikes. This is a manually managed display number, not live booking inventory."
 
               - label: "Event Status"
                 name: "event_status"
                 widget: "select"
                 required: false
-                default: "upcoming"
-                hint: "Leave existing records unchanged; old dates are treated as completed on the public site."
+                default: "auto"
+                hint: "Recommended: Automatic. Future dates show as upcoming and past dates show as completed. Choose another status only for a special case."
                 options:
+                  - label: "Automatic — use the hike date"
+                    value: "auto"
                   - label: "Upcoming"
                     value: "upcoming"
                   - label: "Sold out"
@@ -347,7 +358,8 @@ collections:
               - label: "Description"
                 name: "description"
                 widget: "text"
-                hint: "A short description of what to expect on this hike"
+                required: false
+                hint: "Optional for a quick past-hike entry. Add a short recap or what hikers can expect."
 
               - label: "Flyer Image"
                 name: "flyer"

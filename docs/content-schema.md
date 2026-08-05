@@ -85,6 +85,7 @@ Current core fields:
 
 Optional public/automation fields:
 
+- `event_status`: `auto`, `upcoming`, `sold_out`, `members_only`, `cancelled`, or `completed`
 - `flyer`
 - `registration_url`
 - `distribution_status`: `draft`, `ready`, `sent`, or `failed`
@@ -99,6 +100,8 @@ Optional public/automation fields:
 - `announcement_error`
 
 `spots` is CMS-managed display data, not transactional availability.
+
+Status rendering is date-safe. `auto` or a missing status resolves to `upcoming` for a future date and `completed` for a past date. Past `upcoming`, `sold_out`, and `members_only` values are also resolved to `completed`, preventing stale listings. `cancelled` remains cancelled regardless of date.
 
 ## Blog posts
 

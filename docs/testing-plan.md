@@ -73,6 +73,9 @@ Use:
 - One sold-out event
 - One cancelled event
 - One completed event
+- A newly entered event with a past date and `event_status: auto`; it must render under Completed.
+- A past legacy event still marked `upcoming`; it must render under Completed.
+- Confirm **Add Hike** appears above the event list and new event cards are collapsed by default in the CMS.
 - One event with no price/registration URL
 - One post with a custom permalink
 - One post using the default permalink
@@ -91,4 +94,3 @@ A release is blocked if:
 - Forms falsely report success.
 - Private data is written to Git.
 - Critical desktop/mobile flows fail.
-

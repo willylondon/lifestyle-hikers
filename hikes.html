@@ -14,8 +14,14 @@ image: /assets/images/hero.webp
         </div>
     </section>
 
-    {% assign now_unix = "now" | date: "%s" | plus: 0 %}
+    {% assign today_key = "now" | date: "%Y%m%d" | plus: 0 %}
     {% assign sorted_events = site.data.events.items | sort: "date" | reverse %}
+    {% assign completed_count = 0 %}
+    {% for event in sorted_events %}
+        {% capture derived_status %}{% include event-status.html event=event today_key=today_key %}{% endcapture %}
+        {% assign derived_status = derived_status | strip %}
+        {% if derived_status == "completed" %}{% assign completed_count = completed_count | plus: 1 %}{% endif %}
+    {% endfor %}
 
     <section class="hikes-directory" aria-labelledby="hikes-heading">
         <div class="container">
@@ -53,15 +59,11 @@ image: /assets/images/hero.webp
             </div>
 
             <div class="hike-list" id="hikeList">
-                {% assign now_unix = "now" | date: "%s" | plus: 0 %}
                 {% assign sorted_events = site.data.events.items | sort: "date" | reverse %}
                 {% for event in sorted_events %}
-                {% assign event_unix = event.date | date: "%s" | plus: 0 %}
-                {% assign derived_status = event.event_status %}
-                {% unless derived_status %}
-                    {% if event_unix < now_unix %}{% assign derived_status = "completed" %}{% else %}{% assign derived_status = "upcoming" %}{% endif %}
-                {% endunless %}
-                <article class="hike-directory-card" data-hike-status="{{ derived_status }}">
+                {% capture derived_status %}{% include event-status.html event=event today_key=today_key %}{% endcapture %}
+                {% assign derived_status = derived_status | strip %}
+                <article class="hike-directory-card{% if derived_status == 'completed' or derived_status == 'cancelled' %} hike-directory-card--closed{% endif %}" data-hike-status="{{ derived_status }}">
                     <div class="hike-date-block" aria-label="{{ event.date | date: '%B %-d, %Y' }}">
                         <span>{{ event.date | date: "%b" | upcase }}</span>
                         <strong>{{ event.date | date: "%d" }}</strong>
@@ -76,15 +78,16 @@ image: /assets/images/hero.webp
                             <span class="status-label status-{{ derived_status }}">{{ derived_status | replace: "_", " " | capitalize }}</span>
                         </div>
                         <dl class="hike-facts">
-                            <div><dt>Time</dt><dd>{{ event.departure_time | default: event.time }}</dd></div>
+                            <div><dt>Time</dt><dd>{{ event.departure_time | default: event.time | default: "Not recorded" }}</dd></div>
                             <div><dt>Difficulty</dt><dd>{{ event.difficulty | capitalize }}</dd></div>
                             <div><dt>Price</dt><dd>{% if event.price_jmd %}${{ event.price_jmd }} JMD{% else %}Contact organizer{% endif %}</dd></div>
                             <div><dt>Meeting point</dt><dd>{{ event.meeting_point | default: event.location }}</dd></div>
                             <div><dt>Spaces remaining</dt><dd>{% if event.spaces_remaining %}{{ event.spaces_remaining }}{% elsif event.spots %}{{ event.spots }} (CMS-managed){% else %}Contact organizer{% endif %}</dd></div>
                             <div><dt>Transport</dt><dd>{{ event.transport_information | default: "Contact organizer" }}</dd></div>
                         </dl>
-                        <p class="hike-description">{{ event.description }}</p>
+                        {% if event.description %}<p class="hike-description">{{ event.description }}</p>{% endif %}
                     </div>
+                    {% unless derived_status == "completed" or derived_status == "cancelled" %}
                     <div class="hike-directory-actions">
                         {% if derived_status == "upcoming" or derived_status == "members_only" %}
                             {% if event.registration_url and event.registration_url != "" %}
@@ -98,6 +101,7 @@ image: /assets/images/hero.webp
                         <span class="hike-unavailable">{{ derived_status | replace: "_", " " | capitalize }}</span>
                         {% endif %}
                     </div>
+                    {% endunless %}
                 </article>
                 {% endfor %}
             </div>
@@ -112,7 +116,7 @@ image: /assets/images/hero.webp
                 </div>
             </div>
 
-            {% if recent_completed.size > 0 %}
+            {% if completed_count > 0 %}
             <section class="recent-proof" aria-labelledby="recent-proof-heading">
                 <div class="results-heading recent-proof-heading">
                     <div>
@@ -121,13 +125,21 @@ image: /assets/images/hero.webp
                     </div>
                 </div>
                 <div class="recent-proof-grid">
-                    {% for event in recent_completed limit:3 %}
+                    {% assign rendered_recent = 0 %}
+                    {% for event in sorted_events %}
+                    {% capture recent_status %}{% include event-status.html event=event today_key=today_key %}{% endcapture %}
+                    {% assign recent_status = recent_status | strip %}
+                    {% if recent_status == "completed" and rendered_recent < 3 %}
+                    {% assign rendered_recent = rendered_recent | plus: 1 %}
                     <article class="recent-proof-card">
                         <span class="status-label status-completed">Completed</span>
                         <h3>{{ event.name }}</h3>
                         <p class="recent-proof-meta">{{ event.date | date: "%-d %b %Y" }} · {{ event.location }}</p>
+                        {% if event.description %}
                         <p>{{ event.description | strip_newlines | truncate: 140 }}</p>
+                        {% endif %}
                     </article>
+                    {% endif %}
                     {% endfor %}
                 </div>
             </section>

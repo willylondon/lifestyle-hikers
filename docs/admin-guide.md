@@ -24,9 +24,13 @@ Open **Trails → Featured Trails**.
 
 ## Manage hikes/events
 
-Open **Upcoming Hikes → Upcoming Hikes List**.
+Open **Hikes & Events → Hike Schedule**.
 
+- Use **Add Hike** at the top of the list; new entries open above existing records.
 - Use a real calendar date.
+- Past dates are allowed. Keep **Event Status** on `auto` unless the hike is sold out, members-only, cancelled, or needs another explicit exception.
+- A past date is displayed as completed even if an older record still contains `upcoming`, `sold_out`, or `members_only`.
+- For a quick past-hike record, only name, date, location, and difficulty are required. Add the recap details later when time allows.
 - Keep meeting/time details unambiguous.
 - `spots` is manually managed display data; it is not linked to bookings.
 - Add a real registration URL before presenting an event as bookable.
@@ -68,5 +72,5 @@ Git history is the version record. If a content publish is wrong, contact the re
 - Image and alt text are present where needed.
 - No private data or secrets are included.
 - Distribution status is intentional.
+- Past hikes appear under Completed, not Upcoming.
 - Public page is checked after GitHub Pages finishes rebuilding.
-
