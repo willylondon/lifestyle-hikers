@@ -334,7 +334,7 @@ items:
     time: 5:00 AM Portmore Toll
     distance: 5 Miles
     spots: 10
-    event_status: upcoming
+    event_status: completed
     capacity: null
     price_jmd: null
     meeting_point: ''

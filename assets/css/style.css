@@ -3233,6 +3233,10 @@ textarea:focus-visible {
     border-radius: var(--radius-lg);
 }
 
+.hike-directory-card--closed {
+    grid-template-columns: 92px minmax(0, 1fr);
+}
+
 .hike-date-block {
     display: grid;
     place-items: center;

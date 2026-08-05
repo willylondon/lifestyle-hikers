@@ -12,7 +12,7 @@ Once the CMS is set up (see Setup section below), here's how to use it:
 2. Log in with your **GitHub account**
 3. You'll see the content dashboard with 4 sections:
    - 📝 **Blog Posts** — Trail stories, recaps, tips
-   - 🥾 **Upcoming Hikes** — Group hike schedule
+   - 🥾 **Hikes & Events** — Upcoming and completed group hikes
    - 📸 **Gallery** — Photo gallery
    - 🗺️ **Trails** — Featured trail listings
 
@@ -35,16 +35,18 @@ Once the CMS is set up (see Setup section below), here's how to use it:
    - **Tags** — Add tags like "blue-mountains", "waterfall"
 3. Click **Publish** when ready (or **Save Draft** to finish later)
 
-### Updating Upcoming Hikes
+### Adding or Updating Hikes
 
-1. Click **🥾 Upcoming Hikes** → **Upcoming Hikes List**
-2. You'll see all current hikes listed
-3. Click one to edit, or click **Add Hike** to create a new one
-4. Fill in: name, location, difficulty, date, meeting time, distance, spots, description
-5. Optional: add a flyer image and registration link for Telegram/Brevo announcements
-6. Leave **Distribution Status** as `Draft` while editing
-7. Set **Distribution Status** to `Ready` only when the hike should be announced
-8. Click **Publish** to save changes
+1. Click **🥾 Hikes & Events** → **Hike Schedule**.
+2. Use **Add Hike** at the top of the list. The new form opens at the top, so there is no need to scroll past older hikes.
+3. Enter the hike name, actual date, location, and difficulty. The date may be in the past.
+4. Leave **Event Status** set to **Automatic — use the hike date**. Future dates display as upcoming; past dates display as completed.
+5. For a quick past-hike entry, time, distance, spots, and description are optional and can be added later.
+6. For an upcoming hike, add clear meeting details, availability, description, and a real registration link before publishing it as bookable.
+7. Leave **Distribution Status** as `Draft` while editing. Set it to `Ready` only when the hike should be announced.
+8. Click **Publish** to save changes.
+
+Special statuses such as **Sold out**, **Members only**, and **Cancelled** remain available. Any old record accidentally left as Upcoming or Sold out is displayed as Completed after its date passes; a cancelled hike remains Cancelled.
 
 ### Managing the Gallery
 
