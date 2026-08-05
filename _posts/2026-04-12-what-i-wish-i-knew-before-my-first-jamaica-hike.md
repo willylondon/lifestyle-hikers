@@ -13,7 +13,7 @@ layout: post
 
 I still remember my first hike like it was yesterday.
 
-I was so confident. Good shoes - or so I thought. A bottle of water. A little snack in my bag. SPF 15 sunscreen I applied once in the morning. I figured how hard could it be? Jamaica is beautiful but it's not exactly mountaineering.![](/assets/images/uploads/hkin.jpg)
+I was so confident. Good shoes - or so I thought. A bottle of water. A little snack in my bag. SPF 15 sunscreen I applied once in the morning. I figured how hard could it be? Jamaica is beautiful but it's not exactly mountaineering.![](/assets/images/uploads/hkin-1200w.webp)
 
 Six hours later, I limped back to my car with blisters the size of quarters, a sunburnt neck that felt like it was on fire, barely any water left in my bottle, and legs so cramped I couldn't walk properly for two days.
 

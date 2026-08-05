@@ -6,7 +6,7 @@ date: 2026-04-04
 author: Lifestyle Hikers
 category: Trail Stories
 location: Reggae Falls, St. Thomas
-image: /assets/images/uploads/IMG_1531.jpg
+image: /assets/images/uploads/IMG_1531-1200w.webp
 tags:
   - Reggae Falls, St. Thomas Jamaica, Serge Island, Jamaica Hiking, Lifestyle Hikers, Easy Hikes Jamaica, Dam Head, Jamaica Waterfalls, Hike Report, Things To Do In St. Thomas, Blue Mountains, Jamaica Travel, Hillside St Thomas, Morant Bay, Jamaica Nature
 ---

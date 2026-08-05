@@ -7,7 +7,7 @@ author: Lifestyle Hikers
 category: Recovery & Wellness
 description: "Use our free Post-Hike Recovery Report tool to get personalized hydration, nutrition, sleep, and recovery guidance after every hike in Jamaica. No login required."
 canonical: "https://www.lifestylehikers.com/blog/post-hike-recovery-report-tool-jamaica/"
-image: /assets/images/uploads/recovery-report-thumbnail.png
+image: /assets/images/uploads/recovery-report-thumbnail.webp
 tags:
   - post-hike recovery
   - hiking recovery tips
@@ -35,7 +35,7 @@ The signs show up quietly at first:
 - energy crashes that last longer than expected
 - soreness that makes you skip the next hike
 
-![5 signs you need better post-hike recovery](/assets/images/uploads/recovery-signs-infographic.png)
+![5 signs you need better post-hike recovery](/assets/images/uploads/recovery-signs-infographic.webp)
 
 A structured recovery approach fixes all of that. And it does not have to be complicated.
 
@@ -66,7 +66,7 @@ Once you hit **Generate Report**, the tool builds a personalised plan covering:
 
 That is not generic advice pulled from a fitness blog. The calculations use the **Compendium of Physical Activities MET values**, **ACSM walking equations**, and **ISSN sports nutrition ranges** — the same frameworks used by sports scientists and dietitians.
 
-![What your recovery report includes](/assets/images/uploads/recovery-features-infographic.png)
+![What your recovery report includes](/assets/images/uploads/recovery-features-infographic.webp)
 
 ## Recovery is not just about numbers
 
@@ -86,7 +86,7 @@ It also recommends specific **foods to prioritise** after your hike, with real m
 
 These are foods you can actually find and prepare. Not supplements. Not expensive recovery shakes. Real meals that match what the science says your body needs.
 
-![Post-hike recovery timeline — from hydration to light activity](/assets/images/uploads/recovery-timeline-infographic.png)
+![Post-hike recovery timeline — from hydration to light activity](/assets/images/uploads/recovery-timeline-infographic.webp)
 
 ## Who should use this tool
 

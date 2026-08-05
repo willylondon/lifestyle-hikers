@@ -6,7 +6,7 @@ date: 2026-05-10
 author: Lifestyle Hikers
 category: Hike Recaps
 location: Gordon Town
-image: /assets/images/uploads/PHOTO-2026-05-09-16-28-29.jpg
+image: /assets/images/uploads/PHOTO-2026-05-09-16-28-29-1200w.webp
 distribution_status: ready
 announcement_id: ''
 send_to_telegram: true
@@ -32,7 +32,7 @@ If you are looking for a challenging hike in the St. Andrew hills that delivers 
 
 ## What Is the Savage Pen to Penfield Hike?
 
-The Savage Pen to Penfield hike covers approximately seven miles of mountain terrain in eastern St. Andrew. It begins with the 1.6-kilometre climb up Savage Pen Road in Gordon Town and finishes at Penfield via the Redlight junction in Irish Town.![](/assets/images/uploads/PHOTO-2026-05-09-16-28-33.jpg)
+The Savage Pen to Penfield hike covers approximately seven miles of mountain terrain in eastern St. Andrew. It begins with the 1.6-kilometre climb up Savage Pen Road in Gordon Town and finishes at Penfield via the Redlight junction in Irish Town.![](/assets/images/uploads/PHOTO-2026-05-09-16-28-33-1200w.webp)
 
 The trail passes through some of the most dramatic landscapes in the Blue Mountains region, connecting working farming communities, colonial-era place names, and a road that only exists because of a national infrastructure emergency.
 
@@ -58,7 +58,7 @@ Most hikers do not know the story behind Savage Pen Road, and it is one worth te
 
 In November 2020, Tropical Storm Eta hit Jamaica and caused catastrophic damage to the main Gordon Town Road near Stand Up Hill. The embankment collapsed, leaving an eighty-metre drop where the road used to be. The National Works Agency declared the road impassable, cutting off thousands of residents in Gordon Town and the surrounding St. Andrew hills from Kingston and Papine.
 
-The only alternative detour was through Irish Town, Newcastle, and Silver Hill Gap, adding hours to daily commutes and making emergency services significantly harder to deploy.![](/assets/images/uploads/PHOTO-2026-05-09-11-41-49.jpg)
+The only alternative detour was through Irish Town, Newcastle, and Silver Hill Gap, adding hours to daily commutes and making emergency services significantly harder to deploy.![](/assets/images/uploads/PHOTO-2026-05-09-11-41-49-1200w.webp)
 
 The government, under Prime Minister Andrew Holness, identified Savage Pen Road as the best candidate for an emergency bypass. At the time, locals described it as little more than a footpath. The NWA cut, widened, reshaped, and paved the 1.6-kilometre corridor in a matter of weeks, completing it at a cost of J$60 million compared to the J$200 million required for the permanent repair of the main road.
 
@@ -100,7 +100,7 @@ Carry enough water. There are limited refill points between Savage Pen and Irish
 
 Know the geology. The area sits on the Wagwater Group formation, characterized by clay soil, steep slopes, and low water percolation. Landslips are a regular occurrence after heavy rain. Check the weather before you go and avoid the trail in wet conditions.
 
-This is a community road. Savage Pen Road is an active thoroughfare for residents, farmers, and vehicles. Stay aware of your surroundings, especially on the lower section.![](/assets/images/uploads/PHOTO-2026-05-09-16-28-34.jpg)
+This is a community road. Savage Pen Road is an active thoroughfare for residents, farmers, and vehicles. Stay aware of your surroundings, especially on the lower section.![](/assets/images/uploads/PHOTO-2026-05-09-16-28-34-1200w.webp)
 
 ## Frequently Asked Questions
 

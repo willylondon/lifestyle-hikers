@@ -234,7 +234,7 @@ items:
     stars: 0
     half_star: false
     reviews: 0
-    image: /assets/images/uploads/reach-falls-commons.jpg
+    image: /assets/images/uploads/reach-falls-commons-1200w.webp
     image_width: 1400
     image_height: 935
     image_credit: Morten Idriss Nygaar / Wikimedia Commons
@@ -327,7 +327,7 @@ items:
     stars: 0
     half_star: false
     reviews: 0
-    image: /assets/images/uploads/dunns-river-falls-commons.jpg
+    image: /assets/images/uploads/dunns-river-falls-commons-1200w.webp
     image_width: 960
     image_height: 539
     image_credit: Dr. Thomas Liptak / Wikimedia Commons
@@ -420,7 +420,7 @@ items:
     stars: 0
     half_star: false
     reviews: 0
-    image: /assets/images/uploads/dunns-river-falls-commons.jpg
+    image: /assets/images/uploads/dunns-river-falls-commons-1200w.webp
     image_width: 960
     image_height: 539
     image_is_representative: true
@@ -469,7 +469,7 @@ items:
     stars: 0
     half_star: false
     reviews: 0
-    image: /assets/images/uploads/cockpit-country-commons.jpg
+    image: /assets/images/uploads/cockpit-country-commons-1200w.webp
     image_width: 960
     image_height: 639
     image_credit: Fabian Tompsett / Wikimedia Commons
@@ -515,7 +515,7 @@ items:
     stars: 0
     half_star: false
     reviews: 0
-    image: /assets/images/uploads/cockpit-country-commons.jpg
+    image: /assets/images/uploads/cockpit-country-commons-1200w.webp
     image_width: 960
     image_height: 639
     image_is_representative: true
@@ -873,7 +873,7 @@ items:
     stars: 0
     half_star: false
     reviews: 0
-    image: /assets/images/uploads/ys-falls-commons.jpg
+    image: /assets/images/uploads/ys-falls-commons-1200w.webp
     image_width: 330
     image_height: 440
     image_credit: Jamaica1962 / Wikimedia Commons
