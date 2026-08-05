@@ -7,12 +7,9 @@ image: /assets/images/hero-group-2026.jpg
 ---
 
 {% include hero.html %}
-{% include trail-intelligence.html %}
-{% include trails.html %}
 {% include events.html %}
-{% include about.html %}
-{% include gallery.html %}
-{% include instagram.html %}
-{% include merch.html %}
-{% include testimonials.html %}
+{% include trails.html limit=3 %}
+{% include trail-intelligence.html %}
+{% include about-compact.html %}
+{% include testimonials.html limit=3 show_all=true %}
 {% include join-teaser.html %}

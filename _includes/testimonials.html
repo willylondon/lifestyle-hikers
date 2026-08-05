@@ -23,7 +23,8 @@
         </div>
 
         <div class="testimonials-grid reveal">
-            {% for review in site.data.testimonials.items limit:6 %}
+            {% assign review_limit = include.limit | default: 6 %}
+            {% for review in site.data.testimonials.items limit:review_limit %}
             <article class="review-card">
                 <div class="review-author">
                     <div class="review-avatar">
@@ -49,5 +50,10 @@
             </article>
             {% endfor %}
         </div>
+        {% if include.show_all %}
+        <div class="section-action reveal">
+            <a class="btn btn-outline" href="{{ '/gallery/' | relative_url }}#testimonials">Read More Community Stories</a>
+        </div>
+        {% endif %}
     </div>
 </section>

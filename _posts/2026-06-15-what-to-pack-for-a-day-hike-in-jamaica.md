@@ -6,6 +6,8 @@ categories: Lifestyle Hikers
 excerpt: A comprehensive guide on essential items to pack for a day hike in the beautiful landscapes of Jamaica.
 image: "https://images.unsplash.com/photo-1561339478-428f16f4bef2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MzI1NDd8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODE1NTAwMTB8&ixlib=rb-4.1.0&q=80&w=1080"
 image_alt: "man in red shirt facing house"
+hide_from_blog: true
+robots: noindex
 ---
 
 Heading into the stunning landscapes of Jamaica for a day hike is an exceptional way to immerse yourself in the island's natural beauty. However, to ensure a safe and enjoyable hiking experience, it's crucial to pack the right gear and supplies. In this comprehensive guide tailored for Lifestyle Hikers readers in Jamaica and the Caribbean, we'll explore the essential items you should pack for a day hike in Jamaica.

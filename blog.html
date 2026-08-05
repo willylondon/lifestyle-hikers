@@ -12,19 +12,48 @@ image: /assets/images/uploads/37c23df0-f8b1-4754-ac0d-a90becc8a0fb-1200w.webp
         <div class="section-header reveal">
             <span class="section-badge"><i class="fas fa-pen-fancy"></i> Stories</span>
             <h1 class="section-title">Trail Stories & Updates</h1>
-            <p class="section-subtitle">Guides, recaps, and adventures from the Lifestyle Hikers community.</p>
+            <p class="section-subtitle">Find practical guides, honest recaps, and adventures from the Lifestyle Hikers community.</p>
         </div>
 
-        <div class="blog-grid">
+        <div class="blog-controls" aria-label="Filter trail stories">
+            <div class="form-group">
+                <label for="blog-search">Search stories</label>
+                <input id="blog-search" type="search" placeholder="Search trails, places, or preparation" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="blog-category">Category</label>
+                <select id="blog-category">
+                    <option value="all">All stories</option>
+                    <option value="guides">Trail guides</option>
+                    <option value="stories">Hike recaps & stories</option>
+                    <option value="preparation">Preparation & wellness</option>
+                </select>
+            </div>
+        </div>
+        <div class="blog-results-row">
+            <p id="blog-result-count" aria-live="polite"></p>
+            <button type="button" class="text-button" id="blog-clear" hidden>Clear filters</button>
+        </div>
+
+        <div class="blog-grid" id="blog-grid">
+            {% assign visible_post_index = 0 %}
             {% for post in site.posts %}
-            {% if post.title and post.title != '' %}
-            <article class="blog-card reveal">
+            {% if post.title and post.title != '' and post.hide_from_blog != true %}
+            {% assign title_downcase = post.title | downcase %}
+            {% assign post_category_key = "guides" %}
+            {% assign post_category_label = "Trail guide" %}
+            {% if post.category contains "Stories" or post.category contains "Recaps" %}
+                {% assign post_category_key = "stories" %}
+                {% assign post_category_label = "Hike recap & story" %}
+            {% elsif post.category contains "Recovery" or title_downcase contains "pack" or title_downcase contains "hydration" or title_downcase contains "recovery" or title_downcase contains "first hike" %}
+                {% assign post_category_key = "preparation" %}
+                {% assign post_category_label = "Preparation & wellness" %}
+            {% endif %}
+            <article class="blog-card reveal" data-blog-card data-blog-category="{{ post_category_key }}" data-blog-search="{{ post.title | strip_html | escape }} {{ post.description | default: post.excerpt | strip_html | escape }}" data-blog-index="{{ visible_post_index }}">
                 {% if post.image %}
                 <div class="blog-card-img">
                     <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy" decoding="async">
-                    {% if post.category %}
-                    <span class="blog-category">{{ post.category }}</span>
-                    {% endif %}
+                    <span class="blog-category">{{ post_category_label }}</span>
                 </div>
                 {% endif %}
                 <div class="blog-card-body">
@@ -45,8 +74,18 @@ image: /assets/images/uploads/37c23df0-f8b1-4754-ac0d-a90becc8a0fb-1200w.webp
                     </a>
                 </div>
             </article>
+            {% assign visible_post_index = visible_post_index | plus: 1 %}
             {% endif %}
             {% endfor %}
+        </div>
+
+        <div class="blog-empty" id="blog-no-results" hidden>
+            <i class="fas fa-compass" aria-hidden="true"></i>
+            <h3>No matching stories</h3>
+            <p>Try a broader search or another category.</p>
+        </div>
+        <div class="section-action" id="blog-load-more-wrap">
+            <button type="button" class="btn btn-outline" id="blog-load-more">Load More Stories</button>
         </div>
 
         {% if site.posts.size == 0 %}
@@ -58,3 +97,5 @@ image: /assets/images/uploads/37c23df0-f8b1-4754-ac0d-a90becc8a0fb-1200w.webp
         {% endif %}
     </div>
 </section>
+
+<script src="{{ '/assets/js/blog.js' | relative_url }}"></script>

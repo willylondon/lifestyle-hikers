@@ -7,15 +7,10 @@
             <p class="section-subtitle">From misty Blue Mountain peaks to cascading waterfalls and river gorges —
                 discover Jamaica's best kept hiking secrets.</p>
         </div>
-        <div class="trails-filter reveal">
-            <button class="filter-btn active" data-filter="all">All Trails</button>
-            <button class="filter-btn" data-filter="easy">Easy</button>
-            <button class="filter-btn" data-filter="moderate">Moderate</button>
-            <button class="filter-btn" data-filter="hard">Hard</button>
-        </div>
         <div class="trails-grid" id="trailsGrid">
             {% assign featured_trails = site.data.trails.items | where: "featured", true %}
-            {% for trail in featured_trails %}
+            {% assign trail_limit = include.limit | default: 3 %}
+            {% for trail in featured_trails limit:trail_limit %}
             <div class="trail-card reveal" data-difficulty="{{ trail.difficulty }}" data-search="{{ trail.name }} {{ trail.location }} {{ trail.alt | default: '' }}">
                 <div class="trail-card-img">
                     <img src="{{ trail.image }}" alt="{{ trail.alt | default: trail.name }}" width="{{ trail.image_width | default: 700 }}" height="{{ trail.image_height | default: 500 }}" loading="lazy" decoding="async">
@@ -30,11 +25,14 @@
                         <span><i class="fas fa-route"></i> {{ trail.distance }}</span>
                         <span><i class="fas fa-clock"></i> {{ trail.time }}</span>
                     </div>
-                    {% if trail.preparation_note %}<p class="trail-summary">{{ trail.preparation_note | truncate: 110 }}</p>{% endif %}
+                    {% if trail.preparation_note %}<p class="trail-summary">{{ trail.preparation_note | truncate: 84 }}</p>{% endif %}
                     <a class="card-link" href="{{ '/trails/' | append: trail.slug | append: '/' | relative_url }}">View trail <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
             </div>
             {% endfor %}
+        </div>
+        <div class="section-action reveal">
+            <a class="btn btn-outline" href="{{ '/trails/' | relative_url }}">View All Trails</a>
         </div>
     </div>
 </section>
