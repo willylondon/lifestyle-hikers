@@ -80,7 +80,7 @@ items:
     time: 5:00 Am - Hillel Academy
     distance: 8 mi round trip
     spots: 20
-    description: The hike to Kingsworth is both a physical climb and a peaceful escape, blending city views, hillside neighborhoods, and the quiet beauty that defines the higher elevations of Jack’s Hill. It’s a short adventure that reminds you how quickly Kingston transforms from urban energy to mountain calm.
+    description: The hike to Kingsworth is both a physical climb and a peaceful escape, blending city views, hillside neighborhoods, and the quiet beauty that defines the higher elevations of Jack's Hill. It's a short adventure that reminds you how quickly Kingston transforms from urban energy to mountain calm.
     registration_url: ''
     announcement_id: ''
     announcement_sent_at: ''
@@ -108,7 +108,7 @@ items:
     time: 5:00 AM-Meet at Gordon Town Square
     distance: 6 mi one way
     spots: 20
-    description: Tucked away in the hills of Gordon Town, Sugarloaf Falls—locally known as C-Pond—is a hidden twin-cascade gem that offers a truly raw and refreshing escape. The moderately challenging 40-minute hike from Penfield takes you across loose shale and down rustic wooden ladders, leading to a secluded pool famous for having some of the coldest water in St. Andrew. Perfect for those looking to trade the crowds for a slice of untouched nature, this sanctuary provides a serene atmosphere and a rewarding "ice bucket challenge" for adventurous souls. It’s a quintessential Blue Mountain experience that feels miles away from the heat of the city.
+    description: Tucked away in the hills of Gordon Town, Sugarloaf Falls—locally known as C-Pond—is a hidden twin-cascade gem that offers a truly raw and refreshing escape. The moderately challenging 40-minute hike from Penfield takes you across loose shale and down rustic wooden ladders, leading to a secluded pool famous for having some of the coldest water in St. Andrew. Perfect for those looking to trade the crowds for a slice of untouched nature, this sanctuary provides a serene atmosphere and a rewarding "ice bucket challenge" for adventurous souls. It's a quintessential Blue Mountain experience that feels miles away from the heat of the city.
     registration_url: ''
     announcement_id: ''
     announcement_sent_at: ''
@@ -123,7 +123,7 @@ items:
     distance: 1 mi
     spots: 20
     description: |-
-      Join Lifestyle Hikers this Saturday for an energizing Beach Workout at Port Royal Beach. We’re swapping the hills for the sand to bring you a high-energy session to start your weekend right. Catch the sunrise, feel the breeze, and let’s get moving!
+      Join Lifestyle Hikers this Saturday for an energizing Beach Workout at Port Royal Beach. We're swapping the hills for the sand to bring you a high-energy session to start your weekend right. Catch the sunrise, feel the breeze, and let's get moving!
 
       Event Details:
 
@@ -188,7 +188,7 @@ items:
     description: |-
       The Lifestyle Hikers community came together for the LSH City Walk through Kingston on May 23 — a vibrant morning experience exploring the city while sharing great vibes, unforgettable moments, and excellent company.
 
-      We’re trading the mountain trails for a dynamic city route, but don't let the urban setting fool you—this is a Level 4 Experience that will keep you moving and refreshed. Along the way, we’ll be slowing down to socialize and stay hydrated with a selection of refreshing mocktails, mimosas, and cocktails.
+      We're trading the mountain trails for a dynamic city route, but don't let the urban setting fool you—this is a Level 4 Experience that will keep you moving and refreshed. Along the way, we'll be slowing down to socialize and stay hydrated with a selection of refreshing mocktails, mimosas, and cocktails.
 
       Whether you're here for the fitness, the views, or the social connection, this walk has something for everyone.
 
@@ -236,6 +236,27 @@ items:
     send_to_telegram: false
     send_to_brevo: true
     announcement_sent_at: 2026-06-11T07:31:00
+    telegram_sent: false
+    brevo_sent: false
+    telegram_message_id: ''
+    brevo_message_id: ''
+    announcement_error: ''
+  - name: Cave and Beach Walk
+    location: Hellshire, Sand Hills
+    difficulty: easy
+    date: 2026-07-25
+    time: 5:00 AM — Portmore Toll
+    distance: 5 miles
+    spots: 10
+    event_status: completed
+    description: Discover a side of Hellshire far beyond the famous beaches and fried fish. This dynamic trek took us deep into the rugged limestone hills of southern Portmore — a historic landscape shaped by Taino heritage, Spanish haciendas, and the resilient Maroons who navigated its caves and dense terrain for secrecy and freedom.
+    flyer: ''
+    registration_url: ''
+    distribution_status: draft
+    announcement_id: ''
+    send_to_telegram: false
+    send_to_brevo: false
+    announcement_sent_at: ''
     telegram_sent: false
     brevo_sent: false
     telegram_message_id: ''
