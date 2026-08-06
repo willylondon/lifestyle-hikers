@@ -4,7 +4,7 @@ title: "Hellshire Hiking Adventure: Sand Hills to Two Sisters Cave"
 date: 2026-08-05
 categories: Lifestyle Hikers
 excerpt: Lifestyle Hikers trekked 5 miles through Hellshire's mangroves, coastline and Taino history ,  from Sand Hills to Two Sisters Cave, Portmore, St. Catherine.
-image: /assets/images/uploads/hellshire-crocodile-2026.jpg
+image: /assets/images/uploads/hellshire-crocodile-2026-1200w.webp
 image_alt: American crocodile resting in a mangrove swamp in Hellshire, Jamaica
 permalink: /blog/hellshire-hiking-sand-hills-two-sisters-cave/
 ---
@@ -23,13 +23,13 @@ Explore [upcoming Lifestyle Hikers experiences](https://lifestylehikers.com) →
 
 We drove from the Portmore toll area to Sand Hills in Hellshire, where we parked and prepared for the journey. Before setting off, the group gathered for our usual prayer, a moment to focus, acknowledge the terrain ahead and start the experience together.
 
-![Lifestyle Hikers group gathered at Sand Hills, Hellshire, before starting the hike](/assets/images/uploads/hellshire-prayer-2026.jpg)
+![Lifestyle Hikers group gathered at Sand Hills, Hellshire, before starting the hike](/assets/images/uploads/hellshire-prayer-2026-1200w.webp)
 
-![Lifestyle Hikers walking along the road from Sand Hills towards the Hellshire wetlands](/assets/images/uploads/hellshire-road-to-wetlands-2026.jpg)
+![Lifestyle Hikers walking along the road from Sand Hills towards the Hellshire wetlands](/assets/images/uploads/hellshire-road-to-wetlands-2026-1200w.webp)
 
 From Sand Hills, we headed downhill toward the wetland.
 
-![Lifestyle Hikers heading from Sand Hills toward the Hellshire wetlands](/assets/images/uploads/hellshire-heading-down-2026.jpg)
+![Lifestyle Hikers heading from Sand Hills toward the Hellshire wetlands](/assets/images/uploads/hellshire-heading-down-2026-1200w.webp)
 
 Published information specifically about the Sand Hills community is limited, but Sand Hills sits within the wider Hellshire landscape on the southern side of Portmore, St. Catherine. Portmore is generally divided between its flatter northern plains and the limestone Hellshire Hills to the south. The broader area's history stretches back centuries, with documented evidence of Taino activity in Hellshire and later Spanish haciendas established in the region.
 
@@ -45,7 +45,7 @@ We almost stepped on a crocodile.
 
 It was resting quietly in the swamp, easy to overlook until we were nearly on top of it. Once we recognized what was in front of us, we stopped, gave it space and changed our route.
 
-![American crocodile resting in a mangrove swamp in Hellshire, Jamaica](/assets/images/uploads/hellshire-crocodile-2026.jpg)
+![American crocodile resting in a mangrove swamp in Hellshire, Jamaica](/assets/images/uploads/hellshire-crocodile-2026-1200w.webp)
 
 The American crocodile is native to Jamaica and commonly associated with coastal wetlands, mangrove systems, rivers and brackish water. It is also a protected species. That encounter was a sharp reminder that the swamp was not empty or abandoned; it was an active habitat, and we were the visitors in it.
 
@@ -55,7 +55,7 @@ For the group, the moment was both unnerving and educational, reinforcing the im
 
 As we continued through the wetland, the hike became an outdoor classroom.
 
-![Lifestyle Hikers crossing the Hellshire wetlands, mangrove forest, lagoon, and coastline in the distance](/assets/images/uploads/hellshire-wetlands-2026.jpg)
+![Lifestyle Hikers crossing the Hellshire wetlands, mangrove forest, lagoon, and coastline in the distance](/assets/images/uploads/hellshire-wetlands-2026-1200w.webp)
 
 Jamaica has four recognized mangrove types:
 
@@ -70,25 +70,25 @@ To a passing observer, a mangrove wetland can look like nothing more than mud an
 
 After negotiating the wetland, we emerged onto open beach, and the transition was dramatic. The enclosed swamp gave way to sea air, open views and firmer ground.
 
-![Lifestyle Hikers walking along the Hellshire coastline, seaweed, cliffs, and clear water](/assets/images/uploads/hellshire-coastline-2026.jpg)
+![Lifestyle Hikers walking along the Hellshire coastline, seaweed, cliffs, and clear water](/assets/images/uploads/hellshire-coastline-2026-1200w.webp)
 
 The distance, heat and uneven coastline kept testing the group even as the terrain looked easier.
 
 Along the shore we also encountered Sargassum, the floating brown seaweed that naturally provides food and shelter for marine organisms in the open ocean.
 
-![Sargassum seaweed washed up along the Hellshire coastline, a growing challenge for Jamaica's beaches](/assets/images/uploads/hellshire-sargassum-2026.jpg)
+![Sargassum seaweed washed up along the Hellshire coastline, a growing challenge for Jamaica's beaches](/assets/images/uploads/hellshire-sargassum-2026-1200w.webp)
 
 Problems arise when large quantities wash ashore and begin decomposing. The process can release gases that cause unpleasant odors and irritate eyes and airways where accumulations are heavy. It was another small lesson in how marine ecosystems and coastal conditions are connected.
 
-![A Lifestyle Hiker taking in the Hellshire coastline, rocky shore, calm water, and wide open sky](/assets/images/uploads/hellshire-beach-contemplation-2026.jpg)
+![A Lifestyle Hiker taking in the Hellshire coastline, rocky shore, calm water, and wide open sky](/assets/images/uploads/hellshire-beach-contemplation-2026-1200w.webp)
 
 ### The Old Shrimp Factory
 
-![Lifestyle Hikers en route to the abandoned shrimp factory along the Hellshire coastline](/assets/images/uploads/hellshire-shrimp-factory-route-2026.jpg)
+![Lifestyle Hikers en route to the abandoned shrimp factory along the Hellshire coastline](/assets/images/uploads/hellshire-shrimp-factory-route-2026-1200w.webp)
 
 Continuing along the coast, we reached the abandoned structures known locally as the old shrimp factory, weathered buildings standing near the shore, one of the most visually striking points on the route.
 
-![Aerial view of the abandoned shrimp factory complex along the Hellshire coast, industrial ruins surrounded by dense greenery](/assets/images/uploads/hellshire-shrimp-factory-2026.jpg)
+![Aerial view of the abandoned shrimp factory complex along the Hellshire coast, industrial ruins surrounded by dense greenery](/assets/images/uploads/hellshire-shrimp-factory-2026-1200w.webp)
 
 Behind us: mangroves and crocodile habitat. In front of us: the remains of human development slowly being reclaimed by the coastal environment.
 
@@ -104,7 +104,7 @@ The rugged, isolated Hellshire Hills also provided shelter for people who had es
 
 On the final stretch, we passed the historic Two Sisters Cave area in the Hellshire Hills, a twin limestone cave system containing freshwater sinkholes. A carved Taino face, estimated at roughly 700 years old, has been documented within the cave system.
 
-![Two Sisters Caves notice sign, group reservations only, book ahead through the Urban Development Corporation](/assets/images/uploads/hellshire-two-sisters-cave-sign-2026.jpg)
+![Two Sisters Caves notice sign, group reservations only, book ahead through the Urban Development Corporation](/assets/images/uploads/hellshire-two-sisters-cave-sign-2026-1200w.webp)
 
 With no evidence of permanent Taino occupation found there, heritage researchers generally conclude the caves were likely used for ceremonial purposes, with the freshwater sinkholes possibly serving as a water source. Two Sisters Cave links modern Portmore directly to Jamaica's Indigenous history and is a strong example of why this landscape deserves protection.
 
