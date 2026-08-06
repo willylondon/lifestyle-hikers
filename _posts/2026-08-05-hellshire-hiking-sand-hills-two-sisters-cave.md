@@ -17,7 +17,7 @@ What began as a short planned walk turned into an approximately five-mile hiking
 
 This was not just another hike. It was an encounter with Hellshire's natural environment, its cultural history and a side of Portmore that most visitors never see.
 
-Explore [upcoming Lifestyle Hikers experiences](https://lifestylehikers.com) →
+Explore [upcoming Lifestyle Hikers experiences](/hikes/) →
 
 ### Beginning the Hike at Sand Hills
 
@@ -126,7 +126,7 @@ This adventure delivered on all three of our core elements:
 - **Engagement**, a shared physical and mental challenge requiring teamwork and full participation from the group
 - **Education**, lessons in mangrove ecology, Jamaican wildlife, Taino heritage, coastal ecosystems and Hellshire's history
 
-Plan a [corporate hiking experience in Jamaica](https://lifestylehikers.com) →
+Plan a [corporate hiking experience in Jamaica](/corporate/) →
 
 Lifestyle Hikers builds outdoor experiences for Jamaicans, visitors, private groups and organizations looking for a deeper connection to the island, including:
 
@@ -149,7 +149,7 @@ Follow [@lifestylehikers](https://instagram.com/lifestylehikers) on Instagram fo
 
 Visit [LifestyleHikers.com](https://lifestylehikers.com) to see upcoming hikes, private-group options and corporate hiking experiences.
 
-For partnership, tourism, corporate wellness or group inquiries, [contact Lifestyle Hikers](https://lifestylehikers.com).
+For partnership, tourism, corporate wellness or group inquiries, [contact Lifestyle Hikers](/#contact).
 
 **Explore. Climb. Connect. One foot in front of the other.**
 
