@@ -1,49 +1,56 @@
-# Rollback Plan
+# Lifestyle Hikers — Rollback Plan
 
-## Branch and release controls
+**Date:** August 2, 2026
 
-- Develop on `feature/lifestyle-hikers-platform-upgrade`.
-- Do not commit directly to `main`.
-- Keep content repair, CMS schema, UI, and documentation changes in separate commits.
-- Record the last known-good production commit before deployment.
+## Rollback strategy
 
-## Static site rollback
+The site is a static Jekyll + GitHub Pages deployment. Rollback means reverting Git commits on `main`. There is no database migration, no server-side state, and no cache invalidation needed beyond GitHub Pages rebuild.
 
-1. Revert the failing logical commit on the feature/release branch.
-2. Run the production build and smoke tests.
-3. Merge the revert through the normal review path.
-4. Confirm GitHub Pages redeploys the prior routes/content.
+## Rollback procedures
 
-Do not rewrite history or force-push `main`.
+### Option A: Revert specific commit(s)
+```bash
+git checkout main
+git revert <commit-sha>  # Creates a revert commit
+git push origin main
+# GitHub Pages auto-rebuilds
+```
 
-## CMS data rollback
+### Option B: Reset to a known-good commit (emergency)
+```bash
+git checkout main
+git reset --hard <known-good-sha>
+git push --force origin main
+# GitHub Pages auto-rebuilds
+```
+⚠️ Force push should only be used in emergencies. Prefer `git revert`.
 
-- Restore `_config.yml`, `_data/*.yml`, or affected `_posts/*.md` from the last known-good commit.
-- Keep new fields optional so old records remain renderable.
-- Do not delete original images during the first migration.
-- If the CMS cannot open a new schema, revert `admin/config.yml` and preview-template changes together.
+### Option C: Roll back to previous deployment via GitHub UI
+1. Go to https://github.com/willylondon/lifestyle-hikers/deployments
+2. Find the last successful deployment
+3. The repo is always deployable from any commit on main
 
-## Automation rollback
+## Rollback verification
 
-- Enable `CONTENT_DISTRIBUTION_DRY_RUN=true` before testing payload changes.
-- Revert workflow and script changes as one logical unit.
-- Keep duplicate-protection announcement IDs stable.
-- Do not resend notifications during rollback unless an administrator explicitly requests it.
+After rollback:
+1. Visit https://www.lifestylehikers.com/
+2. Check GitHub Pages build status: `gh api repos/willylondon/lifestyle-hikers/pages`
+3. Verify key pages load: `/`, `/trails/`, `/hikes/`, `/blog/`
+4. Verify CMS loads: `/admin/`
 
-## Route rollback
+## Known-good commits
+| Commit SHA | Date | Description |
+|---|---|---|
+| `3423567` | Jul 31, 2026 | Last known-good before audit branch |
+| `394ebc2` | Aug 2, 2026 | Hero and schedule copy refresh |
 
-- Keep old routes and redirect pages.
-- If a new page fails, remove its navigation link first while preserving existing pages.
-- Never remove an indexed URL without a permanent replacement/redirect plan.
+## What CANNOT be rolled back easily
+- CMS content changes made through Sveltia CMS (are separate commits)
+- External form submissions (Google Forms — outside git)
+- External service state (n8n, Telegram, Brevo)
+- Image uploads (committed to repo but managed by CMS)
 
-## Future backend rollback
-
-No backend is part of the static MVP. A future backend release must document:
-
-- Database backup identifier
-- Migration version
-- Forward-fix and rollback conditions
-- Secret/config rollback
-- Read-only maintenance mode
-- Export/reconciliation of bookings created during the release window
-
+## Rollback risks
+- **Low risk:** All changes are in static files; no database
+- **Medium risk:** CMS content changes may be interleaved with code changes
+- **No risk:** No server-side state, no cache to invalidate beyond GitHub Pages

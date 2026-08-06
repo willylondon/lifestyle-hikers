@@ -25,12 +25,47 @@
             </article>
         </div>
 
+        <div class="ig-feed-container reveal">
+            <!-- Curator.io Instagram Feed -->
+            <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" rel="noopener noreferrer"
+                    class="crt-logo crt-tag">Powered by Curator.io</a></div>
+        </div>
+
         <div class="social-proof-actions reveal">
             <a href="https://www.instagram.com/lifestylehikers" target="_blank" rel="noopener noreferrer" class="nav-cta"
                 aria-label="Open Lifestyle Hikers on Instagram in a new tab">
                 <i class="fab fa-instagram"></i> View on Instagram
             </a>
-            <a href="{{ '/join/' | relative_url }}" class="text-button">Get hike alerts</a>
+            <a href="{{ '/trail-alert/' | relative_url }}" class="text-button">Join the next trail alert</a>
         </div>
     </div>
+    <script>
+        (function () {
+            var feed = document.getElementById('curator-feed-default-feed-layout');
+            if (!feed) return;
+
+            var loaded = false;
+            function loadCuratorFeed() {
+                if (loaded) return;
+                loaded = true;
+                var script = document.createElement('script');
+                script.async = true;
+                script.charset = 'UTF-8';
+                script.src = 'https://cdn.curator.io/published/7a229ffc-c29f-4224-a039-63db290c5395.js';
+                document.head.appendChild(script);
+            }
+
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function (entries) {
+                    if (entries.some(function (entry) { return entry.isIntersecting; })) {
+                        loadCuratorFeed();
+                        observer.disconnect();
+                    }
+                }, { rootMargin: '600px 0px' });
+                observer.observe(feed);
+            } else {
+                window.addEventListener('load', loadCuratorFeed, { once: true });
+            }
+        })();
+    </script>
 </section>

@@ -1,71 +1,28 @@
 ---
 layout: default
-title: "Join the Lifestyle Hikers Community"
-description: "Join Lifestyle Hikers for Jamaica hike alerts, community updates, and practical trail preparation guidance."
+title: Join Lifestyle Hikers
+description: Join Lifestyle Hikers Jamaica - sign up for trail alerts, hike notifications, and community updates.
 permalink: /join/
+canonical_url: "https://www.lifestylehikers.com/join/"
 image: /assets/images/hero-group-2026.jpg
+redirect_to: "/#contact"
 ---
 
-<div class="journey-page join-page">
-    <section class="journey-hero journey-hero--join">
-        <div class="journey-hero-media" aria-hidden="true">
-            <img src="{{ '/assets/images/hero-group-2026.jpg' | relative_url }}" alt="" width="1280" height="720" fetchpriority="high" decoding="async">
-        </div>
-        <div class="container journey-hero-content">
-            <h1>Join the Community</h1>
-            <p>Be first to hear about public hike drops, get practical preparation guidance, and connect with people who genuinely enjoy exploring Jamaica.</p>
-            <a class="btn btn-primary" href="#contact">Start Your Request</a>
-        </div>
-    </section>
-
-    <section class="journey-benefits" aria-labelledby="join-benefits-title">
-        <div class="container">
-            <div class="journey-section-heading">
-                <h2 id="join-benefits-title">What joining unlocks</h2>
-                <p>A simple way to stay close to the next trail opportunity without hunting through the website.</p>
-            </div>
-            <div class="journey-benefit-grid">
-                <article>
-                    <i class="fas fa-bell" aria-hidden="true"></i>
-                    <h3>Hike drops</h3>
-                    <p>Know when public outings, member opportunities, and important schedule updates are released.</p>
-                </article>
-                <article>
-                    <i class="fas fa-route" aria-hidden="true"></i>
-                    <h3>Preparation guidance</h3>
-                    <p>Understand route difficulty, what to bring, and what to confirm before the day.</p>
-                </article>
-                <article>
-                    <i class="fas fa-people-group" aria-hidden="true"></i>
-                    <h3>Community connection</h3>
-                    <p>Stay connected to recent trail moments and people who share the same outdoor energy.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    {% include contact.html %}
-
-    <section class="journey-faq" aria-labelledby="join-faq-title">
-        <div class="container journey-faq-grid">
-            <div class="journey-section-heading journey-section-heading--left">
-                <h2 id="join-faq-title">Before you join</h2>
-                <p>The request form is free. Individual hikes may have separate registration, transport, entrance, or guide costs.</p>
-            </div>
-            <dl>
-                <div>
-                    <dt>Do I need hiking experience?</dt>
-                    <dd>No. Hike listings explain difficulty and preparation so you can choose an appropriate outing.</dd>
-                </div>
-                <div>
-                    <dt>Does this book me onto a hike?</dt>
-                    <dd>No. Joining gets you community updates. Open hikes use their own registration path.</dd>
-                </div>
-                <div>
-                    <dt>When should I hear back?</dt>
-                    <dd>Allow up to two business days. If you do not hear back, email <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</dd>
-                </div>
-            </dl>
-        </div>
-    </section>
+<div class="section" style="text-align:center;padding:120px 0;">
+  <div class="container">
+    <h1 style="font-size:clamp(2rem,5vw,3rem);">Join Lifestyle Hikers</h1>
+    <p style="font-size:1.1rem;color:var(--clr-text-muted);margin:1rem 0 2rem;">
+      You're being redirected to the community sign-up form.
+    </p>
+    <a href="/#contact" class="btn btn-primary" style="padding:1rem 2rem;">
+      Continue to Sign-Up Form
+    </a>
+    <p style="margin-top:2rem;font-size:0.9rem;color:var(--clr-text-muted);">
+      If you are not redirected automatically, click the button above.
+    </p>
+  </div>
 </div>
+
+<script>
+  window.location.replace('/#contact');
+</script>

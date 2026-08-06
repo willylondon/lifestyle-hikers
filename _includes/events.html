@@ -1,15 +1,14 @@
 <!-- Upcoming Hikes Section — Data driven from _data/events.yml -->
 <section class="section upcoming-section" id="upcoming">
-    {% assign today_key = "now" | date: "%Y%m%d" | plus: 0 %}
+    {% assign now_unix = "now" | date: "%s" | plus: 0 %}
     {% assign sorted_events = site.data.events.items | sort: "date" %}
     {% assign upcoming_count = 0 %}
     {% assign past_count = 0 %}
     {% for event in sorted_events %}
-    {% capture derived_status %}{% include event-status.html event=event today_key=today_key %}{% endcapture %}
-    {% assign derived_status = derived_status | strip %}
-    {% if derived_status == "upcoming" or derived_status == "sold_out" or derived_status == "members_only" %}
+    {% assign event_unix = event.date | date: "%s" | plus: 0 %}
+    {% if event_unix >= now_unix %}
     {% assign upcoming_count = upcoming_count | plus: 1 %}
-    {% elsif derived_status == "completed" %}
+    {% else %}
     {% assign past_count = past_count | plus: 1 %}
     {% endif %}
     {% endfor %}
@@ -34,9 +33,8 @@
         <div class="events-grid">
             {% assign rendered_upcoming = 0 %}
             {% for event in sorted_events %}
-            {% capture derived_status %}{% include event-status.html event=event today_key=today_key %}{% endcapture %}
-            {% assign derived_status = derived_status | strip %}
-            {% if derived_status != "cancelled" and derived_status != "completed" and rendered_upcoming < 5 %}
+            {% assign event_unix = event.date | date: "%s" | plus: 0 %}
+            {% if event_unix >= now_unix and rendered_upcoming < 5 %}
             {% assign rendered_upcoming = rendered_upcoming | plus: 1 %}
             <div class="event-card reveal">
                 <div class="event-date">
@@ -47,36 +45,16 @@
                 <div class="event-details">
                     <div class="event-top">
                         <span class="event-badge {{ event.difficulty }}">{{ event.difficulty | capitalize }}</span>
-                        {% if derived_status == "sold_out" %}
-                        <span class="event-spots"><i class="fas fa-ban"></i> Sold out</span>
-                        {% elsif derived_status == "members_only" %}
-                        <span class="event-spots"><i class="fas fa-lock"></i> Members only</span>
-                        {% elsif event.spots %}
                         <span class="event-spots"><i class="fas fa-users"></i> {{ event.spots }} spots left</span>
-                        {% endif %}
                     </div>
                     <h3 class="event-name">{{ event.name }}</h3>
                     <p class="event-location"><i class="fas fa-map-marker-alt"></i> {{ event.location }}</p>
-                    {% if event.time or event.distance %}
                     <div class="event-info">
-                        {% if event.time %}
                         <span><i class="fas fa-clock"></i> {{ event.time }}</span>
-                        {% endif %}
-                        {% if event.distance %}
                         <span><i class="fas fa-route"></i> {{ event.distance }}</span>
-                        {% endif %}
                     </div>
-                    {% endif %}
-                    {% if event.description %}
                     <p class="event-desc">{{ event.description | strip_newlines | truncate: 180 }}</p>
-                    {% endif %}
-                    {% if derived_status == "sold_out" and event.waitlist_url %}
-                    <a href="{{ event.waitlist_url }}" class="event-signup">Join Waitlist <i class="fas fa-arrow-right"></i></a>
-                    {% elsif event.registration_url and event.registration_url != "" %}
-                    <a href="{{ event.registration_url }}" class="event-signup">Request a Place <i class="fas fa-arrow-right"></i></a>
-                    {% else %}
-                    <a href="{{ '/join/' | relative_url }}" class="event-signup">Contact Organizer <i class="fas fa-arrow-right"></i></a>
-                    {% endif %}
+                    <a href="#contact" class="event-signup">Sign Up <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             {% endif %}
@@ -85,9 +63,8 @@
             {% assign rendered_past = 0 %}
             {% assign reverse_sorted_events = sorted_events | reverse %}
             {% for event in reverse_sorted_events %}
-            {% capture derived_status %}{% include event-status.html event=event today_key=today_key %}{% endcapture %}
-            {% assign derived_status = derived_status | strip %}
-            {% if derived_status == "completed" and rendered_past < 3 %}
+            {% assign event_unix = event.date | date: "%s" | plus: 0 %}
+            {% if event_unix < now_unix and rendered_past < 3 %}
             {% assign rendered_past = rendered_past | plus: 1 %}
             <div class="event-card reveal">
                 <div class="event-date">
@@ -102,19 +79,11 @@
                     </div>
                     <h3 class="event-name">{{ event.name }}</h3>
                     <p class="event-location"><i class="fas fa-map-marker-alt"></i> {{ event.location }}</p>
-                    {% if event.time or event.distance %}
                     <div class="event-info">
-                        {% if event.time %}
                         <span><i class="fas fa-clock"></i> {{ event.time }}</span>
-                        {% endif %}
-                        {% if event.distance %}
                         <span><i class="fas fa-route"></i> {{ event.distance }}</span>
-                        {% endif %}
                     </div>
-                    {% endif %}
-                    {% if event.description %}
                     <p class="event-desc">{{ event.description | strip_newlines | truncate: 180 }}</p>
-                    {% endif %}
                 </div>
             </div>
             {% endif %}
@@ -128,9 +97,9 @@
         {% endif %}
         <div style="text-align: center; margin-top: var(--space-3xl);" class="reveal">
             {% if upcoming_count == 0 %}
-            <a href="{{ '/join/' | relative_url }}" class="btn btn-primary"
+            <a href="/trail-alert/" class="btn btn-primary"
                 style="padding: var(--space-md) var(--space-xl); display: inline-flex; align-items: center; justify-content: center; border-radius: var(--radius-full); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; transition: all var(--transition-base); gap: var(--space-sm); margin-right: var(--space-md);">
-                Get Hike Alerts <i class="fas fa-arrow-right"></i>
+                Join Trail Alert <i class="fas fa-arrow-right"></i>
             </a>
             {% endif %}
             <a href="/past-hikes/" class="btn btn-outline"

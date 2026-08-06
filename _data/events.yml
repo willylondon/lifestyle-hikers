@@ -6,13 +6,6 @@ items:
     time: 7:00 AM — Meet at Trailhead
     distance: 3 mi loop
     spots: 15
-    capacity: null
-    price_jmd: null
-    meeting_point: ''
-    departure_time: ''
-    transport_information: ''
-    booking_deadline: ''
-    waitlist_url: ''
     description: Falling Edge Waterfall, also known as Bowden Hill Falls, is one of St. Andrew's best kept secrets, tucked away in the cool hills of Stony Hill, just 30 minutes from Manor Park in St.Andrew. The 40-foot cascade pours into a refreshing natural pool surrounded by lush greenery, reachable via a short 10–15 minute hike.
     registration_url: ''
     announcement_id: ''
@@ -27,13 +20,6 @@ items:
     time: 5:00 AM
     distance: 2.5 mi round trip
     spots: 20
-    capacity: null
-    price_jmd: null
-    meeting_point: ''
-    departure_time: ''
-    transport_information: ''
-    booking_deadline: ''
-    waitlist_url: ''
     description: Nonsuch Falls, tucked away in the rural community of Nonsuch in Portland, is Jamaica's tallest waterfall at 291 feet — standing even higher than Niagara Falls. It's a hidden gem managed by a local family, offering guided hikes through lush rainforest down to the base, where natural pools await. The trek is challenging but well worth it.
     registration_url: ''
     announcement_id: ''
@@ -48,13 +34,6 @@ items:
     time: 6:30 AM
     distance: 4 mi out-and-back
     spots: 12
-    capacity: null
-    price_jmd: null
-    meeting_point: ''
-    departure_time: ''
-    transport_information: ''
-    booking_deadline: ''
-    waitlist_url: ''
     description: Catherine's Peak is the highest point in the parish of St. Andrew, rising to 5,050 feet within the Blue Mountains. It is named after Catherine Long, the wife of Sir Henry Moore, who served as Governor of Jamaica in the mid-1700s, as she is believed to have been the first white woman to scale the peak, making the ascent in 1760. The summit is easily spotted from a distance, identifiable by the cluster of communications antennas at the top. The trailhead begins at Newcastle, a Jamaica Defence Force training camp, where hikers can park and set off on foot.
     registration_url: ''
     announcement_id: ''
@@ -69,13 +48,6 @@ items:
     time: 5:00 AM
     distance: 7 mi one way
     spots: 25
-    capacity: null
-    price_jmd: null
-    meeting_point: ''
-    departure_time: ''
-    transport_information: ''
-    booking_deadline: ''
-    waitlist_url: ''
     description: Kwame Falls is a picturesque, off-the-beaten-path waterfall tucked away in the rural community of Robin's Bay in St. Mary parish. It carries deep historical significance, being named after Kwame, a warrior who fought alongside the legendary Tacky in Jamaica's most notable pre-emancipation rebellion of 1760. To reach the falls, visitors embark on a roughly four-hour round-trip hike through lush tropical rainforest, crossing the Kwame River multiple times and taking in sweeping views of St. Mary's rugged coastline along the way. At the journey's end, a graceful cascade tumbles into a deep, refreshing pool, known for having warm spring-fed spots, surrounded by towering trees and vibrant foliage, making the trek well worth the effort for nature lovers and adventure seekers alike.
     registration_url: ''
     announcement_id: ''
@@ -90,13 +62,6 @@ items:
     time: 5:00 AM- Flow Head Office Parking Lot ,Half Way Tree Road
     distance: 5 mi one way
     spots: 2
-    capacity: null
-    price_jmd: null
-    meeting_point: ''
-    departure_time: ''
-    transport_information: ''
-    booking_deadline: ''
-    waitlist_url: ''
     description: |-
       🌿 What's There:
       The gardens still showcase unique orchids and many other plant species, with a spectacular view of the east side of the Blue Mountains, Strawberry Hills, and Kingston. You'll find global varieties of temperate and semi-tropical plants,  from eucalyptus and rubber trees to cork oaks and lilies, plus a Bamboo Walk with a velvety moss floor. Lime Tree Farm The gardens are described as somewhat semi-abandoned, but the natural beauty more than compensates.
@@ -115,13 +80,6 @@ items:
     time: 5:00 Am - Hillel Academy
     distance: 8 mi round trip
     spots: 20
-    capacity: null
-    price_jmd: null
-    meeting_point: ''
-    departure_time: ''
-    transport_information: ''
-    booking_deadline: ''
-    waitlist_url: ''
     description: The hike to Kingsworth is both a physical climb and a peaceful escape, blending city views, hillside neighborhoods, and the quiet beauty that defines the higher elevations of Jack’s Hill. It’s a short adventure that reminds you how quickly Kingston transforms from urban energy to mountain calm.
     registration_url: ''
     announcement_id: ''
@@ -136,13 +94,6 @@ items:
     time: 5:00 AM - Meet at Rocky Park, Harbour View, Basketball court across from the old drive in
     distance: 5 mi round trip
     spots: 20
-    capacity: null
-    price_jmd: null
-    meeting_point: ''
-    departure_time: ''
-    transport_information: ''
-    booking_deadline: ''
-    waitlist_url: ''
     description: Reggae Falls, located in the hills of Seaforth, St. Thomas, is a spectacular 70-foot man-made cascade originally built as a hydroelectric dam on the Johnson River. Your hike from the Serge Island area will take you through lush forest terrain and rocky riverbeds, eventually leading to the thunderous falls that offer a powerful "natural massage" and a deep, refreshing pool perfect for swimming. Known locally as "Dam Head," the site provides a rustic, community-oriented atmosphere where you can relax in the therapeutic mineral waters after navigating the moderately challenging trail.
     registration_url: ''
     announcement_id: ''
@@ -157,13 +108,6 @@ items:
     time: 5:00 AM-Meet at Gordon Town Square
     distance: 6 mi one way
     spots: 20
-    capacity: null
-    price_jmd: null
-    meeting_point: ''
-    departure_time: ''
-    transport_information: ''
-    booking_deadline: ''
-    waitlist_url: ''
     description: Tucked away in the hills of Gordon Town, Sugarloaf Falls—locally known as C-Pond—is a hidden twin-cascade gem that offers a truly raw and refreshing escape. The moderately challenging 40-minute hike from Penfield takes you across loose shale and down rustic wooden ladders, leading to a secluded pool famous for having some of the coldest water in St. Andrew. Perfect for those looking to trade the crowds for a slice of untouched nature, this sanctuary provides a serene atmosphere and a rewarding "ice bucket challenge" for adventurous souls. It’s a quintessential Blue Mountain experience that feels miles away from the heat of the city.
     registration_url: ''
     announcement_id: ''
@@ -178,13 +122,6 @@ items:
     time: 5:30 AM - Palisadoes
     distance: 1 mi
     spots: 20
-    capacity: null
-    price_jmd: null
-    meeting_point: ''
-    departure_time: ''
-    transport_information: ''
-    booking_deadline: ''
-    waitlist_url: ''
     description: |-
       Join Lifestyle Hikers this Saturday for an energizing Beach Workout at Port Royal Beach. We’re swapping the hills for the sand to bring you a high-energy session to start your weekend right. Catch the sunrise, feel the breeze, and let’s get moving!
 
@@ -220,13 +157,6 @@ items:
     time: 5:00 AM - Richie B Gas Station , Corner of Mannings hill road and Constant Spring
     distance: 3 miles
     spots: 20
-    capacity: null
-    price_jmd: null
-    meeting_point: ''
-    departure_time: ''
-    transport_information: ''
-    booking_deadline: ''
-    waitlist_url: ''
     description: Hiking through Smokey Vale in St. Andrew offers a refreshing escape from the heat of Kingston, taking you into the cooler, mist-shrouded hills of the Manning's Hill area. The neighborhood is known for its elevation and lush, green surroundings, providing panoramic views of the city and the Kingston Harbour as you climb.
     registration_url: ''
     announcement_id: ''
@@ -241,9 +171,7 @@ items:
     time: 5:00 AM - Gordon Town Square
     distance: 6 mile
     spots: 20
-    capacity: null
-    price_jmd: null
-    description: Get ready for an exhilarating challenge as we take on Savage Hill via Red Light to return this Saturday. This Level 7 trek is designed for those looking to push their limits and experience the raw beauty of the Gordon Town ridges.
+    description: The crew tackled Savage Hill via Red Light on this Level 7 trek, pushing limits and experiencing the raw beauty of the Gordon Town ridges.
     registration_url: ''
     announcement_id: ''
     announcement_sent_at: ''
@@ -257,15 +185,8 @@ items:
     time: 5:00 AM - Jessie Ripoll Primary School
     distance: 5 miles
     spots: 20
-    capacity: null
-    price_jmd: null
-    meeting_point: ''
-    departure_time: ''
-    transport_information: ''
-    booking_deadline: ''
-    waitlist_url: ''
     description: |-
-      Ready to see Kingston in a whole new light? Join the Lifestyle Hikers community for our upcoming LSH City Walk on Saturday, May 23! This isn't just a trek—it's a vibrant morning experience designed to explore the beauty of our city while sharing great vibes, unforgettable moments, and excellent company.
+      The Lifestyle Hikers community came together for the LSH City Walk through Kingston on May 23 — a vibrant morning experience exploring the city while sharing great vibes, unforgettable moments, and excellent company.
 
       We’re trading the mountain trails for a dynamic city route, but don't let the urban setting fool you—this is a Level 4 Experience that will keep you moving and refreshed. Along the way, we’ll be slowing down to socialize and stay hydrated with a selection of refreshing mocktails, mimosas, and cocktails.
 
@@ -307,14 +228,7 @@ items:
     time: 5:00 Am - Rocky Park Harbour View , The Basketball court from Across the old drive in
     distance: 7 miles
     spots: 20
-    capacity: null
-    price_jmd: null
-    meeting_point: ''
-    departure_time: ''
-    transport_information: ''
-    booking_deadline: ''
-    waitlist_url: ''
-    description: Are you ready? Step into history and challenge yourself on our upcoming expedition to one of Jamaica's most spectacular geological marvels. Join us for a thrilling 7-mile trek to the awe-inspiring Judgement Cliff in St. Thomas.
+    description: Are you ready? Step into history and challenge yourself on one of Jamaica's most spectacular geological marvels. Join us for a thrilling 7-mile trek to the awe-inspiring Judgement Cliff in St. Thomas.
     flyer: /assets/images/uploads/Judgement Cliff.jpg
     registration_url: ''
     distribution_status: ready
@@ -322,35 +236,6 @@ items:
     send_to_telegram: false
     send_to_brevo: true
     announcement_sent_at: 2026-06-11T07:31:00
-    telegram_sent: false
-    brevo_sent: false
-    telegram_message_id: ''
-    brevo_message_id: ''
-    announcement_error: ''
-  - name: Cave and Beach Walk
-    location: Hellshire , Sand Hill
-    difficulty: easy
-    date: 2026-07-25
-    time: 5:00 AM Portmore Toll
-    distance: 5 Miles
-    spots: 10
-    event_status: completed
-    capacity: null
-    price_jmd: null
-    meeting_point: ''
-    departure_time: ''
-    transport_information: ''
-    booking_deadline: ''
-    payment_methods: []
-    waitlist_url: ''
-    description: Discover a side of Hellshire far beyond the famous beaches and fried fish! This dynamic trek takes you deep into the rugged limestone hills of southern Portmore—a historic landscape shaped by Taino heritage, Spanish haciendas, and the resilient Maroons who navigated its caves and dense terrain for secrecy and freedom.
-    flyer: ''
-    registration_url: ''
-    distribution_status: draft
-    announcement_id: ''
-    send_to_telegram: true
-    send_to_brevo: true
-    announcement_sent_at: ''
     telegram_sent: false
     brevo_sent: false
     telegram_message_id: ''
