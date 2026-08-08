@@ -37,20 +37,60 @@
     {% else %}
         {% assign schema_type = "WebPage" %}
     {% endif %}
+
+    {% comment %} Aggregate testimonials for rating {% endcomment %}
+    {% assign testimonial_count = site.data.testimonials.items | size %}
+    {% assign total_rating = 0 %}
+    {% assign review_count = 0 %}
+    {% for t in site.data.testimonials.items %}
+      {% assign r = t.rating | plus: 0 %}
+      {% if r >= 1 and r <= 5 %}
+        {% assign total_rating = total_rating | plus: r %}
+        {% assign review_count = review_count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+    {% if review_count > 0 %}
+      {% assign avg_rating = total_rating | times: 1.0 | divided_by: review_count | round: 1 %}
+    {% else %}
+      {% assign avg_rating = 5.0 %}
+      {% assign review_count = testimonial_count %}
+    {% endif %}
+
     <script type="application/ld+json">
     {
      "@context": "https://schema.org",
-     "@type": "{{ schema_type }}",
-     "headline": "{{ schema_title | escape }}",
-     "description": "{{ meta_description | escape }}",
-     "author": {
-       "@type": "Organization",
-       "name": "Lifestyle Hikers"
-     },
-     "publisher": {
-       "@type": "Organization",
-       "name": "Lifestyle Hikers"
-     }
+     "@graph": [
+       {
+         "@type": "Organization",
+         "name": "Lifestyle Hikers",
+         "url": "{{ site.url }}",
+         "logo": "{{ site.url }}{{ site.logo }}",
+         "description": "{{ site.description | escape }}",
+         "email": "{{ site.email }}",
+         "sameAs": [
+           "{{ site.social.instagram }}"
+         ],
+         "aggregateRating": {
+           "@type": "AggregateRating",
+           "ratingValue": "{{ avg_rating }}",
+           "reviewCount": "{{ review_count }}",
+           "bestRating": "5"
+         }
+       },
+       {
+         "@type": "{{ schema_type }}",
+         "headline": "{{ schema_title | escape }}",
+         "description": "{{ meta_description | escape }}",
+         "author": {
+           "@type": "Organization",
+           "name": "Lifestyle Hikers"
+         },
+         "publisher": {
+           "@type": "Organization",
+           "name": "Lifestyle Hikers"
+         }
+       }
+     ]
     }
     </script>
 </head>
