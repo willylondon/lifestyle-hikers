@@ -26,10 +26,19 @@
                 {% if upcoming_count > 0 %}
                 Join us on our next adventure across Jamaica. All skill levels welcome — just bring yuh vibes!
                 {% else %}
-                No public hike is open right now. Join the trail alert to catch the next drop, or browse the latest completed hikes from the crew.
+                New hikes drop through our Trail Alert. Join below to get notified the moment we post the next one — then browse recent adventures from the crew.
                 {% endif %}
             </p>
         </div>
+        {% if upcoming_count == 0 %}
+        <div class="trail-alert-cta reveal" style="text-align:center; margin-bottom:var(--space-3xl); padding:var(--space-xl); background:linear-gradient(135deg, rgba(45,106,79,0.18), rgba(30,185,232,0.1)); border:1px solid rgba(30,185,232,0.18); border-radius:var(--radius-lg);">
+            <h3 style="font-family:var(--font-heading); font-size:1.25rem; margin-bottom:var(--space-sm); color:var(--clr-white);">Be first to know when the next hike goes live</h3>
+            <p style="color:var(--clr-text-muted); margin-bottom:var(--space-lg); max-width:520px; margin-left:auto; margin-right:auto;">We post hikes on the Trail Alert first — before Instagram, before anywhere else. Drop your details and you'll never miss a drop.</p>
+            <a href="/trail-alert/" class="btn btn-primary" style="display:inline-flex; align-items:center; gap:var(--space-sm); padding:var(--space-md) var(--space-xl); font-weight:600; letter-spacing:1px; text-transform:uppercase; border-radius:var(--radius-full);">
+                Get Trail Alerts <i class="fas fa-bell"></i>
+            </a>
+        </div>
+        {% endif %}
         <div class="events-grid">
             {% assign rendered_upcoming = 0 %}
             {% for event in sorted_events %}
